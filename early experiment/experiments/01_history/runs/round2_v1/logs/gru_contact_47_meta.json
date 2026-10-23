@@ -1,0 +1,11 @@
+{
+  "model": "gru_contact",
+  "seed": 47,
+  "steps": 8300,
+  "best_val_loss": 7.95261894381838e-06,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 141.84010060038418,
+  "parameters": 7809,
+  "peak_pytorch_allocated_MiB": 146.3193359375
+}

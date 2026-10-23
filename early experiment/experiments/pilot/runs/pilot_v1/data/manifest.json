@@ -1,0 +1,116 @@
+{
+  "config": {
+    "name": "maxwell_wait_gap_v1",
+    "dt": 0.02,
+    "history_steps": 150,
+    "future_steps": 210,
+    "train_episodes": 256,
+    "val_episodes": 64,
+    "test_pairs": 128,
+    "data_seed": 20261019,
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "batch_size": 32,
+    "hidden_size": 32,
+    "learning_rate": 0.003,
+    "train_wait_ranges": [
+      [
+        0.2,
+        0.5
+      ],
+      [
+        1.8,
+        2.2
+      ]
+    ],
+    "test_wait_range": [
+      0.8,
+      1.2
+    ],
+    "plant": {
+      "mass": 0.35,
+      "stiffness": 2200.0,
+      "damping": 45.0
+    },
+    "truth": {
+      "k_inf": 400.0,
+      "k": [
+        900.0,
+        1300.0
+      ],
+      "tau": [
+        0.15,
+        1.4
+      ]
+    },
+    "sensor_std": {
+      "position": 5e-06,
+      "velocity": 5e-05,
+      "force": 0.02
+    },
+    "scales": {
+      "position": 0.006,
+      "velocity": 0.02,
+      "force": 8.0
+    },
+    "initial_guess": {
+      "k_inf": 600.0,
+      "k": [
+        700.0,
+        1000.0
+      ],
+      "tau": [
+        0.25,
+        2.0
+      ]
+    },
+    "profile_target_seconds_per_run": 120,
+    "min_steps": 120,
+    "max_steps": 600,
+    "validation_interval": 30
+  },
+  "splits": {
+    "train": {
+      "episodes": 256,
+      "wait_min": 0.20500200083551168,
+      "wait_max": 2.199197457313475,
+      "sha256": "13109be50f1be72787fbb44560338f80e6c983606e644fae2b6bfd843ca7c090"
+    },
+    "val": {
+      "episodes": 64,
+      "wait_min": 0.2031229270465484,
+      "wait_max": 2.19675448682954,
+      "sha256": "a6b2da25fc728a01e9ecddadb690e116970875f5268cf168ecb8ae79420e1a61"
+    },
+    "test_id": {
+      "episodes": 128,
+      "wait_min": 0.20519685221948208,
+      "wait_max": 2.196944715953024,
+      "sha256": "afa3cfc11f226b24b8f11247d8e2fd624ce7af989d821483abc3fc6fac81383e"
+    },
+    "test_wait": {
+      "episodes": 128,
+      "wait_min": 0.802305922654622,
+      "wait_max": 1.1949528142175896,
+      "sha256": "7bffeef5e1ac057ef71545fc0a2cdfcc002eb8cce0888a43135894116e001de2"
+    }
+  },
+  "training_columns": [
+    "x",
+    "v",
+    "F",
+    "u",
+    "dt"
+  ],
+  "test_id_wait_pairing": "same unseen history and continuation, only wait differs",
+  "privileged_fields": [
+    "truth",
+    "oracle_z",
+    "oracle_initial",
+    "truth_contact",
+    "truth_compression"
+  ]
+}

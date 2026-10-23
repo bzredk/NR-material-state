@@ -1,0 +1,156 @@
+{
+  "disjoint_history_splits": true,
+  "identical_present_within_pairs": true,
+  "no_future_measurement_input": true,
+  "selector_reconstructed_from_predictions": true,
+  "all_training_converged": true,
+  "training_seconds": 732.7900456998032,
+  "peak_allocated_MiB": 207.01318359375,
+  "runs": [
+    {
+      "model": "snapshot_state",
+      "seed": 11,
+      "steps": 1000,
+      "best_val_loss": 2.5376084825741902e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 25.925007099984214,
+      "parameters": 3777,
+      "peak_allocated_MiB": 77.22314453125
+    },
+    {
+      "model": "snapshot_state",
+      "seed": 23,
+      "steps": 1000,
+      "best_val_loss": 2.5379510285953682e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 26.16686959983781,
+      "parameters": 3777,
+      "peak_allocated_MiB": 77.27099609375
+    },
+    {
+      "model": "snapshot_state",
+      "seed": 47,
+      "steps": 1000,
+      "best_val_loss": 2.537738055252703e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 27.60212519997731,
+      "parameters": 3777,
+      "peak_allocated_MiB": 77.31884765625
+    },
+    {
+      "model": "history_state",
+      "seed": 11,
+      "steps": 4000,
+      "best_val_loss": 7.190134169832163e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 106.19113779999316,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.42724609375
+    },
+    {
+      "model": "history_state",
+      "seed": 23,
+      "steps": 2400,
+      "best_val_loss": 7.201475151911533e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 63.604431399842724,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.47509765625
+    },
+    {
+      "model": "history_state",
+      "seed": 47,
+      "steps": 2900,
+      "best_val_loss": 7.188146620743889e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 75.76949020009488,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.52294921875
+    },
+    {
+      "model": "history_single",
+      "seed": 11,
+      "steps": 3400,
+      "best_val_loss": 7.18807935603157e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 90.80753520014696,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.74267578125
+    },
+    {
+      "model": "history_single",
+      "seed": 23,
+      "steps": 2400,
+      "best_val_loss": 7.193292276497232e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 64.22371779987589,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.79052734375
+    },
+    {
+      "model": "history_single",
+      "seed": 47,
+      "steps": 3600,
+      "best_val_loss": 7.197169262932827e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 94.00327220000327,
+      "parameters": 3777,
+      "peak_allocated_MiB": 143.83837890625
+    },
+    {
+      "model": "gru_contact",
+      "seed": 11,
+      "steps": 9100,
+      "best_val_loss": 8.313205322944365e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 50.155582500156015,
+      "parameters": 8001,
+      "peak_allocated_MiB": 206.96240234375
+    },
+    {
+      "model": "gru_contact",
+      "seed": 23,
+      "steps": 8700,
+      "best_val_loss": 8.879647263408211e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 47.7163010998629,
+      "parameters": 8001,
+      "peak_allocated_MiB": 206.916015625
+    },
+    {
+      "model": "gru_contact",
+      "seed": 47,
+      "steps": 10900,
+      "best_val_loss": 8.2067910322318e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 60.62457560002804,
+      "parameters": 8001,
+      "peak_allocated_MiB": 207.01318359375
+    }
+  ],
+  "paired_endpoint_max_difference": [
+    1.6219664500383146e-15,
+    2.741329298977524e-14,
+    3.105071755271638e-12
+  ],
+  "main_limitations": [
+    "one known two-mode Maxwell material",
+    "single history-generation controller",
+    "deterministic known actuator",
+    "synthetic matched histories",
+    "finite candidate catalog and fixed force-cap sweep",
+    "no real robot data"
+  ]
+}

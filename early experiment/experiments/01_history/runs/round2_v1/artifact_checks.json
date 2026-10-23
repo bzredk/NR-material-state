@@ -1,0 +1,14 @@
+{
+  "data_and_source_hashes": "passed",
+  "split_disjointness": "passed",
+  "identical_current_and_future_pair_inputs": "passed",
+  "converged_training_runs": 12,
+  "prediction_arrays": 38,
+  "state_arrays": 18,
+  "per_pair_metric_rows": 7296,
+  "finite_outputs": "passed",
+  "snapshot_pair_predictions_identical": "passed",
+  "best_checkpoints": 12,
+  "figures": 4,
+  "real_data": "none; CSV tool tested with explicitly marked synthetic data"
+}

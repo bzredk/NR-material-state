@@ -1,0 +1,112 @@
+[
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\models.py",
+    "snapshot": "vendor\\round3\\models.py",
+    "sha256": "122386db7b94151d94f2f61eff961c8aafb54b92b92b4492418bb96c70c80fc1"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\dynamics.py",
+    "snapshot": "vendor\\round3\\dynamics.py",
+    "sha256": "157c7e6e3ad6c68b7b99e689235a5184dc505b787e62a6149bde204d5dee029b"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\physics_base.py",
+    "snapshot": "vendor\\round3\\physics_base.py",
+    "sha256": "a9d09f9577d3f8e5a91fb4734bed8bfcf13dece1329595a5c50d8a312c333876"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-closed-loop-2026-10-19\\physics.py",
+    "snapshot": "vendor\\round4\\physics.py",
+    "sha256": "2c202d0146484fa2f6fdb76bd6db6a7399607fbbeee66c86e0a12455158058eb"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-closed-loop-2026-10-19\\control.py",
+    "snapshot": "vendor\\round4\\control.py",
+    "sha256": "a2b2edb290208d4cc8dee05af68aa8cbb58d1f6f7cebcdff28d7145a16c7b419"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\config.json",
+    "snapshot": "inputs\\round3_config.json",
+    "sha256": "1026cebd2a34b96f39b17ffb336d088a1337e93093359d04e26641899940f11c"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\fixed_material.json",
+    "snapshot": "inputs\\fixed_material.json",
+    "sha256": "a56b9aea315545b3680db3598505fc07f1e2299a9c026c9082abae166bb292fc"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\data\\test_histories.npz",
+    "snapshot": "inputs\\test_histories.npz",
+    "sha256": "f10e6e5501f8ad9b11a8564fa640414c0ec70baa5f71cdc0bc9fae3c04df1aca"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-closed-loop-2026-10-19\\results\\test_contract_frozen.json",
+    "snapshot": "inputs\\round4_contract.json",
+    "sha256": "652d2c4d6c3320cfccb9777023674a7b9bd56292f5e60210015329ef219417ea"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-closed-loop-2026-10-19\\results\\reactive_tuning.json",
+    "snapshot": "inputs\\round4_reactive.json",
+    "sha256": "251dba5a6c2d4b49266aa684969ed6227eded8761e34c58d36bb5e18a876823f"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\history_state_11_best.pt",
+    "snapshot": "inputs\\checkpoints\\history_state_11_best.pt",
+    "sha256": "32a9329293fc2579257bf950955638abb796090b1fe14379e1a0448eb9329510"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\history_state_11_meta.json",
+    "snapshot": "inputs\\logs\\history_state_11_meta.json",
+    "sha256": "7d8ce4f6a30e5c734990c40dd7f41bb16d61cfc7a6211c0442fe17c63488c47d"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\history_state_23_best.pt",
+    "snapshot": "inputs\\checkpoints\\history_state_23_best.pt",
+    "sha256": "f0ce66e7dbd3d6318ea10dd49bbc00af1d55329ae085d1b34e82ce98dafa9cc8"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\history_state_23_meta.json",
+    "snapshot": "inputs\\logs\\history_state_23_meta.json",
+    "sha256": "0db2af7867327b097dc894820ab1476288b54f4ada8e353e2262992d89ef6c40"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\history_state_47_best.pt",
+    "snapshot": "inputs\\checkpoints\\history_state_47_best.pt",
+    "sha256": "9793d360cb578c79b8c9d026195295bfa6dc723eeec07773faf7dfc0233d746c"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\history_state_47_meta.json",
+    "snapshot": "inputs\\logs\\history_state_47_meta.json",
+    "sha256": "fb80ded1a81d9500c1ab0695c8a099051a61bcd086cb288c6ec04e691b04948b"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\snapshot_state_11_best.pt",
+    "snapshot": "inputs\\checkpoints\\snapshot_state_11_best.pt",
+    "sha256": "47f2e366f087d5c7cc091d81696370d486bc3e34c2588c804d7f2b49ea1d3275"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\snapshot_state_11_meta.json",
+    "snapshot": "inputs\\logs\\snapshot_state_11_meta.json",
+    "sha256": "754b06968e042ddf10f211a7fb6fdc5b6ae12bd08a9c226f0e2f1ecab664261a"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\snapshot_state_23_best.pt",
+    "snapshot": "inputs\\checkpoints\\snapshot_state_23_best.pt",
+    "sha256": "0c2b053f03558061a3a36e22528137d44156b00c20608a4083757675e00995d0"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\snapshot_state_23_meta.json",
+    "snapshot": "inputs\\logs\\snapshot_state_23_meta.json",
+    "sha256": "73c01b5aee4d214ce04b60198776742a18ae98c83158a4934afeb8aaad3a611c"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\checkpoints\\snapshot_state_47_best.pt",
+    "snapshot": "inputs\\checkpoints\\snapshot_state_47_best.pt",
+    "sha256": "5dd5894ca3406e8be8237a69fadad787abde60068611a39c2857e0bae77107ab"
+  },
+  {
+    "source": "D:\\capp\\NR\\Documents\\Codex\\material-state-control-transfer-2026-10-19\\controlled-release\\runs\\transfer_v2\\logs\\snapshot_state_47_meta.json",
+    "snapshot": "inputs\\logs\\snapshot_state_47_meta.json",
+    "sha256": "279b7eb61d9bbba67d665f1cde320062fd68d9655a27af88ed4ccf856860d7c3"
+  }
+]

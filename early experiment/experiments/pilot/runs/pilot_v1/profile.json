@@ -1,0 +1,35 @@
+{
+  "data_generation_seconds": 0.4932794999331236,
+  "models": {
+    "material_state": {
+      "train_step_seconds_median": 0.35054749995470047,
+      "train_step_seconds_samples": [
+        0.3903255998156965,
+        0.3903125000651926,
+        0.31078249984420836,
+        0.28276630002073944
+      ],
+      "parameters": 3815,
+      "peak_allocated_MiB": 42.22119140625,
+      "peak_reserved_MiB": 44.0,
+      "batch": 32,
+      "history_steps": 151,
+      "future_steps": 210
+    },
+    "gru_force": {
+      "train_step_seconds_median": 0.2209133500000462,
+      "train_step_seconds_samples": [
+        0.2201987998560071,
+        0.2216279001440853,
+        0.21556139993481338,
+        0.22366170003078878
+      ],
+      "parameters": 8305,
+      "peak_allocated_MiB": 42.29150390625,
+      "peak_reserved_MiB": 54.0,
+      "batch": 32,
+      "history_steps": 151,
+      "future_steps": 210
+    }
+  }
+}

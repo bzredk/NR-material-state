@@ -1,0 +1,35 @@
+{
+  "data_type": "synthetic_validation",
+  "units": {
+    "time": "s",
+    "position": "m",
+    "force": "N"
+  },
+  "position_sign": 1,
+  "force_sign": 1,
+  "surface_position_m": 0,
+  "force_offset_N": 0,
+  "analysis": {
+    "reference_compression_m": 0.006,
+    "contact_threshold_N": 0.075,
+    "contact_persistence_s": 0.04,
+    "constitutive_only": true
+  },
+  "actuator": {
+    "calibrated": true,
+    "provenance": "KNOWN SYNTHETIC ACTUATOR; not a robot calibration",
+    "mass_kg": 0.35,
+    "stiffness_N_m": 6000.0,
+    "damping_N_s_m": 70.0
+  },
+  "provenance": {
+    "source": "make_examples.py",
+    "mechanism": "linear",
+    "seed": 1200,
+    "independent_repeats": "independent sensor noise and command perturbations, identical material parameters",
+    "force_noise_sd_N": 0.015,
+    "position_noise_sd_m": 2e-06,
+    "generation_max_step_s": 0.0025,
+    "warning": "In-family positive/negative software controls, not material evidence; never pool with real measurements"
+  }
+}

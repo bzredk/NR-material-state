@@ -1,0 +1,118 @@
+[
+  {
+    "method": "oracle",
+    "cost_s": 3.90735759755291,
+    "cost_ci_low": 3.858867373511905,
+    "cost_ci_high": 3.9574020595651453,
+    "success": 0.45171957671957674,
+    "unsafe": 0.0,
+    "force_rmse_N": 0.0,
+    "position_rmse_mm": 0.0,
+    "contrast_nrmse": 0.0,
+    "reject": 0.5482804232804233
+  },
+  {
+    "method": "classical_integral",
+    "cost_s": 3.9069181960978834,
+    "cost_ci_low": 3.8609468987681876,
+    "cost_ci_high": 3.9554110811425267,
+    "success": 0.4518229166666667,
+    "unsafe": 0.0,
+    "force_rmse_N": 0.00046623938708542954,
+    "position_rmse_mm": 0.00018628964234182802,
+    "contrast_nrmse": 0.0025646198804002295,
+    "reject": 0.5481770833333334
+  },
+  {
+    "method": "local_observer",
+    "cost_s": 3.9079081927910053,
+    "cost_ci_low": 3.8571325489831345,
+    "cost_ci_high": 3.9603790974289024,
+    "success": 0.45163690476190477,
+    "unsafe": 0.0,
+    "force_rmse_N": 0.003105316979241989,
+    "position_rmse_mm": 0.0011246383814821324,
+    "contrast_nrmse": 0.059615969848288194,
+    "reject": 0.5483630952380952
+  },
+  {
+    "method": "snapshot_state",
+    "cost_s": 3.9456462880291006,
+    "cost_ci_low": 3.8974385282324735,
+    "cost_ci_high": 3.9924957182815257,
+    "success": 0.44345927028218696,
+    "unsafe": 0.006579309964726631,
+    "force_rmse_N": 0.03526406469762944,
+    "position_rmse_mm": 0.012783295195977129,
+    "contrast_nrmse": 1.0,
+    "reject": 0.5499614197530863
+  },
+  {
+    "method": "history_state",
+    "cost_s": 3.9066231949955905,
+    "cost_ci_low": 3.863043967702822,
+    "cost_ci_high": 3.956602821525022,
+    "success": 0.4519193672839506,
+    "unsafe": 0.0,
+    "force_rmse_N": 0.003731375629981414,
+    "position_rmse_mm": 0.0013480960981843465,
+    "contrast_nrmse": 0.020956048683383664,
+    "reject": 0.5480806327160493
+  },
+  {
+    "method": "history_single",
+    "cost_s": 3.907135141093474,
+    "cost_ci_low": 3.860510897197421,
+    "cost_ci_high": 3.9553586791776896,
+    "success": 0.4518160273368607,
+    "unsafe": 0.0,
+    "force_rmse_N": 0.0037756932932081644,
+    "position_rmse_mm": 0.0013641711582896875,
+    "contrast_nrmse": 0.02260782916284393,
+    "reject": 0.5481839726631393
+  },
+  {
+    "method": "gru_contact",
+    "cost_s": 3.9468251212522043,
+    "cost_ci_low": 3.8993478439842364,
+    "cost_ci_high": 3.9966427038552688,
+    "success": 0.4428667879188713,
+    "unsafe": 0.010030864197530865,
+    "force_rmse_N": 0.2485627773328148,
+    "position_rmse_mm": 0.07655493509508104,
+    "contrast_nrmse": 0.1633434949029521,
+    "reject": 0.5471023478835978
+  },
+  {
+    "method": "state_swap",
+    "cost_s": 3.9971257027116405,
+    "cost_ci_low": 3.9516951850473987,
+    "cost_ci_high": 4.048403649277998,
+    "success": 0.4324570105820105,
+    "unsafe": 0.019462356701940037,
+    "force_rmse_N": 0.06976370020407707,
+    "position_rmse_mm": 0.025312981871873776,
+    "contrast_nrmse": 2.0050686901169015,
+    "reject": 0.5480806327160493
+  },
+  {
+    "method": "state_average",
+    "cost_s": 3.9442070381393295,
+    "cost_ci_low": 3.896514350473986,
+    "cost_ci_high": 3.9912035331927904,
+    "success": 0.44378995811287475,
+    "unsafe": 0.007061563051146385,
+    "force_rmse_N": 0.034973595217218025,
+    "position_rmse_mm": 0.012677795547701685,
+    "contrast_nrmse": 1.0,
+    "reject": 0.5491484788359787
+  },
+  {
+    "method": "reactive",
+    "cost_s": 2.558518931878307,
+    "cost_ci_low": 2.505895357969577,
+    "cost_ci_high": 2.608667018022487,
+    "success": 0.8267609126984127,
+    "unsafe": 0.17253637566137567
+  }
+]

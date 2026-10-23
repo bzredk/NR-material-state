@@ -1,0 +1,6 @@
+item,question,preferred_start,lab_answer,record_location
+arm_booking,"Which arm/operator/tool mount and booking length; which existing limits?","One FR3/Panda or iiwa; reserve 5 hours initially",,parameter_form.csv and metadata.json
+command_pose,"Which normal-axis command/pose API; interpolation and actual event logging?","One fixed controller configuration; log command and actual platen-to-base motion",,controller_schedule.csv
+force,"Which calibrated force sensor/range/bandwidth/raw access and device clock?","Base load cell; compensated wrist F/T if more practical",,metadata.json and calibration_records.csv
+specimen_fixture,"Which traceable foam batch/coupon/platen and passive recovery view?","Slow open-cell PU; rigid platen; side view or reference-washout alternative",,metadata.json and pretest_observations.csv
+time_export,"Which independent clock mapping/trigger and common-time CSV export?","Retain raw acquisition and arrival timestamps; inspect one export before formal block",,metadata.json and raw device archive

@@ -1,0 +1,95 @@
+{
+  "first_test_pairs": 16,
+  "controls": "all seven",
+  "future_only_refinement": true,
+  "past_replayed_at_finer_dt": false,
+  "initial_state": "same physical decision-time state",
+  "records": [
+    {
+      "factor": 2,
+      "dt": 0.005,
+      "peak_shift_mean_N": 0.052083386493864584,
+      "peak_shift_max_abs_N": 0.1641772541773321,
+      "decision_outcomes": {
+        "oracle": {
+          "cost": 3.983867394179894,
+          "success": 0.43601190476190477,
+          "unsafe": 0.008101851851851851
+        },
+        "classical_integral": {
+          "cost": 3.983867394179894,
+          "success": 0.43601190476190477,
+          "unsafe": 0.008101851851851851
+        },
+        "local_observer": {
+          "cost": 3.982990244708995,
+          "success": 0.43617724867724866,
+          "unsafe": 0.007936507936507936
+        },
+        "snapshot_state": {
+          "cost": 4.009053406084656,
+          "success": 0.4307208994708995,
+          "unsafe": 0.014054232804232803
+        },
+        "history_state": {
+          "cost": 3.9815881283068784,
+          "success": 0.4363425925925926,
+          "unsafe": 0.008267195767195767
+        },
+        "history_single": {
+          "cost": 3.9815881283068784,
+          "success": 0.4363425925925926,
+          "unsafe": 0.008267195767195767
+        },
+        "gru_contact": {
+          "cost": 4.012207341269842,
+          "success": 0.42939814814814814,
+          "unsafe": 0.008597883597883597
+        }
+      }
+    },
+    {
+      "factor": 4,
+      "dt": 0.0025,
+      "peak_shift_mean_N": 0.08622783311418956,
+      "peak_shift_max_abs_N": 0.2648997942924698,
+      "decision_outcomes": {
+        "oracle": {
+          "cost": 4.037538442460318,
+          "success": 0.4246031746031746,
+          "unsafe": 0.01951058201058201
+        },
+        "classical_integral": {
+          "cost": 4.037538442460318,
+          "success": 0.4246031746031746,
+          "unsafe": 0.01951058201058201
+        },
+        "local_observer": {
+          "cost": 4.035262483465608,
+          "success": 0.42509920634920634,
+          "unsafe": 0.019014550264550265
+        },
+        "snapshot_state": {
+          "cost": 4.048801256613757,
+          "success": 0.42228835978835977,
+          "unsafe": 0.022486772486772486
+        },
+        "history_state": {
+          "cost": 4.033608630952381,
+          "success": 0.4252645502645503,
+          "unsafe": 0.019345238095238096
+        },
+        "history_single": {
+          "cost": 4.033608630952381,
+          "success": 0.4252645502645503,
+          "unsafe": 0.019345238095238096
+        },
+        "gru_contact": {
+          "cost": 4.039926835317461,
+          "success": 0.4236111111111111,
+          "unsafe": 0.014384920634920634
+        }
+      }
+    }
+  ]
+}

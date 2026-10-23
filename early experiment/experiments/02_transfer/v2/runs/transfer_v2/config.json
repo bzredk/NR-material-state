@@ -1,0 +1,166 @@
+{
+  "name": "controller_transfer_release_v2",
+  "controller_switch_time": 0.3,
+  "dt": 0.01,
+  "history_seconds": 3.0,
+  "future_seconds": 5.0,
+  "train_pairs": 384,
+  "val_pairs": 96,
+  "test_pairs": 128,
+  "data_seed": 27101950,
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "plant": {
+    "mass": 0.35,
+    "stiffness": 2200.0,
+    "damping": 45.0
+  },
+  "truth": {
+    "k_inf": 400.0,
+    "k": [
+      900.0,
+      1300.0
+    ],
+    "tau": [
+      0.15,
+      1.4
+    ]
+  },
+  "sensor_std": {
+    "position": 5e-06,
+    "velocity": 5e-05,
+    "force": 0.02
+  },
+  "controllers_train": [
+    [
+      1200,
+      25
+    ],
+    [
+      1200,
+      80
+    ],
+    [
+      3600,
+      25
+    ],
+    [
+      3600,
+      80
+    ]
+  ],
+  "controllers_test": [
+    [
+      1200,
+      25
+    ],
+    [
+      1200,
+      80
+    ],
+    [
+      3600,
+      25
+    ],
+    [
+      3600,
+      80
+    ],
+    [
+      2200,
+      45
+    ],
+    [
+      4800,
+      45
+    ],
+    [
+      2200,
+      110
+    ]
+  ],
+  "controller_labels": [
+    "seen_soft_lowD",
+    "seen_soft_highD",
+    "seen_stiff_lowD",
+    "seen_stiff_highD",
+    "new_interpolation",
+    "new_stiffness",
+    "new_damping"
+  ],
+  "test_waits": [
+    0.1,
+    0.6,
+    1.6
+  ],
+  "actions": [
+    {
+      "name": "fast",
+      "ramp": 0.15,
+      "extra_wait": 0.0
+    },
+    {
+      "name": "slow",
+      "ramp": 0.8,
+      "extra_wait": 0.0
+    },
+    {
+      "name": "gentle",
+      "ramp": 1.6,
+      "extra_wait": 0.0
+    },
+    {
+      "name": "wait_fast",
+      "ramp": 0.15,
+      "extra_wait": 0.8
+    },
+    {
+      "name": "shallow",
+      "ramp": 0.15,
+      "extra_wait": 0.0,
+      "depth": 0.0065
+    }
+  ],
+  "action_depth": 0.0075,
+  "goal_position": 0.004,
+  "goal_hold_seconds": 0.2,
+  "force_limits": [
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0
+  ],
+  "planning_force_margin": 0.03,
+  "hidden_size": 32,
+  "batch_pairs": 32,
+  "learning_rate": 0.003,
+  "validation_interval": 100,
+  "minimum_updates": 1000,
+  "maximum_updates": 20000,
+  "meaningful_relative_improvement": 0.002,
+  "plateau_evaluations": 8,
+  "lr_patience_evaluations": 2,
+  "lr_factor": 0.5,
+  "minimum_lr": 1e-05,
+  "bootstrap_resamples": 1000
+}

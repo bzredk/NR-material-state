@@ -1,0 +1,101 @@
+[
+  {
+    "step": 0,
+    "val_loss": 4.913182662373098e-05,
+    "train_loss": null,
+    "learning_rate": 0.003,
+    "seconds": 0.2445684999693185,
+    "converged": false,
+    "last_improvement": 0
+  },
+  {
+    "step": 100,
+    "val_loss": 2.542360167960093e-05,
+    "train_loss": 3.160190681228414e-05,
+    "learning_rate": 0.003,
+    "seconds": 2.788291399832815,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 200,
+    "val_loss": 2.5392887740357157e-05,
+    "train_loss": 3.0237057217163965e-05,
+    "learning_rate": 0.003,
+    "seconds": 5.329315199982375,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 300,
+    "val_loss": 2.5402433493582066e-05,
+    "train_loss": 2.4791870600893162e-05,
+    "learning_rate": 0.003,
+    "seconds": 7.885248799808323,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 400,
+    "val_loss": 2.5385956935982296e-05,
+    "train_loss": 2.9475220799213275e-05,
+    "learning_rate": 0.0015,
+    "seconds": 10.44801289984025,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 500,
+    "val_loss": 2.5383955289726146e-05,
+    "train_loss": 2.71704720944399e-05,
+    "learning_rate": 0.0015,
+    "seconds": 13.09267589985393,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 600,
+    "val_loss": 2.5404736788914306e-05,
+    "train_loss": 2.551000943640247e-05,
+    "learning_rate": 0.0015,
+    "seconds": 15.710045299958438,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 700,
+    "val_loss": 2.5408568641675327e-05,
+    "train_loss": 2.7155290808877908e-05,
+    "learning_rate": 0.00075,
+    "seconds": 18.325750699965283,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 800,
+    "val_loss": 2.5379510285953682e-05,
+    "train_loss": 2.6493988116271794e-05,
+    "learning_rate": 0.00075,
+    "seconds": 20.936799600021914,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 900,
+    "val_loss": 2.538267563068075e-05,
+    "train_loss": 2.712587775022257e-05,
+    "learning_rate": 0.00075,
+    "seconds": 23.553598399972543,
+    "converged": false,
+    "last_improvement": 100
+  },
+  {
+    "step": 1000,
+    "val_loss": 2.538107522317053e-05,
+    "train_loss": 2.5379122234880924e-05,
+    "learning_rate": 0.000375,
+    "seconds": 26.164181499974802,
+    "converged": true,
+    "last_improvement": 100
+  }
+]

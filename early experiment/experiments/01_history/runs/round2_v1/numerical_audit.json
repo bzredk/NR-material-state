@@ -1,0 +1,166 @@
+{
+  "scope": "8 training seeds, wait 1s, not a model-performance test",
+  "rows": [
+    {
+      "seed": 26101902,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.0754461669325902,
+      "coarse_effect_RMS_N": 0.07499723155371239,
+      "fixed_initial_effect_discrepancy_N": 0.001960811389660019,
+      "same_past_command_endpoint_force_mismatch_N": 0.021370265702147506,
+      "reconstructed_endpoint_force_mismatch_N": 8.348877145181177e-14,
+      "reconstructed_effect_RMS_N": 0.0777261016053056
+    },
+    {
+      "seed": 26101902,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.07557680973535078,
+      "coarse_effect_RMS_N": 0.07499723155371239,
+      "fixed_initial_effect_discrepancy_N": 0.0030154718749521277,
+      "same_past_command_endpoint_force_mismatch_N": 0.048909737089852356,
+      "reconstructed_endpoint_force_mismatch_N": 1.220357148667972e-12,
+      "reconstructed_effect_RMS_N": 0.07913013684077144
+    },
+    {
+      "seed": 26101903,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.12387171691862826,
+      "coarse_effect_RMS_N": 0.12368104961907542,
+      "fixed_initial_effect_discrepancy_N": 0.0022879893325987223,
+      "same_past_command_endpoint_force_mismatch_N": 0.0198961978066432,
+      "reconstructed_endpoint_force_mismatch_N": 2.6645352591003757e-13,
+      "reconstructed_effect_RMS_N": 0.12440035320759449
+    },
+    {
+      "seed": 26101903,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.12403804934465876,
+      "coarse_effect_RMS_N": 0.12368104961907542,
+      "fixed_initial_effect_discrepancy_N": 0.003949520469769365,
+      "same_past_command_endpoint_force_mismatch_N": 0.047124662763129876,
+      "reconstructed_endpoint_force_mismatch_N": 1.2150280781497713e-12,
+      "reconstructed_effect_RMS_N": 0.12515270369620238
+    },
+    {
+      "seed": 26101904,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.07893046978575866,
+      "coarse_effect_RMS_N": 0.07949992670776397,
+      "fixed_initial_effect_discrepancy_N": 0.0018032713607009656,
+      "same_past_command_endpoint_force_mismatch_N": 0.02009657912988594,
+      "reconstructed_endpoint_force_mismatch_N": 1.1119993814645568e-12,
+      "reconstructed_effect_RMS_N": 0.08172725486138396
+    },
+    {
+      "seed": 26101904,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.07898632095451505,
+      "coarse_effect_RMS_N": 0.07949992670776397,
+      "fixed_initial_effect_discrepancy_N": 0.0024258624220741447,
+      "same_past_command_endpoint_force_mismatch_N": 0.045971465989829596,
+      "reconstructed_endpoint_force_mismatch_N": 9.174883075502294e-13,
+      "reconstructed_effect_RMS_N": 0.08269275479878765
+    },
+    {
+      "seed": 26101905,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.08625056806013279,
+      "coarse_effect_RMS_N": 0.08561823709430122,
+      "fixed_initial_effect_discrepancy_N": 0.0025033987929992444,
+      "same_past_command_endpoint_force_mismatch_N": 0.015246848641560007,
+      "reconstructed_endpoint_force_mismatch_N": 3.2507330161024584e-13,
+      "reconstructed_effect_RMS_N": 0.08823865048408906
+    },
+    {
+      "seed": 26101905,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.08636101037913926,
+      "coarse_effect_RMS_N": 0.08561823709430122,
+      "fixed_initial_effect_discrepancy_N": 0.003544968390468398,
+      "same_past_command_endpoint_force_mismatch_N": 0.0354905403391772,
+      "reconstructed_endpoint_force_mismatch_N": 6.625811010962934e-13,
+      "reconstructed_effect_RMS_N": 0.08932575381720324
+    },
+    {
+      "seed": 26101906,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.1339867591513871,
+      "coarse_effect_RMS_N": 0.13389363040321195,
+      "fixed_initial_effect_discrepancy_N": 0.002287466091983625,
+      "same_past_command_endpoint_force_mismatch_N": 0.028131742784713865,
+      "reconstructed_endpoint_force_mismatch_N": 2.7995383788947947e-12,
+      "reconstructed_effect_RMS_N": 0.13171004667427774
+    },
+    {
+      "seed": 26101906,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.13404365771614837,
+      "coarse_effect_RMS_N": 0.13389363040321195,
+      "fixed_initial_effect_discrepancy_N": 0.004065859328559722,
+      "same_past_command_endpoint_force_mismatch_N": 0.06466157727813382,
+      "reconstructed_endpoint_force_mismatch_N": 2.4016344468691386e-12,
+      "reconstructed_effect_RMS_N": 0.13174224550720934
+    },
+    {
+      "seed": 26101907,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.09810359394575317,
+      "coarse_effect_RMS_N": 0.09752096335193047,
+      "fixed_initial_effect_discrepancy_N": 0.0025336150322609586,
+      "same_past_command_endpoint_force_mismatch_N": 0.008437479766704392,
+      "reconstructed_endpoint_force_mismatch_N": 1.9539925233402755e-13,
+      "reconstructed_effect_RMS_N": 0.0964277323816031
+    },
+    {
+      "seed": 26101907,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.09823170010909534,
+      "coarse_effect_RMS_N": 0.09752096335193047,
+      "fixed_initial_effect_discrepancy_N": 0.0037982269995906204,
+      "same_past_command_endpoint_force_mismatch_N": 0.020115583903926648,
+      "reconstructed_endpoint_force_mismatch_N": 1.2878587085651816e-12,
+      "reconstructed_effect_RMS_N": 0.09612278234643691
+    },
+    {
+      "seed": 26101908,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.058226339315903576,
+      "coarse_effect_RMS_N": 0.058004418440994805,
+      "fixed_initial_effect_discrepancy_N": 0.0012141867193355557,
+      "same_past_command_endpoint_force_mismatch_N": 0.02044960438079091,
+      "reconstructed_endpoint_force_mismatch_N": 1.730171561575844e-12,
+      "reconstructed_effect_RMS_N": 0.061580312324391026
+    },
+    {
+      "seed": 26101908,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.05828544648772648,
+      "coarse_effect_RMS_N": 0.058004418440994805,
+      "fixed_initial_effect_discrepancy_N": 0.0020099819938689295,
+      "same_past_command_endpoint_force_mismatch_N": 0.046786926934910156,
+      "reconstructed_endpoint_force_mismatch_N": 1.695532603207539e-12,
+      "reconstructed_effect_RMS_N": 0.06384764490974644
+    },
+    {
+      "seed": 26101909,
+      "dt": 0.005,
+      "fixed_initial_effect_RMS_N": 0.12202242604176959,
+      "coarse_effect_RMS_N": 0.12158725059669911,
+      "fixed_initial_effect_discrepancy_N": 0.0028513821430556584,
+      "same_past_command_endpoint_force_mismatch_N": 0.029311614958063004,
+      "reconstructed_endpoint_force_mismatch_N": 1.751487843648647e-12,
+      "reconstructed_effect_RMS_N": 0.12895346080514386
+    },
+    {
+      "seed": 26101909,
+      "dt": 0.0025,
+      "fixed_initial_effect_RMS_N": 0.12208018529718027,
+      "coarse_effect_RMS_N": 0.12158725059669911,
+      "fixed_initial_effect_discrepancy_N": 0.004372296424634844,
+      "same_past_command_endpoint_force_mismatch_N": 0.06726389749424833,
+      "reconstructed_endpoint_force_mismatch_N": 4.973799150320701e-14,
+      "reconstructed_effect_RMS_N": 0.13302818809045394
+    }
+  ],
+  "interpretation": "Endpoint matching is exact at the construction timestep. Same-input finer integration may change endpoint matching; separately reconstructed finer-grid pairs test whether the alias mechanism persists."
+}

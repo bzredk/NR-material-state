@@ -1,0 +1,112 @@
+{
+  "config": {
+    "name": "matched_present_round2_v1",
+    "dt": 0.01,
+    "history_seconds": 3.0,
+    "future_seconds": 4.2,
+    "train_pairs": 384,
+    "val_pairs": 96,
+    "test_pairs": 192,
+    "data_seed": 26101902,
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "train_wait_ranges": [
+      [
+        0.2,
+        0.5
+      ],
+      [
+        1.8,
+        2.2
+      ]
+    ],
+    "test_wait_range": [
+      0.8,
+      1.2
+    ],
+    "plant": {
+      "mass": 0.35,
+      "stiffness": 2200.0,
+      "damping": 45.0
+    },
+    "truth": {
+      "k_inf": 400.0,
+      "k": [
+        900.0,
+        1300.0
+      ],
+      "tau": [
+        0.15,
+        1.4
+      ]
+    },
+    "sensor_std": {
+      "position": 5e-06,
+      "velocity": 5e-05,
+      "force": 0.02
+    },
+    "hidden_size": 32,
+    "batch_pairs": 32,
+    "learning_rate": 0.003,
+    "validation_interval": 100,
+    "minimum_updates": 800,
+    "maximum_updates": 8000,
+    "meaningful_relative_improvement": 0.002,
+    "plateau_evaluations": 6,
+    "lr_patience_evaluations": 2,
+    "lr_factor": 0.5,
+    "minimum_lr": 1e-05,
+    "bootstrap_resamples": 1500
+  },
+  "splits": {
+    "train": {
+      "pairs": 384,
+      "sha256": "0c54d2adc043b6170846dadabde73f5dfdd3a5688240567a0b68177d6516f7c4",
+      "endpoint_max_difference": [
+        1.1475195793586579e-15,
+        3.185413087816724e-14,
+        2.490452288839151e-12
+      ]
+    },
+    "val": {
+      "pairs": 96,
+      "sha256": "8de50713b866c15ec482e9407b03f2c080a5b02eb000f84517b5286888b33d22",
+      "endpoint_max_difference": [
+        9.289444213855802e-16,
+        2.3332139172105304e-14,
+        3.3288927170360694e-12
+      ]
+    },
+    "test_id": {
+      "pairs": 192,
+      "sha256": "c92e0c13f45c31b77b2000ebfb37650306a117591167fe4878451d0e15a84f6c",
+      "endpoint_max_difference": [
+        1.2819606487468604e-15,
+        2.5822226301652762e-14,
+        3.176126028847648e-12
+      ]
+    },
+    "test_wait": {
+      "pairs": 192,
+      "sha256": "776c16568ee7355ab0c88cf5077c756899d14adb340dd0edb8035e537ff66e18",
+      "endpoint_max_difference": [
+        1.2819606487468604e-15,
+        2.5822226301652762e-14,
+        3.176126028847648e-12
+      ]
+    }
+  },
+  "pair_axis": "N,2,...; entire pair remains in one partition",
+  "privileged": [
+    "truth",
+    "oracle_z",
+    "oracle_initial",
+    "truth_contact"
+  ],
+  "pair_construction": "Null-space command perturbations, replayed from a relaxed initial state.",
+  "noise": "Independent history/future noise except shared endpoint noise within a pair.",
+  "selection": "All seeds retained. Past perturbation halved if needed to maintain endpoint/contact feasibility; counts recorded. No future-effect filtering."
+}

@@ -1,0 +1,11 @@
+{
+  "total_nominal_minutes": 217.5,
+  "booking_minutes": 300.0,
+  "full_24_nominally_fit": true,
+  "block1_including_3_anchors_and_reset_end_min": 136.7,
+  "block1_plus_handoff_contingency_min": 181.7,
+  "interpretation": "Nominal linear-path timing. Acceleration limits, confirmation and retries may add time; do not shorten washout to meet the booking.",
+  "initial_reset_s": 60.0,
+  "records": 30,
+  "counted": "One initial washout + each record's active path, post-record washout and handling; one between-block break."
+}

@@ -1,0 +1,108 @@
+{
+  "completed_neural_runs": 9,
+  "summed_training_validation_checkpoint_wall_seconds": 906.2133510997519,
+  "maximum_pytorch_allocated_MiB": 48.97509765625,
+  "memory_scope": "PyTorch allocated tensors, excluding CUDA context, display, and other processes.",
+  "timing_scope": "Measured per-run wall time, not kernel-active GPU time; excludes setup and evaluation.",
+  "runs": [
+    {
+      "model": "gru_force",
+      "seed": 11,
+      "best_step": 330,
+      "best_val_loss": 0.00020173333177808672,
+      "seconds": 85.62015199987218,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.97509765625,
+      "parameters": 8305,
+      "finished": true
+    },
+    {
+      "model": "gru_force",
+      "seed": 23,
+      "best_step": 330,
+      "best_val_loss": 0.00013726371980737895,
+      "seconds": 85.71284179994836,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.97509765625,
+      "parameters": 8305,
+      "finished": true
+    },
+    {
+      "model": "gru_force",
+      "seed": 47,
+      "best_step": 330,
+      "best_val_loss": 0.00011635564442258328,
+      "seconds": 84.44860020000488,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.97509765625,
+      "parameters": 8305,
+      "finished": true
+    },
+    {
+      "model": "material_snapshot",
+      "seed": 11,
+      "best_step": 330,
+      "best_val_loss": 0.00022157863713800907,
+      "seconds": 106.89834539988078,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 27.58837890625,
+      "parameters": 3815,
+      "finished": true
+    },
+    {
+      "model": "material_snapshot",
+      "seed": 23,
+      "best_step": 330,
+      "best_val_loss": 0.00024078291608020663,
+      "seconds": 108.77363579999655,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 27.5888671875,
+      "parameters": 3815,
+      "finished": true
+    },
+    {
+      "model": "material_snapshot",
+      "seed": 47,
+      "best_step": 330,
+      "best_val_loss": 0.0002149942156393081,
+      "seconds": 109.15139640006237,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 27.5888671875,
+      "parameters": 3815,
+      "finished": true
+    },
+    {
+      "model": "material_state",
+      "seed": 11,
+      "best_step": 330,
+      "best_val_loss": 4.486549005378038e-05,
+      "seconds": 107.19063069997355,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.90478515625,
+      "parameters": 3815,
+      "finished": true
+    },
+    {
+      "model": "material_state",
+      "seed": 23,
+      "best_step": 330,
+      "best_val_loss": 4.4600416003959253e-05,
+      "seconds": 107.86791879986413,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.90478515625,
+      "parameters": 3815,
+      "finished": true
+    },
+    {
+      "model": "material_state",
+      "seed": 47,
+      "best_step": 330,
+      "best_val_loss": 4.888445255346596e-05,
+      "seconds": 110.54983000014909,
+      "optimizer_steps": 330,
+      "peak_allocated_MiB": 48.90478515625,
+      "parameters": 3815,
+      "finished": true
+    }
+  ]
+}

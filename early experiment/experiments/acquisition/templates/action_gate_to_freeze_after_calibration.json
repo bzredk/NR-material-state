@@ -1,0 +1,16 @@
+{
+  "status": "not_frozen_no_real_data",
+  "task_definition": null,
+  "controller_and_feedback_contract": null,
+  "minimum_useful_time_gain_s": null,
+  "minimum_useful_success_gain_pp": null,
+  "completion_time_repeatability_band_s": null,
+  "completion_detector_uncertainty_s": null,
+  "force_measurement_uncertainty_N": null,
+  "feedback_delay_distribution_file": null,
+  "inference_budget_s": null,
+  "analysis_unit": "independent specimen/day with paired randomized tasks",
+  "criterion": "Freeze practical thresholds before action tests. Prediction improvement can be valid without action improvement.",
+  "laboratory_protection_reference": null,
+  "freeze_date": null
+}

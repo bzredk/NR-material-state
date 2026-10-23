@@ -1,0 +1,31 @@
+{
+  "fraction_of_branches_with_global_peak_in_first_0p3s": [
+    0.030989583333333334,
+    0.103125,
+    0.0,
+    0.0,
+    0.0020833333333333333,
+    0.0,
+    0.009895833333333333
+  ],
+  "median_prefix_peak_by_controller_N": [
+    2.724080788762296,
+    2.8953341481076693,
+    3.3889785474492484,
+    3.3295512080469685,
+    3.06256783346291,
+    3.5782266744755105,
+    3.1084829581474054
+  ],
+  "median_recontact_peak_by_controller_N": [
+    4.046986356352797,
+    3.8952821570007727,
+    6.838273368234791,
+    6.646302543294438,
+    5.521829848855907,
+    7.434099011705758,
+    5.349194757959758
+  ],
+  "fraction_decisions_blocked_by_initial_switch_despite_recontact_feasible": 0.00043402777777777775,
+  "note": "Post-release force is diagnostic only; original reported safety checks the entire horizon."
+}

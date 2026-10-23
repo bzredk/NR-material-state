@@ -1,0 +1,12 @@
+{
+  "warmup_and_compile_s": 12.865558400051668,
+  "warm_8_episodes_s": 0.008756000082939863,
+  "projected_primary_seconds": 34.04332832247019,
+  "episodes_per_method": 3456,
+  "methods": 9,
+  "adapter_parity": "exact metrics and traces with original covariance",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22621-SP0",
+  "threads": 4,
+  "training_seconds": 0
+}

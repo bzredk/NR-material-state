@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "data_type": "synthetic_validation",
+  "errors": [],
+  "warnings": [
+    "CSV timestamps alone cannot establish force/position sensor synchronization; retain original clocks and calibration.",
+    "Velocity is an unfiltered numerical diagnostic; signed force-displacement work is not automatically dissipated energy."
+  ],
+  "episodes": [
+    {
+      "session_id": "synthetic_demo",
+      "episode_id": "synthetic_0",
+      "samples": 721,
+      "duration_s": 7.2,
+      "sampling_rate_Hz": 100.00000000000018,
+      "max_gap_s": 0.010000000000000675,
+      "dt_cv": 2.7943067989573463e-14,
+      "position_range_m": [
+        -0.0040097923437770995,
+        0.005043333530444554
+      ],
+      "force_range_N": [
+        -0.04524214158025031,
+        6.494380492163145
+      ],
+      "force_displacement_work_J": 0.019684007590023766
+    },
+    {
+      "session_id": "synthetic_demo",
+      "episode_id": "synthetic_1",
+      "samples": 721,
+      "duration_s": 7.2,
+      "sampling_rate_Hz": 100.00000000000018,
+      "max_gap_s": 0.010000000000000675,
+      "dt_cv": 2.7943067989573463e-14,
+      "position_range_m": [
+        -0.004012406186918882,
+        0.005397927868460032
+      ],
+      "force_range_N": [
+        -0.06446920609674042,
+        6.5225057554717525
+      ],
+      "force_displacement_work_J": 0.018408319005232
+    }
+  ],
+  "conventions": "SI; positive position toward compression; positive compressive force",
+  "no_automatic_rows_removed": true,
+  "source_csv": "D:\\capp\\NR\\Documents\\Codex\\material-state-round2-2026-10-19\\examples\\synthetic_demo.csv",
+  "source_metadata": "D:\\capp\\NR\\Documents\\Codex\\material-state-round2-2026-10-19\\examples\\synthetic_metadata.json"
+}

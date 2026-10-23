@@ -1,0 +1,32 @@
+{
+  "purpose": "Designed replayable history witness, separate from main benchmark.",
+  "diagnostic_dt_s": 0.005,
+  "current_observables_A": [
+    0.004490239388256976,
+    0.0002761061646554162,
+    3.3090940691466173
+  ],
+  "current_observables_B": [
+    0.004490239388256996,
+    0.00027610616465469144,
+    3.3090940691466244
+  ],
+  "max_current_observable_abs_difference": 7.105427357601002e-15,
+  "current_observable_abs_difference": {
+    "position_m": 1.9949319973733282e-17,
+    "velocity_m_s": 7.247349421979354e-16,
+    "force_N": 7.105427357601002e-15
+  },
+  "internal_z_A_m": [
+    0.004445669370120534,
+    0.0033572506978561843
+  ],
+  "internal_z_B_m": [
+    0.004615276634489946,
+    0.0032398302840620117
+  ],
+  "future_peak_force_difference_N": 0.113154880161491,
+  "recontact_peak_force_difference_N": 0.113154880161491,
+  "difference_definition": "Maximum absolute pointwise force difference, not difference between two curve maxima.",
+  "method": "Null space of endpoint observable response to smooth past command perturbations; replayed through unilateral simulator."
+}

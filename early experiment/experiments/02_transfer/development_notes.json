@@ -1,0 +1,6 @@
+{
+ "before_test_evaluation":[
+  "Action metric code review found that truncating peak-force evaluation at first goal completion could hide later force peaks. Corrected to evaluate the entire fixed five-second rollout; every model and reactive baseline share this rule. Added a regression test. No test outcomes had been read.",
+  "Validation task feasibility uses only first 24 validation histories and four training controllers. Original four-action profile is preserved. All-test-open-before status: no test histories generated or evaluated. Because fixed 7.5mm final commands and 2.5-6N caps gave only about 30% oracle feasibility, added one 6.5mm shallow fast action (inside the training command-depth range) and extended force-cap sweep to 9N, covering validation peaks up to 8.82N. Training data, learning models, histories, controllers and convergence settings unchanged. Frozen before formal test evaluation. Infeasible cases remain included."
+ ]
+}

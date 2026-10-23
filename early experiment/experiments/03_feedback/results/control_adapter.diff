@@ -1,0 +1,19 @@
+--- round4/control.py
++++ bridge/control_bridge.py
+@@ -84,14 +84,14 @@
+ 
+ @njit(cache=True)
+ def episode(s0,z0,K,D,wait,cap,noise,params,margin,horizon_steps,kind,
+-            update=True,truth_nsub=10,model_nsub=10,keep_trace=False):
++            update=True,truth_nsub=10,model_nsub=10,keep_trace=False,initial_P=None):
+     """kind 0 reactive, 1 predictive (fixed fitted physics), 2 full-state oracle.
+ 
+     All run to the same goal hold (200 ms), then common rate-limited release
+     (350 ms); force safety includes the complete release. Failure cost is 5 s.
+     Unknown future real motion and force are never inputs to the planner.
+     """
+-    s=s0.copy();z=z0.copy();P=np.eye(2)*.0015**2;u=UMIN;rate=0.;hold=0
++    s=s0.copy();z=z0.copy();P=np.eye(2)*.0015**2 if initial_P is None else initial_P.copy();u=UMIN;rate=0.;hold=0
+     done=-1;release_left=-1;peak=0.;excess_integral=0.;first_contact=-1.;prediction=0.;observed_hold=0;positive_force_count=0
+     trace=np.full((436 if keep_trace else 1,16),np.nan)
+     prev_x=s[0]+noise[0,0];last_rmse=0.;errsum=0.;errcount=0;calls=0

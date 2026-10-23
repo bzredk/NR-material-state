@@ -1,0 +1,83 @@
+{
+  "figures": [
+    {
+      "name": "01_transfer",
+      "png_pixels": [
+        2161,
+        1620
+      ],
+      "svg_text_nodes": 80,
+      "pdf_text_characters": 828,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "02_control_wait",
+      "png_pixels": [
+        2161,
+        1020
+      ],
+      "svg_text_nodes": 82,
+      "pdf_text_characters": 689,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "03_action_tradeoff",
+      "png_pixels": [
+        2161,
+        1650
+      ],
+      "svg_text_nodes": 73,
+      "pdf_text_characters": 598,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "04_decision_case",
+      "png_pixels": [
+        2161,
+        1560
+      ],
+      "svg_text_nodes": 43,
+      "pdf_text_characters": 464,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "05_state_reuse",
+      "png_pixels": [
+        2161,
+        1560
+      ],
+      "svg_text_nodes": 49,
+      "pdf_text_characters": 281,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "06_mechanism",
+      "png_pixels": [
+        2161,
+        960
+      ],
+      "svg_text_nodes": 52,
+      "pdf_text_characters": 559,
+      "pdf_width_points": 518.7384
+    },
+    {
+      "name": "07_numerical_audit",
+      "png_pixels": [
+        2161,
+        810
+      ],
+      "svg_text_nodes": 27,
+      "pdf_text_characters": 312,
+      "pdf_width_points": 518.7384
+    }
+  ],
+  "backend": "Python matplotlib only",
+  "exclusions": "No quantitative test histories excluded. Illustrative case chosen by an explicit recorded median-benefit rule. Numerical audit uses the preselected first 16 complete history pairs.",
+  "statistics": "128 whole pairs; three training seeds. Paired bootstrap resamples pairs after averaging seeds. Seed ranges shown for selected prediction curves. No p-value claims.",
+  "warnings_reviewed": [
+    "PNG 300dpi and SVG/PDF satisfy requested formats; TIFF not requested.",
+    "Random generator in plotting is exclusively bootstrap uncertainty, not fabricated response data.",
+    "All data are actual executed synthetic experiments, explicitly labeled; no real material inference.",
+    "Positive finite RMSE checked before log scaling; zero-error oracle omitted only from logarithmic error panels and retained in decision comparisons."
+  ]
+}

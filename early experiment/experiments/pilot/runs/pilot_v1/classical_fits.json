@@ -1,0 +1,50 @@
+{
+  "classical_0": {
+    "nfev": 1,
+    "success": true,
+    "parameters": {
+      "k_inf": 834.3546733266506,
+      "k": [],
+      "tau": []
+    },
+    "seconds": 0.0005220999009907246,
+    "training_episodes": 256,
+    "supervision": "train measured position and force only"
+  },
+  "classical_1": {
+    "nfev": 9,
+    "success": true,
+    "cost": 19.881322445614522,
+    "parameters": {
+      "k_inf": 440.2017601459509,
+      "k": [
+        1631.4994244015734
+      ],
+      "tau": [
+        1.0009975845820154
+      ]
+    },
+    "seconds": 0.20515069994144142,
+    "training_episodes": 256,
+    "supervision": "train measured position and force only"
+  },
+  "classical_2": {
+    "nfev": 8,
+    "success": true,
+    "cost": 0.3674810652854894,
+    "parameters": {
+      "k_inf": 400.0934785868456,
+      "k": [
+        899.2779763407931,
+        1300.054905506266
+      ],
+      "tau": [
+        0.15006703131193352,
+        1.3994421816919806
+      ]
+    },
+    "seconds": 0.4087531000841409,
+    "training_episodes": 256,
+    "supervision": "train measured position and force only"
+  }
+}

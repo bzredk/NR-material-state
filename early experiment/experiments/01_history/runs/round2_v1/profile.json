@@ -1,0 +1,22 @@
+{
+  "snapshot_state": {
+    "seconds_per_update": 0.028119900031015277,
+    "parameters": 3777,
+    "peak_pytorch_allocated_MiB": 34.2470703125
+  },
+  "history_state": {
+    "seconds_per_update": 0.025864100083708763,
+    "parameters": 3777,
+    "peak_pytorch_allocated_MiB": 100.421875
+  },
+  "gru_contact": {
+    "seconds_per_update": 0.015304600121453404,
+    "parameters": 7809,
+    "peak_pytorch_allocated_MiB": 143.79638671875
+  },
+  "gru_force": {
+    "seconds_per_update": 0.00881880009546876,
+    "parameters": 7809,
+    "peak_pytorch_allocated_MiB": 143.79638671875
+  }
+}

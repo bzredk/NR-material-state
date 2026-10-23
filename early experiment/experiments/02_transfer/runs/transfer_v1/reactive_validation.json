@@ -1,0 +1,62 @@
+{
+  "candidates": [
+    {
+      "speed": 0.02,
+      "buffer": 0.05,
+      "gain": 0.02,
+      "cost": 2.468289517195767,
+      "unsafe": 0.140625,
+      "success": 0.8581349206349206
+    },
+    {
+      "speed": 0.02,
+      "buffer": 0.15,
+      "gain": 0.02,
+      "cost": 2.4834986772486776,
+      "unsafe": 0.140625,
+      "success": 0.8577215608465608
+    },
+    {
+      "speed": 0.02,
+      "buffer": 0.3,
+      "gain": 0.02,
+      "cost": 2.5129108796296293,
+      "unsafe": 0.140625,
+      "success": 0.8556547619047619
+    },
+    {
+      "speed": 0.05,
+      "buffer": 0.05,
+      "gain": 0.02,
+      "cost": 2.6140137235449736,
+      "unsafe": 0.23578042328042328,
+      "success": 0.7639715608465608
+    },
+    {
+      "speed": 0.05,
+      "buffer": 0.15,
+      "gain": 0.02,
+      "cost": 2.4054522156084657,
+      "unsafe": 0.18568121693121692,
+      "success": 0.8133267195767195
+    },
+    {
+      "speed": 0.05,
+      "buffer": 0.3,
+      "gain": 0.02,
+      "cost": 2.3376959325396824,
+      "unsafe": 0.16335978835978837,
+      "success": 0.8351521164021164
+    }
+  ],
+  "selected": {
+    "speed": 0.02,
+    "buffer": 0.05,
+    "gain": 0.02,
+    "cost": 2.468289517195767,
+    "unsafe": 0.140625,
+    "success": 0.8581349206349206
+  },
+  "selection": "min cost among <=1% unsafe; otherwise min unsafe then cost",
+  "validation_pairs": 24
+}

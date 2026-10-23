@@ -1,0 +1,188 @@
+{
+  "config": {
+    "name": "material_state_closed_loop_v1",
+    "sensor_dt": 0.01,
+    "control_dt": 0.02,
+    "history_seconds": 3.5,
+    "future_seconds": 4.0,
+    "truth_substeps": 10,
+    "predictor_substeps": 10,
+    "train_pairs": 256,
+    "val_pairs": 64,
+    "test_pairs": 64,
+    "data_seed": 19102026,
+    "training_seeds": [
+      11,
+      23,
+      47
+    ],
+    "controllers_train": [
+      [
+        1200,
+        25
+      ],
+      [
+        1200,
+        80
+      ],
+      [
+        3600,
+        25
+      ],
+      [
+        3600,
+        80
+      ]
+    ],
+    "controllers_test": [
+      [
+        1200,
+        25
+      ],
+      [
+        3600,
+        80
+      ],
+      [
+        2200,
+        45
+      ],
+      [
+        4800,
+        45
+      ],
+      [
+        2200,
+        110
+      ]
+    ],
+    "controller_names": [
+      "seen_soft",
+      "seen_stiff",
+      "new_mid",
+      "new_K",
+      "new_D"
+    ],
+    "waits": [
+      0.1,
+      0.6,
+      1.6
+    ],
+    "force_limits": [
+      3.5,
+      4.5,
+      5.5,
+      6.5,
+      8.0
+    ],
+    "goal_position": 0.004,
+    "goal_hold": 0.2,
+    "command_bounds": [
+      -0.004,
+      0.0085
+    ],
+    "rates": [
+      -0.04,
+      -0.02,
+      -0.005,
+      0.0,
+      0.005,
+      0.02,
+      0.04
+    ],
+    "sensor_std": [
+      5e-06,
+      5e-05,
+      0.02
+    ],
+    "planning_horizon": 0.24,
+    "safety_margins": [
+      0.05,
+      0.15,
+      0.3
+    ],
+    "maximum_updates": 12000,
+    "minimum_updates": 1000,
+    "validation_interval": 100,
+    "patience": 8,
+    "relative_improvement": 0.002,
+    "batch_size": 64,
+    "lr": 0.003,
+    "hidden_size": 32,
+    "meaningful_cost_gain_s": 0.05,
+    "meaningful_success_gain_pp": 2.0,
+    "violation_tolerances_N": [
+      0.0,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "bootstrap_samples": 2000
+  },
+  "reactive": {
+    "index": 42,
+    "params": [
+      20.0,
+      0.015,
+      0.0,
+      0.05
+    ],
+    "summary": {
+      "time_s": 1.6552361111111036,
+      "peak_N": 4.385044470987951,
+      "complete": 0.9861111111111112,
+      "unsafe": 0.0,
+      "safe_success": 0.9861111111111112,
+      "cost_s": 1.669124999999992,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9347222222222155,
+      "state_rmse_m": 0.0009754872948530353,
+      "planning_calls": 0.0
+    }
+  },
+  "mpc": {
+    "horizon": 0.12,
+    "margin": 0.05,
+    "summary": {
+      "time_s": 1.6105347222222188,
+      "peak_N": 4.79890995711198,
+      "complete": 0.9888888888888889,
+      "unsafe": 0.0,
+      "safe_success": 0.9888888888888889,
+      "cost_s": 1.6216458333333297,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9347291666666598,
+      "state_rmse_m": 0.0,
+      "planning_calls": 42.42986111111111
+    }
+  },
+  "source_hashes": {
+    "analyze.py": "cd6f521064f07b2a5470ba7c45698929aeec176b6058b8ceee0440a96e757ba0",
+    "common.py": "a00e95d5fd35e3e0bb7a865ce3746de62f163f1ee297a3d6c0dd2d9c304263f5",
+    "control.py": "a2b2edb290208d4cc8dee05af68aa8cbb58d1f6f7cebcdff28d7145a16c7b419",
+    "data.py": "d6a0f11d7f9a84a880e714ede3616a0dfd679bb625dcfbedcbbfb53329677c4c",
+    "numerics.py": "fd361147a07e07dbe13ebbde52cb898f915db9f3ef1f4ce496427ee1fb690b7a",
+    "physics.py": "2c202d0146484fa2f6fdb76bd6db6a7399607fbbeee66c86e0a12455158058eb",
+    "run_gate.py": "ea2618738b13edde4bcf36c4d11405eb8b743abe9f1cf30d8c20b11bd8242454",
+    "test_physics_control.py": "874686a2203766e678b5907f0f6530b9f896677a72c956bf2c0a68a1cf92c1d3"
+  },
+  "metrics": [
+    "time_s",
+    "peak_N",
+    "complete",
+    "unsafe",
+    "safe_success",
+    "cost_s",
+    "excess_N",
+    "dose_Ns",
+    "first_contact_s",
+    "state_rmse_m",
+    "planning_calls"
+  ],
+  "cases": 9600,
+  "histories": 128,
+  "cluster": "whole preload pair",
+  "action_space": "continuous command slew [-0.04,0.04] m/s and command [-0.004,0.0085] m; MPC grid includes exact reactive proposal"
+}

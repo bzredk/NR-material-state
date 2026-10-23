@@ -1,0 +1,27 @@
+{
+ "history_pair_count":128,
+ "member_axis":["A","B: same present observation, different replayed history"],
+ "controller_axis":"config.json controllers_test order; last three held out",
+ "wait_axis":"config.json test_waits order",
+ "action_axis":"config.json actions order",
+ "force_cap_axis":"config.json force_limits order",
+ "arrays":{
+  "force_mse":"[history pair, member, controller, wait, action], mean squared error across all 500 future force samples; N squared",
+  "position_mse":"same axes; m squared",
+  "contrast_mse":"[history pair, controller, wait, action], mean squared error of predicted B-minus-A force response; N squared",
+  "contrast_signal":"same axes; mean squared true B-minus-A response; denominator for effect NRMSE",
+  "time":"[history pair, member, controller, wait, action], predicted first sustained goal time; infinity if no completion",
+  "peak":"same axes, predicted maximum force over the complete 5s forecast",
+  "grounded_state":"[history pair, member, material mode], meters",
+  "decision_choice":"[history pair, member, controller, wait, cap], action index, -1 reject",
+  "decision_success":"same axes, actual sustained goal within horizon AND actual whole-horizon peak <= cap",
+  "decision_unsafe":"same axes, actual peak > cap after execution; rejection is false",
+  "decision_reject":"same axes, no predicted feasible action",
+  "decision_cost":"same axes, actual first goal time if safely successful; 6 seconds otherwise",
+  "decision_time":"same axes, actual first goal time, infinity if executed but incomplete; NaN for rejection",
+  "decision_peak":"same axes, actual whole-horizon peak; NaN for rejection"
+ },
+ "reactive":"No predicted arrays or action index; feedback policy evaluated separately. Same decision axis and actual outcome definitions.",
+ "statistical_unit":"whole pair. Never treat controller, wait, candidate action, or force-cap branches of the same history as independent replicates.",
+ "provenance":"Synthetic simulation only. Future measured trajectories are labels/evaluation, never model inputs. No real material or robot data."
+}

@@ -1,0 +1,13 @@
+{
+ "backend":"python",
+ "export":{"width_inches":7.2047,"formats":["png","svg","pdf"],"png_dpi":300,"editable_text":true},
+ "replicate":"three training seeds; confidence intervals resample whole physical-history pairs, not correlated controller branches",
+ "source":"only freshly executed Maxwell synthetic data; no real-material or robot data",
+ "figures":[
+  {"name":"01_transfer","question":"Does a fixed grounded state predict new controller responses?","panels":["force RMSE by controller","paired response contrast","state diagnostic"],"archetype":"quantitative grid"},
+  {"name":"02_control_wait","question":"Where does history retain predictive and decision value?","panels":["force error reduction controller x wait","decision cost difference controller x wait"],"archetype":"quantitative grid"},
+  {"name":"03_action_tradeoff","question":"Do prediction gains translate into safe timely completion?","panels":["penalized completion time by force limit","success and violations","selected actions"],"archetype":"quantitative grid"},
+  {"name":"04_cases","question":"Which grounded state changes which action and actual outcome?","panels":["synchronized command, actual/predicted position and force","same history under changed future controllers","matched-observation pair action outcomes"],"archetype":"quantitative grid"},
+  {"name":"05_mechanism","question":"Is any gain attributable to history, physical evolution or controller diversity?","panels":["state swap/average","multi vs single controller training","prediction error vs decision-boundary distance"],"archetype":"quantitative grid"}
+ ]
+}

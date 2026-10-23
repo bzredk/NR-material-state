@@ -1,0 +1,7 @@
+{
+  "trigger": "gru_contact seed 47 reached 8000 updates without validation plateau; no test-performance evaluation has occurred.",
+  "change": "Raise guardrail to 20000 for unfinished runs; keep optimizer, loss, convergence threshold, and validation-only checkpoint selection unchanged.",
+  "original_maximum_updates": 8000,
+  "revised_maximum_updates": 20000,
+  "selection_based_on": "validation logs only"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": [
+    "Blank physical settings rejected.",
+    "Original 24-row order, balanced blocks, six anchors, matched hold start and actual-event blanks preserved.",
+    "Reference washout accepts an unmeasured optical band; no fake height supplied.",
+    "Entered speed limit enforced.",
+    "Existing synthetic fixture: all raw rows retained; unchanged first_batch accepts assembled 24-row batch.",
+    "Constitutive-ready does not claim command-forecast readiness."
+  ],
+  "source_copies_unchanged": true,
+  "fixture": "pre-existing synthetic_validation raw files only",
+  "no_new_material_simulation": true,
+  "no_model_fit": true,
+  "actual_lab_settings_filled": false,
+  "detailed_records": "verification\\interface_20261020_033912"
+}

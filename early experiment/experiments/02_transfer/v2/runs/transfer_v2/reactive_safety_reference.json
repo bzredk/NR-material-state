@@ -1,0 +1,15 @@
+{
+  "parameters": {
+    "speed": 0.02,
+    "buffer": 0.05,
+    "gain": 0.02
+  },
+  "selection": "lexicographic validation unsafe fraction, then validation cost",
+  "status": "additional challenge; primary validation <=1% policy retained",
+  "heldout": {
+    "success": 0.810433201058201,
+    "unsafe": 0.0013227513227513227,
+    "reject": 0.18824404761904762,
+    "cost": 2.616733217592593
+  }
+}

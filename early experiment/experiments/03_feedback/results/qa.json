@@ -1,0 +1,13 @@
+{
+  "original_artifacts_unchanged": true,
+  "contract_unchanged": true,
+  "all_predicted_forecast_origins_finite": true,
+  "all_action_metrics_finite": true,
+  "branches_per_method": 3456,
+  "methods": 9,
+  "pairs": 64,
+  "prefix_precision_fix": "first attempt archived; canonical float64 prefix reused in all analyses",
+  "controller_changes": "optional covariance input only; parity test exact",
+  "no_training": true,
+  "no_controller_retuning": true
+}

@@ -1,0 +1,5 @@
+{
+  "generation_attempt_1": "Stopped on endpoint mismatch for training seed 26102222 before training. No training/test model result was consulted.",
+  "repair": "Keep all seeds; halve past input perturbation only to preserve known contact branch and endpoint match. 2 of 384 training pairs shrunk once, no validation/test pair shrunk.",
+  "hyperparameter_search": "One model configuration each; validation-controlled LR scheduling and early stopping. No test-driven model changes."
+}

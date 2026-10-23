@@ -1,0 +1,13 @@
+{
+  "reference_dt": 0.005,
+  "force_rmse_N_vs_reference": [
+    0.011614408687685642,
+    0.004305716231152726
+  ],
+  "position_rmse_mm_vs_reference": [
+    0.010129108487759985,
+    0.00375942629446294
+  ],
+  "refinement_improves": true,
+  "interpretation": "Generated data and predictors share dt; reference discrepancy is a numerical fidelity limit."
+}

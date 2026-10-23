@@ -1,0 +1,95 @@
+{
+  "status": "diagnostic after main evaluation; selected actions and primary strict-cap results unchanged",
+  "methods": {
+    "snapshot_state": {
+      "violation_excess_quantiles_N": [
+        0.003338522137254163,
+        0.0220575163958463,
+        0.06512667136571615,
+        0.1502985308808853
+      ],
+      "fractions_exceeding_by_N": {
+        "0": 0.007619598765432099,
+        "0.02": 0.004126708553791887,
+        "0.05": 0.0013916446208112874,
+        "0.1": 0.00018601190476190475
+      },
+      "cost_with_evaluation_tolerance_s": {
+        "0": 3.9001604524911824,
+        "0.02": 3.883898671737213,
+        "0.05": 3.8710626102292767,
+        "0.1": 3.8653452932098764
+      }
+    },
+    "history_state": {
+      "violation_excess_quantiles_N": [],
+      "fractions_exceeding_by_N": {
+        "0": 0.0,
+        "0.02": 0.0,
+        "0.05": 0.0,
+        "0.1": 0.0
+      },
+      "cost_with_evaluation_tolerance_s": {
+        "0": 3.8671642140652556,
+        "0.02": 3.8671642140652556,
+        "0.05": 3.8671642140652556,
+        "0.1": 3.8671642140652556
+      }
+    },
+    "gru_contact": {
+      "violation_excess_quantiles_N": [
+        0.013488146212659747,
+        0.11452129127248067,
+        0.3656938187845277,
+        0.47779237941782604
+      ],
+      "fractions_exceeding_by_N": {
+        "0": 0.006765321869488536,
+        "0.02": 0.005704365079365079,
+        "0.05": 0.0046985229276895945,
+        "0.1": 0.0035893408289241623
+      },
+      "cost_with_evaluation_tolerance_s": {
+        "0": 3.914543788580247,
+        "0.02": 3.909855668540565,
+        "0.05": 3.9058135609567897,
+        "0.1": 3.9014043209876546
+      }
+    },
+    "reactive_safe": {
+      "violation_excess_quantiles_N": [
+        0.0006000746958528147,
+        0.004850481153579889,
+        0.008745006900312546,
+        0.015033740920849858
+      ],
+      "fractions_exceeding_by_N": {
+        "0": 0.0013227513227513227,
+        "0.02": 0.0,
+        "0.05": 0.0,
+        "0.1": 0.0
+      },
+      "cost_with_evaluation_tolerance_s": {
+        "0": 2.616733217592593,
+        "0.02": 2.6127172205687827,
+        "0.05": 2.6127172205687827,
+        "0.1": 2.6127172205687827
+      }
+    }
+  },
+  "history_vs_reactive_on_shared_successes": [
+    {
+      "same_successful_task_count": 22214,
+      "history_time_advantage_s": 0.3334356711983434
+    },
+    {
+      "same_successful_task_count": 22218,
+      "history_time_advantage_s": 0.33348591232334146
+    },
+    {
+      "same_successful_task_count": 22225,
+      "history_time_advantage_s": 0.33349111361079864
+    }
+  ],
+  "interpretation": "Nonzero tolerance is sensitivity analysis, not permission to exceed the original cap. Conditional success speed is not an overall success comparison."
+}

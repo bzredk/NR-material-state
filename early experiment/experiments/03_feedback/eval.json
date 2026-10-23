@@ -1,0 +1,42 @@
+{
+  "name": "frozen-history-state-closed-loop-bridge",
+  "claim": "Frozen history grounding improves pre-contact command-conditioned prediction under held-out controllers; available feedback may remove its additional action value.",
+  "unit_of_analysis": "whole stored test history pair; controller, wait, cap and checkpoint seeds are dependent repeated measurements",
+  "datasets": ["round3 controlled-release transfer_v2 stored test histories", "round4 frozen controller and converged RK4 execution"],
+  "splits": [
+    {"name": "controller-transfer", "held_out": "K,D=(2200,45),(4800,45),(2200,110)", "leakage_check": "unchanged checkpoint and source-data hashes; original 301x5 contact encoding cut only"}
+  ],
+  "baselines": [
+    {"name": "history_state", "category": "frozen learned history initializer, seeds 11/23/47", "controlled_variables": ["material", "planner", "observer", "feedback", "future controller", "action capacity"]},
+    {"name": "snapshot_state", "category": "same-structure current-observation initializer, seeds 11/23/47", "controlled_variables": ["material", "planner", "observer", "feedback", "future controller", "action capacity"]},
+    {"name": "classical", "category": "full measured-history integration with fitted parameters", "controlled_variables": ["material", "planner", "observer", "feedback", "future controller", "action capacity"]},
+    {"name": "reactive_005_and_030", "category": "round4 validation-selected gains; predeclared 0.05 and 0.30 N margins", "controlled_variables": ["feedback", "task", "action capacity", "sensor and control clocks"]}
+  ],
+  "metrics": [
+    {"name": "precontact_120ms_force_RMSE", "direction": "lower", "rationale": "fixed known future command at 20 ms before recontact, shared-input diagnostic", "primary": true},
+    {"name": "history_initialization_cost_gain", "direction": "higher", "rationale": "snapshot minus history failure-penalized cost in the same controller", "primary": true},
+    {"name": "gap_contraction_time", "direction": "lower", "rationale": "first >=0 recontact time where mean force-RMSE gap stays within 0.02 N for at least 50 ms", "primary": false},
+    {"name": "completion_time_quality_peak_failures_action_difference", "direction": "diagnostic", "rationale": "separate physical duration, achieved hold, peak and failure causes from penalty cost", "primary": false}
+  ],
+  "ablations": ["seed-11 common-input observer with force innovation removed, diagnostic only; primary controllers retain all feedback"],
+  "falsification_criteria": [
+    "history has no precontact forecast advantage in the shared-input diagnostic",
+    "feedback reduces initialization differences before action consequences separate",
+    "gain remains below 50 ms and 2 percentage points success, with constraints nonworsening",
+    "integration requires retraining, a different task or a major controller rewrite: stop and document the gap"
+  ],
+  "compute_budget": {"gpu_hours": 0.02, "cpu_threads": 4, "expected_cpu_wall_minutes": 10, "tuning_trials_per_method": 0},
+  "seeds": [11, 23, 47],
+  "artifacts": ["frozen input hashes", "minimal adapter and unchanged execution code", "configs", "per-episode metrics", "preselected traces", "PNG/SVG/PDF figures", "short report"],
+  "frozen_scope": {
+    "state": "two Maxwell internal deformations in metres; same ordering and fitted material constants as round3/round4",
+    "encoding": "one inference at the original in-contact cut; never re-encode detached or new-controller histories",
+    "prefix": "same 0.3 s release under original K=2200,D=45 using converged execution; measured-motion propagation and identical causal force correction for every predictive method",
+    "covariance": "same 1.5 mm initial standard deviation at encoding; carry posterior covariance through release into the fourth-round controller",
+    "task": "round4 4 mm compression held 200 ms, 4 s deadline then 350 ms release; 1 ms physics, 100 Hz sensing, 50 Hz control",
+    "execution_metrics": "fourth-round task metrics start after the common prefix; report its peak separately and an end-to-end force-limit failure so prefix violations are not hidden",
+    "prediction": "common fixed command probe is a diagnostic, not a substituted action task; no future measured motion or force enters forecasts",
+    "statistics": "pair-cluster bootstrap; average three frozen checkpoint seeds inside each pair before primary intervals; also report all seed results",
+    "interpretation": "existing history segment was generated with round3 discretization and is not regenerated; future execution switches to the verified reference from its stored physical endpoint"
+  }
+}

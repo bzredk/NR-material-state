@@ -1,0 +1,11 @@
+{
+  "model": "snapshot_state",
+  "seed": 11,
+  "steps": 1000,
+  "best_val_loss": 2.5376084825741902e-05,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 25.925007099984214,
+  "parameters": 3777,
+  "peak_allocated_MiB": 77.22314453125
+}

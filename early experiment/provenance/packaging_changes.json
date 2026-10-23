@@ -1,0 +1,62 @@
+{
+  "scope": "Portable launchers, export checks, snapshot-only provenance checks, and documentation links.",
+  "scientific_model_training_and_evaluation_code_changed": false,
+  "recorded_metrics_data_and_checkpoints_changed": false,
+  "changes": [
+    {
+      "path": "experiments/02_transfer/v2/run_experiment.ps1",
+      "before_sha256": "0cfec80cb59691f1c36fecca9f37ca5f10d79be2d2bbd9ba6eac8da9dfbcad12",
+      "after_sha256": "5eff9cafb96787a058d5d433158f3ff94c0c0c1641f38cb141f195b9f267894d"
+    },
+    {
+      "path": "experiments/03_feedback/run.ps1",
+      "before_sha256": "9a39d44f58f86d97959d82cc12fea70148a3630ed551aa108659627c1601df0c",
+      "after_sha256": "71b271e70c2cdcc12961c5741708da9392f4ce0086e5abdf9acafdde2b96848b"
+    },
+    {
+      "path": "experiments/03_feedback/run.ps1",
+      "before_sha256": "71b271e70c2cdcc12961c5741708da9392f4ce0086e5abdf9acafdde2b96848b",
+      "after_sha256": "88330bdb508d3337e5f07f291160d58c8b2d0a334b58bd14f63fcca26216d3ae"
+    },
+    {
+      "path": "experiments/02_transfer/v2/qa_exports.py",
+      "before_sha256": "4eb993d300fe664300c0f17612ce7942ebf05f8b5798c64c68da39a1549913e8",
+      "after_sha256": "1d96182874a22df322bbad659e891514db110c64c29713de0eb4f94f48308dfb"
+    },
+    {
+      "path": "experiments/03_feedback/finalize.py",
+      "before_sha256": "c7bc95755500703fa33aab3d8b5f5b8bc2dac2b843d4a78827650f5abe9e8ea8",
+      "after_sha256": "a32694c696ca906ce874e06de8b20d2fd4b489dc25cd2f2f8e3971ea7dde0092"
+    },
+    {
+      "path": "experiments/lab/verify_session.py",
+      "before_sha256": "a5461f6833a1b0f50d095428e528ccb60560c41404be403df935807715cd00cb",
+      "after_sha256": "b0bbeabd8357586daf08c9455c0fb5f770399565347c6b2eb96e870b6ae1e930"
+    },
+    {
+      "path": "experiments/lab/verify_session.py",
+      "before_sha256": "b0bbeabd8357586daf08c9455c0fb5f770399565347c6b2eb96e870b6ae1e930",
+      "after_sha256": "c510d6c06aaa1471d4c5004187752f4cb2bef50f915c10d19ba13bd6fd698606"
+    },
+    {
+      "path": "experiments/02_transfer/\u672c\u8f6e\u7ed3\u679c\u4e0e\u7814\u7a76\u5224\u65ad.md",
+      "before_sha256": "5341efe01115a21f2f789524127f49a053da8f4f3b5740a4d2843d6f23baa1d5",
+      "after_sha256": "7a923ef0c87e2fa192e2576a3226594e1ab66a7950b2db5a2b6998d776a451e1"
+    },
+    {
+      "path": "experiments/02_transfer/v2/README.md",
+      "before_sha256": "c5726bef4ee3318f23db03303bb4a3488dbfb7a0b3e774a73577c3dfbf21398e",
+      "after_sha256": "285a5f6fd17a7482af24a83aac1d72734e093d71fe59c7be21a456ee79f1a46f"
+    },
+    {
+      "path": "experiments/03_feedback/README.md",
+      "before_sha256": "b271a83261b9bea17689e9b8f2cd17cfa0d329574f68ff70036e1379da21be43",
+      "after_sha256": "9f389f17675065f95adfd3867296b0f261c35e2fbd31e335c57f356f03b02f48"
+    },
+    {
+      "path": "experiments/03_feedback/\u95ed\u73af\u8854\u63a5\u7b80\u62a5.md",
+      "before_sha256": "44ca1960523ee94e50ac7834ff6105a32a86ab4e8c7e484b31f1746d283258c6",
+      "after_sha256": "762e3694023a14f70f23a218efa061e2b9604f4cead3542df4add2c7fed8f9b1"
+    }
+  ]
+}

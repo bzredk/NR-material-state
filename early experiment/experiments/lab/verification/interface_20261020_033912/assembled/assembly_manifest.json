@@ -1,0 +1,571 @@
+{
+  "recordings": [
+    {
+      "file": "e00.csv",
+      "sha256": "7652629f3431e4b859c6bd6a7a6381f55ad813db2dde0e62821fc02a3968736e",
+      "rows": 731
+    },
+    {
+      "file": "e01.csv",
+      "sha256": "3121fd5c0160101a96ba7b321f9d8d46a1eec2773b55846773c0dfe9845e938d",
+      "rows": 731
+    },
+    {
+      "file": "e02.csv",
+      "sha256": "ddea06ea492e5ec868e70bd0071337dba70fc7d969e1bcba0c5a8e8355ae999d",
+      "rows": 731
+    },
+    {
+      "file": "e03.csv",
+      "sha256": "61bafcf5741e914e23de05a4dc878d0e1feaa426e53e2a7d696a045406d04c64",
+      "rows": 731
+    },
+    {
+      "file": "e04.csv",
+      "sha256": "ecbd5363e32d308825c8b8f03d1ff1b1b8bae2eaf52642d4c6e470065475e6a9",
+      "rows": 791
+    },
+    {
+      "file": "e05.csv",
+      "sha256": "8f8f459a63acda700787320652864101ef13a1b4b0173728e39dcdb4410f1ab2",
+      "rows": 791
+    },
+    {
+      "file": "e06.csv",
+      "sha256": "a10d6ddc55c27aa14df219cb155ac82cf16c000c208c9c05e50835990c45a8ea",
+      "rows": 791
+    },
+    {
+      "file": "e07.csv",
+      "sha256": "0682e119b20988c66d3a6e77a1e593c61e00c3390bca399db417086a7d10c332",
+      "rows": 791
+    },
+    {
+      "file": "e08.csv",
+      "sha256": "eea578d8dc1e56950f488c5c302bb432b18b22c61b0aa3ba29c85d101703762e",
+      "rows": 1031
+    },
+    {
+      "file": "e09.csv",
+      "sha256": "65a4c0c8d6365a8cbdec6f7add8626e16d1fd31d97d201984cd767fc498db9a8",
+      "rows": 1031
+    },
+    {
+      "file": "e10.csv",
+      "sha256": "4bc3e214da383287223f8c63dbfcc3cbc52e0ced715967a4db94d519a10248a5",
+      "rows": 1031
+    },
+    {
+      "file": "e11.csv",
+      "sha256": "34cf8c8b8849cef16948ddb76421fa484c745811cbb21888de0e6ee138817794",
+      "rows": 1031
+    },
+    {
+      "file": "e12.csv",
+      "sha256": "6f6c7c455dc0e6fad3fe70172bb4c53f70d7c1bb7e6eba3e1f2fa463343f71c5",
+      "rows": 731
+    },
+    {
+      "file": "e13.csv",
+      "sha256": "d3283aa93179c03eba8484f1396b9a052cb69bdabb3f9e25681766505d0f2f7d",
+      "rows": 731
+    },
+    {
+      "file": "e14.csv",
+      "sha256": "198415fbcfc0c6667fd14f5eddd54bf7b57d7ea59f2815ccef3f07499334fcfb",
+      "rows": 731
+    },
+    {
+      "file": "e15.csv",
+      "sha256": "2a9289f8bd5fb65336d6fcfee2212f413671ffa39ce0b8cf54e2a3e703df4b03",
+      "rows": 731
+    },
+    {
+      "file": "e16.csv",
+      "sha256": "530e591046bbb940d0e09c19b1b117088276618dfc4731f42bff2700a95146c1",
+      "rows": 791
+    },
+    {
+      "file": "e17.csv",
+      "sha256": "24bb58cdfeb3a7b487412474d711ab9cd550b34e89408a6d8ca313775b8e2221",
+      "rows": 791
+    },
+    {
+      "file": "e18.csv",
+      "sha256": "4af43b30eb13f80e67e3c04179c52c9884a229694fdcddffc7a7f56a3a2b9646",
+      "rows": 791
+    },
+    {
+      "file": "e19.csv",
+      "sha256": "2e1aa0213d7e3a310025685712cf183a6f307f37701a64f841518945d80ef98a",
+      "rows": 791
+    },
+    {
+      "file": "e20.csv",
+      "sha256": "3cceb4d5cce48a6f2a29b855196ad82be919c5d9827287ea5275803da5f518ac",
+      "rows": 1031
+    },
+    {
+      "file": "e21.csv",
+      "sha256": "efaa43b3042a26b8f11c50ad449e55e9c21647e7e1b4f719e6f8d854e3d15a2d",
+      "rows": 1031
+    },
+    {
+      "file": "e22.csv",
+      "sha256": "5ad911e457fa81471ca2596507276087330aaeeb3dc3dc40cddff9d6c41c9431",
+      "rows": 1031
+    },
+    {
+      "file": "e23.csv",
+      "sha256": "2b03aabbb8da0ffd1e24ec1fc46b38f71515e486a1651c600bacd7d272442bcc",
+      "rows": 1031
+    }
+  ],
+  "quality": {
+    "status": "passed",
+    "data_type": "synthetic_validation",
+    "errors": [],
+    "warnings": [
+      "CSV timestamps alone cannot establish force/position sensor synchronization; retain original clocks and calibration.",
+      "Velocity is an unfiltered numerical diagnostic; signed force-displacement work is not automatically dissipated energy."
+    ],
+    "episodes": [
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e00",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010033417249413054,
+          0.004559671123628645
+        ],
+        "force_range_N": [
+          -0.042441194310976045,
+          4.711631812124987
+        ],
+        "force_displacement_work_J": 0.012559400486527636
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e01",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010077086744573157,
+          0.004561036204235773
+        ],
+        "force_range_N": [
+          -0.035820250639281084,
+          4.726621717309058
+        ],
+        "force_displacement_work_J": 0.01252328305389704
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e02",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.001004365078481184,
+          0.0045622200818479595
+        ],
+        "force_range_N": [
+          -0.03670905200128008,
+          4.897582501610612
+        ],
+        "force_displacement_work_J": 0.013138538727044798
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e03",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010041200092725919,
+          0.004559584109492677
+        ],
+        "force_range_N": [
+          -0.045845668208970985,
+          4.902480649251698
+        ],
+        "force_displacement_work_J": 0.01314821506468732
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e04",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.0010059838504896603,
+          0.004553768516507461
+        ],
+        "force_range_N": [
+          -0.04307816750174724,
+          4.841786690027353
+        ],
+        "force_displacement_work_J": 0.013055964424197784
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e05",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.0010077675506611054,
+          0.004556263909408574
+        ],
+        "force_range_N": [
+          -0.04643678712982602,
+          4.863878700076463
+        ],
+        "force_displacement_work_J": 0.013090735417765273
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e06",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.0010054165584616548,
+          0.004555860175458461
+        ],
+        "force_range_N": [
+          -0.039038872929409676,
+          4.876420011325287
+        ],
+        "force_displacement_work_J": 0.013708292434318656
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e07",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.001008163350148772,
+          0.004557515240655272
+        ],
+        "force_range_N": [
+          -0.03511706930576545,
+          4.902381942830484
+        ],
+        "force_displacement_work_J": 0.013722677585846839
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e08",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.001008269856502277,
+          0.004537105118813566
+        ],
+        "force_range_N": [
+          -0.051819358842735606,
+          5.258452162078522
+        ],
+        "force_displacement_work_J": 0.014939787600568511
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e09",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010071874131784065,
+          0.004533169617249506
+        ],
+        "force_range_N": [
+          -0.07602443719475431,
+          5.257589746331896
+        ],
+        "force_displacement_work_J": 0.01494688905209525
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e10",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010058978402467179,
+          0.004537561983144541
+        ],
+        "force_range_N": [
+          -0.037427026532892524,
+          5.235998806306895
+        ],
+        "force_displacement_work_J": 0.015582680164100502
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e11",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010065836373147948,
+          0.00453523505533769
+        ],
+        "force_range_N": [
+          -0.043785459740187944,
+          5.222724918386634
+        ],
+        "force_displacement_work_J": 0.015587995335267463
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e12",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010053197163645855,
+          0.005418101349554253
+        ],
+        "force_range_N": [
+          -0.03561495726532901,
+          7.7049778475013
+        ],
+        "force_displacement_work_J": 0.02396279836642377
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e13",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.001005128390118103,
+          0.005419043252023289
+        ],
+        "force_range_N": [
+          -0.037459806887627935,
+          7.741085431821409
+        ],
+        "force_displacement_work_J": 0.023961406495605284
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e14",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010046185060589704,
+          0.005872621418178456
+        ],
+        "force_range_N": [
+          -0.0486094722966997,
+          9.61981559648336
+        ],
+        "force_displacement_work_J": 0.0267738258005376
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e15",
+        "samples": 731,
+        "duration_s": 14.6,
+        "sampling_rate_Hz": 50.000000000000234,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.806392679731916e-14,
+        "position_range_m": [
+          -0.0010062560950860064,
+          0.00587316458968455
+        ],
+        "force_range_N": [
+          -0.039234782736450334,
+          9.634633293992264
+        ],
+        "force_displacement_work_J": 0.02678624607886371
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e16",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.0010059796625848715,
+          0.005414627727841736
+        ],
+        "force_range_N": [
+          -0.03924637281049982,
+          7.738819527074243
+        ],
+        "force_displacement_work_J": 0.024637083754215222
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e17",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.001006203717492575,
+          0.005415709152957758
+        ],
+        "force_range_N": [
+          -0.041334785115728634,
+          7.732452312522214
+        ],
+        "force_displacement_work_J": 0.024674393060110964
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e18",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.0010068926692227392,
+          0.005868445685031558
+        ],
+        "force_range_N": [
+          -0.05053221713245946,
+          9.621881231780451
+        ],
+        "force_displacement_work_J": 0.02744931095296643
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e19",
+        "samples": 791,
+        "duration_s": 15.8,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.02000000000000135,
+        "dt_cv": 2.8985555144089215e-14,
+        "position_range_m": [
+          -0.001008426602266786,
+          0.00587356341831625
+        ],
+        "force_range_N": [
+          -0.0436137463333432,
+          9.6439933110663
+        ],
+        "force_displacement_work_J": 0.02743865652043319
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e20",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010088773955265241,
+          0.005415652069498686
+        ],
+        "force_range_N": [
+          -0.038143532181814384,
+          7.740602681526678
+        ],
+        "force_displacement_work_J": 0.027403726081271184
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e21",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010088147752249916,
+          0.005414335000750521
+        ],
+        "force_range_N": [
+          -0.04701457001537905,
+          7.745122121947397
+        ],
+        "force_displacement_work_J": 0.027414433582980673
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e22",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010067890003512348,
+          0.005869639386055691
+        ],
+        "force_range_N": [
+          -0.04634576835294039,
+          9.604449246861238
+        ],
+        "force_displacement_work_J": 0.030152977839199645
+      },
+      {
+        "session_id": "synthetic_linear",
+        "episode_id": "e23",
+        "samples": 1031,
+        "duration_s": 20.6,
+        "sampling_rate_Hz": 50.000000000001066,
+        "max_gap_s": 0.020000000000003126,
+        "dt_cv": 3.755205595836199e-14,
+        "position_range_m": [
+          -0.0010066310603425162,
+          0.0058703532338242595
+        ],
+        "force_range_N": [
+          -0.05168056435428487,
+          9.639573453693124
+        ],
+        "force_displacement_work_J": 0.030250024643445415
+      }
+    ],
+    "conventions": "SI; positive position toward compression; positive compressive force",
+    "no_automatic_rows_removed": true
+  },
+  "auto_selected_for_fitting": false,
+  "missing_plans": []
+}

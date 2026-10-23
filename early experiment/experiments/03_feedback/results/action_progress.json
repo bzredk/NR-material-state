@@ -1,0 +1,155 @@
+[
+  {
+    "method": "classical",
+    "seconds": 8.734087000135332,
+    "mean_metrics": {
+      "time_s": 1.2952025462963204,
+      "peak_N": 4.229846549707935,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.2952025462963204,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.5158098043576241e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "history_state_11",
+    "seconds": 2.677106199786067,
+    "mean_metrics": {
+      "time_s": 1.2952025462963204,
+      "peak_N": 4.2298465571112365,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.2952025462963204,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.5158963900561073e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "history_state_23",
+    "seconds": 2.6611782000400126,
+    "mean_metrics": {
+      "time_s": 1.2952025462963204,
+      "peak_N": 4.229846564805577,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.2952025462963204,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.515784489769305e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "history_state_47",
+    "seconds": 2.52495039999485,
+    "mean_metrics": {
+      "time_s": 1.2952025462963204,
+      "peak_N": 4.229846567257089,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.2952025462963204,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.5158097018644872e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "snapshot_state_11",
+    "seconds": 2.606531900120899,
+    "mean_metrics": {
+      "time_s": 1.295199652777802,
+      "peak_N": 4.229853601664105,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.295199652777802,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.513399427648125e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "snapshot_state_23",
+    "seconds": 2.560980499954894,
+    "mean_metrics": {
+      "time_s": 1.295199652777802,
+      "peak_N": 4.229853601384497,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.295199652777802,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.5134030967079738e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "snapshot_state_47",
+    "seconds": 2.5077231999021024,
+    "mean_metrics": {
+      "time_s": 1.295199652777802,
+      "peak_N": 4.2298536036004935,
+      "complete": 1.0,
+      "unsafe": 0.0,
+      "safe_success": 1.0,
+      "cost_s": 1.295199652777802,
+      "excess_N": 0.0,
+      "dose_Ns": 0.0,
+      "first_contact_s": 0.9564554398148316,
+      "state_rmse_m": 1.5134252504879074e-05,
+      "planning_calls": 26.67332175925926
+    }
+  },
+  {
+    "method": "reactive_005",
+    "seconds": 0.8666976999957114,
+    "mean_metrics": {
+      "time_s": 1.343260995370365,
+      "peak_N": 3.6134292821325453,
+      "complete": 1.0,
+      "unsafe": 0.07928240740740741,
+      "safe_success": 0.9207175925925926,
+      "cost_s": 1.6021846064814895,
+      "excess_N": 0.015133639123848899,
+      "dose_Ns": 0.0007535048467183456,
+      "first_contact_s": 0.9554600694444575,
+      "state_rmse_m": 1.4910405587692413e-05,
+      "planning_calls": 0.0
+    }
+  },
+  {
+    "method": "reactive_030",
+    "seconds": 0.8857222001533955,
+    "mean_metrics": {
+      "time_s": 1.3784953703703695,
+      "peak_N": 3.562968518658991,
+      "complete": 1.0,
+      "unsafe": 0.06018518518518518,
+      "safe_success": 0.9398148148148148,
+      "cost_s": 1.556142939814823,
+      "excess_N": 0.0030313339407658734,
+      "dose_Ns": 6.755482712615726e-05,
+      "first_contact_s": 0.9554600694444575,
+      "state_rmse_m": 1.48002019559576e-05,
+      "planning_calls": 0.0
+    }
+  }
+]

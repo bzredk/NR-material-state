@@ -1,0 +1,10 @@
+{
+ "parent_run":"../runs/transfer_v1",
+ "reason":"Initial pilot changed impedance during loaded contact. Validation reactive failures motivated isolating the switch while detached. A subsequent complete phase decomposition corrected our initial interpretation: only 0.0434% of held-out decisions were blocked solely by the initial switch despite a feasible recontact. Therefore switch transients are NOT the main cause of model-selector rejection; this branch is a controlled replication and improves the reactive reference, not a purported fix for most model failures.",
+ "change":"All candidates first release under the unchanged historical controller for 0.3s; then switch K,D while detached. Learned state and material are carried continuously. Conditional GRU receives the actual known piecewise control schedule. Full five-second force cap still includes release, no safety interval removed.",
+ "reactive_reference":"Added admission/rejection using current measured force >= cap-buffer, so the feedback policy need not blindly execute an already-infeasible initial state. Tuning still uses only the new validation set.",
+ "preservation":"Parent sources, configurations, trained models, raw evaluations and original validation profiles retained unchanged after this branch was created.",
+ "new_seed":27101950,
+ "test_policy":"Fresh train/validation/test histories. Same preselected five actions, caps, controller splits, network architectures, noise and convergence rule. Train all twelve model-seed runs from scratch. Open new test only after validation convergence.",
+ "interpretation":"Sequential experimental redesign after a diagnostic run, not an untouched preregistered benchmark. Both rounds must be disclosed."
+}

@@ -1,0 +1,11 @@
+{
+  "model": "gru_force",
+  "seed": 47,
+  "steps": 9300,
+  "best_val_loss": 1.2769107039882025e-05,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 96.04963520006277,
+  "parameters": 7809,
+  "peak_pytorch_allocated_MiB": 146.5185546875
+}

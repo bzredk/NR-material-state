@@ -1,0 +1,11 @@
+{
+  "model": "gru_contact",
+  "seed": 47,
+  "steps": 7900,
+  "best_val_loss": 9.51654192249407e-06,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 41.77516180020757,
+  "parameters": 8001,
+  "peak_allocated_MiB": 206.96533203125
+}

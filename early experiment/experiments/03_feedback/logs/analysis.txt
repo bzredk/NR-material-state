@@ -1,0 +1,54 @@
+{
+  "effects": {
+    "cost_gain_s": {
+      "mean": -2.893518518518521e-06,
+      "ci95": [
+        -8.680555555555562e-06,
+        0.0
+      ]
+    },
+    "safe_success_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "over_limit_change_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "seed_cost_gain_ms": {
+      "11": -0.002893518518518521,
+      "23": -0.002893518518518521,
+      "47": -0.002893518518518521
+    },
+    "both_successful_time_gain_s": {
+      "mean": -2.893518518518521e-06,
+      "ci95": [
+        -8.680555555555564e-06,
+        0.0
+      ],
+      "paired_seed_branch_count": 10368
+    },
+    "classical_minus_history_cost_s": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "meaningful": false
+  },
+  "gap_contraction_s": 0.0,
+  "precontact_advantage": {
+    "mean": -4.3027734114768805e-05,
+    "ci95": [
+      -8.927923016804528e-05,
+      1.5849050652409045e-06
+    ]
+  }
+}

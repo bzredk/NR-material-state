@@ -1,0 +1,12 @@
+{
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.22621-SP0",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.9.1+cu128",
+    "numba": "0.67.0",
+    "matplotlib": "3.11.0"
+  },
+  "execution": "GPU for six frozen encoder inferences; four CPU threads for rollout; zero training"
+}

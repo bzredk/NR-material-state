@@ -1,0 +1,139 @@
+{
+  "total_training_wall_seconds": 981.8786630006507,
+  "runs": [
+    {
+      "model": "snapshot_state",
+      "seed": 11,
+      "steps": 800,
+      "best_val_loss": 3.27799655982138e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 20.866193800000474,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 36.7099609375
+    },
+    {
+      "model": "snapshot_state",
+      "seed": 23,
+      "steps": 800,
+      "best_val_loss": 3.278223145268081e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 21.004882500041276,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 36.7578125
+    },
+    {
+      "model": "snapshot_state",
+      "seed": 47,
+      "steps": 800,
+      "best_val_loss": 3.27783764078049e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 22.174544299952686,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 36.7578125
+    },
+    {
+      "model": "history_state",
+      "seed": 11,
+      "steps": 3200,
+      "best_val_loss": 7.1845485460168374e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 87.80158130009659,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 102.30322265625
+    },
+    {
+      "model": "history_state",
+      "seed": 23,
+      "steps": 2500,
+      "best_val_loss": 7.197692108699509e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 68.94967520004138,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 102.30322265625
+    },
+    {
+      "model": "history_state",
+      "seed": 47,
+      "steps": 2600,
+      "best_val_loss": 7.198221434615941e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 71.67824549996294,
+      "parameters": 3777,
+      "peak_pytorch_allocated_MiB": 102.35107421875
+    },
+    {
+      "model": "gru_contact",
+      "seed": 11,
+      "steps": 7500,
+      "best_val_loss": 7.693142682304218e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 133.13926429999992,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 145.677734375
+    },
+    {
+      "model": "gru_contact",
+      "seed": 23,
+      "steps": 7100,
+      "best_val_loss": 7.703939748656316e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 126.2935737001244,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 145.7724609375
+    },
+    {
+      "model": "gru_contact",
+      "seed": 47,
+      "steps": 8300,
+      "best_val_loss": 7.95261894381838e-06,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 141.84010060038418,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 146.3193359375
+    },
+    {
+      "model": "gru_force",
+      "seed": 11,
+      "steps": 10100,
+      "best_val_loss": 1.0447632727543047e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 99.09274140000343,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 146.4189453125
+    },
+    {
+      "model": "gru_force",
+      "seed": 23,
+      "steps": 9000,
+      "best_val_loss": 1.003289192643327e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 92.98822519998066,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 146.4189453125
+    },
+    {
+      "model": "gru_force",
+      "seed": 47,
+      "steps": 9300,
+      "best_val_loss": 1.2769107039882025e-05,
+      "converged": true,
+      "stop_reason": "validation_plateau",
+      "seconds": 96.04963520006277,
+      "parameters": 7809,
+      "peak_pytorch_allocated_MiB": 146.5185546875
+    }
+  ],
+  "memory_scope": "PyTorch allocations exclude NumPy arrays, CUDA context, and desktop",
+  "timing_scope": "training + validation + checkpoints; not kernel-active GPU time"
+}

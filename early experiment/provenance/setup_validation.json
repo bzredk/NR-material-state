@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-23",
+  "scope": "Setup instructions and renamed experiment entry points; no new training or material measurements.",
+  "fresh_cpu_environment": {
+    "platform": "Windows",
+    "python": "3.11.9",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "numba": "0.67.0",
+      "matplotlib": "3.11.0",
+      "pytest": "9.1.1",
+      "pillow": "12.3.0",
+      "pypdf": "6.14.2",
+      "torch": "2.9.1+cpu"
+    },
+    "pip_check": "passed",
+    "environment_check": "passed",
+    "require_cuda_negative_check": "correctly rejected the CPU wheel"
+  },
+  "existing_cuda_environment": {
+    "torch": "2.9.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "environment_check": "passed"
+  },
+  "correctness_tests_passed": {
+    "pilot": 5,
+    "e1_and_intake": 9,
+    "e2": 8
+  },
+  "checkpoint_replay": {
+    "cpu": {
+      "e1": 12,
+      "e2": 12,
+      "finite_outputs": true,
+      "e1_archive_comparison": "diagnostic only; original CUDA tolerance is not relaxed",
+      "e1_maximum_force_difference_N": 0.002514660358428955
+    },
+    "cuda": {
+      "e1": 12,
+      "e2": 12,
+      "e1_original_tolerance_passed": true,
+      "e2_comparison": "checkpoint load, shape and finite outputs"
+    }
+  },
+  "workcopy_checks": {
+    "e1": "PowerShell evaluate launcher, nine tests and numerical audit passed; summary means agree within 1e-7",
+    "e2": "PowerShell evaluate and export sequence passed; scientific row metrics agree within 1e-7",
+    "e3": "CPU analysis, six figure exports and finalize passed; effects match archived JSON",
+    "p1": "Synthetic interface verification and blank session form creation passed"
+  },
+  "not_run": [
+    "Fresh model training",
+    "Full E3 trajectory regeneration",
+    "Real-material acquisition",
+    "Linux execution"
+  ]
+}

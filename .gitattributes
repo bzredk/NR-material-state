@@ -1,0 +1,8 @@
+# Preserve the recorded artifact hashes on every platform.
+* -text
+*.npz binary
+*.pt binary
+*.png binary
+*.pdf binary
+*.pptx binary
+

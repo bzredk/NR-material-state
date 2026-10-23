@@ -1,0 +1,11 @@
+{
+  "model": "history_state",
+  "seed": 23,
+  "steps": 2500,
+  "best_val_loss": 7.197692108699509e-06,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 68.94967520004138,
+  "parameters": 3777,
+  "peak_pytorch_allocated_MiB": 102.30322265625
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.11.9",
+  "torch": "2.9.1+cu128",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "cuda": "12.8",
+  "total_memory_GiB": 15.92047119140625,
+  "preparation_seconds": 34.458660300122574,
+  "physics_engine": "NumPy exact branchwise adjoint; GRUs on CUDA"
+}

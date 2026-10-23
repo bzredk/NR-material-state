@@ -1,0 +1,59 @@
+{
+  "family_prediction": {
+    "history": {
+      "original_cut_recontact_rmse_N": 0.00571211997925655,
+      "force_rmse_at_relative_time": {
+        "-0.1": 0.016009371268001806,
+        "-0.02": 0.02383219672473788,
+        "0.0": 0.02287474139919671,
+        "0.02": 0.006774611078271112,
+        "0.05": 0.004765108985186857,
+        "0.1": 0.003785402191458074,
+        "0.2": 0.0033387753138285014,
+        "0.5": 0.0032665890713094383,
+        "0.8": 0.0032437663434378467
+      }
+    },
+    "snapshot": {
+      "original_cut_recontact_rmse_N": 0.06813243024102127,
+      "force_rmse_at_relative_time": {
+        "-0.1": 0.01597932773978847,
+        "-0.02": 0.023789168990623097,
+        "0.0": 0.02283435216441163,
+        "0.02": 0.0067747458263340025,
+        "0.05": 0.004765175635189822,
+        "0.1": 0.0037855381800627236,
+        "0.2": 0.0033387564920781872,
+        "0.5": 0.003266601018766172,
+        "0.8": 0.0032437647895070232
+      }
+    }
+  },
+  "relative_rmse_reduction_percent": 91.61615113529682,
+  "snapshot_over_history_rmse": 11.927695932235814,
+  "seed11_prefix_state_diagnostic": {
+    "history_state_11": {
+      "rmse_mm_at_cut": 0.014403827483554016,
+      "rmse_mm_at_handoff": 0.02515186701396735
+    },
+    "snapshot_state_11": {
+      "rmse_mm_at_cut": 0.16545200189704692,
+      "rmse_mm_at_handoff": 0.025118518007878957
+    },
+    "classical": {
+      "rmse_mm_at_cut": 0.0008974881718977455,
+      "rmse_mm_at_handoff": 0.025150116630034854
+    }
+  },
+  "prefix_peak_range_N": [
+    2.523768504099944,
+    4.1745111532438575
+  ],
+  "recorded_wall_seconds": {
+    "prepare": 4.841743899974972,
+    "primary_episode_batches": 26.024977300083265,
+    "diagnostic_method_batches": 35.40626449952833
+  },
+  "timing_scope": "Accepted run, timed method batches only; excludes plotting, I/O between timers, profiling and the archived precision-fix attempt.",
+  "no_additional_simulation": true
+}

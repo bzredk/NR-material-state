@@ -1,0 +1,30 @@
+{
+  "train": {
+    "pairs": 384,
+    "shrunk_pairs": 2,
+    "max_shrinks": 1,
+    "current_observations_identical": true,
+    "commands_identical": true
+  },
+  "val": {
+    "pairs": 96,
+    "shrunk_pairs": 0,
+    "max_shrinks": 0,
+    "current_observations_identical": true,
+    "commands_identical": true
+  },
+  "test_id": {
+    "pairs": 192,
+    "shrunk_pairs": 0,
+    "max_shrinks": 0,
+    "current_observations_identical": true,
+    "commands_identical": true
+  },
+  "test_wait": {
+    "pairs": 192,
+    "shrunk_pairs": 0,
+    "max_shrinks": 0,
+    "current_observations_identical": true,
+    "commands_identical": true
+  }
+}

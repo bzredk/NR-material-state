@@ -1,0 +1,32 @@
+{
+ "name":"grounded-state-controller-transfer-and-action-v1",
+ "claim":"A history-grounded material state remains useful under changed known future impedance and can improve constrained action selection over a same-structure snapshot.",
+ "unit_of_analysis":"physically replayed history pair; controller/action/wait branches stay grouped",
+ "datasets":["new seeded matched-history Maxwell simulation; previously train-fitted fixed material parameters"],
+ "splits":[
+  {"name":"history","held_out":"entire replayed history pairs","leakage_check":"disjoint seed ranges and array hashes; test responses unused for training/early stopping"},
+  {"name":"controller","held_out":"K=2200 D=45 interpolation, K=4800 D=45 stiffness extrapolation, K=2200 D=110 damping extrapolation","leakage_check":"only four training corners in fitting and validation; all known control parameters given to every predictor"}
+ ],
+ "baselines":[
+  {"name":"classical_integral","category":"known physics and full history","controlled_variables":["material","observations","future controls","selector"]},
+  {"name":"local_observer","category":"short-history classical estimation","controlled_variables":["material","last 0.2s observations","future controls","selector"]},
+  {"name":"snapshot_state","category":"same physical structure and capacity","controlled_variables":["model architecture","loss","training pairs","controls","selector"]},
+  {"name":"history_state","category":"structured learned state","controlled_variables":["fixed material and actuator","no state supervision","no future measured input"]},
+  {"name":"history_single","category":"single future controller training ablation","controlled_variables":["history architecture","number of examples","commands","updates"]},
+  {"name":"gru_contact","category":"controller-conditioned temporal baseline with known contact and actuator","controlled_variables":["history","data","loss","known controls","selector"]},
+  {"name":"reactive","category":"feedback-only action reference","controlled_variables":["force cap","goal","plant","sensor noise" ]},
+  {"name":"oracle","category":"privileged discrete-action upper reference","controlled_variables":["same candidate actions","selector margin","goal"]}
+ ],
+ "metrics":[
+  {"name":"future force RMSE","direction":"lower","rationale":"predictive transfer to unseen future controllers","primary":true},
+  {"name":"penalized completion time","direction":"lower","rationale":"completion time if safe successful, otherwise horizon+1; failures cannot look artificially fast","primary":true},
+  {"name":"unsafe fraction","direction":"lower","rationale":"true peak exceeding force cap","primary":false},
+  {"name":"pair-response-difference NRMSE","direction":"lower","rationale":"whether hidden history contrast survives controller transfer","primary":false},
+  {"name":"position RMSE","direction":"lower","rationale":"command-conditioned motion rather than privileged future-motion input","primary":false}
+ ],
+ "ablations":["same-structure current observation encoder","history single-controller training","swap within-pair learned states","average within-pair learned states","contact GRU replaces fixed Maxwell state evolution with a learned sequence closure"],
+ "falsification_criteria":["history does not improve response-contrast error under new controllers","prediction gains produce no action benefit outside tiny boundary subsets","state swaps do not change predicted contrast or decisions","learned history cannot match a competitive short classical observer; no neural-necessity claim allowed"],
+ "compute_budget":{"gpu_hours":2.0,"tuning_trials_per_method":1},
+ "seeds":[11,23,47],
+ "artifacts":["config","source and data hashes","cost profile","all validation curves and checkpoints","per-history prediction and decision metrics","PNG SVG PDF figures","reproduction commands"]
+}

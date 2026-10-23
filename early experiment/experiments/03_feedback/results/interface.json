@@ -1,0 +1,65 @@
+{
+  "state_definition": "z1,z2 Maxwell internal deformations in metres; frozen order",
+  "encoding": "301x5 original in-contact histories; snapshot receives last 1x5 inside same architecture",
+  "normalization": [
+    0.006,
+    0.02,
+    8.0,
+    0.006,
+    0.01
+  ],
+  "all_parameters_frozen": true,
+  "endpoint_force_range_N": [
+    2.53969669342041,
+    4.175281524658203
+  ],
+  "detached_handoff_force_max_N": 0.0,
+  "models": [
+    {
+      "method": "history_state_11",
+      "best_step": 3200,
+      "inference_seconds": 0.13138070004060864,
+      "parameters": 3777,
+      "converged": true
+    },
+    {
+      "method": "history_state_23",
+      "best_step": 1900,
+      "inference_seconds": 0.001492599956691265,
+      "parameters": 3777,
+      "converged": true
+    },
+    {
+      "method": "history_state_47",
+      "best_step": 2100,
+      "inference_seconds": 0.0010061999782919884,
+      "parameters": 3777,
+      "converged": true
+    },
+    {
+      "method": "snapshot_state_11",
+      "best_step": 900,
+      "inference_seconds": 0.012564899865537882,
+      "parameters": 3777,
+      "converged": true
+    },
+    {
+      "method": "snapshot_state_23",
+      "best_step": 800,
+      "inference_seconds": 0.000938100041821599,
+      "parameters": 3777,
+      "converged": true
+    },
+    {
+      "method": "snapshot_state_47",
+      "best_step": 200,
+      "inference_seconds": 0.0008527000900357962,
+      "parameters": 3777,
+      "converged": true
+    }
+  ],
+  "prefix_feedback": "same causal observer; no future measurements",
+  "history_numerics": "stored round3 histories retained; RK4 starts at their stored cut, not retrospectively regenerated",
+  "seconds": 4.841743899974972,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti"
+}

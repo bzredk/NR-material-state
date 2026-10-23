@@ -1,0 +1,46 @@
+{
+  "name": "real-material-mechanism-screen-2026-10-20",
+  "claim": "A history-grounded physical state and, if necessary, a state-dependent material evolution law improve held-condition prediction beyond fixed-spectrum/static/QLV explanations; real-feedback action value is a separate claim.",
+  "unit_of_analysis": "reset-to-recovery episode for pilot; specimen/day clusters for independent confirmation",
+  "datasets": ["pending_real_24_factorial", "pending_independent_specimen_day_program", "existing_synthetic_interface_fixture_only"],
+  "splits": [
+    {"name": "preload-amplitude", "held_out": "all high-terminal-preload episodes; both technical repeats", "leakage_check": "entire episodes; report achieved-strain overlap from the common probe"},
+    {"name": "waiting", "held_out": "all middle-wait episodes; interpolation, both repeats", "leakage_check": "fit repeat 1 and validate repeat 2 only outside held condition"},
+    {"name": "history-program", "held_out": "all overshoot episodes; both repeats", "leakage_check": "no future-force selection of histories or preprocessing"},
+    {"name": "independent-confirmation", "held_out": "new specimens/day and frozen new duration/order program", "leakage_check": "freeze candidate and comparison before collection; new day and specimen partly crossed"}
+  ],
+  "baselines": [
+    {"name": "L2/L4/L6", "category": "positive fixed relaxation spectrum", "controlled_variables": ["data", "initialization rule", "condition splits", "optimization starts", "phase weights"]},
+    {"name": "S2/S4/S6", "category": "nonlinear equilibrium stiffness with fixed spectrum", "controlled_variables": ["data", "history access", "observation model", "parameter search budget"]},
+    {"name": "Q2/Q4/Q6", "category": "quasi-linear viscoelastic fixed spectrum", "controlled_variables": ["data", "history access", "held-condition scoring"]},
+    {"name": "R2/SR2", "category": "priority candidate, positive state-dependent rates", "controlled_variables": ["data", "state dimension vs L2/S2", "history", "future inputs"]},
+    {"name": "later classical/current/history initialization", "category": "fixed-law state-initialization factorial", "controlled_variables": ["law", "feedback", "state update", "controller", "action abilities"]},
+    {"name": "later strong reactive control", "category": "action-value comparator", "controlled_variables": ["observations and delay", "action capabilities", "task", "tuning protocol"]}
+  ],
+  "metrics": [
+    {"name": "held-condition recontact force RMSE in N", "direction": "lower", "rationale": "primary constitutive mechanism test, compared against repeatability and calibration sensitivity", "primary": true},
+    {"name": "recontact peak error and threshold contact position error", "direction": "lower", "rationale": "links recovery to subsequent interaction and geometry; fixed threshold sensitivity reported", "primary": false},
+    {"name": "later future-command force and actual-motion prediction", "direction": "lower", "rationale": "separate actuator and material contributions; never condition on future measured motion", "primary": false},
+    {"name": "later meaningful task completion time and completion rate", "direction": "task-specific", "rationale": "same feedback/control; practical thresholds frozen from measured task/noise/latency before action tests", "primary": false}
+  ],
+  "ablations": [
+    "2/4/6 fixed modes and static versus QLV nonlinearity",
+    "constant versus state-dependent rate with same state dimension",
+    "frozen law x current/history initialization factorial after mechanism screening",
+    "calibration perturbation and actual-motion versus command-conditioned prediction",
+    "actual measured feedback retained; no artificial feedback removal as main evidence"
+  ],
+  "falsification_criteria": [
+    "Strong classical models reach repeatability/calibration scale and the rate candidate has no independent benefit: retain classical law.",
+    "Benefits vanish on new specimen/day/program: narrow claim, do not proceed to flexible learning.",
+    "Residual explained by synchronization, actuator, interface or irreversibility: model that cause rather than an ungrounded rate.",
+    "Prediction gain persists but action gain is below measured practical threshold: report mechanism/prediction contribution only."
+  ],
+  "compute_budget": {"gpu_hours": 0, "tuning_trials_per_method": 2},
+  "seeds": [20261019],
+  "artifacts": ["English protocol", "Chinese rationale", "randomized 24 sheet", "calibration/pretest templates", "raw/context/command schemas", "analysis code", "whole-episode splits", "per-episode metrics", "provenance", "independent-confirmation plan"],
+  "status": "offline_only_no_real_observations",
+  "pilot_inference_limit": "Two technical repeats on one specimen; no population p-values, no timestamp bootstrap.",
+  "practical_thresholds": "Numerical values deliberately pending measured calibration/pretest; no inherited simulated thresholds.",
+  "two_level_validation": "First laws and future-command prediction; then matched closed-loop action. Material law and initial state contributions separated."
+}

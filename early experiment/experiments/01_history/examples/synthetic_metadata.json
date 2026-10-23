@@ -1,0 +1,24 @@
+{
+  "data_type": "synthetic_validation",
+  "units": {
+    "time": "ms",
+    "position": "mm",
+    "force": "N"
+  },
+  "columns": {
+    "episode_id": "episode_id",
+    "specimen_id": "specimen_id",
+    "session_id": "session_id",
+    "timestamp": "timestamp",
+    "command_position": "command_position",
+    "actual_position": "actual_position",
+    "normal_force": "normal_force",
+    "phase": "phase"
+  },
+  "position_sign": 1,
+  "force_sign": 1,
+  "surface_position_m": 0.0,
+  "force_offset_N": 0.0,
+  "review_limits": {},
+  "notes": "Software smoke test only; generated from round2 TRAIN pair 0, not robot data."
+}

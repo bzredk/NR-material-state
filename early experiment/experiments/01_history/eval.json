@@ -1,0 +1,152 @@
+{
+  "name": "matched-present-round2",
+  "claim": "At fixed fitted material physics, history identifies the otherwise hidden stress split and predicts different recontact responses for identical current observations and future commands.",
+  "unit_of_analysis": "physically replayed history pair, with paired ID/held-out-wait continuations",
+  "datasets": [
+    "two-mode-maxwell-matched-present-v1"
+  ],
+  "splits": [
+    {
+      "name": "test_id",
+      "held_out": "complete history pairs and random seeds",
+      "leakage_check": "pair IDs disjoint; both branches remain together"
+    },
+    {
+      "name": "test_wait",
+      "held_out": "[0.8,1.2] s waits; train [0.2,0.5] or [1.8,2.2] s",
+      "leakage_check": "same unseen histories as test_id; identical current observation and commands within each pair"
+    }
+  ],
+  "baselines": [
+    {
+      "name": "classical_integral",
+      "category": "fixed-physics history integration",
+      "controlled_variables": [
+        "training-only fitted parameters",
+        "measured history",
+        "known relaxed start",
+        "future commands"
+      ]
+    },
+    {
+      "name": "snapshot_state",
+      "category": "same-capacity observation ablation",
+      "controlled_variables": [
+        "fixed material parameters",
+        "positive state parameterization",
+        "instantaneous stress constraint",
+        "future physics",
+        "data and loss"
+      ]
+    },
+    {
+      "name": "history_state",
+      "category": "history-grounded state",
+      "controlled_variables": [
+        "all snapshot factors except access to full history"
+      ]
+    },
+    {
+      "name": "gru_contact / gru_force",
+      "category": "matched sequence architecture contact-structure control",
+      "controlled_variables": [
+        "history encoder",
+        "future command GRU",
+        "parameter count",
+        "known actuator",
+        "training loss",
+        "validation protocol"
+      ]
+    },
+    {
+      "name": "oracle",
+      "category": "privileged upper bound",
+      "controlled_variables": [
+        "future commands",
+        "numerical integrator"
+      ]
+    },
+    {
+      "name": "pair_average_oracle",
+      "category": "within-pair identical-prediction lower bound, not deployable",
+      "controlled_variables": [
+        "equal predictions for both branches"
+      ]
+    },
+    {
+      "name": "local_observer",
+      "category": "fixed-physics least-squares observer over the last 0.2 s of known contact, unknown start state",
+      "controlled_variables": [
+        "fixed fitted material",
+        "past position and force only",
+        "future physics and commands"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "paired_response_difference_NRMSE",
+      "direction": "lower",
+      "rationale": "sqrt(sum squared errors in predicted B-A force)/sqrt(sum squared true B-A force), recontact window; identical predictions score exactly 1",
+      "primary": true
+    },
+    {
+      "name": "recontact_force_RMSE_N",
+      "direction": "lower",
+      "rationale": "overall open-loop prediction quality",
+      "primary": false
+    },
+    {
+      "name": "hidden_state_contrast_NRMSE",
+      "direction": "lower",
+      "rationale": "diagnose recovery of the physical state difference not fixed by current force",
+      "primary": false
+    }
+  ],
+  "ablations": [
+    "current observation only",
+    "state exchange between matched pair members at test time",
+    "learned command GRU with/without unilateral contact"
+  ],
+  "falsification_criteria": [
+    "History-state paired response NRMSE >= 0.5: does not meet the predeclared useful recovery criterion; >=1: no improvement over predicting no difference.",
+    "History-state hidden contrast NRMSE >=0.5: do not claim accurate state recovery even if absolute force prediction improves.",
+    "Learned methods fail to beat classical integration: no learning-necessity or new constitutive-law claim on known Maxwell physics.",
+    "Any run hits maximum updates without validation plateau: convergence comparison remains incomplete; retain status and resolve before final interpretation."
+  ],
+  "compute_budget": {
+    "gpu_hours": 2.5,
+    "tuning_trials_per_method": 1,
+    "maximum_updates_per_run": 20000
+  },
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "artifacts": [
+    "generator and numerical gradient tests",
+    "train-only fixed material fit",
+    "profile",
+    "data hashes",
+    "resume checkpoints",
+    "validation logs",
+    "paired predictions and state diagnostics",
+    "figures",
+    "CSV real-data intake tool"
+  ],
+  "convergence": "After >=800 updates, stop when validation loss has not improved by >=0.2% relative for 600 updates. Evaluate every 100; reduce LR by 0.5 on plateau, min 1e-5. Best checkpoint by individual future observation MSE only. Never select by test results.",
+  "training_loss": "Normalized individual future force + position MSE; no paired-effect loss and no true state supervision.",
+  "physics_interface": "Learned state obeys k1*z1+k2*z2=(k_inf+k1+k2)*x-F at current contact, up to positive clipping; one learned scalar distributes stress across positive modes. Snapshot and history share this constraint.",
+  "contact_control": "Both sequence controls consume future commands/time/current readings with a GRU. Contact version predicts an effective free surface and solves the known unilateral actuator contact equations; force version predicts force then solves the same actuator. No true future contact input.",
+  "scope": "One linear two-mode material, known actuator, relaxed initial history. Pair construction uses simulator control response only to generate trajectories; no future-effect filtering. Test wait is interpolation. No real-data result.",
+  "statistical_plan": "1500 bootstrap resamples over optimization seeds and independent history pairs. Preserve per-seed and per-pair numerators/denominators. Three seeds do not measure material-level uncertainty.",
+  "validation_only_extension": {
+    "trigger": "gru_contact seed 47 reached 8000 updates without validation plateau; no test-performance evaluation has occurred.",
+    "change": "Raise guardrail to 20000 for unfinished runs; keep optimizer, loss, convergence threshold, and validation-only checkpoint selection unchanged.",
+    "original_maximum_updates": 8000,
+    "revised_maximum_updates": 20000,
+    "selection_based_on": "validation logs only"
+  },
+  "pretest_local_observer_addition": "Added before any model test evaluation to distinguish current-readout insufficiency from necessity of a long neural history; window fixed at 0.2 s without tuning."
+}

@@ -1,0 +1,82 @@
+{
+  "source": "first 24 validation pairs, four training controllers",
+  "actions": [
+    {
+      "action": "fast",
+      "peak_quantiles": [
+        3.4159353520201776,
+        5.390683732227681,
+        8.590665433183613
+      ],
+      "time_quantiles": [
+        0.71,
+        1.23,
+        2.62
+      ],
+      "selected_fraction": 0.2642361111111111
+    },
+    {
+      "action": "slow",
+      "peak_quantiles": [
+        3.4625266659883653,
+        5.128863623451167,
+        7.477360279549794
+      ],
+      "time_quantiles": [
+        1.2,
+        1.79,
+        3.15
+      ],
+      "selected_fraction": 0.019212962962962963
+    },
+    {
+      "action": "gentle",
+      "peak_quantiles": [
+        3.4805753136498385,
+        4.950391015741063,
+        6.835330865487021
+      ],
+      "time_quantiles": [
+        1.82,
+        2.48,
+        3.83
+      ],
+      "selected_fraction": 0.014467592592592593
+    },
+    {
+      "action": "wait_fast",
+      "peak_quantiles": [
+        3.6058931672173227,
+        5.736724699080159,
+        8.821769437616526
+      ],
+      "time_quantiles": [
+        1.51,
+        2.035,
+        3.5100000000000002
+      ],
+      "selected_fraction": 0.0
+    }
+  ],
+  "oracle_success": 0.29791666666666666,
+  "oracle_reject": 0.7020833333333333,
+  "force_limits": [
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0
+  ],
+  "goal": 0.004,
+  "frozen_config": true
+}

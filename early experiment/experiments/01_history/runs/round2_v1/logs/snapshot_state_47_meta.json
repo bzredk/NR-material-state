@@ -1,0 +1,11 @@
+{
+  "model": "snapshot_state",
+  "seed": 47,
+  "steps": 800,
+  "best_val_loss": 3.27783764078049e-05,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 22.174544299952686,
+  "parameters": 3777,
+  "peak_pytorch_allocated_MiB": 36.7578125
+}

@@ -1,0 +1,95 @@
+{
+  "training_steps_per_run": 330,
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "selection": "Same number of optimizer updates, chosen from pre-training profiling; no test access.",
+  "estimated_training_seconds_without_validation": 565.7462414551992,
+  "hyperparameter_trials_per_model": 1,
+  "configuration": {
+    "name": "maxwell_wait_gap_v1",
+    "dt": 0.02,
+    "history_steps": 150,
+    "future_steps": 210,
+    "train_episodes": 256,
+    "val_episodes": 64,
+    "test_pairs": 128,
+    "data_seed": 20261019,
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "batch_size": 32,
+    "hidden_size": 32,
+    "learning_rate": 0.003,
+    "train_wait_ranges": [
+      [
+        0.2,
+        0.5
+      ],
+      [
+        1.8,
+        2.2
+      ]
+    ],
+    "test_wait_range": [
+      0.8,
+      1.2
+    ],
+    "plant": {
+      "mass": 0.35,
+      "stiffness": 2200.0,
+      "damping": 45.0
+    },
+    "truth": {
+      "k_inf": 400.0,
+      "k": [
+        900.0,
+        1300.0
+      ],
+      "tau": [
+        0.15,
+        1.4
+      ]
+    },
+    "sensor_std": {
+      "position": 5e-06,
+      "velocity": 5e-05,
+      "force": 0.02
+    },
+    "scales": {
+      "position": 0.006,
+      "velocity": 0.02,
+      "force": 8.0
+    },
+    "initial_guess": {
+      "k_inf": 600.0,
+      "k": [
+        700.0,
+        1000.0
+      ],
+      "tau": [
+        0.25,
+        2.0
+      ]
+    },
+    "profile_target_seconds_per_run": 120,
+    "min_steps": 120,
+    "max_steps": 600,
+    "validation_interval": 30
+  },
+  "additional_pretest_ablation": {
+    "model": "material_snapshot",
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "training_steps": 330,
+    "reason": "Test historical grounding against same-capacity current-observation encoder; added before test evaluation.",
+    "cost_bound_seconds_per_run": 120
+  }
+}

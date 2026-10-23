@@ -1,0 +1,11 @@
+{
+  "model": "history_state",
+  "seed": 11,
+  "steps": 4000,
+  "best_val_loss": 7.190134169832163e-06,
+  "converged": true,
+  "stop_reason": "validation_plateau",
+  "seconds": 106.19113779999316,
+  "parameters": 3777,
+  "peak_allocated_MiB": 143.42724609375
+}

@@ -1,0 +1,37 @@
+{
+  "name": "maxwell-wait-gap-pilot-v1",
+  "claim": "A state grounded from past boundary observations can evolve through separation and recovery to predict recontact under unseen wait durations.",
+  "unit_of_analysis": "complete episode; ID/OOD are paired by unseen history",
+  "datasets": ["synthetic-2-mode-maxwell-impedance-v1"],
+  "splits": [
+    {"name": "test_id", "held_out": "independent complete histories; waits in training ranges", "leakage_check": "disjoint episode IDs and saved SHA256"},
+    {"name": "test_wait", "held_out": "waits in [0.8,1.2] s; train waits [0.2,0.5] or [1.8,2.2] s", "leakage_check": "same test histories, never training histories; equal forecast duration"}
+  ],
+  "baselines": [
+    {"name": "classical_2", "category": "correct-family system identification", "controlled_variables": ["training observations", "past observations", "future commands", "known actuator"]},
+    {"name": "classical_0/classical_1", "category": "reduced material models", "controlled_variables": ["training observations", "known actuator"]},
+    {"name": "gru_force", "category": "unstructured material memory with matched actuator physics", "controlled_variables": ["history", "future commands", "known actuator", "optimizer updates", "validation protocol"]},
+    {"name": "material_snapshot", "category": "same-capacity history ablation", "controlled_variables": ["material decoder", "model parameter count", "future commands", "optimizer updates"]},
+    {"name": "oracle", "category": "privileged simulator-state upper bound", "controlled_variables": ["future commands", "integrator", "known actuator"]}
+  ],
+  "metrics": [
+    {"name": "recontact_force_rmse_N", "direction": "lower", "rationale": "Mean per-episode RMSE within 1.2 s of commanded repress onset, excludes long easy zero-force waits", "primary": true},
+    {"name": "recontact_position_rmse_mm", "direction": "lower", "rationale": "Command-to-motion consequence, not force-only regression", "primary": false},
+    {"name": "peak_force_error_N", "direction": "lower", "rationale": "Action-relevant transient error", "primary": false}
+  ],
+  "ablations": ["reset state on separation", "freeze state during separation", "zero state at forecast cut", "encode only current observation"],
+  "falsification_criteria": [
+    "Material-state model does not beat its frozen/reset-state variants on held-out wait prediction.",
+    "Snapshot model matches history model: this dataset does not establish necessity of historical grounding.",
+    "Classical correct-family estimator matches or beats learned models: no learned-law advantage may be claimed on this generator."
+  ],
+  "compute_budget": {"gpu_hours": 0.4, "tuning_trials_per_method": 1},
+  "seeds": [11,23,47],
+  "artifacts": ["code", "configuration", "data and manifest", "runtime profile", "checkpoints", "per-episode metrics", "figures", "real-data protocol"],
+  "scope": "Held-out wait INTERPOLATION inside training min/max. One homogeneous material, one known impedance. No real-world or new-material result.",
+  "additional_diagnostic": "paired wait-effect prediction error, synchronized to commanded repress onset",
+  "statistical_plan": "1500 hierarchical bootstrap resamples of optimization seeds and independent paired test episodes; seed-wise means retained. Deterministic classical models bootstrap episodes only.",
+  "training_information": "Noisy x,v,F,u,dt histories and noisy future x,F labels. Known relaxed physical initial condition. No ground-truth material state supervision.",
+  "test_information": "Noisy past, current x/v, future commands; future achieved positions/forces are labels only. Oracle separately marked.",
+  "prospective_snapshot_note": "Snapshot ablation added before any test-set evaluation to assess whether the history encoder is necessary. Same 330-update plan as the main two models."
+}

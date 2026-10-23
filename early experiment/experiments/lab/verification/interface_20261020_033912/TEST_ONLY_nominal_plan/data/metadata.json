@@ -1,0 +1,63 @@
+{
+  "data_type": "real",
+  "units": {
+    "time": "s",
+    "position": "m",
+    "force": "N"
+  },
+  "position_sign": 1,
+  "force_sign": 1,
+  "surface_position_m": null,
+  "force_offset_N": null,
+  "coordinates": "Compression positive; fixed relaxed surface reference for this session; do not re-zero every trial",
+  "clocks": {
+    "common_clock_id": null,
+    "alignment_method": null,
+    "calibration_record": null,
+    "force_sample_hz": null,
+    "pose_sample_hz": null,
+    "command_update_hz": null,
+    "measured_transport_latency_ms": null,
+    "force_filter_id": null,
+    "force_filter_delay_ms": null
+  },
+  "calibration": {
+    "calibration_id": "TEST_ONLY",
+    "force_noise_sd_N": null,
+    "force_bias_bound_N": null,
+    "position_zero_bound_m": null,
+    "time_alignment_bound_s": null,
+    "local_stiffness_bound_N_m": null,
+    "force_slew_bound_N_s": null,
+    "fastest_relevant_time_s": null,
+    "provenance": null
+  },
+  "analysis": {
+    "reference_compression_m": 0.004,
+    "contact_threshold_N": 0.1,
+    "contact_persistence_s": 0.1,
+    "max_step_s": null,
+    "tau_min_s": null,
+    "tau_max_s": null
+  },
+  "acquisition": {
+    "specimen_batch": null,
+    "geometry_mm": null,
+    "mass_g": null,
+    "direction": null,
+    "fixture_id": null,
+    "platen_id": null,
+    "interface": null,
+    "preconditioning_record": null,
+    "pretest_freeze": "pretest_frozen.json",
+    "raw_clock_archive": null
+  },
+  "actuator": {
+    "calibrated": false,
+    "provenance": null,
+    "note": "The first-batch runner fits constitutive laws only. Future-command validation is a separate level."
+  },
+  "review": {
+    "calibration_reviewed": false
+  }
+}

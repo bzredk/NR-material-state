@@ -1,0 +1,11 @@
+{
+ "data_type":"real",
+ "units":{"time":"s","position":"m","force":"N"},
+ "columns":{"episode_id":"episode_id","specimen_id":"specimen_id","session_id":"session_id","timestamp":"timestamp","command_position":"command_position","actual_position":"actual_position","normal_force":"normal_force","phase":"phase"},
+ "position_sign":1,
+ "force_sign":1,
+ "surface_position_m":0.0,
+ "force_offset_N":0.0,
+ "review_limits":{},
+ "notes":"Fill actual units, calibration offsets, coordinate signs, and lab review limits before use. Limits are offline data review thresholds, not robot safety enforcement. Record actuator settings and original sensor clock information separately."
+}

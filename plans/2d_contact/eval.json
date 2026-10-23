@@ -1,0 +1,39 @@
+{
+  "name": "nr-planar-contact-history-mismatch-draft",
+  "status": "proposed_not_implemented_or_executed",
+  "claim": "Interaction history improves recontact response prediction for matched current observations in a spatially two-dimensional deformable body; action value is tested separately under identical feedback.",
+  "unit_of_analysis": "independent complete history pair, with all future branches clustered",
+  "datasets": ["proposed-calibrated-planar-viscoelastic-contact"],
+  "splits": [
+    {"name": "id-history-holdout", "held_out": "complete history pairs and seed ranges", "leakage_check": "group all history members and action branches before splitting; hash trajectory lineage"},
+    {"name": "wait-command-holdout", "held_out": "declared wait intervals and future command speeds", "leakage_check": "freeze intervals on calibration and validation only; report interpolation separately from extrapolation"}
+  ],
+  "baselines": [
+    {"name": "snapshot_state", "category": "matched-capacity state ablation", "controlled_variables": ["material dynamics", "state dimension", "parameters", "future commands", "training data", "tuning budget"]},
+    {"name": "classical_observer", "category": "calibrated physical reference", "controlled_variables": ["observations", "material law", "future commands", "controller"]},
+    {"name": "direct_recurrent_predictor", "category": "sequence reference", "controlled_variables": ["history", "future commands", "parameter budget", "validation budget"]},
+    {"name": "oracle_state", "category": "privileged diagnostic", "controlled_variables": ["future commands", "plant integrator"]},
+    {"name": "reactive_feedback", "category": "action reference", "controlled_variables": ["feedback rate", "sensors", "limits", "latency"]}
+  ],
+  "metrics": [
+    {"name": "paired_force_effect_nrmse", "direction": "lower", "rationale": "Primary state-history test in the first 1.2 seconds after commanded recontact", "primary": true},
+    {"name": "force_rmse_N", "direction": "lower", "rationale": "Absolute response error", "primary": false},
+    {"name": "lateral_marker_rmse_mm", "direction": "lower", "rationale": "Observable spatial deformation", "primary": false},
+    {"name": "full_episode_success_without_violation", "direction": "higher", "rationale": "Separate Gate 2 action endpoint under common feedback", "primary": false}
+  ],
+  "ablations": ["snapshot instead of history", "state reset after release", "state freeze during separation", "same scalar sensors versus shared lateral-marker sensors", "matched feedback latency sweep"],
+  "falsification_criteria": [
+    "Matched observations do not exhibit a history effect above the predefined noise floor.",
+    "History paired-effect NRMSE is not below 0.5, or the improvement over snapshot is below 20%.",
+    "A classical observer matches or beats history: no neural necessity claim.",
+    "Common feedback yields less than a 5 percentage point success gain at the declared primary condition, or increases violations: no useful added action-value claim.",
+    "Mesh/time refinement changes the primary metric by more than 5% or by the intended method effect: numerical gate fails."
+  ],
+  "compute_budget": {"gpu_hours": 24, "cpu_hours_initial_feasibility": 8, "tuning_trials_per_method": 3, "status": "proposed_caps_not_executed"},
+  "seeds": [11, 23, 47, 71, 101],
+  "artifacts": ["solver and contact checks", "frozen calibration config", "split lineage", "training code", "checkpoints", "per-pair and per-seed metrics", "full-episode actions", "mesh animation", "failure records"],
+  "proposed_pair_counts": {"train": 384, "validation": 96, "test": 128},
+  "latency_ms": [0, 20, 50, 100],
+  "statistics": "Cluster bootstrap over complete history pairs and optimization seeds; preserve all controller/action branches within each pair; 95% intervals.",
+  "pending_before_freeze": ["solver implementation", "numerically valid geometry and strain range", "mesh and integration step", "sensor noise", "state representation and dimension", "calibration-derived force and deformation limits", "primary action latency condition", "cost-based final sample counts"]
+}

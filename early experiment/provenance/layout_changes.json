@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-23",
+  "previous_commit": "3850b0794fb862820a367a469bc325414ee51425",
+  "description": "Shorter experiment folder names and portable entry instructions.",
+  "renames_in_order": [
+    {
+      "from": "early experiment/experiments/material-state-pilot-2026-10-19",
+      "to": "early experiment/experiments/pilot"
+    },
+    {
+      "from": "early experiment/experiments/material-state-round2-2026-10-19",
+      "to": "early experiment/experiments/01_history"
+    },
+    {
+      "from": "early experiment/experiments/material-state-control-transfer-2026-10-19",
+      "to": "early experiment/experiments/02_transfer"
+    },
+    {
+      "from": "early experiment/experiments/material-state-frozen-bridge-2026-10-20",
+      "to": "early experiment/experiments/03_feedback"
+    },
+    {
+      "from": "early experiment/experiments/material-state-closed-loop-2026-10-19",
+      "to": "early experiment/experiments/controller"
+    },
+    {
+      "from": "early experiment/experiments/real-material-first-session-2026-10-20",
+      "to": "early experiment/experiments/lab"
+    },
+    {
+      "from": "early experiment/experiments/real-material-acquisition-pack-2026-10-20",
+      "to": "early experiment/experiments/acquisition"
+    },
+    {
+      "from": "early experiment/diagrams/interaction-history-state-flow",
+      "to": "early experiment/diagrams/workflow"
+    },
+    {
+      "from": "plans/planar-contact-mismatch",
+      "to": "plans/2d_contact"
+    },
+    {
+      "from": "early experiment/experiments/02_transfer/controlled-release",
+      "to": "early experiment/experiments/02_transfer/v2"
+    }
+  ],
+  "saved_data_checkpoints_metrics_and_figures_unchanged": true,
+  "original_source_paths_and_hashes_retained": true,
+  "unchanged_files_after_path_mapping": 737,
+  "edited_existing_files": [
+    {
+      "path": "early experiment/diagrams/workflow/README.md",
+      "before_sha256": "286e6d0f7e6ad9e69c2c7f6aa4753adaf11178432a0eca2bc73f52b9d0de7091",
+      "after_sha256": "3c01d9dd51384815b37658e8d7231bd633cd2396796abd850119aedb38bd9b11"
+    },
+    {
+      "path": "early experiment/experiments/02_transfer/v2/README.md",
+      "before_sha256": "285a5f6fd17a7482af24a83aac1d72734e093d71fe59c7be21a456ee79f1a46f",
+      "after_sha256": "b4ca9aeed9440cb283c3f9a12ce8f33a2540a945edae252d86b7ebed6a3ee218"
+    },
+    {
+      "path": "early experiment/experiments/02_transfer/\u672c\u8f6e\u7ed3\u679c\u4e0e\u7814\u7a76\u5224\u65ad.md",
+      "before_sha256": "7a923ef0c87e2fa192e2576a3226594e1ab66a7950b2db5a2b6998d776a451e1",
+      "after_sha256": "48218d9cb76716e6a156785fe7fdc8c858166c22cc55e6ae0f3179ea044056d9"
+    },
+    {
+      "path": "early experiment/experiments/03_feedback/bootstrap.py",
+      "before_sha256": "3d2450691bbf86bb7ffb80fe53d9abeab725c057141b279c1e04651821b7934f",
+      "after_sha256": "5fcb4d4195d83c706b4a2cf597d858151676ff5a6e113890efc6946662e9baec"
+    },
+    {
+      "path": "early experiment/experiments/03_feedback/README.md",
+      "before_sha256": "9f389f17675065f95adfd3867296b0f261c35e2fbd31e335c57f356f03b02f48",
+      "after_sha256": "1235036f96ffc141433ea458be78685bbc983babd7ae446e997c0c84b3d91398"
+    },
+    {
+      "path": "early experiment/experiments/01_history/README.md",
+      "before_sha256": "de32d45274620fb45dddf18a412f0bd6d7fc70682e6f9f80b3f1337cf9b01c15",
+      "after_sha256": "60ed4e655cf6f7a070ce06c6635f13d26a653dc9da49e4ac9a4971148a09c73d"
+    },
+    {
+      "path": "early experiment/experiments/01_history/run.ps1",
+      "before_sha256": "cb7be13704fe6c591cd54153296a6c711e12cfba67d2590e821b1ae70033ad50",
+      "after_sha256": "5d63b308429f2f04bd43ead19763d3c5948334dee0b0628b684a5894538085bb"
+    },
+    {
+      "path": "early experiment/experiments/lab/README.md",
+      "before_sha256": "13eb067223222a9225c4f3c79a51066192b797c326d4392dc3cedf110bb49317",
+      "after_sha256": "d40c062346c4000cc8a256391245551a4e517dfbb1cf8195c0adeabfbce31763"
+    },
+    {
+      "path": "early experiment/experiments/lab/snapshot_inputs.py",
+      "before_sha256": "19b81d67d9bffe4a92a351fdd3cf3ad9d6bd74074178b6f62ca3525b062efdb6",
+      "after_sha256": "73f308f538097721909f79521a811129227c0846d7856d74c67cd79b5c32e6df"
+    },
+    {
+      "path": "early experiment/PRESENTATION_MAP.md",
+      "before_sha256": "1e877b398a11a77fdcc4fd08eb754686540409ce4aca0fa9872e365ebc93e1f2",
+      "after_sha256": "b9e9b2d6982417f25bf62c42d91335d290d1956f6f532cc23f9be27d927b02a3"
+    },
+    {
+      "path": "early experiment/provenance/packaging_changes.json",
+      "before_sha256": "49c32e80a6164d5e5be544dd5e0ee787a2fff3a778ab1a8a71f69da209f9c228",
+      "after_sha256": "9ce1cb8a5fa463b22cb72a8f966597eda522e607430dca8668fceaa10d68c202"
+    },
+    {
+      "path": "early experiment/provenance/source_manifest.json",
+      "before_sha256": "24aeed0ccaeb96c2b1c7799274273f0ed4b67425981829968371f955aa4a09c2",
+      "after_sha256": "b1e64ca1fb11431c8d60e4981c90d835e90f7b1c95872165787c51562a7d1b2f"
+    },
+    {
+      "path": "early experiment/README.md",
+      "before_sha256": "84f0a4f169c1dc3dc11ae4caa1f70dce2f7555a87438b17a5b0be3e624b68352",
+      "after_sha256": "aa0dfa480b783a3a8b3406756ab64c0f2c6c38450a03fec43a00a720875e23bd"
+    },
+    {
+      "path": "early experiment/REPRODUCING.md",
+      "before_sha256": "36b169d97e1c0ece9354b4f3d4afd05efbec2dccc4d4017a77b2bf1eeb8156d7",
+      "after_sha256": "12c9b633ae14d021523c0994015271a72ee0f3e9ac78a2b71da0ff6f18f394a5"
+    },
+    {
+      "path": "early experiment/RESULTS.md",
+      "before_sha256": "a5aca748e2843ef00011634429040ca075f3e84ee6541c15c1fb885ac957fb1f",
+      "after_sha256": "1d3559098b8341d4be6ed12996267685276862143b4dc00b33e708df6ee2bb0e"
+    },
+    {
+      "path": "early experiment/tools/check_results.py",
+      "before_sha256": "c63b6150ba7c1d611b8be8cfd13f5821c901926849174d032c3d61f08932f23c",
+      "after_sha256": "e159ac9dd05e0037f0f466734b9259f8969ad27680430c8a99a3559e4655b777"
+    },
+    {
+      "path": "early experiment/tools/replay_checkpoints.py",
+      "before_sha256": "566c52923b3ad83a016ec268fe26ae69ca11c2324e3bdbeb0ab3f52703c0ed50",
+      "after_sha256": "95b2cf6572604a572c901bfd5803d2398103d918093baf36462bf2a2cb70ecfd"
+    },
+    {
+      "path": "early experiment/tools/verify_bundle.py",
+      "before_sha256": "f2e1a9c6564a9e3baded35d340a565af17ceee99bf8070ae4b19fe12bb4ec058",
+      "after_sha256": "481def8d89cba48d04b92f247d26a92f038936ebc6ff740bee0102fb6667afb9"
+    },
+    {
+      "path": "early experiment/tools/workcopy.py",
+      "before_sha256": "da253befd80e875876d2a0f4113a6d6b0d79550d49a341a14a5ac2f935a1e3aa",
+      "after_sha256": "1cc2df89a009c32b4fb3dcb45da3c1d5e62cee92e52394848ce5e90864a29959"
+    },
+    {
+      "path": "plans/2d_contact/README.md",
+      "before_sha256": "0583551cf98ef031edae08bc902e464476f8cf1be07b12abca24e16445b38990",
+      "after_sha256": "7c596bd350a52ea6cef33c4bb1af978e59860f2b8a3f2478302a7337b4285639"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "9797b4214d161941158cb70d8b46793197f2564b3e8b7789f4a1f1ba6835486c",
+      "after_sha256": "24103b4c8cbc3adc15540575d5491cceddb237e6fd15385985778c3fcd3b8ec8"
+    }
+  ]
+}

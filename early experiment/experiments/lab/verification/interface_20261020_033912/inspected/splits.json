@@ -1,0 +1,98 @@
+{
+  "amplitude": {
+    "fit": [
+      "synthetic_linear/e00",
+      "synthetic_linear/e02",
+      "synthetic_linear/e04",
+      "synthetic_linear/e06",
+      "synthetic_linear/e08",
+      "synthetic_linear/e10"
+    ],
+    "validation": [
+      "synthetic_linear/e01",
+      "synthetic_linear/e03",
+      "synthetic_linear/e05",
+      "synthetic_linear/e07",
+      "synthetic_linear/e09",
+      "synthetic_linear/e11"
+    ],
+    "test": [
+      "synthetic_linear/e12",
+      "synthetic_linear/e13",
+      "synthetic_linear/e14",
+      "synthetic_linear/e15",
+      "synthetic_linear/e16",
+      "synthetic_linear/e17",
+      "synthetic_linear/e18",
+      "synthetic_linear/e19",
+      "synthetic_linear/e20",
+      "synthetic_linear/e21",
+      "synthetic_linear/e22",
+      "synthetic_linear/e23"
+    ]
+  },
+  "wait": {
+    "fit": [
+      "synthetic_linear/e00",
+      "synthetic_linear/e02",
+      "synthetic_linear/e08",
+      "synthetic_linear/e10",
+      "synthetic_linear/e12",
+      "synthetic_linear/e14",
+      "synthetic_linear/e20",
+      "synthetic_linear/e22"
+    ],
+    "validation": [
+      "synthetic_linear/e01",
+      "synthetic_linear/e03",
+      "synthetic_linear/e09",
+      "synthetic_linear/e11",
+      "synthetic_linear/e13",
+      "synthetic_linear/e15",
+      "synthetic_linear/e21",
+      "synthetic_linear/e23"
+    ],
+    "test": [
+      "synthetic_linear/e04",
+      "synthetic_linear/e05",
+      "synthetic_linear/e06",
+      "synthetic_linear/e07",
+      "synthetic_linear/e16",
+      "synthetic_linear/e17",
+      "synthetic_linear/e18",
+      "synthetic_linear/e19"
+    ]
+  },
+  "program": {
+    "fit": [
+      "synthetic_linear/e00",
+      "synthetic_linear/e04",
+      "synthetic_linear/e08",
+      "synthetic_linear/e12",
+      "synthetic_linear/e16",
+      "synthetic_linear/e20"
+    ],
+    "validation": [
+      "synthetic_linear/e01",
+      "synthetic_linear/e05",
+      "synthetic_linear/e09",
+      "synthetic_linear/e13",
+      "synthetic_linear/e17",
+      "synthetic_linear/e21"
+    ],
+    "test": [
+      "synthetic_linear/e02",
+      "synthetic_linear/e03",
+      "synthetic_linear/e06",
+      "synthetic_linear/e07",
+      "synthetic_linear/e10",
+      "synthetic_linear/e11",
+      "synthetic_linear/e14",
+      "synthetic_linear/e15",
+      "synthetic_linear/e18",
+      "synthetic_linear/e19",
+      "synthetic_linear/e22",
+      "synthetic_linear/e23"
+    ]
+  }
+}

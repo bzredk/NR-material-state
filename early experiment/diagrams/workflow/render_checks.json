@@ -1,0 +1,21 @@
+{
+  "canvas_inches": [
+    16,
+    9
+  ],
+  "png_pixels": [
+    4800,
+    2700
+  ],
+  "font": "Arial",
+  "backend": "Python / matplotlib",
+  "text_outside_canvas": [],
+  "svg_editable_text_elements": 57,
+  "diagram_scope": "one history-conditioned decision, not a closed-loop performance claim",
+  "visual_review": "No text overlaps; arrows and labels readable; consistent Arial; state components distinct from GRU memory.",
+  "exports": [
+    "interaction_history_state_flow.svg",
+    "interaction_history_state_flow.pdf",
+    "interaction_history_state_flow.png"
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "figure": "01_prediction_transfer",
+    "question": "Does the frozen history state predict new-controller responses, and does its advantage survive new feedback?",
+    "interpretation": "Original-cut forecasts favor history. Shared release and contact feedback makes online forecasts nearly coincide; classical integration remains a strong reference.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  },
+  {
+    "figure": "02_feedback_and_action_change",
+    "question": "When do state estimates become similar, and do different estimates continue changing actions?",
+    "interpretation": "The 0.3-s release brings the estimates together, while its common observer also perturbs initially accurate estimates. Rate differences occur in about 0.12% of branches and disappear after the first 100 ms in the matched ongoing-task comparison.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  },
+  {
+    "figure": "03_action_outcomes",
+    "question": "Does the predictive advantage change actual duration, quality, force peaks or failure types?",
+    "interpretation": "All predictive methods complete every task within its force limit. History/current time difference is −0.0029 ms, below the preset useful-gain criterion. The fixed preload prefix is reported separately, not hidden in task safety.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  },
+  {
+    "figure": "04_synchronized_case",
+    "question": "How do commands, responses, forecasts, state updates and action choices connect in one complete interaction?",
+    "interpretation": "Case IDs were fixed before evaluation. Overlapping curves are retained: they show feedback convergence rather than an outcome-selected separation. Vertical markers: handoff, approach onset, first contact of the history method.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  },
+  {
+    "figure": "05_synchronized_case",
+    "question": "How do commands, responses, forecasts, state updates and action choices connect in one complete interaction?",
+    "interpretation": "Case IDs were fixed before evaluation. Overlapping curves are retained: they show feedback convergence rather than an outcome-selected separation. Vertical markers: handoff, approach onset, first contact of the history method.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  },
+  {
+    "figure": "06_synchronized_case",
+    "question": "How do commands, responses, forecasts, state updates and action choices connect in one complete interaction?",
+    "interpretation": "Case IDs were fixed before evaluation. Overlapping curves are retained: they show feedback convergence rather than an outcome-selected separation. Vertical markers: handoff, approach onset, first contact of the history method.",
+    "source": "existing frozen round3 checkpoints in the new round4 bridge simulation; no real data"
+  }
+]

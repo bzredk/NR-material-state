@@ -1,0 +1,18 @@
+{
+  "validation_date": "2026-10-23",
+  "scope": "Packaging and bounded reproduction checks, not new research results",
+  "correctness_tests": {"historical_pilot": 5, "matched_history_and_intake": 9, "controlled_transfer": 8, "total_passed": 22},
+  "primary_checkpoint_replays": {"E1": 12, "E2": 12, "finite_outputs": true, "E1_maximum_absolute_difference_from_saved_prediction": 0.0000016689300537109375, "comparison_scope": "one complete test pair per checkpoint; all three output channels"},
+  "converged_primary_training_records": 24,
+  "bridge_checkpoints_identical_to_E2": 6,
+  "bridge_input_snapshot_hashes_verified": true,
+  "bridge_preregistered_contract_hashes_verified": true,
+  "real_session_interface_replay": "passed on existing synthetic fixture only",
+  "real_data_collected": false,
+  "new_training_performed": false,
+  "presentation_slides": 12,
+  "previous_workflow_formats": ["PNG", "SVG", "PDF", "Python source"],
+  "next_experiment_contract": "structurally validated draft; calibration and implementation pending",
+  "source_language_check": "Python and PowerShell source contain no Chinese characters",
+  "credential_pattern_scan": "no matches in 511 inspected text artifacts before final metadata generation"
+}
