@@ -1,0 +1,40 @@
+{
+  "data": "main.npz",
+  "config": {
+    "nx": 24,
+    "ny": 12,
+    "width": 0.04,
+    "height": 0.02,
+    "thickness": 0.01,
+    "radius": 0.03,
+    "E_inf": 20000.0,
+    "E_fast": 40000.0,
+    "E_slow": 60000.0,
+    "nu": 0.35,
+    "tau_fast": 0.12,
+    "tau_slow": 0.9,
+    "tool_mass": 0.04,
+    "actuator_k": 5000.0,
+    "actuator_c": 12.0,
+    "penalty": 2000000000.0,
+    "dt": 0.01,
+    "clearance": 0.00015,
+    "newton_tol": 1e-08,
+    "newton_max": 35
+  },
+  "source_sha256": {
+    "__init__.py": "f21b01a5e4f6428eb3ccee4252277a9aa8a757ff76505835db6c7767421d71db",
+    "checks.py": "816180e1cc3951399bb75279724814f80c101e174fff62f9e9a74056adaf480f",
+    "cli.py": "18a2d3e33886dc03c218a70a6e4b10880920a0c6d3a3ff63eecf85345c2afc5a",
+    "estimators.py": "ca20ba1f10f62278d46074f13e693bcdda5e8ebb7eab782537076c23e49b863c",
+    "experiments.py": "9283ea80689f2596e13290ebd80fc9f8df5303839354de6d4d7148dc7b4c8d6f",
+    "physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e",
+    "plotting.py": "285fb148b5d67394ab3eeeb6f266007411198462a7dd43e8c34c4986799ac10b",
+    "protocols.py": "c99ec8b332f552e0b5fa8c205b4d35dda57605f82c1722d95a7d5921f148e6fd",
+    "widgets.py": "844d5a61939f69fcd0fbaee81e4541e3c522b4f3cc9a12cfa64873fe30f1a0a4"
+  },
+  "frames": 93,
+  "fps": 17,
+  "wall_seconds": 73.43257436399995,
+  "deformation_scale": 1
+}

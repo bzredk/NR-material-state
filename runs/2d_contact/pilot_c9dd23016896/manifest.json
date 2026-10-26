@@ -1,0 +1,265 @@
+{
+  "status": "completed",
+  "created_utc": "2026-10-26T07:41:47.822762+00:00",
+  "signature": "c9dd23016896",
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.22621-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.0",
+      "pillow": "12.3.0",
+      "ipywidgets": "8.1.8",
+      "ipympl": "0.10.0",
+      "ipykernel": "7.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.10.4"
+    },
+    "git_head": "ebef9b0d6d8affe45ebef2bd05f9b798127187f9",
+    "git_status": "?? plans/hidden_state_reframing/\n?? plans/robot_manipulation/\n?? pyproject.toml\n?? requirements-notebook.txt\n?? runs/\n?? src/",
+    "source_sha256": {
+      "__init__.py": "f21b01a5e4f6428eb3ccee4252277a9aa8a757ff76505835db6c7767421d71db",
+      "checks.py": "816180e1cc3951399bb75279724814f80c101e174fff62f9e9a74056adaf480f",
+      "estimators.py": "ca20ba1f10f62278d46074f13e693bcdda5e8ebb7eab782537076c23e49b863c",
+      "experiments.py": "9283ea80689f2596e13290ebd80fc9f8df5303839354de6d4d7148dc7b4c8d6f",
+      "physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e",
+      "protocols.py": "c99ec8b332f552e0b5fa8c205b4d35dda57605f82c1722d95a7d5921f148e6fd"
+    }
+  },
+  "histories": [
+    {
+      "id": "calibration_100",
+      "seed": 100,
+      "split": "calibration",
+      "parameters": {
+        "amplitude": 0.00036948310404518305,
+        "loading": 0.42,
+        "hold": 0.42,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/calibration_100.npz",
+      "status": "completed"
+    },
+    {
+      "id": "calibration_101",
+      "seed": 101,
+      "split": "calibration",
+      "parameters": {
+        "amplitude": 0.00033391315500123594,
+        "loading": 0.3,
+        "hold": 0.54,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/calibration_101.npz",
+      "status": "completed"
+    },
+    {
+      "id": "calibration_102",
+      "seed": 102,
+      "split": "calibration",
+      "parameters": {
+        "amplitude": 0.00036789152722603406,
+        "loading": 0.32999999999999996,
+        "hold": 0.51,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "hold",
+        "include_future": false
+      },
+      "path": "histories/calibration_102.npz",
+      "status": "completed"
+    },
+    {
+      "id": "validation_200",
+      "seed": 200,
+      "split": "validation",
+      "parameters": {
+        "amplitude": 0.0003795879957069119,
+        "loading": 0.24,
+        "hold": 0.6,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/validation_200.npz",
+      "status": "completed"
+    },
+    {
+      "id": "validation_201",
+      "seed": 201,
+      "split": "validation",
+      "parameters": {
+        "amplitude": 0.0003604949991801031,
+        "loading": 0.3,
+        "hold": 0.54,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/validation_201.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_300",
+      "seed": 300,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.0003639890635718841,
+        "loading": 0.24,
+        "hold": 0.6,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/test_300.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_301",
+      "seed": 301,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.0003100428833166406,
+        "loading": 0.3,
+        "hold": 0.54,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "hold",
+        "include_future": false
+      },
+      "path": "histories/test_301.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_302",
+      "seed": 302,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.0003858931831689015,
+        "loading": 0.44999999999999996,
+        "hold": 0.39,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/test_302.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_303",
+      "seed": 303,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.0003425232731296973,
+        "loading": 0.32999999999999996,
+        "hold": 0.51,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "hold",
+        "include_future": false
+      },
+      "path": "histories/test_303.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_304",
+      "seed": 304,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.00041482868282052983,
+        "loading": 0.42,
+        "hold": 0.42,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/test_304.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_305",
+      "seed": 305,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.00038376142235739156,
+        "loading": 0.3,
+        "hold": 0.54,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/test_305.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_306",
+      "seed": 306,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.00032512632213613647,
+        "loading": 0.44999999999999996,
+        "hold": 0.39,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "hold",
+        "include_future": false
+      },
+      "path": "histories/test_306.npz",
+      "status": "completed"
+    },
+    {
+      "id": "test_307",
+      "seed": 307,
+      "split": "test",
+      "parameters": {
+        "amplitude": 0.00038105103075432984,
+        "loading": 0.48,
+        "hold": 0.36,
+        "release": 0.26,
+        "wait": 0.3,
+        "excitation": "pulse",
+        "include_future": false
+      },
+      "path": "histories/test_307.npz",
+      "status": "completed"
+    }
+  ],
+  "failures": [],
+  "statistical_unit": "Complete parent history",
+  "sensor_resolution_SI": [
+    2e-06,
+    5e-05,
+    0.006,
+    5e-06,
+    5e-06
+  ],
+  "sensor_noise_std_SI": [
+    5e-07,
+    1e-05,
+    0.0015,
+    1e-06,
+    1e-06
+  ],
+  "material_status": "Synthetic; no physical specimen calibration",
+  "independent_test_history_count": 8,
+  "known_parameters": true,
+  "body_dynamics": "Quasistatic; dynamic 1-DOF indenter",
+  "new_3d_or_hardware_evidence": false,
+  "completed_utc": "2026-10-26T07:43:00.165526+00:00",
+  "wall_seconds": 72.34406580007635,
+  "checks_passed": true
+}

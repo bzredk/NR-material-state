@@ -1,0 +1,14 @@
+{
+  "vscode_main_pid": 688516,
+  "vscode_parent_pid": 7976,
+  "vscode_parent_process": "WmiPrvSE.exe",
+  "launch": "WMI Win32_Process.Create with CREATE_BREAKAWAY_FROM_JOB",
+  "current_codex_command_job_query_succeeded": true,
+  "vscode_in_current_codex_command_job": false,
+  "docker_frontend_in_current_codex_command_job": false,
+  "any_windows_job_membership": true,
+  "interpretation": "Both applications can belong to their own Windows jobs. Their membership in any job alone does not imply dependence on Codex. The new VS Code was created through WMI with breakaway and is absent from the current Codex command job.",
+  "closing_codex_actually_tested": false,
+  "devcontainer_connected": true,
+  "container_shutdown_action": "none"
+}

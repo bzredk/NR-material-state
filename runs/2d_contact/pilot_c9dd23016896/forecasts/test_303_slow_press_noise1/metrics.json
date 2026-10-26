@@ -1,0 +1,71 @@
+{
+  "Snapshot": {
+    "force_rmse_N": 0.00149930352936989,
+    "marker_rmse_m": 4.59916689629979e-07,
+    "inference_seconds": 0.1316164000891149,
+    "inference": {
+      "window_seconds": 0.0,
+      "basis_coefficients": [
+        0.05831677375035645,
+        0.09604821582111578,
+        0.1675099459516714,
+        0.042586893475493284,
+        0.14179359474337316,
+        0.25092238714529347
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.30604584449081396,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Short classical": {
+    "force_rmse_N": 0.0024708520973602383,
+    "marker_rmse_m": 2.561575071986246e-07,
+    "inference_seconds": 2.503824800020084,
+    "inference": {
+      "window_seconds": 0.2,
+      "basis_coefficients": [
+        0.10983296314980723,
+        0.18115557166786211,
+        0.2643394112571317,
+        0.11556790017777964,
+        0.14644009226780352,
+        0.20292223384370936
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.5380307851393707,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Full classical": {
+    "force_rmse_N": 7.66815169974065e-06,
+    "marker_rmse_m": 1.5881452293672567e-09,
+    "inference_seconds": 0.6836143000982702,
+    "inference": {
+      "window": "full",
+      "known_relaxed_start": true,
+      "internal_truth_used": false,
+      "solver_steps": 140,
+      "observation_use": "actual tool position drives material replay"
+    }
+  },
+  "True state": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 0.0,
+    "inference_seconds": 0.0,
+    "inference": {
+      "privileged": true,
+      "scope": "same solver and future commands"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "Snapshot": {
+    "force_rmse_N": 0.0022365540739254486,
+    "marker_rmse_m": 2.92094776477286e-07,
+    "inference_seconds": 0.11271740007214248,
+    "inference": {
+      "window_seconds": 0.0,
+      "basis_coefficients": [
+        0.033780307773267355,
+        0.11023352051084342,
+        0.18588918196877077,
+        0.05112869165635797,
+        0.15759003011566167,
+        0.2774039937798495
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.30605565252722877,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Short classical": {
+    "force_rmse_N": 0.002318757653560105,
+    "marker_rmse_m": 1.3765263353343585e-07,
+    "inference_seconds": 2.3112729999702424,
+    "inference": {
+      "window_seconds": 0.2,
+      "basis_coefficients": [
+        0.14285979095683943,
+        0.20391791664244047,
+        0.2845702577405944,
+        0.13734704793028307,
+        0.16740964317047605,
+        0.22103960701875403
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.5380408188804398,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Full classical": {
+    "force_rmse_N": 8.396844870973298e-06,
+    "marker_rmse_m": 9.362514827303658e-10,
+    "inference_seconds": 0.8655950999818742,
+    "inference": {
+      "window": "full",
+      "known_relaxed_start": true,
+      "internal_truth_used": false,
+      "solver_steps": 140,
+      "observation_use": "actual tool position drives material replay"
+    }
+  },
+  "True state": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 0.0,
+    "inference_seconds": 0.0,
+    "inference": {
+      "privileged": true,
+      "scope": "same solver and future commands"
+    }
+  }
+}

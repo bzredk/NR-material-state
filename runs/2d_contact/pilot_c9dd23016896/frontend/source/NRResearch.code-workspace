@@ -1,0 +1,12 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "python.useEnvironmentsExtension": false,
+    "jupyter.disableJupyterAutoStart": true,
+    "jupyter.notebookFileRoot": "${workspaceFolder}"
+  },
+  "extensions": {
+    "recommendations": ["ms-python.python", "ms-toolsai.jupyter"]
+  }
+}

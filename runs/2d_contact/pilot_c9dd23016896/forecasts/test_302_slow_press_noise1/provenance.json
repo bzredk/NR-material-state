@@ -1,0 +1,26 @@
+{
+  "parent_id": "test_302",
+  "action": "Slow press",
+  "noise_multiplier": 1.0,
+  "noise_std_SI": [
+    5e-07,
+    1e-05,
+    0.0015,
+    1e-06,
+    1e-06
+  ],
+  "seed": 123,
+  "source_sha256": {
+    "__init__.py": "f21b01a5e4f6428eb3ccee4252277a9aa8a757ff76505835db6c7767421d71db",
+    "checks.py": "816180e1cc3951399bb75279724814f80c101e174fff62f9e9a74056adaf480f",
+    "cli.py": "647adf23801745ba77b9b1928841c5b3916d4ccf7ed4a5a291cc750a358920b7",
+    "estimators.py": "ca20ba1f10f62278d46074f13e693bcdda5e8ebb7eab782537076c23e49b863c",
+    "experiments.py": "9283ea80689f2596e13290ebd80fc9f8df5303839354de6d4d7148dc7b4c8d6f",
+    "physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e",
+    "plotting.py": "a0dad89fb04bcb74823a6e4c4d2de5275598e4405cc78c7913401ae23cd24c54",
+    "protocols.py": "c99ec8b332f552e0b5fa8c205b4d35dda57605f82c1722d95a7d5921f148e6fd",
+    "widgets.py": "7d8248018cfba8dc68e1169e44329f07af765421bc5fc77ff13e00d6e0f778c4"
+  },
+  "utc": "2026-10-26T07:48:29.859630+00:00",
+  "future_achieved_motion_given_to_predictors": false
+}

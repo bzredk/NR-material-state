@@ -1,43 +1,46 @@
-# NR · material memory
+# NR · Object hidden state
 
-Press a soft material, release it, then press it again. The second force response can depend on the first loading history, even when the current position and force look the same.
+How much interaction history does a robot need to predict an object's next response? This project studies hidden dynamic state through materials with fast and slow relaxation.
 
-This project studies how much of that history a robot needs to keep. A small recurrent encoder estimates two internal material variables. A fixed physics model then uses that estimate to predict the response to the next command.
+**Start with [2D](2D/README.md)** — a spatial FEM experiment with a circular indenter, solved lateral deformation, classical state estimates and an interactive VS Code notebook.
 
-The experiments so far use a one-dimensional contact simulator. History improves prediction in the matched-history and controller-transfer tests. A classical observer is also competitive. When all methods receive the same feedback during execution, the learned initialization adds no useful action benefit in the tested task. That result is why the next experiment focuses on contact geometry, lateral deformation and response mismatch.
+![Spatial 2D loading, relaxation and recontact](runs/container_validation/20261026_linux_cpu/spatial_process.gif)
 
-## Run it
+## Run the 2D demo
 
-Start with the [setup guide](SETUP.md), or [中文安装与运行说明](docs/SETUP.zh-CN.md). It covers Windows PowerShell and Linux, CPU and CUDA installation, expected outputs, and common errors.
+1. Clone this repository and open its root in VS Code.
+2. Start Docker Desktop with the Linux engine and choose **Dev Containers: Reopen in Container**.
+3. Open [`2D/spatial_2d_hidden_state.ipynb`](2D/spatial_2d_hidden_state.ipynb), select `/opt/venv/bin/python`, then **Run All**.
 
-Once the environment is installed, these commands check the saved results from the repository root:
+The demo computes a fresh main trajectory and replays saved prediction comparisons. **Recompute** runs a selected comparison again. The Linux notebook has been executed from a clean kernel; native playback, sliders and curve updates were also checked in VS Code.
 
-```sh
-python "early experiment/tools/check_environment.py"
-python "early experiment/tools/verify_bundle.py"
-python "early experiment/tools/check_results.py"
-python "early experiment/tools/replay_checkpoints.py"
-```
+[Build and CLI commands](docs/spatial_2d/CONTAINER.md) · [Model and results](docs/spatial_2d/README.md) · [Three-minute demo / 中文讲解](docs/spatial_2d/DEMO.zh-CN.md)
 
-The checks work on CPU. Full E1/E2 runs and the frozen-encoder preparation in E3 require CUDA. The [reproduction guide](early%20experiment/REPRODUCING.md) gives the commands for each experiment, including fresh runs and interrupted training.
+## Research status
 
-## Experiments
+| Study | Evidence | Status |
+| --- | --- | --- |
+| [Spatial 2D](2D/README.md) | 17 physical checks; eight test histories; cross-action predictions and history-window sweeps | Executed pilot |
+| [Archived 1D E1/E2/E3](early%20experiment/RESULTS.md) | History-dependent response, controller transfer and common-feedback control | Executed; E3 found no action benefit |
+| [Hidden-state formulation](plans/hidden_state_reframing/README.md) | State definitions, two-framework mapping, literature audit and discriminating experiments | Research design |
+| [3D robot manipulation](plans/robot_manipulation/README.md) | Coupled robot/contact requirements and staged protocol | Planned |
 
-The archive contains the code, synthetic data, trained weights, logs and figures used in the [October 22, 2026 progress slides](early%20experiment/presentation/NR_Progress_2026-10-22.pdf) ([PowerPoint](early%20experiment/presentation/NR_Progress_2026-10-22.pptx)).
+The 2D pilot uses synthetic, small-strain material parameters. A short classical observer helps without noise but is less accurate than the instantaneous fit under nominal noise. Full-history replay performs well with its known relaxed start and correct model. These results motivate testing noise, excitation and model mismatch before adding learned representations.
 
-| Folder | Experiment |
+## Repository map
+
+| Path | Contents |
 | --- | --- |
-| [`01_history`](early%20experiment/experiments/01_history) | E1: different histories, matched current observations, identical future command |
-| [`02_transfer/v2`](early%20experiment/experiments/02_transfer/v2) | E2: reuse one state estimate under different future controllers |
-| [`03_feedback`](early%20experiment/experiments/03_feedback) | E3: frozen estimates with a common observer and controller |
-| [`lab`](early%20experiment/experiments/lab) | P1: first material-collection protocol and data intake; measurements are still pending |
+| [`2D/`](2D/) | Main notebook and experiment overview |
+| [`src/nr2d/`](src/nr2d/) | Physics, protocols, estimators, plots, widgets and CLI |
+| [`tests/`](tests/) | Numerical and data contracts |
+| [`tools/`](tools/README.md) | Notebook execution, validation and environment helpers |
+| [`runs/`](runs/README.md) | Published raw data, figures, failures and reproducibility records |
+| [`docs/`](docs/README.md) | Setup, implementation and presentation guides |
+| [`plans/`](plans/README.md) | Literature, research decisions and future protocols |
+| [`early experiment/`](early%20experiment/README.md) | Preserved 1D code, data, trained models and slides |
+| `.devcontainer/`, `Dockerfile`, `requirements-container.*` | Pinned Linux CPU environment |
 
-The earlier pilot and supporting snapshots are listed in the [archive guide](early%20experiment/README.md). Read [results and interpretation](early%20experiment/RESULTS.md) for the numbers, or the [slide map](early%20experiment/PRESENTATION_MAP.md) to find a figure's source.
+Each result stays with its configuration and provenance. Routine notebook replays, editor state and local environments stay outside Git; the published pilot includes the raw trajectories behind its figures. See the [run index](runs/README.md).
 
-## How the estimate is used
-
-![Measured history, material-state estimate, candidate predictions and action selection](early%20experiment/diagrams/workflow/interaction_history_state_flow.png)
-
-The figure shows one decision: measured history produces a state estimate, candidate commands are rolled out, and a shared selector chooses an action. The [drawing source and vector exports](early%20experiment/diagrams/workflow) are included.
-
-The [2D contact plan](plans/2d_contact/README.md) is the next study. It has not been implemented yet. The two internal variables in the current simulator describe material memory along one motion axis; they are not two spatial dimensions.
+For the archived 1D environment, use [SETUP.md](SETUP.md) or [中文安装说明](docs/SETUP.zh-CN.md). Its CUDA training dependencies are separate from the current CPU container.

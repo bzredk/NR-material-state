@@ -1,0 +1,34 @@
+{
+  "name": "JEPA objective suitability pilot for hidden object state",
+  "status": "PROPOSED_NOT_EXECUTED",
+  "parent_protocol": "eval_spec.json",
+  "claim": "At matched causal information and model capacity, embedding prediction retains action-relevant hidden-state information and offers a measurable robustness or data-efficiency benefit beyond direct physical-response prediction; decision value is a separate gated claim.",
+  "unit_of_analysis": "Parent history block conditional on the fixed carrier; pair members, future branches, frames and training seeds remain dependent. Specimen/batch clustering is required for material-level claims.",
+  "datasets": ["D0 archived diagnostic only, with privileged construction caveats", "D1 proposed qualified spatial 2D, independent noise, matched and natural histories", "D2 full-arm study only after parent stage gates"],
+  "splits": [
+    {"name": "parent_training_validation_pilot_test", "held_out": "All parent IDs and future branches grouped; independent pilot and fresh final test", "leakage_check": "Reuse parent split contract; no selection by future effect or oracle action disagreement"},
+    {"name": "future_action_shift", "held_out": "Declared command and controller conditions", "leakage_check": "Freeze command families before final data; no future achieved motion as input"},
+    {"name": "nuisance_and_physics_shift", "held_out": "Separately declared sensing and physical parameter/geometry conditions", "leakage_check": "Augmentations preserve physical state and channel units; no target-field leakage"}
+  ],
+  "baselines": [
+    {"name": "current-only direct physical prediction", "category": "factorial cell", "controlled_variables": ["encoder capacity", "data", "actions", "controller", "tuning budget"]},
+    {"name": "history direct physical prediction", "category": "strong learned reference", "controlled_variables": ["same history encoder as JEPA", "same channels and downstream readout", "compute"]},
+    {"name": "current-only embedding prediction", "category": "factorial cell", "controlled_variables": ["non-collapse recipe", "data", "capacity", "controller"]},
+    {"name": "history embedding prediction", "category": "candidate", "controlled_variables": ["same causal memory", "all retained state counted", "shared physical-output evaluation"]},
+    {"name": "short/full classical observers", "category": "physical reference", "controlled_variables": ["calibration", "reset information", "observations", "controller"]},
+    {"name": "true state with same fitted predictor", "category": "restricted privileged reference", "controlled_variables": ["same law, action library and controller; not global optimum"]}
+  ],
+  "metrics": [
+    {"name": "held-out force-response error under unseen commands", "direction": "lower", "rationale": "Common physical output avoids comparing incompatible latent-loss scales", "primary": true},
+    {"name": "nuisance-shift degradation or data-efficiency curve", "direction": "lower degradation / fewer independent training units", "rationale": "Test the reason for using JEPA, not only more model capacity", "primary": false},
+    {"name": "older-history residual gain and recursive forecast accuracy", "direction": "below a meaningful frozen tolerance with accurate outputs", "rationale": "Test omitted information; nonsignificance and agreement between wrong forecasts are insufficient", "primary": false},
+    {"name": "proper distributional score and coverage if a belief is claimed", "direction": "lower score and calibrated coverage", "rationale": "Point loss does not establish uncertainty adequacy", "primary": false},
+    {"name": "full-operation decision utility", "direction": "higher", "rationale": "Secondary gated study only after true-state headroom; include preload/probe/release/retreat", "primary": false}
+  ],
+  "ablations": ["instant versus common history architecture", "physical-output versus embedding objective", "future time horizon covering calibrated modes", "shared measured-force channel", "physical-response anchor only after a diagnosed embedding failure", "all learned memory and filters serialized"],
+  "falsification_criteria": ["Embedding accuracy does not preserve held-out physical response: reject tested target adequacy", "Gain disappears when history, capacity, labels and compute are matched: reject JEPA-specific improvement", "Short classical or direct prediction is adequate and JEPA has no useful robustness/data-efficiency benefit: stop escalation", "No restricted true-state action headroom: stop action-benefit claim for that task", "Prior work matches core problem, information and contribution: stop that novelty argument"],
+  "compute_budget": {"sensor_only_feasibility_cap_local_hours": 8, "status": "planning cap, not runtime estimate", "tuning_trials_per_cell": 3, "foundation_pretraining": false, "full_visual_sweep": "deferred pending measured need and throughput"},
+  "seeds": [11,23,47],
+  "artifacts": ["parent split manifests", "sensor/action timestamps", "target and privilege definitions", "complete model memory", "raw physical scores and failures", "tuning/compute logs", "source and dependency versions"],
+  "unfrozen_quantities": ["task-linked error tolerance", "horizon/window scale for new material", "sensor noise and rates", "final confirmation sample size"]
+}

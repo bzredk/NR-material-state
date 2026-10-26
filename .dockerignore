@@ -1,0 +1,5 @@
+# The image contains dependencies. Source, archives and results are bind-mounted.
+# In particular, the host .venv and runtime credentials never enter the context.
+*
+!Dockerfile
+!requirements-container.txt

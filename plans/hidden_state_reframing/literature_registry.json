@@ -1,0 +1,232 @@
+{
+  "audit_date": "2026-10-25",
+  "status": "source_inspection_only_no_reproduction_run",
+  "evidence_labels": {
+    "F": "Explicit paper, source-code, or metadata fact",
+    "I": "Reasoned implication, not directly established experimentally",
+    "U": "Unverified detail",
+    "A": "Access or release limitation"
+  },
+  "claim_links": {
+    "C01": "response relevance",
+    "C02": "recoverability and required history",
+    "C03": "compressed and recursive sufficiency",
+    "C04": "cross-action reuse",
+    "C05": "decision value",
+    "C06": "scope transfer"
+  },
+  "papers": [
+    {
+      "id": "P01",
+      "name": "RoboPack",
+      "pdf": "https://www.roboticsproceedings.org/rss20/p130.pdf",
+      "original_archive": "2026-10-23-novelty-experiment-audit/sources/robopack.pdf",
+      "rechecked_pdf_pages": [
+        6,
+        7,
+        14
+      ],
+      "code": "https://github.com/BoAi01/robopack",
+      "commit": "ac02a01006b50dbb7379b676ec5a622921875c5b",
+      "commit_date": "2025-03-21",
+      "code_id": "K-P01",
+      "data_id": "D-P01",
+      "license_status": "API metadata null; no LICENSE found in inspected tree",
+      "data_status": "README link found; metadata request 404 and web access unavailable; raw ZIP not inspected",
+      "links": [
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "critical_observations": [
+        "Model retains LSTM hidden/cell state beyond emitted physics vector.",
+        "Dataset action features use realized tool displacement.",
+        "history_length=1 is not a one-frame-memory model."
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "HIRE",
+      "pdf": "https://arxiv.org/pdf/2609.30828v1",
+      "original_archive": "2026-10-23-novelty-experiment-audit/sources/hire.pdf",
+      "rechecked_pdf_pages": [
+        5,
+        6
+      ],
+      "code_id": "K-P16",
+      "data_id": "D-P16",
+      "code_status": "Primary page says code will be released upon publication; runnable release not established",
+      "data_status": "Reported synchronized demonstrations; public raw schema and payload not verified",
+      "links": [
+        "C01",
+        "C02",
+        "C03",
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "AdaptiGraph",
+      "pdf": "https://hauserlab.web.illinois.edu/papers/RSS2024-Zhang-AdaptiGraph.pdf",
+      "original_archive": "2026-10-23-novelty-experiment-audit/sources/adaptigraph.pdf",
+      "rechecked_pdf_pages": [
+        4,
+        6,
+        7,
+        13
+      ],
+      "code": "https://github.com/Boey-li/AdaptiGraph",
+      "commit": "a7c75357793422e9108c36f58c6928f3f8a123ad",
+      "commit_date": "2024-07-25",
+      "code_id": "K-P02",
+      "data_id": "D-P02",
+      "license_status": "MIT in API metadata and LICENSE file in tree",
+      "data_status": "Drive folders and ZIP metadata listed; README/code schema inspected; binary payloads not downloaded",
+      "links": [
+        "C02",
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "critical_observations": [
+        "Public sample 100 episodes per material with 98/2 split; original generation 1000 with 900/100.",
+        "Documented info.timestamp means frame count rather than synchronized wall-clock timestamps.",
+        "No force, recovery-spectrum, or dynamic internal-state labels in documented HDF5 schema."
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Rapid Mismatch Estimation",
+      "pdf": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/jaszczuk25a/jaszczuk25a.pdf",
+      "original_archive": "2026-10-23-novelty-experiment-audit/sources/rme.pdf",
+      "rechecked_pdf_pages": [
+        7,
+        8,
+        18,
+        19
+      ],
+      "code": "https://github.com/mateusz-jaszczuk/RapidMismatchEstimation",
+      "commit": "a2fe683ccc7a921692949445f867a73938933d89",
+      "commit_date": "2025-08-20",
+      "code_id": "K-P03",
+      "data_id": "D-P03",
+      "license_status": "API metadata null; no root LICENSE found",
+      "data_status": "Weights and inference code found; complete training/evaluation data not identified in inspected tree",
+      "links": [
+        "C02",
+        "C05"
+      ],
+      "critical_observations": [
+        "Target is payload mass/CoM under a gravitational wrench model.",
+        "Robot-specific FK and hardcoded local paths require adaptation.",
+        "Parent-simulation grouping before augmented-window train/validation split unverified."
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Physics-augmented viscoelasticity",
+      "pdf": "https://arxiv.org/pdf/2401.14270",
+      "publication": "https://link.springer.com/article/10.1007/s00466-024-02477-1",
+      "original_archive": "2026-10-23-novelty-experiment-audit/sources/pann_viscoelastic.pdf",
+      "rechecked_pdf_pages": [
+        9,
+        12,
+        13
+      ],
+      "code_id": "K-P04",
+      "data_id": "D-P04",
+      "code_status": "Author source repository not established in inspected sources",
+      "data_status": "Synthetic strain/stress generation recipe described; no public payload verified",
+      "links": [
+        "C01",
+        "C02",
+        "C03",
+        "C06"
+      ],
+      "critical_observations": [
+        "Auxiliary LSTM is training-only; deployment integrates constitutive internal state.",
+        "Material-point strain/stress inputs are not sparse robot boundary measurements.",
+        "FE deployment is not an experiment addressed by this paper."
+      ]
+    }
+  ],
+  "data_access_checks": [
+    {
+      "id": "D-P01",
+      "url": "https://drive.google.com/file/d/1KS9Zyp4Z9K7R0F13zmgMpsP21Wa589C2/view",
+      "result": "connector_metadata_404_and_web_inaccessible",
+      "payload_inspected": false
+    },
+    {
+      "id": "D-P02",
+      "url": "https://drive.google.com/drive/folders/1HR39B7PXbYkM2w3XcA3feTCRCZH1q7UG",
+      "result": "listed_release_folders",
+      "payload_inspected": false,
+      "listed_files": [
+        {
+          "name": "granular.zip",
+          "bytes": 686064449
+        },
+        {
+          "name": "cloth.zip",
+          "bytes": 476828964
+        },
+        {
+          "name": "rope.zip",
+          "bytes": 868133700
+        },
+        {
+          "name": "granular_1.zip",
+          "bytes": 135041249
+        }
+      ]
+    }
+  ],
+  "source_snapshots": [
+    {
+      "file": "robopack_readme.txt",
+      "url": "https://raw.githubusercontent.com/BoAi01/robopack/main/README.md"
+    },
+    {
+      "file": "robopack_dataset.py.txt",
+      "url": "https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/dynamics/dataset.py"
+    },
+    {
+      "file": "robopack_recording.py.txt",
+      "url": "https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/perception/record_training_data_stamped.py"
+    },
+    {
+      "file": "robopack_model.py.txt",
+      "url": "https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/dynamics/models/estimator_predictor_dpi_net_obj_latent_lstm.py"
+    },
+    {
+      "file": "robopack_config.json.txt",
+      "url": "https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/dynamics/model_configs/estimator_predictor_tac_packing_seq25.json"
+    },
+    {
+      "file": "adaptigraph_readme.txt",
+      "url": "https://raw.githubusercontent.com/Boey-li/AdaptiGraph/main/README.md"
+    },
+    {
+      "file": "adaptigraph_rope_config.yaml.txt",
+      "url": "https://raw.githubusercontent.com/Boey-li/AdaptiGraph/a7c75357793422e9108c36f58c6928f3f8a123ad/src/config/dynamics/rope.yaml"
+    },
+    {
+      "file": "rme_readme.txt",
+      "url": "https://raw.githubusercontent.com/mateusz-jaszczuk/RapidMismatchEstimation/main/README.md"
+    },
+    {
+      "file": "rme_source.py.txt",
+      "url": "https://raw.githubusercontent.com/mateusz-jaszczuk/RapidMismatchEstimation/a2fe683ccc7a921692949445f867a73938933d89/RapidMismatchEstimation.py"
+    }
+  ],
+  "limits": [
+    "No code installation or runtime validation.",
+    "Public dataset metadata and schema are not evidence of inspected payload contents.",
+    "No claim that an unreported evaluation is impossible for a method.",
+    "Read sample does not establish any platform as a field-wide standard."
+  ]
+}

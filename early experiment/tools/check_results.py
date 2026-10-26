@@ -29,9 +29,9 @@ def main():
             assert hashlib.sha256((r3/'checkpoints'/name).read_bytes()).digest() == hashlib.sha256((bridge/'inputs/checkpoints'/name).read_bytes()).digest()
     effects = read(bridge/'results/summary.json')['effects']
     for item in read(bridge/'results/input_provenance.json'):
-        assert hashlib.sha256((bridge/item['snapshot']).read_bytes()).hexdigest()==item['sha256']
+        assert hashlib.sha256((bridge/item['snapshot'].replace('\\','/')).read_bytes()).hexdigest()==item['sha256']
     for name,expected in read(bridge/'results/preregistered_hashes.json').items():
-        assert hashlib.sha256((bridge/name).read_bytes()).hexdigest()==expected
+        assert hashlib.sha256((bridge/name.replace('\\','/')).read_bytes()).hexdigest()==expected
     assert effects['safe_success_gain_pp']['mean'] == 0
     assert effects['meaningful'] is False
     assert abs(effects['cost_gain_s']['mean']) < 1e-5

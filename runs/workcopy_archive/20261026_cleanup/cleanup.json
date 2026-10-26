@@ -1,0 +1,157 @@
+{
+  "status": "completed",
+  "utc": "2026-10-26T20:21:35.1328715Z",
+  "removed": [
+    {
+      "path": "reproductions/e1",
+      "kind": "restorable_workcopy",
+      "files": 117,
+      "bytes": 136213972,
+      "retained_copy": null
+    },
+    {
+      "path": "reproductions/e2",
+      "kind": "restorable_workcopy",
+      "files": 316,
+      "bytes": 166441634,
+      "retained_copy": null
+    },
+    {
+      "path": "reproductions/e3",
+      "kind": "restorable_workcopy",
+      "files": 111,
+      "bytes": 296311683,
+      "retained_copy": null
+    },
+    {
+      "path": "reproductions/lab",
+      "kind": "restorable_workcopy",
+      "files": 240,
+      "bytes": 41718302,
+      "retained_copy": null
+    },
+    {
+      "path": ".runtime/cleanup/restore_check",
+      "kind": "temporary_restore_check",
+      "files": 738,
+      "bytes": 639177136,
+      "retained_copy": null
+    },
+    {
+      "path": ".pytest_cache",
+      "kind": "regenerable_cache",
+      "files": 4,
+      "bytes": 3277,
+      "retained_copy": null
+    },
+    {
+      "path": "tools/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 1,
+      "bytes": 7130,
+      "retained_copy": null
+    },
+    {
+      "path": "tests/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 1,
+      "bytes": 17770,
+      "retained_copy": null
+    },
+    {
+      "path": "src/nr2d/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 9,
+      "bytes": 139233,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/pilot/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 4,
+      "bytes": 53708,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/pilot/.pytest_cache",
+      "kind": "regenerable_cache",
+      "files": 4,
+      "bytes": 878,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/02_transfer/v2/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 17,
+      "bytes": 775120,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/02_transfer/v2/.pytest_cache",
+      "kind": "regenerable_cache",
+      "files": 4,
+      "bytes": 1056,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/01_history/__pycache__",
+      "kind": "regenerable_cache",
+      "files": 7,
+      "bytes": 85043,
+      "retained_copy": null
+    },
+    {
+      "path": "early experiment/experiments/01_history/.pytest_cache",
+      "kind": "regenerable_cache",
+      "files": 4,
+      "bytes": 1180,
+      "retained_copy": null
+    },
+    {
+      "path": ".runtime/container/build.log",
+      "kind": "duplicate_log",
+      "files": 1,
+      "bytes": 48019,
+      "retained_copy": "D:\\capp\\NR\\NR-material-state\\runs\\container_validation\\20261026_linux_cpu\\build.log"
+    },
+    {
+      "path": ".runtime/container/devcontainer-up-initial.log",
+      "kind": "duplicate_log",
+      "files": 1,
+      "bytes": 7704,
+      "retained_copy": "D:\\capp\\NR\\NR-material-state\\runs\\container_validation\\20261026_linux_cpu\\setup_initial_failure.log"
+    },
+    {
+      "path": ".runtime/container/devcontainer-up.log",
+      "kind": "duplicate_log",
+      "files": 1,
+      "bytes": 95,
+      "retained_copy": "D:\\capp\\NR\\NR-material-state\\runs\\container_validation\\20261026_linux_cpu\\setup_success.log"
+    },
+    {
+      "path": ".runtime/container/devcontainer-up-initial.json",
+      "kind": "duplicate_log",
+      "files": 1,
+      "bytes": 251,
+      "retained_copy": "D:\\capp\\NR\\NR-material-state\\runs\\container_validation\\20261026_linux_cpu\\setup_initial_failure.json"
+    },
+    {
+      "path": ".runtime/container/devcontainer-up.json",
+      "kind": "duplicate_log",
+      "files": 1,
+      "bytes": 321,
+      "retained_copy": "D:\\capp\\NR\\NR-material-state\\runs\\container_validation\\20261026_linux_cpu\\setup_success.json"
+    }
+  ],
+  "removed_preexisting_bytes": 641826376,
+  "archive_bytes_before_report": 1195005,
+  "net_reclaimed_bytes": 640631371,
+  "protected": [
+    "early experiment original evidence",
+    "runs/2d_contact",
+    "runs/container_validation",
+    ".venv",
+    "active VS Code and Jupyter runtime"
+  ],
+  "restoration_verified_before_deletion": true
+}

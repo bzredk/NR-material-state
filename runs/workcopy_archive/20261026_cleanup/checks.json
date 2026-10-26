@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "container_tests": {
+    "passed": 4,
+    "wall_seconds": 1.38,
+    "command": "python -m pytest -q -p no:cacheprovider"
+  },
+  "demo": {
+    "status": "verified_cached_pilot",
+    "run": "pilot_c9dd23016896",
+    "command": "python -m nr2d.cli demo"
+  },
+  "git_diff_check": "passed",
+  "dev_container_remained_running": true
+}

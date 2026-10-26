@@ -1,0 +1,22 @@
+Visual Studio Code (1.105.1, dev-container, desktop)
+Jupyter Extension Version: 2025.9.1.
+Python Extension Version: 2026.10.0.
+Python Environment Extension Version: 1.12.0.
+Pylance Extension Version: 2025.10.4.
+Platform: linux (x64).
+Home = /home/vscode
+Temp Storage folder ~/.vscode-server/data/User/globalStorage/ms-toolsai.jupyter/version-2025.9.1
+Workspace folder /workspaces/NR-material-state
+18:31:42.997 [info] Starting Kernel (Python Path: /opt/venv/bin/python, Venv, 3.11.9) for '/workspaces/NR-material-state/output/jupyter-notebook/spatial_2d_hidden_state.ipynb' (disableUI=true)
+18:31:43.081 [info] Process Execution: /opt/venv/bin/python -m pip list
+18:31:43.108 [info] Process Execution: /opt/venv/bin/python -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+18:31:43.111 [info] Process Execution: /opt/venv/bin/python -m ipykernel_launcher --f=~/.local/share/jupyter/runtime/kernel-v3b067dd05c25b687638b7927bb009f86eb94a0c7c.json
+    > cwd: /workspaces/NR-material-state
+18:31:44.068 [info] Kernel successfully started
+18:31:44.073 [info] Process Execution: /opt/venv/bin/python ~/.<username>-server/extensions/ms-toolsai.jupyter-2025.9.1-linux-x64/pythonFiles/printJupyterDataDir.py
+18:31:45.160 [error] Widget Error: Failed to access CDN https://unpkg.com/ after 0 attempt(s), TypeError: Failed to fetch
+18:36:41.847 [info] Restart requested /workspaces/NR-material-state/output/jupyter-notebook/spatial_2d_hidden_state.ipynb
+18:36:41.967 [info] Process Execution: /opt/venv/bin/python -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+18:36:41.974 [info] Process Execution: /opt/venv/bin/python -m ipykernel_launcher --f=~/.local/share/jupyter/runtime/kernel-v304679632fc9206e78ba977436d266b0e09c845d4.json
+    > cwd: /workspaces/NR-material-state
+18:36:42.987 [info] Restarted 61ebdcc9-18ec-4796-85ce-1411e82c2829

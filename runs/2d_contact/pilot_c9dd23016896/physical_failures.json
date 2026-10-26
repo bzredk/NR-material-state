@@ -1,0 +1,17 @@
+[
+  {
+    "path": "histories\\validation_200.npz",
+    "max_body_balance_N": 5.518885756380931e-09,
+    "max_tool_balance_N": 5.518884627075948e-09,
+    "max_penetration_um": 5.024749861485742,
+    "max_strain": 0.04392195812126919,
+    "passed": false,
+    "diagnostic": {
+      "path": "diagnostics\\validation_200_double_penalty.npz",
+      "max_penetration_um": 2.644994289549725,
+      "force_change_NRMSE": 0.005424507017213502,
+      "original_preserved": true,
+      "included_in_test_comparisons": false
+    }
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "all_original_noncache_files_reconstructed_byte_for_byte": true,
+  "files": 738,
+  "workcopies": [
+    {
+      "status": "passed",
+      "experiment": "e1",
+      "files": 103,
+      "destination": "D:\\capp\\NR\\NR-material-state\\.runtime\\cleanup\\restore_check\\e1"
+    },
+    {
+      "status": "passed",
+      "experiment": "e2",
+      "files": 297,
+      "destination": "D:\\capp\\NR\\NR-material-state\\.runtime\\cleanup\\restore_check\\e2"
+    },
+    {
+      "status": "passed",
+      "experiment": "e3",
+      "files": 103,
+      "destination": "D:\\capp\\NR\\NR-material-state\\.runtime\\cleanup\\restore_check\\e3"
+    },
+    {
+      "status": "passed",
+      "experiment": "lab",
+      "files": 235,
+      "destination": "D:\\capp\\NR\\NR-material-state\\.runtime\\cleanup\\restore_check\\lab"
+    }
+  ],
+  "archive_sha256": {
+    "manifest.json": "b0602909396f8b10265c057f29d26fa26a037b21933fa360c2fd29f397811113",
+    "overrides.zip": "45b08ea5c03e34b57378320d5716ba1b632cbcc314f192708d2472286f583051"
+  }
+}

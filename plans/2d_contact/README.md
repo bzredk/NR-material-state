@@ -1,6 +1,6 @@
 # 2D contact experiment
 
-Proposed October 23, 2026. Implementation and calibration are still pending. The completed 1D experiments are in [early experiment](../../early%20experiment/README.md).
+Proposed October 23, 2026. **Update, October 26:** the initial spatial solver, classical estimators, physical checks and VS Code interactive pilot are implemented and executed. See the [implementation and evidence guide](../../docs/spatial_2d/README.md) and [notebook](../../2D/spatial_2d_hidden_state.ipynb). The larger sample counts, learned models, decision experiment and real calibration below remain proposals; the small pilot is not their completion. The 1D experiments remain in [early experiment](../../early%20experiment/README.md).
 
 The next study uses a single indenter and a deformable body in a plane. It should show how previous loading changes force and sideways deformation during the next contact, then test whether that information affects a decision under shared feedback.
 

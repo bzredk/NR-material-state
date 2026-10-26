@@ -1,0 +1,2727 @@
+{
+  "rows": [
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0014953893816744325,
+      "marker_rmse_m": 4.495508796445544e-07,
+      "inference_seconds": 0.13799410010688007,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.030028861395472544,
+          0.10419348344363324,
+          0.17912428461100616,
+          0.04606201786211836,
+          0.15178750496793117,
+          0.2678641091577703
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005627618590236532,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0011871461021441085,
+      "marker_rmse_m": 2.3020934227308294e-07,
+      "inference_seconds": 2.3395764001179487,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.042099715664307466,
+          0.14498727547225984,
+          0.2548147248383141,
+          0.0612378037977979,
+          0.14838900840472516,
+          0.2544827488926336
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006333070873200925,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 9.243629004991885e-13,
+      "marker_rmse_m": 1.7094853853116652e-14,
+      "inference_seconds": 0.9102757000364363,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001780939210095678,
+      "marker_rmse_m": 5.005272014047028e-07,
+      "inference_seconds": 0.13907649996690452,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.030700887966048602,
+          0.10544698842693141,
+          0.1805730842697562,
+          0.04702375895838816,
+          0.1530436110322345,
+          0.269924364157777
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.3060523119125706,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0024263367718880087,
+      "marker_rmse_m": 2.5623014237203603e-07,
+      "inference_seconds": 2.5557915999088436,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.13126535741974504,
+          0.19582102403080234,
+          0.27687680363096273,
+          0.13031463443492933,
+          0.16080638858031018,
+          0.21574763544592898
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380372442992226,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.536868625571942e-06,
+      "marker_rmse_m": 1.4069624054315733e-09,
+      "inference_seconds": 0.9564285001251847,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0018078551065212568,
+      "marker_rmse_m": 2.769979772696078e-07,
+      "inference_seconds": 0.13251150003634393,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.030028861395472544,
+          0.10419348344363324,
+          0.17912428461100616,
+          0.04606201786211836,
+          0.15178750496793117,
+          0.2678641091577703
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005627618590236532,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0009936865115010248,
+      "marker_rmse_m": 1.8328239486139747e-07,
+      "inference_seconds": 2.5769603000953794,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.042099715664307466,
+          0.14498727547225984,
+          0.2548147248383141,
+          0.0612378037977979,
+          0.14838900840472516,
+          0.2544827488926336
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006333070873200925,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.3038105496523812e-12,
+      "marker_rmse_m": 1.6892209530700763e-14,
+      "inference_seconds": 1.0305139999836683,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.002120205822275208,
+      "marker_rmse_m": 3.0071811613953545e-07,
+      "inference_seconds": 0.1282904997933656,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.030700887966048602,
+          0.10544698842693141,
+          0.1805730842697562,
+          0.04702375895838816,
+          0.1530436110322345,
+          0.269924364157777
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.3060523119125706,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0023919261741355705,
+      "marker_rmse_m": 1.4520533161140132e-07,
+      "inference_seconds": 2.622819800162688,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.13126535741974504,
+          0.19582102403080234,
+          0.27687680363096273,
+          0.13031463443492933,
+          0.16080638858031018,
+          0.21574763544592898
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380372442992226,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 8.412944383839056e-06,
+      "marker_rmse_m": 8.656400436162216e-10,
+      "inference_seconds": 0.9785334998741746,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_300",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0007925953885389252,
+      "marker_rmse_m": 3.1792211928649697e-07,
+      "inference_seconds": 0.1048047998920083,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.10109281622625912,
+          0.08839041955614028,
+          0.14894970466622662,
+          0.10278268323059,
+          0.12813485790394102,
+          0.21024650952929255
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005006610889099893,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0012528436794546408,
+      "marker_rmse_m": 2.3471731640988936e-07,
+      "inference_seconds": 2.7316024999599904,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06308991036793593,
+          0.12128345114017895,
+          0.20951821780880442,
+          0.03746192798976507,
+          0.12466963496692293,
+          0.21881921279201802
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005354323264189317,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.3656566515389889e-12,
+      "marker_rmse_m": 9.091941921298648e-15,
+      "inference_seconds": 0.6432635998353362,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0009968442399025741,
+      "marker_rmse_m": 3.589502889365899e-07,
+      "inference_seconds": 0.10774810006842017,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.10263762711273343,
+          0.08996993702083936,
+          0.15066780983079212,
+          0.10405000067822406,
+          0.12986205659928923,
+          0.21159715772259707
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604151678432095,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002503444906827347,
+      "marker_rmse_m": 2.5208444408362507e-07,
+      "inference_seconds": 2.601218800060451,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.0801148875043715,
+          0.1610836075535268,
+          0.249394130489535,
+          0.09413048674637295,
+          0.12740731962928636,
+          0.18752624409190477
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380232761916418,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 9.078445358871894e-06,
+      "marker_rmse_m": 1.8431130502662155e-09,
+      "inference_seconds": 0.7214967999607325,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001007869976475283,
+      "marker_rmse_m": 2.1401393950547902e-07,
+      "inference_seconds": 0.1120686000213027,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.10109281622625912,
+          0.08839041955614028,
+          0.14894970466622662,
+          0.10278268323059,
+          0.12813485790394102,
+          0.21024650952929255
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005006610889099893,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0010136928561804846,
+      "marker_rmse_m": 1.754477615250561e-07,
+      "inference_seconds": 2.5519601001869887,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06308991036793593,
+          0.12128345114017895,
+          0.20951821780880442,
+          0.03746192798976507,
+          0.12466963496692293,
+          0.21881921279201802
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005354323264189317,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.9395241616643353e-12,
+      "marker_rmse_m": 8.799048966871663e-15,
+      "inference_seconds": 0.6285526999272406,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001242937349836459,
+      "marker_rmse_m": 2.3377450102871026e-07,
+      "inference_seconds": 0.11078369989991188,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.10263762711273343,
+          0.08996993702083936,
+          0.15066780983079212,
+          0.10405000067822406,
+          0.12986205659928923,
+          0.21159715772259707
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604151678432095,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0023943100220059988,
+      "marker_rmse_m": 1.4035648638268383e-07,
+      "inference_seconds": 2.5563131000380963,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.0801148875043715,
+          0.1610836075535268,
+          0.249394130489535,
+          0.09413048674637295,
+          0.12740731962928636,
+          0.18752624409190477
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380232761916418,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.0254203739945007e-05,
+      "marker_rmse_m": 1.136107408269639e-09,
+      "inference_seconds": 0.7192669999785721,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_301",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001483450833840416,
+      "marker_rmse_m": 4.1172655152318343e-07,
+      "inference_seconds": 0.13117889990098774,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05865278607693258,
+          0.0967175825296092,
+          0.1683632328441892,
+          0.04310018081291093,
+          0.1425504018125274,
+          0.25216915087859143
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0053436271892025496,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0011075104867622823,
+      "marker_rmse_m": 2.1202806438254662e-07,
+      "inference_seconds": 2.592800199985504,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.047002284530232655,
+          0.1429605031577004,
+          0.2480644690205871,
+          0.0422496255060778,
+          0.13837862719286073,
+          0.24175137097796393
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0060664202273991805,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 3.953544101502536e-12,
+      "marker_rmse_m": 1.9526535396858486e-14,
+      "inference_seconds": 0.9541670000180602,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0019776990814379344,
+      "marker_rmse_m": 4.903895413719086e-07,
+      "inference_seconds": 0.13943290011957288,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.027550931072886753,
+          0.09786029229291976,
+          0.1712244315677973,
+          0.04195879720700671,
+          0.1448839682641361,
+          0.2564699965988254
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604680591337446,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0023257247927457292,
+      "marker_rmse_m": 2.426519044726576e-07,
+      "inference_seconds": 2.6735654999502003,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.1243316512339928,
+          0.19090477949146867,
+          0.2736563200627364,
+          0.1209912970119806,
+          0.14960049212817042,
+          0.2021337575899678
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380336987333381,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 6.560937896849364e-06,
+      "marker_rmse_m": 1.4302646015651552e-09,
+      "inference_seconds": 0.942239600000903,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0017809346554650313,
+      "marker_rmse_m": 2.5068463674236493e-07,
+      "inference_seconds": 0.1324299001134932,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05865278607693258,
+          0.0967175825296092,
+          0.1683632328441892,
+          0.04310018081291093,
+          0.1425504018125274,
+          0.25216915087859143
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0053436271892025496,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0009279349419984014,
+      "marker_rmse_m": 1.6686497331145437e-07,
+      "inference_seconds": 2.646367499837652,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.047002284530232655,
+          0.1429605031577004,
+          0.2480644690205871,
+          0.0422496255060778,
+          0.13837862719286073,
+          0.24175137097796393
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0060664202273991805,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 5.49667859994724e-12,
+      "marker_rmse_m": 1.8727953881297504e-14,
+      "inference_seconds": 0.9453143998980522,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0023128148531577574,
+      "marker_rmse_m": 2.841334793125218e-07,
+      "inference_seconds": 0.12858729995787144,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.027550931072886753,
+          0.09786029229291976,
+          0.1712244315677973,
+          0.04195879720700671,
+          0.1448839682641361,
+          0.2564699965988254
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604680591337446,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002292405490312307,
+      "marker_rmse_m": 1.2778563241965998e-07,
+      "inference_seconds": 2.633452400099486,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.1243316512339928,
+          0.19090477949146867,
+          0.2736563200627364,
+          0.1209912970119806,
+          0.14960049212817042,
+          0.2021337575899678
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380336987333381,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.544244383330459e-06,
+      "marker_rmse_m": 8.721976714934296e-10,
+      "inference_seconds": 0.9573913000058383,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_302",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0012258008566091963,
+      "marker_rmse_m": 4.109123654859572e-07,
+      "inference_seconds": 0.12981429998762906,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05773395945457788,
+          0.09493673549696822,
+          0.16605744177032727,
+          0.04176957904704598,
+          0.14050873800053068,
+          0.24879470306111742
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0052672764387779345,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0012225685210667432,
+      "marker_rmse_m": 2.3552663434202564e-07,
+      "inference_seconds": 2.6689506999682635,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06686582474779859,
+          0.13191588620384148,
+          0.23394747142144107,
+          0.04972546486453605,
+          0.13823622541404326,
+          0.23876646457467357
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005909257636237159,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 4.300402313015521e-12,
+      "marker_rmse_m": 2.201781439296808e-14,
+      "inference_seconds": 0.6327881999313831,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.00149930352936989,
+      "marker_rmse_m": 4.59916689629979e-07,
+      "inference_seconds": 0.1316164000891149,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05831677375035645,
+          0.09604821582111578,
+          0.1675099459516714,
+          0.042586893475493284,
+          0.14179359474337316,
+          0.25092238714529347
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604584449081396,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0024708520973602383,
+      "marker_rmse_m": 2.561575071986246e-07,
+      "inference_seconds": 2.503824800020084,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.10983296314980723,
+          0.18115557166786211,
+          0.2643394112571317,
+          0.11556790017777964,
+          0.14644009226780352,
+          0.20292223384370936
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380307851393707,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.66815169974065e-06,
+      "marker_rmse_m": 1.5881452293672567e-09,
+      "inference_seconds": 0.6836143000982702,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0015272330820717507,
+      "marker_rmse_m": 2.645844726010124e-07,
+      "inference_seconds": 0.13282529986463487,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05773395945457788,
+          0.09493673549696822,
+          0.16605744177032727,
+          0.04176957904704598,
+          0.14050873800053068,
+          0.24879470306111742
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0052672764387779345,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.001033418005241239,
+      "marker_rmse_m": 1.8759650426611608e-07,
+      "inference_seconds": 2.5592054000589997,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06686582474779859,
+          0.13191588620384148,
+          0.23394747142144107,
+          0.04972546486453605,
+          0.13823622541404326,
+          0.23876646457467357
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005909257636237159,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 5.973572770339922e-12,
+      "marker_rmse_m": 2.1158646925031076e-14,
+      "inference_seconds": 0.6450845000799745,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0018251864322841025,
+      "marker_rmse_m": 2.867415299242865e-07,
+      "inference_seconds": 0.12064510001800954,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05831677375035645,
+          0.09604821582111578,
+          0.1675099459516714,
+          0.042586893475493284,
+          0.14179359474337316,
+          0.25092238714529347
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604584449081396,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0024154730974849793,
+      "marker_rmse_m": 1.463851329577155e-07,
+      "inference_seconds": 2.5098949000239372,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.10983296314980723,
+          0.18115557166786211,
+          0.2643394112571317,
+          0.11556790017777964,
+          0.14644009226780352,
+          0.20292223384370936
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380307851393707,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 8.690259192948515e-06,
+      "marker_rmse_m": 9.669144855723713e-10,
+      "inference_seconds": 0.6645040002185851,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_303",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0018674528295391996,
+      "marker_rmse_m": 4.3488344933176296e-07,
+      "inference_seconds": 0.13048560009337962,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03568484065844203,
+          0.11271304879278125,
+          0.18855708964537338,
+          0.053515200944588615,
+          0.15982250948150994,
+          0.2811123673227469
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0059427796388498485,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0008325734852263539,
+      "marker_rmse_m": 1.6588361415566e-07,
+      "inference_seconds": 2.523988600121811,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.07344860800458508,
+          0.1653120449832833,
+          0.26831140988277774,
+          0.07550583543332631,
+          0.16188141065069586,
+          0.26148510937356056
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006791489011969473,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 2.4754018609450063e-12,
+      "marker_rmse_m": 1.7418736967114926e-14,
+      "inference_seconds": 0.9161253999918699,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0021656950200742275,
+      "marker_rmse_m": 4.897858729634909e-07,
+      "inference_seconds": 0.12024169997312129,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03679920142688857,
+          0.11405171392060895,
+          0.18998531575508174,
+          0.054875042419948214,
+          0.16100163495010547,
+          0.28308620072283386
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.306058327738801,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0021392858784437655,
+      "marker_rmse_m": 2.3590309288404832e-07,
+      "inference_seconds": 2.4604420999530703,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.15213340901623004,
+          0.18621134727050953,
+          0.3088981054603809,
+          0.14005072351809467,
+          0.17058844462567202,
+          0.22556697141001095
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380437697351748,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.603321795943116e-06,
+      "marker_rmse_m": 1.883422495408856e-09,
+      "inference_seconds": 0.8831909000873566,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0021408083599601863,
+      "marker_rmse_m": 2.462511913355842e-07,
+      "inference_seconds": 0.1199719998985529,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03568484065844203,
+          0.11271304879278125,
+          0.18855708964537338,
+          0.053515200944588615,
+          0.15982250948150994,
+          0.2811123673227469
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0059427796388498485,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.000723016730002814,
+      "marker_rmse_m": 1.3763297297320878e-07,
+      "inference_seconds": 2.407847800059244,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.07344860800458508,
+          0.1653120449832833,
+          0.26831140988277774,
+          0.07550583543332631,
+          0.16188141065069586,
+          0.26148510937356056
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006791489011969473,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 3.4113485499298637e-12,
+      "marker_rmse_m": 1.687379335709809e-14,
+      "inference_seconds": 0.8863977999426425,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.002465687019418573,
+      "marker_rmse_m": 2.716103812397247e-07,
+      "inference_seconds": 0.129414799856022,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03679920142688857,
+          0.11405171392060895,
+          0.18998531575508174,
+          0.054875042419948214,
+          0.16100163495010547,
+          0.28308620072283386
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.306058327738801,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002177690179095815,
+      "marker_rmse_m": 1.1955177405096715e-07,
+      "inference_seconds": 2.4214135999791324,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.15213340901623004,
+          0.18621134727050953,
+          0.3088981054603809,
+          0.14005072351809467,
+          0.17058844462567202,
+          0.22556697141001095
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380437697351748,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 9.031489506423794e-06,
+      "marker_rmse_m": 1.1699621822549468e-09,
+      "inference_seconds": 0.9292063000611961,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_304",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001619567955517271,
+      "marker_rmse_m": 4.453092771415351e-07,
+      "inference_seconds": 0.12373610003851354,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03285471767829715,
+          0.10891812077202692,
+          0.18445517949467014,
+          0.0499336622001436,
+          0.1563752696911291,
+          0.27539856419875175
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005804774655930284,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0010635258139925924,
+      "marker_rmse_m": 2.0879403003270552e-07,
+      "inference_seconds": 2.466713299974799,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.05249261382524072,
+          0.15356371700788604,
+          0.262431777495184,
+          0.06939815829697231,
+          0.15466622302969485,
+          0.2597766297309885
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006562928645393534,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 5.071037408789529e-12,
+      "marker_rmse_m": 3.503860756801881e-14,
+      "inference_seconds": 0.9449928998947144,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0019117643283170023,
+      "marker_rmse_m": 4.98240775859195e-07,
+      "inference_seconds": 0.11957850004546344,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.033780307773267355,
+          0.11023352051084342,
+          0.18588918196877077,
+          0.05112869165635797,
+          0.15759003011566167,
+          0.2774039937798495
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30605565252722877,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0023239782076974374,
+      "marker_rmse_m": 2.4925644247189376e-07,
+      "inference_seconds": 2.432968199951574,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.14285979095683943,
+          0.20391791664244047,
+          0.2845702577405944,
+          0.13734704793028307,
+          0.16740964317047605,
+          0.22103960701875403
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380408188804398,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.411537797105267e-06,
+      "marker_rmse_m": 1.5080121357140857e-09,
+      "inference_seconds": 0.9287241001147777,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0019198550506511758,
+      "marker_rmse_m": 2.679662580945546e-07,
+      "inference_seconds": 0.12309379992075264,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.03285471767829715,
+          0.10891812077202692,
+          0.18445517949467014,
+          0.0499336622001436,
+          0.1563752696911291,
+          0.27539856419875175
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005804774655930284,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0009018964015132481,
+      "marker_rmse_m": 1.6878742323955816e-07,
+      "inference_seconds": 2.3527878001332283,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.05249261382524072,
+          0.15356371700788604,
+          0.262431777495184,
+          0.06939815829697231,
+          0.15466622302969485,
+          0.2597766297309885
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.006562928645393534,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.235987599950441e-12,
+      "marker_rmse_m": 3.39613169724884e-14,
+      "inference_seconds": 0.903118799906224,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0022365540739254486,
+      "marker_rmse_m": 2.92094776477286e-07,
+      "inference_seconds": 0.11271740007214248,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.033780307773267355,
+          0.11023352051084342,
+          0.18588918196877077,
+          0.05112869165635797,
+          0.15759003011566167,
+          0.2774039937798495
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30605565252722877,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002318757653560105,
+      "marker_rmse_m": 1.3765263353343585e-07,
+      "inference_seconds": 2.3112729999702424,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.14285979095683943,
+          0.20391791664244047,
+          0.2845702577405944,
+          0.13734704793028307,
+          0.16740964317047605,
+          0.22103960701875403
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380408188804398,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 8.396844870973298e-06,
+      "marker_rmse_m": 9.362514827303658e-10,
+      "inference_seconds": 0.8655950999818742,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_305",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0005462465721942552,
+      "marker_rmse_m": 2.568308382445328e-07,
+      "inference_seconds": 0.09842989989556372,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09882540227704742,
+          0.11181053491823387,
+          0.13700432029621684,
+          0.1014644127669655,
+          0.11740474589024363,
+          0.19588953462789804
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0048254771017556776,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0010173279118508157,
+      "marker_rmse_m": 1.9679016419310145e-07,
+      "inference_seconds": 1.8464597000274807,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.10877337362244034,
+          0.12321694455632706,
+          0.19642686014335253,
+          0.10953566611540344,
+          0.12094017417183597,
+          0.19406351106152897
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005405912931504861,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.991245053548701e-12,
+      "marker_rmse_m": 1.8678628862688195e-15,
+      "inference_seconds": 0.559099700069055,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0012002486199844994,
+      "marker_rmse_m": 3.74786995138642e-07,
+      "inference_seconds": 0.09332179999910295,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09553784957437278,
+          0.08342396897634799,
+          0.14311867566223327,
+          0.09803203771929864,
+          0.12244564866706584,
+          0.2049580383538788
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30603761553442715,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0024774736156524123,
+      "marker_rmse_m": 2.4633984134132593e-07,
+      "inference_seconds": 2.437355199828744,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.07360211328826627,
+          0.1570036489777238,
+          0.24808425949002885,
+          0.08548018496148593,
+          0.11889257699480296,
+          0.17845129842142654
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380212013864604,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.54451729161793e-06,
+      "marker_rmse_m": 1.52598863331131e-09,
+      "inference_seconds": 0.5936376999597996,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0006000816648954185,
+      "marker_rmse_m": 1.821708990017044e-07,
+      "inference_seconds": 0.09487690008245409,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09882540227704742,
+          0.11181053491823387,
+          0.13700432029621684,
+          0.1014644127669655,
+          0.11740474589024363,
+          0.19588953462789804
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.0048254771017556776,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0008422892300475895,
+      "marker_rmse_m": 1.5152789285792186e-07,
+      "inference_seconds": 1.9062759000808,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.10877337362244034,
+          0.12321694455632706,
+          0.19642686014335253,
+          0.10953566611540344,
+          0.12094017417183597,
+          0.19406351106152897
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005405912931504861,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 1.965787443218047e-12,
+      "marker_rmse_m": 1.9303119486940878e-15,
+      "inference_seconds": 0.5476677999831736,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001459911951782346,
+      "marker_rmse_m": 2.3466802444787188e-07,
+      "inference_seconds": 0.0923632001504302,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09553784957437278,
+          0.08342396897634799,
+          0.14311867566223327,
+          0.09803203771929864,
+          0.12244564866706584,
+          0.2049580383538788
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30603761553442715,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002360910290888153,
+      "marker_rmse_m": 1.345020055453928e-07,
+      "inference_seconds": 2.299443199997768,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.07360211328826627,
+          0.1570036489777238,
+          0.24808425949002885,
+          0.08548018496148593,
+          0.11889257699480296,
+          0.17845129842142654
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380212013864604,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 8.50684490695675e-06,
+      "marker_rmse_m": 9.40454415094139e-10,
+      "inference_seconds": 0.5964581000152975,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_306",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.001519185039364697,
+      "marker_rmse_m": 4.087134977138764e-07,
+      "inference_seconds": 0.11720460001379251,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.06375479362128197,
+          0.09166567803711394,
+          0.16066047555865481,
+          0.06749187027009987,
+          0.135862894657106,
+          0.24073637392783104
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005179824245713043,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.00112481539087725,
+      "marker_rmse_m": 2.1460120057446864e-07,
+      "inference_seconds": 2.3661585999652743,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.04379827000263791,
+          0.13836467661750712,
+          0.2408905923177314,
+          0.0378605075022942,
+          0.132420769959189,
+          0.23367570767243734
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005860874339524799,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 2.611447279533597e-12,
+      "marker_rmse_m": 2.3036507509636068e-14,
+      "inference_seconds": 0.8472724999301136,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0017444552498320069,
+      "marker_rmse_m": 4.597168092810861e-07,
+      "inference_seconds": 0.11239450005814433,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05687861311612396,
+          0.09341142341910436,
+          0.1639869457298034,
+          0.0407213624330937,
+          0.13868544412944617,
+          0.24575095996565413
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604384890176284,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0023457008852160997,
+      "marker_rmse_m": 2.4055337811768956e-07,
+      "inference_seconds": 2.3284296998754144,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.11475389216537375,
+          0.1845111259438617,
+          0.2685192954501019,
+          0.11364661459089201,
+          0.14231707499384308,
+          0.1952793754512273
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380307611627356,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 6.6999134897852945e-06,
+      "marker_rmse_m": 1.48097103339553e-09,
+      "inference_seconds": 0.8176251999102533,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0018129068996576524,
+      "marker_rmse_m": 2.4865590238935724e-07,
+      "inference_seconds": 0.11470130016095936,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.06375479362128197,
+          0.09166567803711394,
+          0.16066047555865481,
+          0.06749187027009987,
+          0.135862894657106,
+          0.24073637392783104
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005179824245713043,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.0009445804235362226,
+      "marker_rmse_m": 1.676657786752499e-07,
+      "inference_seconds": 2.283801400102675,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.04379827000263791,
+          0.13836467661750712,
+          0.2408905923177314,
+          0.0378605075022942,
+          0.132420769959189,
+          0.23367570767243734
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.005860874339524799,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "force_rmse_N": 2.932579636992424e-12,
+      "marker_rmse_m": 2.2492834777419082e-14,
+      "inference_seconds": 0.8009481998160481,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "force_rmse_N": 0.0020666274555893906,
+      "marker_rmse_m": 2.7244788432321997e-07,
+      "inference_seconds": 0.12615490006282926,
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.05687861311612396,
+          0.09341142341910436,
+          0.1639869457298034,
+          0.0407213624330937,
+          0.13868544412944617,
+          0.24575095996565413
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.30604384890176284,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "force_rmse_N": 0.002305964003614048,
+      "marker_rmse_m": 1.2899974295881625e-07,
+      "inference_seconds": 2.322185799945146,
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.11475389216537375,
+          0.1845111259438617,
+          0.2685192954501019,
+          0.11364661459089201,
+          0.14231707499384308,
+          0.1952793754512273
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.5380307611627356,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "force_rmse_N": 7.753560984351166e-06,
+      "marker_rmse_m": 9.04186117800224e-10,
+      "inference_seconds": 0.8193886000663042,
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay"
+      }
+    },
+    {
+      "parent_id": "test_307",
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "inference": {
+        "privileged": true,
+        "scope": "same solver and future commands"
+      }
+    }
+  ],
+  "independent_units": 8,
+  "wall_seconds": 175.2117627998814,
+  "inference": "Descriptive pilot only; branches and noise realizations remain grouped within parents"
+}

@@ -1,8 +1,14 @@
 # Preserve the recorded artifact hashes on every platform.
-* -text
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.npz binary
 *.pt binary
 *.png binary
 *.pdf binary
 *.pptx binary
+
+# Preserve generated evidence without whitespace cleanup or noisy code review.
+*.svg -whitespace
+runs/**/*.log -whitespace
+runs/** linguist-generated=true
+plans/**/figures/** linguist-generated=true
 

@@ -1,0 +1,71 @@
+{
+  "Snapshot": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 7.102046938670875e-07,
+    "inference_seconds": 0.11480650003068149,
+    "inference": {
+      "window_seconds": 0.0,
+      "basis_coefficients": [
+        0.030028861395472544,
+        0.10419348344363324,
+        0.17912428461100616,
+        0.04606201786211836,
+        0.15178750496793117,
+        0.2678641091577703
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.005627618590236532,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Short classical": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 8.656289541104483e-11,
+    "inference_seconds": 2.3876425998751074,
+    "inference": {
+      "window_seconds": 0.2,
+      "basis_coefficients": [
+        0.042099715664307466,
+        0.14498727547225984,
+        0.2548147248383141,
+        0.0612378037977979,
+        0.14838900840472516,
+        0.2544827488926336
+      ],
+      "basis_size": 6,
+      "known_relaxed_start": false,
+      "internal_truth_used": false,
+      "solver_calls": 35,
+      "optimizer_status": 1,
+      "optimizer_success": true,
+      "weighted_residual": 0.006333070873200925,
+      "approximation": "Nonnegative initial-strain basis; complete spatial future model"
+    }
+  },
+  "Full classical": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 1.7195363745848135e-14,
+    "inference_seconds": 1.0125167001970112,
+    "inference": {
+      "window": "full",
+      "known_relaxed_start": true,
+      "internal_truth_used": false,
+      "solver_steps": 140,
+      "observation_use": "actual tool position drives material replay"
+    }
+  },
+  "True state": {
+    "force_rmse_N": 0.0,
+    "marker_rmse_m": 0.0,
+    "inference_seconds": 0.0,
+    "inference": {
+      "privileged": true,
+      "scope": "same solver and future commands"
+    }
+  }
+}

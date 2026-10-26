@@ -1,0 +1,571 @@
+{
+  "conditions": [
+    {
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 1.3187111071597992,
+      "min_force_rmse_mN": 0.5462465721942552,
+      "max_force_rmse_mN": 1.8674528295391997,
+      "mean_inference_seconds": 0.12170603749109432
+    },
+    {
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 1.1010389239218483,
+      "min_force_rmse_mN": 0.8325734852263539,
+      "max_force_rmse_mN": 1.2528436794546407,
+      "mean_inference_seconds": 2.442031250015134
+    },
+    {
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 2.8366371961716338e-09,
+      "min_force_rmse_mN": 9.243629004991885e-10,
+      "max_force_rmse_mN": 5.071037408789529e-09,
+      "mean_inference_seconds": 0.8009981249633711
+    },
+    {
+      "action": "Slow press",
+      "noise": 0.0,
+      "method": "True state",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.0,
+      "min_force_rmse_mN": 0.0,
+      "max_force_rmse_mN": 0.0,
+      "mean_inference_seconds": 0.0
+    },
+    {
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 1.6596186598767266,
+      "min_force_rmse_mN": 0.9968442399025741,
+      "max_force_rmse_mN": 2.1656950200742275,
+      "mean_inference_seconds": 0.12042630003998056
+    },
+    {
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 2.3765996444788797,
+      "min_force_rmse_mN": 2.1392858784437654,
+      "max_force_rmse_mN": 2.503444906827347,
+      "mean_inference_seconds": 2.4991994874435477
+    },
+    {
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.007512961744435682,
+      "min_force_rmse_mN": 0.006560937896849364,
+      "max_force_rmse_mN": 0.009078445358871893,
+      "mean_inference_seconds": 0.8158696375321597
+    },
+    {
+      "action": "Slow press",
+      "noise": 1.0,
+      "method": "True state",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.0,
+      "min_force_rmse_mN": 0.0,
+      "max_force_rmse_mN": 0.0,
+      "mean_inference_seconds": 0.0
+    },
+    {
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Snapshot",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 1.5746930994622192,
+      "min_force_rmse_mN": 0.6000816648954185,
+      "max_force_rmse_mN": 2.1408083599601864,
+      "mean_inference_seconds": 0.12030991251231171
+    },
+    {
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Short classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.922564387502628,
+      "min_force_rmse_mN": 0.723016730002814,
+      "max_force_rmse_mN": 1.033418005241239,
+      "mean_inference_seconds": 2.410650775069371
+    },
+    {
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "Full classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 3.782411163961832e-09,
+      "min_force_rmse_mN": 1.3038105496523811e-09,
+      "max_force_rmse_mN": 7.235987599950441e-09,
+      "mean_inference_seconds": 0.798449774942128
+    },
+    {
+      "action": "Fast press",
+      "noise": 0.0,
+      "method": "True state",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.0,
+      "min_force_rmse_mN": 0.0,
+      "max_force_rmse_mN": 0.0,
+      "mean_inference_seconds": 0.0
+    },
+    {
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Snapshot",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 1.9662406197836604,
+      "min_force_rmse_mN": 1.242937349836459,
+      "max_force_rmse_mN": 2.465687019418573,
+      "mean_inference_seconds": 0.1186196124763228
+    },
+    {
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Short classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 2.332179613887122,
+      "min_force_rmse_mN": 2.1776901790958147,
+      "max_force_rmse_mN": 2.415473097484979,
+      "mean_inference_seconds": 2.459599475027062
+    },
+    {
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "Full classical",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.008573798996096005,
+      "min_force_rmse_mN": 0.007544244383330459,
+      "max_force_rmse_mN": 0.010254203739945006,
+      "mean_inference_seconds": 0.8162929875252303
+    },
+    {
+      "action": "Fast press",
+      "noise": 1.0,
+      "method": "True state",
+      "parent_count": 8,
+      "mean_force_rmse_mN": 0.0,
+      "min_force_rmse_mN": 0.0,
+      "max_force_rmse_mN": 0.0,
+      "mean_inference_seconds": 0.0
+    }
+  ],
+  "physical_audit": [
+    {
+      "path": "histories\\calibration_100.npz",
+      "max_body_balance_N": 3.4110735134922077e-09,
+      "max_tool_balance_N": 3.4110735100498658e-09,
+      "max_penetration_um": 4.63615809185024,
+      "max_strain": 0.043175614203530555,
+      "passed": true
+    },
+    {
+      "path": "histories\\calibration_101.npz",
+      "max_body_balance_N": 2.9636047210040983e-09,
+      "max_tool_balance_N": 2.9636047032231827e-09,
+      "max_penetration_um": 4.174087598274247,
+      "max_strain": 0.04073909044708365,
+      "passed": true
+    },
+    {
+      "path": "histories\\calibration_102.npz",
+      "max_body_balance_N": 7.331588865525096e-09,
+      "max_tool_balance_N": 7.331587502899806e-09,
+      "max_penetration_um": 4.743175332374682,
+      "max_strain": 0.04122550522389112,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_300.npz",
+      "max_body_balance_N": 7.917609680732629e-09,
+      "max_tool_balance_N": 7.917608190605163e-09,
+      "max_penetration_um": 4.813139818500795,
+      "max_strain": 0.042928739956324416,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_301.npz",
+      "max_body_balance_N": 5.512297906323793e-09,
+      "max_tool_balance_N": 5.512296738854894e-09,
+      "max_penetration_um": 3.7409543396267617,
+      "max_strain": 0.03636041799924703,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_302.npz",
+      "max_body_balance_N": 4.3663526405612885e-09,
+      "max_tool_balance_N": 4.3663520941233935e-09,
+      "max_penetration_um": 4.683456352306377,
+      "max_strain": 0.04419775693372994,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_303.npz",
+      "max_body_balance_N": 7.481307903907386e-09,
+      "max_tool_balance_N": 7.481307899570577e-09,
+      "max_penetration_um": 4.290608901059404,
+      "max_strain": 0.039083958191536775,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_304.npz",
+      "max_body_balance_N": 7.072146302605775e-09,
+      "max_tool_balance_N": 7.072145012811766e-09,
+      "max_penetration_um": 4.766410023067651,
+      "max_strain": 0.04675155747522844,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_305.npz",
+      "max_body_balance_N": 2.928787979500358e-09,
+      "max_tool_balance_N": 2.9287867964189473e-09,
+      "max_penetration_um": 4.842719963606981,
+      "max_strain": 0.04415574599479672,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_306.npz",
+      "max_body_balance_N": 1.4660475498515235e-09,
+      "max_tool_balance_N": 1.4660475429126296e-09,
+      "max_penetration_um": 3.8425478961651183,
+      "max_strain": 0.0375555146745829,
+      "passed": true
+    },
+    {
+      "path": "histories\\test_307.npz",
+      "max_body_balance_N": 2.852015756264585e-12,
+      "max_tool_balance_N": 2.8520173419102623e-12,
+      "max_penetration_um": 4.574034493667553,
+      "max_strain": 0.04386800415907295,
+      "passed": true
+    },
+    {
+      "path": "histories\\validation_200.npz",
+      "max_body_balance_N": 5.518885756380931e-09,
+      "max_tool_balance_N": 5.518884627075948e-09,
+      "max_penetration_um": 5.024749861485742,
+      "max_strain": 0.04392195812126919,
+      "passed": false,
+      "diagnostic": {
+        "path": "diagnostics\\validation_200_double_penalty.npz",
+        "max_penetration_um": 2.644994289549725,
+        "force_change_NRMSE": 0.005424507017213502,
+        "original_preserved": true,
+        "included_in_test_comparisons": false
+      }
+    },
+    {
+      "path": "histories\\validation_201.npz",
+      "max_body_balance_N": 5.9587111928688374e-09,
+      "max_tool_balance_N": 5.958710028869385e-09,
+      "max_penetration_um": 4.656862354787694,
+      "max_strain": 0.042675114439091805,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 5.84864656705264e-11,
+      "max_tool_balance_N": 5.848430420507533e-11,
+      "max_penetration_um": 3.7457440090987815,
+      "max_strain": 0.0443841035110403,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 5.84864656705264e-11,
+      "max_tool_balance_N": 5.848430420507533e-11,
+      "max_penetration_um": 3.7457440090987815,
+      "max_strain": 0.0443841035110403,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_hold_noise0\\true_state.npz",
+      "max_body_balance_N": 9.009385829964837e-16,
+      "max_tool_balance_N": 0.0,
+      "max_penetration_um": 0.0,
+      "max_strain": 0.01589920459746484,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_release_noise0\\true_state.npz",
+      "max_body_balance_N": 9.009385829964837e-16,
+      "max_tool_balance_N": 0.0,
+      "max_penetration_um": 0.0,
+      "max_strain": 0.01589920459746484,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.407414073616614e-09,
+      "max_tool_balance_N": 7.40741325309241e-09,
+      "max_penetration_um": 3.5646476240994844,
+      "max_strain": 0.043781697011312404,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_300_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.407414073616614e-09,
+      "max_tool_balance_N": 7.40741325309241e-09,
+      "max_penetration_um": 3.5646476240994844,
+      "max_strain": 0.043781697011312404,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_301_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 5.4534127214012074e-11,
+      "max_tool_balance_N": 5.453140022870784e-11,
+      "max_penetration_um": 4.021774334738414,
+      "max_strain": 0.04421305527722854,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_301_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 5.4534127214012074e-11,
+      "max_tool_balance_N": 5.453140022870784e-11,
+      "max_penetration_um": 4.021774334738414,
+      "max_strain": 0.04421305527722854,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_301_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.436528158023814e-09,
+      "max_tool_balance_N": 7.436527495359446e-09,
+      "max_penetration_um": 3.7438204872115466,
+      "max_strain": 0.04373439876948453,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_301_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.436528158023814e-09,
+      "max_tool_balance_N": 7.436527495359446e-09,
+      "max_penetration_um": 3.7438204872115466,
+      "max_strain": 0.04373439876948453,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_302_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 2.141960531469242e-10,
+      "max_tool_balance_N": 2.14195549867052e-10,
+      "max_penetration_um": 3.840219262261522,
+      "max_strain": 0.044269878925205494,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_302_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 2.141960531469242e-10,
+      "max_tool_balance_N": 2.14195549867052e-10,
+      "max_penetration_um": 3.840219262261522,
+      "max_strain": 0.044269878925205494,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_302_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.48934811303087e-09,
+      "max_tool_balance_N": 7.489347413069947e-09,
+      "max_penetration_um": 3.6355935658422447,
+      "max_strain": 0.043754086724679384,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_302_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.48934811303087e-09,
+      "max_tool_balance_N": 7.489347413069947e-09,
+      "max_penetration_um": 3.6355935658422447,
+      "max_strain": 0.043754086724679384,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_303_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 4.3258030295832695e-10,
+      "max_tool_balance_N": 4.3257940090211944e-10,
+      "max_penetration_um": 3.8565258224805534,
+      "max_strain": 0.04433171499403241,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_303_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 4.3258030295832695e-10,
+      "max_tool_balance_N": 4.3257940090211944e-10,
+      "max_penetration_um": 3.8565258224805534,
+      "max_strain": 0.04433171499403241,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_303_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.46292124625958e-09,
+      "max_tool_balance_N": 7.462920840334286e-09,
+      "max_penetration_um": 3.6302620405821218,
+      "max_strain": 0.04376028798820721,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_303_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.46292124625958e-09,
+      "max_tool_balance_N": 7.462920840334286e-09,
+      "max_penetration_um": 3.6302620405821218,
+      "max_strain": 0.04376028798820721,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_304_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 5.958680771023239e-11,
+      "max_tool_balance_N": 5.958403648947952e-11,
+      "max_penetration_um": 3.7385806030562847,
+      "max_strain": 0.04429969168675336,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_304_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 5.958680771023239e-11,
+      "max_tool_balance_N": 5.958403648947952e-11,
+      "max_penetration_um": 3.7385806030562847,
+      "max_strain": 0.04429969168675336,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_304_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.317487060731764e-09,
+      "max_tool_balance_N": 7.317486312632265e-09,
+      "max_penetration_um": 3.5757756899411177,
+      "max_strain": 0.043777741356870986,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_304_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.317487060731764e-09,
+      "max_tool_balance_N": 7.317486312632265e-09,
+      "max_penetration_um": 3.5757756899411177,
+      "max_strain": 0.043777741356870986,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_305_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 6.047781719864531e-11,
+      "max_tool_balance_N": 6.047482393328751e-11,
+      "max_penetration_um": 3.7254669130839297,
+      "max_strain": 0.044369785629923754,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_305_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 6.047781719864531e-11,
+      "max_tool_balance_N": 6.047482393328751e-11,
+      "max_penetration_um": 3.7254669130839297,
+      "max_strain": 0.044369785629923754,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_305_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.531449781536526e-09,
+      "max_tool_balance_N": 7.531449217317715e-09,
+      "max_penetration_um": 3.557082256416149,
+      "max_strain": 0.04378379965016779,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_305_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.531449781536526e-09,
+      "max_tool_balance_N": 7.531449217317715e-09,
+      "max_penetration_um": 3.557082256416149,
+      "max_strain": 0.04378379965016779,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_306_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 4.428974922920936e-09,
+      "max_tool_balance_N": 4.428974301889932e-09,
+      "max_penetration_um": 4.078987992132575,
+      "max_strain": 0.04416802895911992,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_306_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 4.428974922920936e-09,
+      "max_tool_balance_N": 4.428974301889932e-09,
+      "max_penetration_um": 4.078987992132575,
+      "max_strain": 0.04416802895911992,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_306_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.243462881584284e-09,
+      "max_tool_balance_N": 7.243462077973634e-09,
+      "max_penetration_um": 3.785070807332022,
+      "max_strain": 0.04371777125998286,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_306_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.243462881584284e-09,
+      "max_tool_balance_N": 7.243462077973634e-09,
+      "max_penetration_um": 3.785070807332022,
+      "max_strain": 0.04371777125998286,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_307_fast_press_noise0\\true_state.npz",
+      "max_body_balance_N": 2.7678424955636383e-09,
+      "max_tool_balance_N": 2.767842015912597e-09,
+      "max_penetration_um": 3.8942753525421456,
+      "max_strain": 0.04424369644547516,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_307_fast_press_noise1\\true_state.npz",
+      "max_body_balance_N": 2.7678424955636383e-09,
+      "max_tool_balance_N": 2.767842015912597e-09,
+      "max_penetration_um": 3.8942753525421456,
+      "max_strain": 0.04424369644547516,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_307_slow_press_noise0\\true_state.npz",
+      "max_body_balance_N": 7.3313493999596635e-09,
+      "max_tool_balance_N": 7.331348822296746e-09,
+      "max_penetration_um": 3.6607527026581255,
+      "max_strain": 0.043744523334811346,
+      "passed": true
+    },
+    {
+      "path": "forecasts\\test_307_slow_press_noise1\\true_state.npz",
+      "max_body_balance_N": 7.3313493999596635e-09,
+      "max_tool_balance_N": 7.331348822296746e-09,
+      "max_penetration_um": 3.6607527026581255,
+      "max_strain": 0.043744523334811346,
+      "passed": true
+    }
+  ],
+  "physical_threshold_exceedances": [
+    {
+      "path": "histories\\validation_200.npz",
+      "max_body_balance_N": 5.518885756380931e-09,
+      "max_tool_balance_N": 5.518884627075948e-09,
+      "max_penetration_um": 5.024749861485742,
+      "max_strain": 0.04392195812126919,
+      "passed": false,
+      "diagnostic": {
+        "path": "diagnostics\\validation_200_double_penalty.npz",
+        "max_penetration_um": 2.644994289549725,
+        "force_change_NRMSE": 0.005424507017213502,
+        "original_preserved": true,
+        "included_in_test_comparisons": false
+      }
+    }
+  ],
+  "optimizer_nonconvergence": [],
+  "batch_failures": [],
+  "independent_parents": 8,
+  "status": "descriptive synthetic pilot",
+  "confidence_intervals": "Not computed: small development pilot, single shared noise realization; not a powered confirmatory study"
+}

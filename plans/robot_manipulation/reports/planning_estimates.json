@@ -1,0 +1,41 @@
+{
+  "status": "planning_arithmetic_not_experimental_results",
+  "formula": "ceil(d * (z_(1-alpha/2) + z_power)^2 / delta^2)",
+  "assumptions": {
+    "alpha_two_sided": 0.05,
+    "power": 0.8,
+    "discordance": 0.25
+  },
+  "sample_size_approximations": [
+    {
+      "absolute_difference": 0.08,
+      "approx_independent_units": 307
+    },
+    {
+      "absolute_difference": 0.05,
+      "approx_independent_units": 785
+    }
+  ],
+  "provisional_primary_natural_history_blocks": 320,
+  "provisional_matched_mechanism_blocks": 320,
+  "evaluated_method_instances": 38,
+  "base_evaluation_episodes": 36480,
+  "simulated_hours_excluding_preconditioning": 152.0,
+  "illustrative_solver_worker_hours": 760.0,
+  "ideal_wall_hours_with_independent_workers": 95.0,
+  "budget_exclusions": [
+    "qualification",
+    "preconditioning",
+    "data generation",
+    "secondary controller-policy comparison",
+    "full latency sweep",
+    "additional ablations",
+    "physical experiments"
+  ],
+  "limitations": [
+    "Approximation does not include clustering, training-seed variation, or continuity correction.",
+    "Natural and matched populations must not be pooled to inflate primary sample size.",
+    "Safety noninferiority and per-stratum inference require separate power assessment.",
+    "Throughput and worker independence are unmeasured assumptions."
+  ]
+}

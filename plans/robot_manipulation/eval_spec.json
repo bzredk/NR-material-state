@@ -1,0 +1,116 @@
+{
+  "name": "Material memory under shared feedback in articulated robot manipulation",
+  "version": "0.1",
+  "date": "2026-10-23",
+  "status": "proposed_not_executed",
+  "claim": "A deployable residual material-state estimate may improve constraint-respecting robot task completion beyond fitted classical observers and ordinary shared feedback; this is a falsifiable research question, not an established novel method.",
+  "unit_of_analysis": "An independently generated material-geometry-task-history block. Keep all pair members, time windows, action branches, sensor replicates, and algorithm replays together; cluster further when material realizations are reused.",
+  "primary_population": "Naturally sampled histories, equally weighted across two tasks and four test strata. Matched-history pairs form a separate mechanism population.",
+  "datasets": [
+    {"name": "planar_mechanism", "train_blocks": 384, "validation_blocks": 96, "test_blocks": 128, "status": "planned"},
+    {"name": "robot_3d", "train_blocks": 1024, "validation_blocks": 128, "independent_pilot_blocks": 32, "provisional_test_blocks": 640, "tasks": ["contact_traversal", "grasp_transport_place"], "test_blocks_per_task": 320, "strata_per_task": 4, "blocks_per_stratum": 80, "matched_pair_blocks": 320, "natural_history_blocks": 320, "status": "planned_size_requires_pilot_freeze"},
+    {"name": "physical_validation", "status": "not_collected", "requirement": "Independent material calibration before calibrated-simulation claims; physical robot tasks only after qualified 3D robot evaluation."}
+  ],
+  "splits": [
+    {"name": "training_validation_pilot", "held_out": "Disjoint material-instance and history-generation groups; no derived-window split", "leakage_check": "Hash parent block IDs before feature extraction; fit normalization and constitutive parameters on training/calibration only."},
+    {"name": "test_id", "held_out": "Unseen material/geometry realizations and history seeds within training bounds", "leakage_check": "No physical realization, paired member, action branch, or sensor replicate crosses splits."},
+    {"name": "test_history_ood", "held_out": "Preregistered nonoverlapping history duration/amplitude bands", "leakage_check": "Record actual numerical bounds before test generation; current-observation matching cannot inspect future effects."},
+    {"name": "test_parameter_ood", "held_out": "Preregistered material-parameter bands outside training support", "leakage_check": "Do not call an interior withheld band extrapolation; use validation for model choice."},
+    {"name": "test_controller_ood", "held_out": "Future controller gains and speed combinations", "leakage_check": "Encode only past observations; issue future commands without future measured trajectories."},
+    {"name": "secondary_structure_geometry", "held_out": "Qualified additional relaxation modes, constitutive family, mesh/integration setting, or geometry", "leakage_check": "Report each structural shift separately; do not change it after observing comparative performance."}
+  ],
+  "baselines": [
+    {"name": "B0_reactive", "category": "deployable_control", "controlled_variables": "Same sensors, physical limits, and validation tuning access; report action-interface differences."},
+    {"name": "B1_classical_observer", "category": "deployable_physics", "controlled_variables": "Fitted correct-family constitutive law, full causal history, same calibration data and planner; local-window variant is additional."},
+    {"name": "B2_command_lstm", "category": "deployable_sequence_model", "controlled_variables": "Same boundary data, future commands, training budget, feedback, and planner; no future measured indentation."},
+    {"name": "B3_history_operator", "category": "adapted_HANO_style", "controlled_variables": "Boundary observations and command interface matched; preserve finite temporal history; label adaptation."},
+    {"name": "B4_latent_physics_graph", "category": "adapted_RoboPack_style", "controlled_variables": "Same sensors and planner, history-based estimation and frozen rollout latent, equal adaptation data."},
+    {"name": "B5_property_graph", "category": "adapted_AdaptiGraph_style", "controlled_variables": "Retain temporal inputs, equal property-fitting interactions, same sensor and compute budget."},
+    {"name": "B6_constitutive_potentials", "category": "adapted_PANN_style", "controlled_variables": "Boundary observer with equal deployable information; microscopic labels require a separate privileged track."},
+    {"name": "O_oracle", "category": "privileged_ceiling", "controlled_variables": "True material state and parameters only for oracle; same constraints, actuation, planner library, and control timing."}
+  ],
+  "candidate": {"name": "C_evolving_material_state", "status": "mechanism_and_architecture_not_yet_justified", "restriction": "No algorithmic novelty claim until a deficiency beyond strong existing baselines is demonstrated."},
+  "metrics": [
+    {"name": "natural_history_constraint_respecting_completion", "direction": "higher", "primary": true, "rationale": "Measures actual operation utility with full episode constraints, rather than prediction alone."},
+    {"name": "matched_history_paired_effect_nrmse", "direction": "lower", "primary": false, "rationale": "Tests whether history predicts response differences under common future commands; report effect magnitudes and absolute errors too."},
+    {"name": "constraint_violation_probability_and_excess", "direction": "lower", "primary": false, "rationale": "Counts force, deformation, joint, and collision violations from episode start, including probes and release."},
+    {"name": "force_surface_motion_rollout_error", "direction": "lower", "primary": false, "rationale": "Distinguishes constitutive prediction quality from downstream control benefit."},
+    {"name": "fixed_library_action_regret", "direction": "lower", "primary": false, "rationale": "Compares decisions with an offline privileged oracle using independent physical branch replay."},
+    {"name": "fallback_defer_and_completion_cost", "direction": "report_distribution", "primary": false, "rationale": "Prevents apparent safety gains by refusing all work and apparent speed gains by discarding failures."},
+    {"name": "uncertainty_coverage_and_width", "direction": "calibrated_and_informative", "primary": false, "rationale": "Empirical scope for reuse or defer decisions, without claiming universal certification."},
+    {"name": "latency_deadlines_and_throughput", "direction": "lower_latency_with_feasible_throughput", "primary": false, "rationale": "Planning computation advances the causal clock; no free paused-time inference."}
+  ],
+  "ablations": [
+    "Snapshot versus history with matched capacity, fixed evolution law, and common planner",
+    "Full-history versus 0.2-second classical observer",
+    "History windows 0.2, 0.5, 1, and 3 seconds",
+    "Latent dimensions 2, 4, 8, and 16 with parameter-matched controls",
+    "Fixed versus learned evolution under a common encoder",
+    "Context-only versus evolving state",
+    "Ordered versus shuffled history and history-conditioned fast feedback",
+    "Erase initialization after controlled intervals of shared feedback",
+    "Elastic control and zero added latency",
+    "Added latency 20, 50, and 100 ms as sensitivity analysis",
+    "No uncertainty or fallback, with equal observations and action budget",
+    "Equal-extra-compute control and separately reported privileged-supervision track"
+  ],
+  "falsification_criteria": [
+    "Complete current-observation matching eliminates the measurable future history effect.",
+    "A fitted classical or short-history observer explains the effect without a useful learned-method advantage.",
+    "Shared credible feedback removes useful action benefit, as occurred in archived E3.",
+    "Gain exists only in curated pairs and does not transfer to natural-history operations.",
+    "Gain requires artificial delays, weaker baseline information, privileged future motion, or unmatched compute.",
+    "Numerical error or contact/coupling artifacts are comparable to the method effect.",
+    "The claimed effect fails prespecified model-family or physical-calibration validation."
+  ],
+  "statistics": {
+    "primary_contrast": "Candidate against strongest deployable baseline selected on validation before test unblinding",
+    "minimum_useful_gain": 0.08,
+    "alpha_two_sided": 0.05,
+    "planning_power": 0.8,
+    "planning_discordance": 0.25,
+    "planning_effects": [0.08, 0.05],
+    "constraint_risk_noninferiority_margin": 0.02,
+    "interval": "95% paired hierarchical/crossed bootstrap over independent blocks/material realizations and training seeds; preserve task/stratum weights and add conservative exact paired-binary bounds for degenerate binary outcomes",
+    "bootstrap_replicates": 20000,
+    "aggregation_seed": 1007,
+    "multiplicity": "One prespecified primary contrast; Holm correction for declared secondary comparison families",
+    "freeze_requirement": "Pilot-based clustered power and final sample size must be frozen before final test access; nonsignificance is not equivalence."
+  },
+  "compute_budget": {
+    "status": "provisional_not_consumed_or_reserved",
+    "pilot_gpu_hours_cap": 8,
+    "training_validation_gpu_hours_cap": 240,
+    "base_evaluation_worker_hours_cap": 1000,
+    "trained_method_families": 7,
+    "deterministic_method_instances": 3,
+    "maximum_validation_configurations_per_family": 10,
+    "assumed_episode_seconds_excluding_preconditioning": 15,
+    "illustrative_realtime_factor": 0.2,
+    "illustrative_independent_workers": 8,
+    "exclusions": ["qualification", "preconditioning", "data generation", "secondary controller-policy comparison", "full latency sweep", "additional ablations", "physical experiments"],
+    "requirement": "Measure speed and memory on the qualified backend; revise prospectively if full study is infeasible."
+  },
+  "seeds": [11, 23, 47, 71, 101],
+  "artifacts": [
+    "Source PDF manifest, inspected-page ledger, and novelty decision",
+    "Versioned frozen protocol and split/asset/material hashes",
+    "Robot-material physics qualification report",
+    "Dependency lock or container digest, solver commits, hardware and driver record",
+    "Raw observations, commands, realized motion, and acquisition/delivery timestamps",
+    "Full state snapshots for deterministic or tolerance-bounded replay",
+    "Checkpoints and all validation attempts",
+    "Per-block and per-seed outcomes, including every failure",
+    "Aggregation scripts, confidence intervals, and power assumptions",
+    "Uncut representative robot task videos and a small reproducible scene",
+    "Explicit gate decision before physical robot work"
+  ],
+  "unresolved_before_confirmatory_run": [
+    "Compatible solver/plugin versions and qualified two-way coupling",
+    "Physical or explicitly synthetic material coefficients",
+    "Exact force/strain limits, action values, and validity range",
+    "Measured sensor noise and latency, match tolerances, and processing budget",
+    "Numerical split bounds and prospective final sample size",
+    "Faithful baseline code availability and adaptation verification"
+  ]
+}

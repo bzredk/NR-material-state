@@ -1,0 +1,165 @@
+{
+  "rows": [
+    {
+      "check": "Affine strain patch",
+      "error": 8.673617379884035e-18,
+      "tolerance": 1e-12,
+      "unit": "strain",
+      "passed": true,
+      "meaning": "Constant-strain element reproduces an affine displacement field"
+    },
+    {
+      "check": "Relaxation reference",
+      "error": 0.0013496543360245047,
+      "tolerance": 0.02,
+      "unit": "relative",
+      "passed": true,
+      "meaning": "Backward-Euler material-point response versus continuous Maxwell solution"
+    },
+    {
+      "check": "Free recovery reference",
+      "error": 0.0015507407217525992,
+      "tolerance": 0.02,
+      "unit": "relative",
+      "passed": true,
+      "meaning": "Zero-stress two-mode recovery versus matrix-exponential solution"
+    },
+    {
+      "check": "Body force balance",
+      "error": 4.640388601151457e-09,
+      "tolerance": 2e-07,
+      "unit": "N",
+      "passed": true,
+      "meaning": "Bottom vertical reaction equals tool reaction"
+    },
+    {
+      "check": "Tool dynamic balance",
+      "error": 4.640387664834461e-09,
+      "tolerance": 2e-07,
+      "unit": "N",
+      "passed": true,
+      "meaning": "Actuator - contact = mass * acceleration"
+    },
+    {
+      "check": "Contact separation",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "unit": "N",
+      "passed": true,
+      "meaning": "No tensile contact; zero reaction while separated"
+    },
+    {
+      "check": "Recontact detected",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "unit": "flag",
+      "passed": true,
+      "meaning": "Reaction returns after physical approach"
+    },
+    {
+      "check": "Contact penetration",
+      "error": 4.851349298695814,
+      "tolerance": 5.0,
+      "unit": "um",
+      "passed": true,
+      "meaning": "Penalty penetration, not exact complementarity"
+    },
+    {
+      "check": "Small-strain range",
+      "error": 0.04718278649762468,
+      "tolerance": 0.06,
+      "unit": "strain",
+      "passed": true,
+      "meaning": "Frobenius strain norm; synthetic small-strain scope"
+    },
+    {
+      "check": "Unforced recovery energy",
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "unit": "J",
+      "passed": true,
+      "meaning": "Stored body energy cannot increase during detached wait"
+    },
+    {
+      "check": "Elastic recovery control",
+      "error": 4.3373029446312365e-119,
+      "tolerance": 1e-10,
+      "unit": "m",
+      "passed": true,
+      "meaning": "Zero-memory body returns to zero displacement on separation"
+    },
+    {
+      "check": "Elastic hold drift",
+      "error": 0.0,
+      "tolerance": 0.001,
+      "unit": "relative",
+      "passed": true,
+      "meaning": "No constitutive relaxation for elastic material after actuator settling"
+    },
+    {
+      "check": "Time-step convergence",
+      "error": 0.0033243810712200858,
+      "tolerance": 0.05,
+      "unit": "NRMSE",
+      "passed": true,
+      "meaning": "Default dt versus dt/4 over the full episode"
+    },
+    {
+      "check": "Time refinement trend",
+      "error": 0.0012508391003047538,
+      "tolerance": 0.035,
+      "unit": "NRMSE",
+      "passed": true,
+      "meaning": "dt/2 versus dt/4"
+    },
+    {
+      "check": "Mesh convergence",
+      "error": 0.021810747258954245,
+      "tolerance": 0.05,
+      "unit": "NRMSE",
+      "passed": true,
+      "meaning": "Default mesh versus double resolution"
+    },
+    {
+      "check": "Mesh refinement trend",
+      "error": 0.00557299307087516,
+      "tolerance": 0.035,
+      "unit": "NRMSE",
+      "passed": true,
+      "meaning": "1.5x mesh versus 2x mesh"
+    },
+    {
+      "check": "Penalty sensitivity",
+      "error": 0.002675856180309592,
+      "tolerance": 0.02,
+      "unit": "NRMSE",
+      "passed": true,
+      "meaning": "Double contact penalty"
+    }
+  ],
+  "passed": true,
+  "wall_seconds": 17.901766945999952,
+  "config": {
+    "nx": 24,
+    "ny": 12,
+    "width": 0.04,
+    "height": 0.02,
+    "thickness": 0.01,
+    "radius": 0.03,
+    "E_inf": 20000.0,
+    "E_fast": 40000.0,
+    "E_slow": 60000.0,
+    "nu": 0.35,
+    "tau_fast": 0.12,
+    "tau_slow": 0.9,
+    "tool_mass": 0.04,
+    "actuator_k": 5000.0,
+    "actuator_c": 12.0,
+    "penalty": 2000000000.0,
+    "dt": 0.01,
+    "clearance": 0.00015,
+    "newton_tol": 1e-08,
+    "newton_max": 35
+  },
+  "scope": "Synthetic quasistatic 2D body + dynamic tool; not real-material validation"
+}

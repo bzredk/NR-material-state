@@ -1,0 +1,28 @@
+{
+  "name": "NR Spatial 2D CPU",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/NR-material-state,type=bind",
+  "workspaceFolder": "/workspaces/NR-material-state",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": false,
+  "shutdownAction": "none",
+  "postCreateCommand": "/opt/venv/bin/python tools/setup_container.py",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python@2026.10.0",
+        "ms-toolsai.jupyter@2025.9.1"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python",
+        "python.useEnvironmentsExtension": false,
+        "jupyter.notebookFileRoot": "${workspaceFolder}",
+        "jupyter.disableJupyterAutoStart": false
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "NR hidden object state: minimal discriminating evidence chain v0.1",
+  "status": "PROPOSED_NOT_EXECUTED",
+  "date": "2026-10-25",
+  "claim": "H1: feasible action-observation histories improve prediction beyond matched current observations and can be compressed and recursively updated over a declared action class. H2 is separate: the information improves a consequential decision before ordinary feedback supplies equivalent information.",
+  "unit_of_analysis": "Parent history-generating block conditional on one fixed plant for the initial diagnostic; all pair members, future forks, frames and training seeds are dependent within that block. Later material claims require independent specimen or batch clusters.",
+  "target": {"primary": "B: scoped predictive state", "reference": "A: identifiable physical internal coordinates", "extension": "C: calibrated belief if unresolved uncertainty changes decisions"},
+  "datasets": [
+    {"id": "D0", "status": "ARCHIVED_ANALYZED", "role": "Code audit and evidence reconstruction; not new final testing"},
+    {"id": "D1", "status": "PROPOSED", "role": "Spatial 2D continuum histories with independent sensor noise and physical replay", "populations": ["current-observation matched histories", "naturally sampled histories"]},
+    {"id": "D2", "status": "PROPOSED_GATED", "role": "Articulated 3D closed-loop robot episodes with validated bidirectional contact"},
+    {"id": "D3", "status": "NOT_COLLECTED", "role": "Real calibration and later robot trials", "specimen_fixture_measurements": "confirmed absent by user"}
+  ],
+  "splits": [
+    {"name": "calibration", "planned_units": 12, "held_out": "Separate calibration trajectories", "leakage_check": "No shared history or specimen test labels; model identification recorded separately"},
+    {"name": "independent_pilot", "planned_units": 24, "held_out": "Independent parent blocks not used in final estimates", "leakage_check": "Freeze gates, action library, margins and later power before fresh final generation"},
+    {"name": "train", "planned_units": 256, "held_out": "Validation, pilot and test parents", "leakage_check": "Hash parent manifests; never split overlapping windows or branches"},
+    {"name": "validation", "planned_units": 64, "held_out": "Parents unseen during training", "leakage_check": "Select models, hyperparameters and one primary contrast without final outcomes"},
+    {"name": "initial_2d_test", "planned_units": 128, "held_out": "64 matched-pair blocks plus 64 natural-history blocks, all fresh", "leakage_check": "Freeze generation without future-effect filtering; never treat this planning n as powered robot confirmation"},
+    {"name": "later_robot_confirmation", "planned_units": null, "held_out": "Fresh groups after an independent robot pilot", "leakage_check": "Prospective precision/power calculation and separate transfer groups before final access"}
+  ],
+  "shared_controls": ["delivered sensor channels", "reset information", "calibration data", "action set", "downstream controller", "task thresholds", "compute deadline", "prefix and whole-operation constraints"],
+  "baselines": [
+    {"name": "M0 snapshot", "category": "current-only", "controlled_variables": ["shared fitted predictor", "shared controls"]},
+    {"name": "M1 short classical observer", "category": "physics and short history", "controlled_variables": ["shared observations and fitted physics", "valid contact/reset assumptions"]},
+    {"name": "M2 full-history classical and named learned initializer", "category": "history reference", "controlled_variables": ["shared calibration and reset information", "equal tuning budget"]},
+    {"name": "M3 recursive representation", "category": "candidate", "controlled_variables": ["all retained memory counted", "shared predictor or encoder-law factorial comparison"]},
+    {"name": "M4 true hidden state with same fitted predictor", "category": "privileged state-information reference", "controlled_variables": ["same action library, controller, horizon and law", "not a global optimal-policy bound"]},
+    {"name": "M5 true state with true law", "category": "diagnostic privilege", "controlled_variables": ["separately label removal of both state and model error"]},
+    {"name": "tuned reactive controller", "category": "practical deployment reference", "controlled_variables": ["same sensing and full-operation limits", "separate native-action result if interfaces differ"]}
+  ],
+  "metrics": [
+    {"name": "X01 paired future-response effect relative to measured error floor", "direction": "larger supports relevance", "rationale": "Missing information must survive observable matching and physics/numerical checks", "primary": true, "claim": "H1 initial relevance gate"},
+    {"name": "X02 predictive loss and history/action sweep", "direction": "lower", "rationale": "Separate recoverability from architecture capacity", "primary": false},
+    {"name": "X03 older-history residual predictive gain with interval", "direction": "below a meaningful predeclared tolerance for adequacy", "rationale": "Require capable probes; nonsignificance alone is inconclusive", "primary": false},
+    {"name": "X02-X04 CRPS or multivariate energy score plus coverage", "direction": "lower proper score with calibrated coverage", "rationale": "RMSE cannot test omitted variance or multimodality; otherwise narrow claim to mean prediction", "primary": false},
+    {"name": "X04 recursive/prefix forecast discrepancy with both scored against truth", "direction": "lower with accurate calibrated outcomes", "rationale": "Agreement between two wrong estimators is insufficient", "primary": false},
+    {"name": "X05 held-out-action response and action-ranking error", "direction": "lower", "rationale": "Encode once and exclude future realized motion from inputs", "primary": false},
+    {"name": "X06 full-operation constraint-respecting utility", "direction": "higher", "rationale": "Separate decision evidence from forecast accuracy; include all failures and prefix costs", "primary": true, "claim": "H2 gated action claim", "utility_definition": "UNFROZEN: credible task specification and independent pilot required"},
+    {"name": "X07 shift-specific degradation and adaptation cost", "direction": "lower", "rationale": "Action, shape, material, mechanism and embodiment shifts are distinct", "primary": false}
+  ],
+  "ablations": [
+    "Elastic no-memory carrier under the same sensing and task",
+    "Initial history grid 0/0.05/0.2/0.5/1/3 s for archived modes; recalibrate for new carrier before final access",
+    "Ordinary versus informative feasible excitation with probe costs included",
+    "Current visible shape/force/channel availability with independent noise",
+    "Common observer covariance versus validation-calibrated covariance versus no-innovation diagnostic",
+    "State-information reference at decision versus truth-initialized ordinary observer",
+    "Encoder versus forward-law factorial if candidate changes both",
+    "Natural feedback primary; credible latency sensitivity secondary, never remove feedback solely to favor memory"
+  ],
+  "falsification_criteria": [
+    "X01 effect vanishes after matching all visible channels or correcting numerical/actuator artifacts: reject missing object-state claim in that regime",
+    "Short classical inference matches candidate across declared tests: stop unsupported learned-method necessity claim",
+    "Adequate older-history probe adds decision-relevant prediction: reject tested representation sufficiency",
+    "Recursive predictions agree but fail held-out outcomes: reject online-state adequacy",
+    "No M4 decision advantage after controller/action sensitivity checks: stop action-value claim for this task",
+    "Useful reference gap but demonstrably inadequate sensing: change information conditions or maintain belief, not claim neural failure proves impossibility",
+    "Existing method matches the proposed problem, deployable information, mechanism and central evidence: stop that novelty claim"
+  ],
+  "statistics": {
+    "primary_contrasts": "one contrast frozen on validation per H1/H2 stage",
+    "resampling": "cluster by parent history and first by material instance if multiple histories share it",
+    "binary_ceiling": "Report discordant counts and appropriate exact or one-sided bounds; do not infer equivalence from [0,0] bootstrap",
+    "multiplicity": "Holm correction for predeclared secondary comparison family",
+    "power": "Initial sizes are planning values for route selection; fresh robot confirmation requires independent pilot-based calculation",
+    "failures": "retain solver errors, invalid trajectories, timeouts, divergence, cap breaches, drops and missing-data cases with reasons"
+  },
+  "compute_budget": {"initial_timing_physics_pilot_cap_local_hours": 8, "status": "planning cap, not measured runtime", "benchmark_full_sweep": "gated on throughput and useful task gap", "environment": "Existing project Python is CPU-only; dedicated locked simulator environment required", "inference_deadline_ms": null},
+  "seeds": [11, 23, 47],
+  "seed_status": "Planned initial training seeds; later confirmation targets five if feasible; not independent physical samples",
+  "unfrozen_gates": ["physical specimen and calibrated time scales", "sensor resolution and timing", "valid material strain range", "actual control interface", "task utility and meaningful effect", "mesh/time convergence tolerance", "robot confirmation sample size"],
+  "artifacts": ["immutable source and parent-ID manifests", "raw full-episode sensor/action clocks", "physical parameter and mesh records", "dependency/asset/solver locks", "code and dirty-diff hashes", "model checkpoints and complete carried state", "all attempted/accepted matching records", "per-trial failure and outcome tables", "grouped intervals and compute profiles"],
+  "execution_order": ["archived diagnostic audit", "spatial 2D physical qualification and X01-X06", "qualified articulated 3D operation and confirmation", "real robot after simulation gate; coupon calibration may occur earlier"]
+}

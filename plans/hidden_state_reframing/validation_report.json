@@ -1,0 +1,936 @@
+{
+  "date": "2026-10-25",
+  "scope": "document, source-preservation and contract checks only; no scientific experiment",
+  "passed": true,
+  "check_count": 157,
+  "errors": [],
+  "checks": [
+    {
+      "check": "JSON: eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON: figure_data.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON: jepa_eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON: literature_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON: registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON: figures\\provenance.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Python syntax: tools\\build_nadia_figures.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Python syntax: tools\\validate_package.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/01_history/physics.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/01_history/models.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/01_history/data.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/01_history/experiment.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/01_history/runs/round2_v1/fixed_material.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/02_transfer/v2/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/02_transfer/v2/models.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/02_transfer/v2/dynamics.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/vendor/round4/physics.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/vendor/round4/control.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/bridge.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/analyze.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/config.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/results/summary.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: existing_evidence.md -> ../../early experiment/experiments/03_feedback/results/report_numbers.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: formalization.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: frameworks.md -> registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: jepa_assessment.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: jepa_assessment.md -> jepa_eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: jepa_assessment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: minimal_experiment.md -> closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: minimal_experiment.md -> eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/01_state_aliasing.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> figure_data.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/02_existing_evidence.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/03_decision_gate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: nadia_brief.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: nadia_brief.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: novelty_clarification.md -> closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: novelty_clarification.md -> formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: novelty_clarification.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> research_position.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> literature_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> resources_platforms.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> roadmap_and_decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> nadia_brief.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> figures/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> roadmap_and_decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> ../../../Documents/Codex/2026-10-25-hidden-state-reframing/research_synthesis_zh.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> figure_data.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> figures/provenance.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> ../../../Documents/Codex/2026-10-25-hidden-state-reframing/theory_checks/verification.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: README.md -> ../../../Documents/Codex/2026-10-25-hidden-state-reframing/theory_sources.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_position.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_position.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: research_position.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/lab_confirmation.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/session_plan/parameter_form.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../../Documents/Codex/2026-10-25-hidden-state-reframing/resources/hardware_probe.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../SETUP.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/lab_confirmation.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/session_plan/parameter_form.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/FIRST_SESSION_PLAN_EN.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../early experiment/experiments/lab/eval.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: resources_platforms.md -> ../../../Documents/Codex/2026-10-25-hidden-state-reframing/resources/hardware_probe.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: resources_platforms.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: review_log.md -> validation_report.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: review_log.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> resources_platforms.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> ../../../Documents/Codex/2026-10-23-project-feedback/\u9879\u76ee\u53cd\u9988\u603b\u7ed3\u4e0e\u8f6c\u5f55.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> ../../../Documents/Codex/2026-10-23-project-feedback/sources.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> ../robot_manipulation/novelty_decision.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: roadmap_and_decisions.md -> minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "English technical prose: roadmap_and_decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/research_position.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/frameworks.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/formalization.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/closest_work.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/roadmap_and_decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/02_existing_evidence.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/existing_evidence.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/resources_platforms.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/minimal_experiment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/eval_spec.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/roadmap_and_decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/figures/01_state_aliasing.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/figures/02_existing_evidence.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/figures/03_decision_gate.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/nadia_brief.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Link: research_synthesis_zh.md -> ../../../NR-material-state/plans/hidden_state_reframing/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Preserved archived source: early experiment/experiments/01_history/runs/round2_v1/summary.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Preserved archived source: early experiment/experiments/03_feedback/results/summary.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Preserved archived source: early experiment/experiments/03_feedback/results/report_numbers.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Question link: C06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "experiments links: C06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "levels links: C06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "data links: C06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source links: C06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source path: SRC-E1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source path: SRC-E2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source path: SRC-E3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Source path: SRC-AUDIO",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Evaluation required fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Planning status retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Matched/natural test allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure pair fixed independently of effect",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "file_manifest": [
+    {
+      "path": "closest_work.md",
+      "bytes": 36334,
+      "sha256": "0ec5236dad6fe7a342b1b25fd991f23e4cde0d280633a03b5ff72fc6814fb93f"
+    },
+    {
+      "path": "eval_spec.json",
+      "bytes": 10113,
+      "sha256": "a6fd977f8321eaff0c72b7b2da248b85195b285bfeb1bf2523f93241fdceae40"
+    },
+    {
+      "path": "existing_evidence.md",
+      "bytes": 29889,
+      "sha256": "df3eb2c18e8efbb24fbce5580eb4fc4e182396cad3eec351f2706289a9fdaf7a"
+    },
+    {
+      "path": "figure_data.json",
+      "bytes": 6772,
+      "sha256": "3623fa67e307e06b58e718ac2067e21edcf80075111d82644b81aaae03484d2e"
+    },
+    {
+      "path": "figures/01_state_aliasing.png",
+      "bytes": 278503,
+      "sha256": "7284394c6316114d9d7a5129b8ecc99d3bf1276af57179a89cdb33e1ab746f66"
+    },
+    {
+      "path": "figures/01_state_aliasing.svg",
+      "bytes": 164233,
+      "sha256": "12bf1ddcef2a754f045268bd5be993daa30e5610081766f510cf9599ad132409"
+    },
+    {
+      "path": "figures/02_existing_evidence.png",
+      "bytes": 200208,
+      "sha256": "18f7d723a1f8d93dad33105c0eb74a0fa45c3f5b136bce5e522f1d38b54b4c5d"
+    },
+    {
+      "path": "figures/02_existing_evidence.svg",
+      "bytes": 142828,
+      "sha256": "73bf6697d4ab5c2b57486aa95b42890f255fa1e94e49cb21e6f0be7269eb3394"
+    },
+    {
+      "path": "figures/03_decision_gate.png",
+      "bytes": 240835,
+      "sha256": "7a93f6aee8a5e8605a679c3928c1eef3fb053ca11e2589dea1ddc79afafbf4de"
+    },
+    {
+      "path": "figures/03_decision_gate.svg",
+      "bytes": 153482,
+      "sha256": "2246c013a3a63c81a0bd04df2f99dd2f241a52efa3b875d8c24c7a54a5b8f256"
+    },
+    {
+      "path": "figures/provenance.json",
+      "bytes": 617,
+      "sha256": "8727ba2c7503c26f6e7d2d370ad68deabddc0034d718642048aa7f5877b64f94"
+    },
+    {
+      "path": "formalization.md",
+      "bytes": 13917,
+      "sha256": "705d51c2241b0cbbfd74cffccbba54e0fc66f821cf0844c73b6eac3f3a6e32b8"
+    },
+    {
+      "path": "frameworks.md",
+      "bytes": 10605,
+      "sha256": "359d5495bb7023bd41b5d6de404070a6b4807dd9836b92f82dc5f21c6626b2a4"
+    },
+    {
+      "path": "jepa_assessment.md",
+      "bytes": 14220,
+      "sha256": "1875f7823ca591c175eb41de01f1c317177952821771be4d7e2d924f5d63502d"
+    },
+    {
+      "path": "jepa_eval_spec.json",
+      "bytes": 5344,
+      "sha256": "3e005b9a9a4251bdd3a8ecf195b95b427ce47f6549a51151baf0acff4eb8dfa0"
+    },
+    {
+      "path": "literature_registry.json",
+      "bytes": 8307,
+      "sha256": "613f51486e0c5d82de7609deb7ae2e261cb04689d73ee7cc3527f4893c847ee7"
+    },
+    {
+      "path": "minimal_experiment.md",
+      "bytes": 21402,
+      "sha256": "afb4406065401f3e57fa27bd78c6c5cedd20447dad41f1d54d61302d879d5af1"
+    },
+    {
+      "path": "nadia_brief.md",
+      "bytes": 13259,
+      "sha256": "7ff618f378175f5c24c1e9686e79186d58412c6581e5dab65033a4650b19640a"
+    },
+    {
+      "path": "novelty_clarification.md",
+      "bytes": 10727,
+      "sha256": "e451af7005f7f170cf98920bc75d7db23e6388e0d0561c25dc61b2e30876e3dd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5753,
+      "sha256": "e2e5e179e651ee609d884ab87b27deec53997d828f47e9f613510f280fcd1677"
+    },
+    {
+      "path": "registry.json",
+      "bytes": 4093,
+      "sha256": "d53d3fc907a77650eb8fedc84f1bedf51cb57dfb0a5dd68b7fb50d32a5b726f9"
+    },
+    {
+      "path": "research_position.md",
+      "bytes": 4159,
+      "sha256": "31b7179c396932048e65510fa6e2a735e9f2ca8d36f212e6e9b11f34286bfff6"
+    },
+    {
+      "path": "resources_platforms.md",
+      "bytes": 25250,
+      "sha256": "52b1ea2d93fd60265e7e6ef29abe01c951b6763cbe9ed7d18c711c569ad36ff6"
+    },
+    {
+      "path": "review_log.md",
+      "bytes": 4358,
+      "sha256": "8c833f872f010ae3da913fbfd9223d07af682a6624a5516df001ad3899397f84"
+    },
+    {
+      "path": "roadmap_and_decisions.md",
+      "bytes": 26243,
+      "sha256": "7014cda3b6e7886950992b61c21c90d1d69fa9bca2b9559af1fea1d444304b1b"
+    },
+    {
+      "path": "tools/build_nadia_figures.py",
+      "bytes": 9329,
+      "sha256": "61b86ffc87346818ee836ffc6b48ff77338f7e356e0ccea27dc139574f597e4d"
+    },
+    {
+      "path": "tools/validate_package.py",
+      "bytes": 4657,
+      "sha256": "95ad1e9e8f074268aca085173565e2ba32b027c92d5e1fd4cfb7cd7751566079"
+    }
+  ],
+  "manual_checks": [
+    "three generated PNG figures inspected visually",
+    "three theory PDF pages rendered and inspected separately",
+    "closest-method and physical-evidence peer reviews incorporated"
+  ]
+}

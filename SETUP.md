@@ -154,7 +154,7 @@ python "early experiment/tools/replay_checkpoints.py"
 
 | Command | What a successful run shows |
 | --- | --- |
-| `verify_bundle.py` | `status: passed`, a file count, 12 slides and three diagram formats. It checks SHA-256 hashes and English source text. |
+| `verify_bundle.py` | `status: passed`, a file count, 12 slides and three diagram formats. It checks archived research hashes and experiment source text. Use `--strict-snapshot` to also compare documentation and helpers with the historical release. |
 | `check_results.py` | 24 converged primary training records, six matching frozen checkpoints, and the archived E1/E2/E3 metrics. |
 | `replay_checkpoints.py` | Two result blocks, each with `checkpoints_replayed: 12` and finite predictions. E1 reports differences from saved predictions; CUDA mode also enforces the original tolerance. |
 
