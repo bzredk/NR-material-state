@@ -1,5 +1,11 @@
 {
   "python.useEnvironmentsExtension": false,
-  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "files.exclude": {
+    ".runtime": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "jupyter.notebookFileRoot": "${workspaceFolder}/2D",
   "jupyter.interactiveWindow.textEditor.executeSelection": true
 }

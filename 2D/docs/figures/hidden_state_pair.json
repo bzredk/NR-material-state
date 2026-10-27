@@ -1,0 +1,75 @@
+{
+  "claim": "The preselected histories have similar current readings and different subsequent simulated responses.",
+  "scope": "One preselected pair from an eight-history synthetic pilot; lateral residuals remain.",
+  "archetype": "asymmetric mixed-modality figure",
+  "backend": "Python / Matplotlib",
+  "size_inches": [
+    12.6,
+    7.6
+  ],
+  "raster_dpi": 300,
+  "editable_text": [
+    "SVG",
+    "PDF"
+  ],
+  "run": "runs/2d_contact/pilot_c9dd23016896",
+  "parents": [
+    "test_300",
+    "test_301"
+  ],
+  "action": "Slow press",
+  "pair_selection": "First lexicographic accepted pair; closest pair only if none accepts",
+  "future_used_for_selection": false,
+  "commands_identical": true,
+  "observation_residual_SI": [
+    0.0,
+    0.0,
+    0.0,
+    2.1791931185619937e-06,
+    2.1791931185621953e-06
+  ],
+  "matching_limits_SI": [
+    2e-06,
+    5e-05,
+    0.006,
+    5e-06,
+    5e-06
+  ],
+  "max_force_difference_mN": 9.652292919709863,
+  "rms_force_difference_mN": 5.583165461353072,
+  "body_frame": {
+    "parent": "test_300",
+    "index": 24,
+    "rule": "peak force within the fixed first history",
+    "deformation_scale": 1
+  },
+  "transforms": {
+    "time": "relative to prediction cut",
+    "lateral_response": "mean of left and right markers",
+    "force_display": "N to mN",
+    "position_display": "m to mm",
+    "lateral_display": "m to um"
+  },
+  "counts": {
+    "history_frames": [
+      141,
+      141
+    ],
+    "future_frames": [
+      101,
+      101
+    ]
+  },
+  "exclusions": "None within the requested pair; all five endpoint channels are shown.",
+  "export_scope": "README and presentation figure; 300 dpi PNG and vector exports, not a journal submission package.",
+  "statistics": "Descriptive traces; two histories, no confidence interval or population test.",
+  "source_sha256": {
+    "runs/2d_contact/pilot_c9dd23016896/histories/test_300.npz": "deb7e6bd6192dd18ef2bd5d8dd41c10c37135ddb2e1198824bab06ca39844352",
+    "runs/2d_contact/pilot_c9dd23016896/histories/test_301.npz": "a456568be5a7bf14568f1ab3a92570d754f7a10c19c3ab942ee51eeba5b6dbfd",
+    "runs/2d_contact/pilot_c9dd23016896/pair_refinement/default_test_300.npz": "bdbbc6fa37b2539d6f7f0f19b691d04f95f60f10ef4b1dd4312c13de214adfcd",
+    "runs/2d_contact/pilot_c9dd23016896/pair_refinement/default_test_301.npz": "d4666fdae17fdf573ce6c3613a05a0051c609c352df9ceb7361b0cde1e45923f",
+    "runs/2d_contact/pilot_c9dd23016896/matching.json": "5379298453bd6fa0e80c11d0c9683a7bd69cf79f558f44d7c53ea04e4ef8bd3e",
+    "tools/plot_hidden_state_pair.py": "15ae806f66b5ba3e3498259763da4b04427e092392f33b1e8af73e2846ee85a6",
+    "src/nr2d/physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e"
+  }
+}

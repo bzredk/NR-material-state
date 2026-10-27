@@ -1,0 +1,29 @@
+{
+  "name": "NR 2D Docker",
+  "build": {
+    "dockerfile": "../2D/environment/Dockerfile",
+    "context": "../2D/environment"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/NR-material-state,type=bind",
+  "workspaceFolder": "/workspaces/NR-material-state",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": false,
+  "shutdownAction": "none",
+  "postCreateCommand": "python /workspaces/NR-material-state/2D/tools/setup_container.py",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python@2026.10.0",
+        "ms-toolsai.jupyter@2025.9.1"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.useEnvironmentsExtension": false,
+        "jupyter.notebookFileRoot": "${workspaceFolder}/2D",
+        "terminal.integrated.cwd": "${workspaceFolder}/2D",
+        "jupyter.disableJupyterAutoStart": false
+      }
+    }
+  }
+}

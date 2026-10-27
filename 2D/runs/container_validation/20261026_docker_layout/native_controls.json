@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "date": "2026-10-26",
+  "application": "VS Code",
+  "container": "NR 2D Docker",
+  "python": "/usr/local/bin/python",
+  "notebook": "2D/notebooks/spatial_2d_hidden_state.ipynb",
+  "procedure": "Restart kernel, Run All, inspect live outputs, then operate replay controls.",
+  "observations": {
+    "fresh_main_solve_seconds": 1.19,
+    "timeline": "Selecting frame 82 displayed 0.82 s, the release phase, deformed mesh, contact points and aligned curve cursors.",
+    "play": "Frames advanced and the mesh and curves updated through release and wait.",
+    "pause": "Playback stopped at frame 166, 1.66 s, recontact.",
+    "reset": "Returned to frame 0, 0.00 s, initial state."
+  },
+  "scope": "Direct native replay-control verification. Forecast and sweep callback coverage is in callbacks.json."
+}

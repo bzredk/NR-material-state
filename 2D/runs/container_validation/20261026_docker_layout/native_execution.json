@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "application": "VS Code",
+  "container_name": "NR 2D Docker",
+  "python": "/usr/local/bin/python",
+  "visible_kernel_label": "Python 3.11.9",
+  "registered_jupyter_kernel": "NR 2D (Docker)",
+  "source": "native_run.ipynb",
+  "code_cells": 9,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "notebook_body_seconds": 5.72,
+  "scope": "Native Run All in the rebuilt Dev Container; callback coverage is recorded separately."
+}

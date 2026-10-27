@@ -1,0 +1,29 @@
+{
+  "basis_depths_m": [
+    0.0001,
+    0.00028,
+    0.00045
+  ],
+  "force_residual_scale_N": 0.004,
+  "lateral_residual_scale_m": 3e-06,
+  "regularization_weight": 0.015,
+  "initial_coefficient": 0.12,
+  "coefficient_bounds": [
+    0.0,
+    2.5
+  ],
+  "max_nfev": 7,
+  "ftol": 1e-05,
+  "xtol": 1e-05,
+  "gtol": 1e-05,
+  "diff_step": 0.001,
+  "short_window_seconds": 0.2,
+  "sweep_windows_seconds": [
+    0.0,
+    0.04,
+    0.1,
+    0.2,
+    0.4,
+    0.8
+  ]
+}

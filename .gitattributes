@@ -8,7 +8,8 @@
 
 # Preserve generated evidence without whitespace cleanup or noisy code review.
 *.svg -whitespace
-runs/**/*.log -whitespace
-runs/** linguist-generated=true
-plans/**/figures/** linguist-generated=true
+2D/runs/**/*.log -whitespace
+2D/runs/** linguist-generated=true
+1D/provenance/workcopies/** linguist-generated=true
+research/**/figures/** linguist-generated=true
 

@@ -1,0 +1,42 @@
+{
+  "name": "Spatial 2D hidden-state demonstration v0.1",
+  "status": "EXECUTED_EXPLORATORY_PILOT",
+  "claim": "Test whether physically reached, similar current observations retain different future responses and how short classical history changes spatial prediction; do not assert long-history or control necessity.",
+  "unit_of_analysis": "Complete synthetic parent loading history, conditional on fixed material/geometry. All windows, future branches and shared-noise realizations are dependent within that parent. Real object or mechanism transfer is not tested.",
+  "datasets": [
+    {"name": "Archived history dependence", "role": "Separate display-pipeline replay; no new spatial evidence"},
+    {"name": "New spatial 2D", "role": "Synthetic FEM traces, full internal fields privileged for diagnosis/reference"}
+  ],
+  "splits": [
+    {"name": "calibration", "held_out": "Three parents with seeds 100-102", "leakage_check": "No shared parent with validation/test; numerical main episode separate"},
+    {"name": "validation", "held_out": "Two parents 200-201 plus fixed smooth/pulse sweep parents", "leakage_check": "Window and noise diagnosis kept separate from test comparisons; no fitting to test truth"},
+    {"name": "test", "held_out": "Eight parents 300-307", "leakage_check": "All branches stay with the parent; pair selected by current sensors before future computation; all pairs logged"}
+  ],
+  "baselines": [
+    {"name": "Snapshot", "category": "current-only classical fit", "controlled_variables": ["known physics", "current channels", "six initial-strain coefficients", "seven optimizer iterations"]},
+    {"name": "Short classical", "category": "0.2 s classical fit", "controlled_variables": ["same known physics", "same sensors", "same basis and optimizer cap", "longer history is the information intervention"]},
+    {"name": "Full classical", "category": "full movement replay", "controlled_variables": ["same known physics", "same future commands", "known relaxed start explicitly additional information"]},
+    {"name": "True state", "category": "privileged diagnostic", "controlled_variables": ["same future commands and solver", "full internal fields and exact current tool state are privileged"]}
+  ],
+  "metrics": [
+    {"name": "Per-parent force RMSE in N", "direction": "lower", "rationale": "Prediction over one second including approach/contact; paired action conditions remain grouped", "primary": true},
+    {"name": "Lateral RMSE in m", "direction": "lower", "rationale": "Independent output type from solved deformation, two symmetric markers not independent modes", "primary": false},
+    {"name": "Matching residual/acceptance rate", "direction": "descriptive", "rationale": "State similarity using all current deployment channels; not exact observation equality", "primary": false},
+    {"name": "Physics errors and constraint overruns", "direction": "lower", "rationale": "Whole prefixes and futures audited; no discarded solver/constraint failures", "primary": false},
+    {"name": "Inference seconds and solver evaluations", "direction": "lower", "rationale": "Different window costs and algorithmic budgets disclosed", "primary": false}
+  ],
+  "ablations": ["Elastic material control", "Window lengths 0, .04, .1, .2, .4, .8 and full", "Smooth versus pulse loading", "Synthetic noise 0 and 1; 4 available on demand", "Slow versus fast future approach", "Hold/release detached negative controls", "Mesh/time-step/penalty refinement"],
+  "falsification_criteria": [
+    "No resolved future contrast after current-sensor matching and numerical refinement: no aliasing evidence for this regime",
+    "Snapshot explains contrast using residual lateral information: similarity alone does not establish hidden-state necessity",
+    "Short classical is sufficiently accurate: do not claim a long sequence or neural state is necessary",
+    "Nominal noise reverses the short-window advantage: retain the failure and diagnose observability/model-fit conditioning",
+    "Physics gate fails: retain and diagnose before interpreting method differences",
+    "No action comparison executed: prediction improvement cannot support decision benefit"
+  ],
+  "compute_budget": {"device": "CPU", "default_mesh": "24x12 rectangles / 576 triangles", "dt_seconds": 0.01, "finite_fit_max_nfev": 7, "statistical_scope": "small exploratory pilot; no powered hypothesis test", "stop_rule": "fixed listed parents, conditions and windows; no future-effect-based case selection"},
+  "seeds": [100, 101, 102, 200, 201, 300, 301, 302, 303, 304, 305, 306, 307, 123],
+  "artifacts": ["2D/notebooks/spatial_2d_hidden_state.ipynb", "runs/2d_contact/latest.json", "runs/2d_contact/<run>/manifest.json", "raw NPZ traces", "matching.json", "batch.json", "summary.json", "physical_failures.json", "figures with provenance sidecars", "source snapshot and dependency versions"],
+  "limitations": ["Synthetic small-strain quasistatic body", "Known fixed parameters and geometry", "Two symmetric lateral markers", "5 um matching band is not sensor quantization", "One common sensor-noise realization per condition", "No recursive learning, controller gain study, 3D arm, real measurement, or universal sufficiency proof"],
+  "framework_mapping": {"G1": "General hidden object state question", "D1": "five sensor channels plus command and time", "S1": "release/recovery/recontact", "M1": "classical spatial inference", "spatial_comparison": "controlled current-similarity and future-branch prediction", "C1": "synthetic viscoelastic continuum", "mechanism_link": "D1 x C1 x two internal strain fields x feasible loading/future intervention x M1 x relevance/history/cross-action prediction; decision and transfer levels remain untested"}
+}

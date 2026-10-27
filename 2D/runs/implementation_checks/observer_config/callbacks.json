@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "wall_seconds": 6.731017314999917,
+  "platform": "linux",
+  "python": "/usr/local/bin/python",
+  "scope": "Python widget callbacks and ipympl creation in a fresh kernel; not a frontend click test",
+  "checks": [
+    "shared replay cursor",
+    "pause preserves frame",
+    "reset",
+    "bounded live canvas",
+    "no trace mutation",
+    "four future actions",
+    "two checkpoints",
+    "noise selection",
+    "excitation selection",
+    "cached results"
+  ]
+}

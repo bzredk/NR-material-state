@@ -1,0 +1,15 @@
+{
+  "run": "runs/2d_contact/pilot_c9dd23016896",
+  "parents": [
+    "test_300",
+    "test_301"
+  ],
+  "trace": "Actual tool position; time relative to each history's endpoint.",
+  "source_sha256": {
+    "runs/2d_contact/pilot_c9dd23016896/matching.json": "5379298453bd6fa0e80c11d0c9683a7bd69cf79f558f44d7c53ea04e4ef8bd3e",
+    "runs/2d_contact/pilot_c9dd23016896/config.json": "4298992d46a41f95aa529ca6eb87f788c88dd170794649524dcd0a582877927c",
+    "runs/2d_contact/pilot_c9dd23016896/histories/test_300.npz": "deb7e6bd6192dd18ef2bd5d8dd41c10c37135ddb2e1198824bab06ca39844352",
+    "runs/2d_contact/pilot_c9dd23016896/histories/test_301.npz": "a456568be5a7bf14568f1ab3a92570d754f7a10c19c3ab942ee51eeba5b6dbfd",
+    "tools/draw_experiment_flow.py": "cf8955ee9d5fc6048c982f96ad0d9a870126f2716fa729d4d53d407c71b4f291"
+  }
+}

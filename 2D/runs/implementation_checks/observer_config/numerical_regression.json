@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "scope": "Numerical regression; no new scientific comparison",
+  "reference": "runs/2d_contact/pilot_c9dd23016896/source/estimators.py",
+  "reference_sha256": "ca20ba1f10f62278d46074f13e693bcdda5e8ebb7eab782537076c23e49b863c",
+  "observer_config": {
+    "basis_depths_m": [
+      0.0001,
+      0.00028,
+      0.00045
+    ],
+    "force_residual_scale_N": 0.004,
+    "lateral_residual_scale_m": 3e-06,
+    "regularization_weight": 0.015,
+    "initial_coefficient": 0.12,
+    "coefficient_bounds": [
+      0.0,
+      2.5
+    ],
+    "max_nfev": 7,
+    "ftol": 1e-05,
+    "xtol": 1e-05,
+    "gtol": 1e-05,
+    "diff_step": 0.001,
+    "short_window_seconds": 0.2,
+    "sweep_windows_seconds": [
+      0.0,
+      0.04,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ]
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "processor": "",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.0",
+      "pillow": "12.3.0",
+      "ipywidgets": "8.1.8",
+      "ipympl": "0.10.0",
+      "ipykernel": "7.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.10.4"
+    },
+    "git_head": "592441e667320c456732b25f80ab45dfbff6c248",
+    "git_status": "M notebooks/spatial_2d_hidden_state.ipynb\n M src/nr2d/cli.py\n M src/nr2d/estimators.py\n M src/nr2d/experiments.py\n M src/nr2d/plotting.py\n M src/nr2d/widgets.py\n M tools/build_spatial_notebook.py\n?? configs/observer.json\n?? tests/test_observer_config.py\n?? tools/verify_observer_refactor.py",
+    "source_sha256": {
+      "__init__.py": "f21b01a5e4f6428eb3ccee4252277a9aa8a757ff76505835db6c7767421d71db",
+      "checks.py": "816180e1cc3951399bb75279724814f80c101e174fff62f9e9a74056adaf480f",
+      "cli.py": "ff1cb7c433cf53e42acb7f448f75e4abe155072e69c2aa15797b34d120719a29",
+      "estimators.py": "91354228c653b5e88bef2d287e0c32ef38e085e1cafe4ccd753bd47ed0e272ef",
+      "experiments.py": "9a70b2603ae36c49adce46dc0c92190069edfc52acf0d5104801d24d7c75c34b",
+      "physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e",
+      "plotting.py": "b7623e3fd3d356e3ce8eb03585975089aa52b3902fc5580d39c9a3fd70de4012",
+      "protocols.py": "c99ec8b332f552e0b5fa8c205b4d35dda57605f82c1722d95a7d5921f148e6fd",
+      "widgets.py": "bcce8065d2c94bf315becfc3a34e37a4555ac306423961d56735140d6605eadf"
+    }
+  },
+  "cases": [
+    {
+      "parent": "test_300",
+      "action": "Slow press",
+      "noise": 0.0,
+      "methods": {
+        "Snapshot": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.00149538935214834,
+          "marker_rmse_m": 4.4955088663655615e-07
+        },
+        "Short classical": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.001187146121089947,
+          "marker_rmse_m": 2.3020934566008563e-07
+        },
+        "Full classical": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 9.243629004991885e-13,
+          "marker_rmse_m": 1.7094853853116652e-14
+        },
+        "True state": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.0,
+          "marker_rmse_m": 0.0
+        }
+      }
+    },
+    {
+      "parent": "test_301",
+      "action": "Fast press",
+      "noise": 1.0,
+      "methods": {
+        "Snapshot": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.0012429373349767813,
+          "marker_rmse_m": 2.3377449945311998e-07
+        },
+        "Short classical": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.0023943100733002575,
+          "marker_rmse_m": 1.4035649379014643e-07
+        },
+        "Full classical": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 1.0254203739945007e-05,
+          "marker_rmse_m": 1.136107408269639e-09
+        },
+        "True state": {
+          "max_abs_difference": {
+            "u": 0.0,
+            "z": 0.0,
+            "d": 0.0,
+            "v": 0.0,
+            "force": 0.0,
+            "markers": 0.0
+          },
+          "force_rmse_N": 0.0,
+          "marker_rmse_m": 0.0
+        }
+      }
+    }
+  ],
+  "wall_seconds": 43.459859698999935
+}
