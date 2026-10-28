@@ -1,0 +1,44 @@
+[
+  {
+    "id": "calibration_4000",
+    "seed": 4000,
+    "split": "calibration",
+    "physics": {
+      "max_body_balance_N": 7.398548808323913e-09,
+      "max_tool_balance_N": 7.398548807456551e-09,
+      "max_penetration_m": 4.690279284614055e-06,
+      "max_strain": 0.04427596461053794,
+      "passed": true
+    },
+    "status": "completed",
+    "wall_seconds": 0.04131292999954894
+  },
+  {
+    "id": "calibration_4001",
+    "seed": 4001,
+    "split": "calibration",
+    "physics": {
+      "max_body_balance_N": 3.7043260845900927e-09,
+      "max_tool_balance_N": 3.70432608071407e-09,
+      "max_penetration_m": 4.461525951434677e-06,
+      "max_strain": 0.040819634627083455,
+      "passed": true
+    },
+    "status": "completed",
+    "wall_seconds": 0.039281571000174154
+  },
+  {
+    "id": "calibration_4002",
+    "seed": 4002,
+    "split": "calibration",
+    "physics": {
+      "max_body_balance_N": 3.5173322761317127e-09,
+      "max_tool_balance_N": 3.5173309525377006e-09,
+      "max_penetration_m": 5.014680694848648e-06,
+      "max_strain": 0.04501980298555025,
+      "passed": false
+    },
+    "status": "completed",
+    "wall_seconds": 0.03745270199942752
+  }
+]

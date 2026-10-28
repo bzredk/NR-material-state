@@ -1,0 +1,32 @@
+{
+  "generation": [],
+  "computation": [],
+  "physical_limits": [
+    {
+      "parent_id": "test_5017",
+      "stage": "physical history",
+      "max_body_balance_N": 6.32463629558766e-09,
+      "max_tool_balance_N": 6.3246346423961874e-09,
+      "max_penetration_m": 5.02985491998689e-06,
+      "max_strain": 0.04374283587334222,
+      "passed": false
+    }
+  ],
+  "calibration_physical_limits": [
+    {
+      "id": "calibration_4002",
+      "seed": 4002,
+      "split": "calibration",
+      "physics": {
+        "max_body_balance_N": 3.5173322761317127e-09,
+        "max_tool_balance_N": 3.5173309525377006e-09,
+        "max_penetration_m": 5.014680694848648e-06,
+        "max_strain": 0.04501980298555025,
+        "passed": false
+      },
+      "status": "completed",
+      "wall_seconds": 0.03745270199942752
+    }
+  ],
+  "optimizer_nonconvergence": 201
+}

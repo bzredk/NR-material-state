@@ -180,3 +180,85 @@ class SweepDashboard:
             self.status.value = f"<b>FAILED</b>: {escape(str(exc))}"
         finally:
             self.button.disabled = False
+
+
+class InformationDashboard:
+    """Inspect paired predictions; parameter changes are applied only on Run."""
+
+    def __init__(self, run):
+        self.run = Path(run)
+        spec = read_json(self.run/'study.json')
+        self.parent = W.Dropdown(options=[f'test_{s}' for s in spec['test_seeds']],description='History')
+        self.repeat = W.Dropdown(options=list(range(spec['noise_repeats'])),description='Noise draw')
+        self.channels = W.Dropdown(options=['Both','Without lateral','With lateral'],description='Sensors')
+        self.window = W.Dropdown(options=[('Snapshot',0.),('Recent 0.2 s',.2),('Recent 0.8 s',.8),
+                                          ('Earlier contact + propagation','contact')],value=.8,description='Window')
+        self.action = W.Dropdown(options=spec['actions'],description='Future')
+        self.recompute = W.Checkbox(value=False,description='Recompute estimates and both futures',indent=False,
+                                   layout=W.Layout(width='340px'))
+        self.button = W.Button(description='Run selection',icon='play',button_style='primary')
+        self.progress = W.IntProgress(value=0,max=18,description='Progress')
+        self.status = W.HTML()
+        self.details = W.HTML()
+        self.plot = W.VBox()
+        self.fig = None
+        self.last_error = None
+        self.button.on_click(self._run)
+        self.widget = W.VBox([W.HTML('Recorded independent histories. Dropdowns select a view; press Run to apply.'),
+                              W.HBox([self.parent,self.repeat]),
+                              W.HBox([self.channels,self.window,self.action]),
+                              W.HBox([self.button,self.recompute]),self.progress,self.status,self.plot,self.details])
+        self._run(None)
+
+    def _run(self, _):
+        from datetime import datetime
+        from .information import evaluate_job, method_key
+        from .plotting import information_forecast_figure
+        self.button.disabled = True
+        self.last_error = None
+        self.progress.value = 0
+        started = time.perf_counter()
+        folder = self.run/'test'/self.parent.value/f'repeat_{self.repeat.value}'
+        def progress(message):
+            self.progress.value = min(self.progress.max,self.progress.value+1)
+            self.status.value = '<b>RECOMPUTING</b> | '+escape(message)
+        try:
+            mode = 'REPLAY: saved predictions; no solver call'
+            if self.recompute.value:
+                folder = self.run/'interactive'/datetime.now().strftime('%Y%m%d_%H%M%S_%f')
+                spec = read_json(self.run/'study.json')
+                config = read_json(self.run/'calibration.json')['observer_config']
+                result = evaluate_job((self.run,self.parent.value,self.repeat.value,config,folder,spec['actions'],1.),progress)
+                mode = 'RECOMPUTED: saved history, fresh estimates and both futures'
+            else:
+                result = read_json(folder/'result.json')
+            with plt.ioff():
+                self.fig = information_forecast_figure(self.run,self.parent.value,self.repeat.value,self.window.value,
+                            self.action.value,self.channels.value,folder,self.fig)
+            if not self.plot.children:
+                self.plot.children = (figure_widget(self.fig),)
+            self.fig.canvas.draw_idle()
+            rows = []
+            for side in (False,True):
+                if self.channels.value=='Without lateral' and side or self.channels.value=='With lateral' and not side:
+                    continue
+                for duration in dict.fromkeys([0.,self.window.value]):
+                    key = method_key(side,duration)
+                    row = next(r for r in result['rows'] if r['method']==key and r['action']==self.action.value)
+                    info = row['inference']
+                    interval = lambda k: ' - '.join(f'{s:.2f}' for s in info[k])
+                    rows.append([key,interval('update_interval_s'),interval('propagation_interval_s'),
+                                 interval('motion_interval_s'),f"{info['observed_contact_seconds']:.2f}",
+                                 f"{row['force_rmse_N']*1e3:.3f}",str(info['optimizer_success'])])
+            self.details.value = table(['Condition','Update (s)','Propagation (s)','Motion input (s)',
+                                        'Contact in update (s)','Force RMSE (mN)','Converged'],rows)
+            if self.window.value=='contact':
+                self.details.value += '<p>Contact selection reads all prior measured force. After the update, only measured position propagates the state; current velocity initializes the future rollout.</p>'
+            self.details.value += '<p>References: full motion replay knows the relaxed initial state; true-state prediction receives internal FEM fields. Fast press reuses the Slow-press estimate.</p>'
+            self.progress.value = self.progress.max
+            self.status.value = f'<b>{mode}</b> | {time.perf_counter()-started:.2f} s | {len(result["failures"])} computation failures'
+        except Exception as exc:
+            self.last_error = exc
+            self.status.value = '<b>FAILED</b> | '+escape(str(exc))
+        finally:
+            self.button.disabled = False

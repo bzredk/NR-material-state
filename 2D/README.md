@@ -2,6 +2,14 @@
 
 A circular indenter loads a viscoelastic body, releases it and makes contact again. The current pilot compares state estimates from instantaneous measurements, a short observation window and full loading history.
 
+## Sensor channels and contact history
+
+The [new comparison](runs/information/channels_contact_20261026/RESULTS.md) uses 24 independent histories and three noise draws per history. For Slow press, current lateral shape reduces mean force error from 11.50 to 2.20 mN; recent lateral history reduces it to 1.29 mN over 0.2 s and 0.23 mN over 0.8 s. The same estimates also predict Fast press.
+
+![History duration, contact data and prediction error](runs/information/channels_contact_20261026/figures/02_window_and_contact.png)
+
+Waiting contains useful recovery information when lateral sensing is enabled. Without it, earlier contact plus motion propagation is much more informative. [Section 5 of the Notebook](notebooks/spatial_2d_hidden_state.ipynb) provides sensor, window and future-action controls. The original pilot below is retained; its noisy-short-window loss does not generalize to the new batch.
+
 ## Pilot results
 
 Start with [the recorded pilot](runs/2d_contact/pilot_c9dd23016896/RESULTS.md). It contains eight independent test histories, the force-error comparison and the retained penetration-limit failure.
@@ -16,7 +24,7 @@ Short history helps in noiseless prediction and degrades under nominal noise. Fu
 
 ## Run
 
-Open [the notebook](notebooks/spatial_2d_hidden_state.ipynb) using the [Docker / VS Code instructions](docs/CONTAINER.md). Run All computes one fresh spatial trajectory and replays the published checks, forecasts and sweeps. The slider controls playback; Run and Recompute buttons control calculation.
+Open [the notebook](notebooks/spatial_2d_hidden_state.ipynb) using the [Docker / VS Code instructions](docs/CONTAINER.md). Run All computes one fresh spatial trajectory and replays recorded comparisons, including the new study. The slider controls playback; Run and Recompute buttons control calculation.
 
 [Observer and physical settings](docs/CONFIGURATION.md) are shared with the CLI. New observer comparisons are stored separately from the published results.
 

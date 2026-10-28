@@ -10,12 +10,15 @@ __pycache__/
 .runtime/
 .DS_Store
 Thumbs.db
+node_modules/
+~$*
 reproductions/
 verification-local/
 
 # Repeated local sessions; published pilot and release evidence stay versioned.
 2D/runs/2d_contact/*/notebook_runs/
 2D/runs/notebook_validation/
+2D/runs/information/*/interactive/
 
 # Publish one container check; repeated sessions and shared exports stay local.
 2D/runs/container_validation/*/

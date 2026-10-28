@@ -1,0 +1,38 @@
+{
+  "python": "3.11.9",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "processor": "",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.0",
+    "pillow": "12.3.0",
+    "ipywidgets": "8.1.8",
+    "ipympl": "0.10.0",
+    "ipykernel": "7.2.0",
+    "nbformat": "5.10.4",
+    "nbclient": "0.10.4"
+  },
+  "git_head": "3aea82f0c3a65c066ed954e9387c7163eb87e06e",
+  "git_status": "M README.md\n M docs/CONFIGURATION.md\n M notebooks/spatial_2d_hidden_state.ipynb\n M runs/README.md\n M src/nr2d/estimators.py\n M src/nr2d/plotting.py\n M src/nr2d/widgets.py\n M tests/test_observer_config.py\n M tools/README.md\n M tools/build_spatial_notebook.py\n M tools/verify_spatial_interactions.py\n M ../README.md\n?? configs/information_study.json\n?? runs/information/\n?? src/nr2d/information.py",
+  "source_sha256": {
+    "__init__.py": "f21b01a5e4f6428eb3ccee4252277a9aa8a757ff76505835db6c7767421d71db",
+    "checks.py": "816180e1cc3951399bb75279724814f80c101e174fff62f9e9a74056adaf480f",
+    "cli.py": "ff1cb7c433cf53e42acb7f448f75e4abe155072e69c2aa15797b34d120719a29",
+    "estimators.py": "dd67e5e14ee0977a4eb089f3eb7c2e21ba2c6e15e5225a98b2136bcea316dd53",
+    "experiments.py": "9a70b2603ae36c49adce46dc0c92190069edfc52acf0d5104801d24d7c75c34b",
+    "information.py": "c10029b0d01dc6cbcba109512dee45ca80ae22f05b8579464780712812b5c996",
+    "physics.py": "3d64e0696aa4c0637f1e35723888b024bc7f75ef2d6c4650b5132344fb92f10e",
+    "plotting.py": "5b4942aee9ae4edeae007ae754221f61ed57589b7179d124418fbebc4c4ee744",
+    "protocols.py": "c99ec8b332f552e0b5fa8c205b4d35dda57605f82c1722d95a7d5921f148e6fd",
+    "widgets.py": "06c8b9344a819efd3dbdb58bdea7cf60f883e4003bb667a8c0a4419ebae6e9ad"
+  },
+  "utc": "2026-10-27T01:42:44.092046+00:00",
+  "cpu_count": 24,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "source_note": "source/ preserves the initial snapshot; source/final/ contains delivered reporting and UI code. Physics and estimator hashes are unchanged since prepare."
+}

@@ -12,6 +12,7 @@ from nr2d.experiments import ROOT, write_json
 parser = argparse.ArgumentParser(description=__doc__)
 result_dir = ROOT/"runs/notebook_validation"/datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
 parser.add_argument("--record", type=Path, default=result_dir/"interaction_checks.json")
+parser.add_argument("--recompute-information", action="store_true", help="Also rerun one complete information-study job")
 args = parser.parse_args()
 
 if sys.platform == "win32":
@@ -55,6 +56,28 @@ for excitation_name, noise_value in [('hold', 0.), ('hold', 1.), ('pulse', 0.), 
     assert sweep.progress.value == 7
     assert sweep.fig.canvas is sweep_canvas
 print('PASS: slider cursor, pause, reset, bounded canvas, immutable main trace, four actions, two checkpoints, noise/excitation controls')
+
+information_canvas = information.fig.canvas
+for sensors in ['Both', 'Without lateral', 'With lateral']:
+    for duration in [0., .2, .8, 'contact']:
+        for action in ['Slow press', 'Fast press']:
+            information.channels.value = sensors
+            information.window.value = duration
+            information.action.value = action
+            information.button.click()
+            assert information.last_error is None, repr(information.last_error)
+            assert information.fig.canvas is information_canvas
+            assert 'REPLAY' in information.status.value
+            assert action in information.fig._suptitle.get_text()
+print('PASS: sensor masks, four window selections and action reuse in the information dashboard')
+"""))
+if args.recompute_information:
+    nb.cells.append(nbf.v4.new_code_cell("""
+information.recompute.value = True
+information.button.click()
+assert information.last_error is None, repr(information.last_error)
+assert 'RECOMPUTED' in information.status.value
+print('PASS: information-study recomputation', information.status.value)
 """))
 start = time.perf_counter()
 NotebookClient(nb, timeout=600, kernel_name="nr-spatial-state", resources={"metadata": {"path": str(ROOT)}},
@@ -63,6 +86,7 @@ result = {"status": "passed", "wall_seconds": time.perf_counter()-start,
           "platform": sys.platform, "python": sys.executable,
           "scope": "Python widget callbacks and ipympl creation in a fresh kernel; not a frontend click test",
           "checks": ["shared replay cursor", "pause preserves frame", "reset", "bounded live canvas", "no trace mutation", "four future actions", "two checkpoints",
-                     "noise selection", "excitation selection", "cached results"]}
+                     "noise selection", "excitation selection", "cached results", "sensor masks", "contact/update windows", "cross-action cached state"],
+          "information_recomputed":args.recompute_information}
 write_json(args.record, result)
 print(result)

@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "check": "Complete nominal-noise jobs",
+      "passed": true,
+      "value": 72
+    },
+    {
+      "check": "Calibration and test histories disjoint",
+      "passed": true,
+      "value": {
+        "calibration": 3,
+        "test": 24
+      }
+    },
+    {
+      "check": "Independent noise seeds",
+      "passed": true,
+      "value": 72
+    },
+    {
+      "check": "Stored observations reproduce exactly",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "check": "Same estimate reused across actions",
+      "passed": true,
+      "value": "SHA256 of internal fields and tool state"
+    },
+    {
+      "check": "Recorded residual channels match masks",
+      "passed": true,
+      "value": "F or F + left + right"
+    },
+    {
+      "check": "Physical configuration unchanged",
+      "passed": true,
+      "value": "configs/spatial_contact.json"
+    }
+  ],
+  "all_passed": true,
+  "unit_tests": "tests/test_observer_config.py additionally mutates disabled channels and propagation-only inputs"
+}

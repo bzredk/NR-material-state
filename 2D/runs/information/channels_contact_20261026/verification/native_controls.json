@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "application": "Visual Studio Code",
+  "environment": "NR 2D Docker @ desktop-linux",
+  "kernel": "Python 3.11.9",
+  "notebook": "verification/native_verified.ipynb",
+  "run_all": "Completed in the native VS Code notebook; separate fresh-kernel timing is in notebook.json",
+  "observed_controls": {
+    "sensors": "Without lateral",
+    "window": "Earlier contact + propagation",
+    "future": "Fast press"
+  },
+  "dropdowns": "Changing selections leaves the previous plot visible until Run selection is pressed",
+  "run_selection": "Curves, title and legend updated to the selected cached conditions; REPLAY status, zero computation failures",
+  "recompute_scope": "Fresh recomputation was verified through the Python widget callback; see callbacks.json",
+  "utc": "2026-10-27T01:42:44.097867+00:00",
+  "executed_code_cells": 11,
+  "numerical_cells_match_main_notebook": true,
+  "note": "Native copy predates final result prose; its executable cells match the delivered notebook."
+}

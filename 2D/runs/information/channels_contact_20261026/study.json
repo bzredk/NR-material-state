@@ -1,0 +1,87 @@
+{
+  "name": "Channels and contact history",
+  "run": "runs/information/channels_contact_20261026",
+  "physics": "configs/spatial_contact.json",
+  "calibration_seeds": [
+    4000,
+    4001,
+    4002
+  ],
+  "test_seeds": [
+    5000,
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006,
+    5007,
+    5008,
+    5009,
+    5010,
+    5011,
+    5012,
+    5013,
+    5014,
+    5015,
+    5016,
+    5017,
+    5018,
+    5019,
+    5020,
+    5021,
+    5022,
+    5023
+  ],
+  "noise_repeats": 3,
+  "noise_root_seed": 20261026,
+  "windows_seconds": [
+    0.0,
+    0.2,
+    0.8
+  ],
+  "contact_window_seconds": 0.2,
+  "contact_threshold_N": 0.0045,
+  "actions": [
+    "Slow press",
+    "Fast press"
+  ],
+  "noiseless_diagnostic_seeds": [
+    5000,
+    5001,
+    5002,
+    5003
+  ],
+  "bootstrap_resamples": 2000,
+  "tuning_candidates": [
+    {
+      "name": "published",
+      "force_residual_scale_N": 0.004,
+      "lateral_residual_scale_m": 3e-06,
+      "regularization_weight": 0.015,
+      "max_nfev": 7
+    },
+    {
+      "name": "noise_scaled",
+      "force_residual_scale_N": 0.0015,
+      "lateral_residual_scale_m": 1e-06,
+      "regularization_weight": 0.015,
+      "max_nfev": 12
+    },
+    {
+      "name": "lighter_penalty",
+      "force_residual_scale_N": 0.0015,
+      "lateral_residual_scale_m": 1e-06,
+      "regularization_weight": 0.003,
+      "max_nfev": 20
+    }
+  ],
+  "selection": "One shared preset minimizes mean Slow-press force RMSE over three calibration histories and all eight finite-window conditions. Each condition sees the same three candidates and one independent noise draw per calibration history. Fast press and test histories are not used for selection.",
+  "analysis": "Average the three noise repeats within each complete test history. Bootstrap complete histories for paired mean differences. Intervals are exploratory, pointwise 95% intervals, conditional on this material and history distribution.",
+  "physics_limits": {
+    "penetration_m": 5e-06,
+    "strain": 0.06,
+    "balance_N": 2e-07
+  },
+  "scope": "Fixed synthetic material, geometry and forward model. No controller comparison, parameter mismatch or neural training. All physical and optimization failures are retained. No selection by future effects."
+}

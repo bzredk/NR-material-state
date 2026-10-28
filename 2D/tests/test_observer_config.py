@@ -36,6 +36,41 @@ def test_requested_budget_and_window_reach_inference_and_forecast():
     assert np.all(np.isfinite(forecasts['Short classical'].force))
 
 
+def test_disabled_lateral_input_cannot_change_any_estimate():
+    model, trace = short_history()
+    observer = Observer(model, replace(ObserverConfig(), use_lateral=False, max_nfev=3))
+    observed = observer.observations(trace, noise=1., seed=85)
+    changed = observed.copy()
+    changed[:, 3:] = np.nan
+    for window, end in [(0., None), (.2, None), (.2, 35), ('full', None)]:
+        a = observer.infer(trace, window, observed, update_end=end)
+        b = observer.infer(trace, window, changed, update_end=end)
+        np.testing.assert_array_equal(a.state.z, b.state.z)
+        np.testing.assert_array_equal(a.state.u, b.state.u)
+        assert (a.state.d, a.state.v) == (b.state.d, b.state.v)
+
+
+def test_contact_update_uses_only_motion_after_update():
+    from nr2d.information import contact_end
+    model, trace = short_history()
+    observer = Observer(model, replace(ObserverConfig(), max_nfev=2))
+    observed = observer.observations(trace, noise=1., seed=91)
+    end = contact_end(observed, model.c.dt, .2, .0045)
+    changed = observed.copy()
+    changed[end+1:, 2:] = np.nan
+    a = observer.infer(trace,.2,observed,update_end=end)
+    b = observer.infer(trace,.2,changed,update_end=end)
+    np.testing.assert_array_equal(a.state.z,b.state.z)
+    np.testing.assert_array_equal(a.state.u,b.state.u)
+    assert a.diagnostics['propagation_interval_s'] == [trace.time[end],trace.time[-1]]
+    # Contact selection receives the measured signal, not contact labels.
+    inactive = observed.copy()
+    inactive[:,2] = 0.
+    import pytest
+    with pytest.raises(ValueError,match='No observed contact'):
+        contact_end(inactive,model.c.dt,.2,.0045)
+
+
 def test_explicit_settings_do_not_replay_or_replace_legacy_cache(tmp_path):
     model, trace = short_history()
     run = tmp_path / 'run'

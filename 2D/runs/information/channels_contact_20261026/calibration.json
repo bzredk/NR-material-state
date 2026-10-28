@@ -1,0 +1,58 @@
+{
+  "scores": [
+    {
+      "candidate": "published",
+      "mean_force_rmse_N": 0.004505520250349699,
+      "rows": 24,
+      "failures": 0,
+      "optimizer_nonconvergence": 9
+    },
+    {
+      "candidate": "noise_scaled",
+      "mean_force_rmse_N": 0.004532106904505909,
+      "rows": 24,
+      "failures": 0,
+      "optimizer_nonconvergence": 4
+    },
+    {
+      "candidate": "lighter_penalty",
+      "mean_force_rmse_N": 0.004567170366683369,
+      "rows": 24,
+      "failures": 0,
+      "optimizer_nonconvergence": 0
+    }
+  ],
+  "selected": "published",
+  "observer_config": {
+    "basis_depths_m": [
+      0.0001,
+      0.00028,
+      0.00045
+    ],
+    "force_residual_scale_N": 0.004,
+    "lateral_residual_scale_m": 3e-06,
+    "regularization_weight": 0.015,
+    "initial_coefficient": 0.12,
+    "coefficient_bounds": [
+      0.0,
+      2.5
+    ],
+    "max_nfev": 7,
+    "ftol": 1e-05,
+    "xtol": 1e-05,
+    "gtol": 1e-05,
+    "diff_step": 0.001,
+    "short_window_seconds": 0.2,
+    "sweep_windows_seconds": [
+      0.0,
+      0.04,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ],
+    "use_lateral": true
+  },
+  "selection": "One shared preset minimizes mean Slow-press force RMSE over three calibration histories and all eight finite-window conditions. Each condition sees the same three candidates and one independent noise draw per calibration history. Fast press and test histories are not used for selection.",
+  "frozen_utc": "2026-10-27T01:17:34.044307+00:00"
+}

@@ -48,6 +48,7 @@ class ObserverConfig:
     diff_step: float = 1e-3
     short_window_seconds: float = .2
     sweep_windows_seconds: tuple = (0., .04, .1, .2, .4, .8)
+    use_lateral: bool = True
 
     def asdict(self):
         # A stable JSON-compatible representation for config files and records.
@@ -81,7 +82,7 @@ class Observer:
         observed += rng.normal(size=observed.shape) * NOISE_STD * noise
         return observed
 
-    def infer(self, trace: Trace, window, obs=None):
+    def infer(self, trace: Trace, window, obs=None, update_end=None):
         started = time.perf_counter()
         model = self.model
         settings = self.config
@@ -106,13 +107,15 @@ class Observer:
                 "optimization_used": False,
             })
 
-        steps = min(last, max(0, round(float(window) / model.c.dt)))
-        begin = last - steps
+        end = last if update_end is None else int(update_end)
+        steps = min(end, max(0, round(float(window) / model.c.dt)))
+        begin = end - steps
+        channels = [2, 3, 4] if settings.use_lateral else [2]
         residual_scale = np.array([
             settings.force_residual_scale_N,
             settings.lateral_residual_scale_m,
             settings.lateral_residual_scale_m,
-        ])
+        ])[:len(channels)]
         residual_calls = 0
 
         def rollout(coefficients):
@@ -125,18 +128,19 @@ class Observer:
                           float(observed[begin, 1]), float(trace.time[begin]))
             if steps:
                 replay = model.simulate(
-                    trace.command[begin + 1:], trace.phase[begin + 1:], state=state,
-                    actual_positions=observed[begin + 1:, 0],
+                    trace.command[begin + 1:end + 1], trace.phase[begin + 1:end + 1], state=state,
+                    actual_positions=observed[begin + 1:end + 1, 0],
                 )
-                return replay.checkpoint(), replay.observation[:, 2:]
+                return replay.checkpoint(), replay.observation[:, channels]
             force = model.contact(displacement, position)[2]
-            return state, np.r_[force, model.marker_values(displacement)][None, :]
+            predicted = np.r_[force, model.marker_values(displacement)]
+            return state, predicted[None, :len(channels)]
 
         def residual(coefficients):
             nonlocal residual_calls
             residual_calls += 1
             _, predicted = rollout(coefficients)
-            error = (predicted - observed[begin:, 2:]) / residual_scale
+            error = (predicted - observed[begin:end + 1, channels]) / residual_scale
             return np.r_[error.ravel() / np.sqrt(len(error)),
                          settings.regularization_weight * coefficients]
 
@@ -151,6 +155,13 @@ class Observer:
             diff_step=settings.diff_step,
         )
         state, _ = rollout(result.x)
+        # Older contact updates are transported to the common prediction cut
+        # using measured motion only; intervening force/shape is not fitted.
+        if end < last:
+            state = model.simulate(
+                trace.command[end + 1:], trace.phase[end + 1:], state=state,
+                actual_positions=observed[end + 1:, 0],
+            ).checkpoint()
         state.d = float(observed[-1, 0])
         state.v = float(observed[-1, 1])
         return Estimate(state, time.perf_counter() - started, {
@@ -167,6 +178,11 @@ class Observer:
             "approximation": "Nonnegative initial-strain basis; complete spatial future model",
             "observer_config": settings.asdict(),
             "optimization_used": True,
+            "fitted_channels": channels,
+            "update_interval_s": [float(trace.time[begin]), float(trace.time[end])],
+            "propagation_interval_s": [float(trace.time[end]), float(trace.time[last])],
+            "motion_interval_s": [float(trace.time[begin]), float(trace.time[last])],
+            "motion_sample_count": last - begin + 1,
         })
 
 

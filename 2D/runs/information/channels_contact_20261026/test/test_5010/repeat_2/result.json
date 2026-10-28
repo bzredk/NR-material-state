@@ -1,0 +1,1770 @@
+{
+  "parent_id": "test_5010",
+  "repeat": 2,
+  "noise_seed": 2698538478,
+  "noise_multiplier": 1.0,
+  "observer_config": {
+    "basis_depths_m": [
+      0.0001,
+      0.00028,
+      0.00045
+    ],
+    "force_residual_scale_N": 0.004,
+    "lateral_residual_scale_m": 3e-06,
+    "regularization_weight": 0.015,
+    "initial_coefficient": 0.12,
+    "coefficient_bounds": [
+      0.0,
+      2.5
+    ],
+    "max_nfev": 7,
+    "ftol": 1e-05,
+    "xtol": 1e-05,
+    "gtol": 1e-05,
+    "diff_step": 0.001,
+    "short_window_seconds": 0.2,
+    "sweep_windows_seconds": [
+      0.0,
+      0.04,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ],
+    "use_lateral": true
+  },
+  "actions": [
+    "Slow press",
+    "Fast press"
+  ],
+  "rows": [
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.0",
+      "action": "Slow press",
+      "force_rmse_N": 0.005524247722721166,
+      "contact_force_rmse_N": 0.006420466159547547,
+      "marker_rmse_m": 8.082197991085566e-07,
+      "inference_seconds": 0.045268898000358604,
+      "forecast_seconds": 0.6148727020008664,
+      "state_sha256": "c521daba4bcf2069566848ca37c8f65e7833f650ae5c3ee95800a154933c7bd5",
+      "physics": {
+        "max_body_balance_N": 7.4009541845693194e-09,
+        "max_tool_balance_N": 7.400953711857172e-09,
+        "max_penetration_m": 3.986237006343464e-06,
+        "max_strain": 0.043603823665949094,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 7,
+        "optimizer_nfev": 1,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2736452564464734,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_sample_count": 1,
+        "phase_seconds": {},
+        "observed_contact_samples": 0,
+        "update_sample_count": 1,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.0",
+      "action": "Fast press",
+      "force_rmse_N": 0.00582476275442714,
+      "contact_force_rmse_N": 0.006095248678289289,
+      "marker_rmse_m": 4.4136507048377545e-07,
+      "inference_seconds": 0.045268898000358604,
+      "forecast_seconds": 0.5678143919976719,
+      "state_sha256": "c521daba4bcf2069566848ca37c8f65e7833f650ae5c3ee95800a154933c7bd5",
+      "physics": {
+        "max_body_balance_N": 5.422509663510766e-11,
+        "max_tool_balance_N": 5.422336017690821e-11,
+        "max_penetration_m": 4.317777815047064e-06,
+        "max_strain": 0.04387580446842825,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 7,
+        "optimizer_nfev": 1,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2736452564464734,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_sample_count": 1,
+        "phase_seconds": {},
+        "observed_contact_samples": 0,
+        "update_sample_count": 1,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.0",
+      "action": "Slow press",
+      "force_rmse_N": 0.003605412668173842,
+      "contact_force_rmse_N": 0.004298173433393475,
+      "marker_rmse_m": 8.467274939203314e-07,
+      "inference_seconds": 0.12954870199973811,
+      "forecast_seconds": 0.6250101480000012,
+      "state_sha256": "466e6297e2c67148a1739162f6d118f23b1902380a81e7f1ec36dd8bb2253552",
+      "physics": {
+        "max_body_balance_N": 7.3474343250182206e-09,
+        "max_tool_balance_N": 7.3474339906502706e-09,
+        "max_penetration_m": 3.770085012422394e-06,
+        "max_strain": 0.04367465248404688,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09969073211077292,
+          0.08703393511092532,
+          0.14742414868619003,
+          0.10160961435701098,
+          0.12662119630233504,
+          0.20896754661896655
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_nfev": 4,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2736604882785937,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_sample_count": 1,
+        "phase_seconds": {},
+        "observed_contact_samples": 0,
+        "update_sample_count": 1,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.0",
+      "action": "Fast press",
+      "force_rmse_N": 0.0041870524008744145,
+      "contact_force_rmse_N": 0.004411115067438298,
+      "marker_rmse_m": 5.019714826726238e-07,
+      "inference_seconds": 0.12954870199973811,
+      "forecast_seconds": 0.5742115819994069,
+      "state_sha256": "466e6297e2c67148a1739162f6d118f23b1902380a81e7f1ec36dd8bb2253552",
+      "physics": {
+        "max_body_balance_N": 6.042613631684901e-11,
+        "max_tool_balance_N": 6.042347091422817e-11,
+        "max_penetration_m": 4.114196432144471e-06,
+        "max_strain": 0.043941463739649286,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.0,
+        "basis_coefficients": [
+          0.09969073211077292,
+          0.08703393511092532,
+          0.14742414868619003,
+          0.10160961435701098,
+          0.12662119630233504,
+          0.20896754661896655
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 28,
+        "optimizer_nfev": 4,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2736604882785937,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_sample_count": 1,
+        "phase_seconds": {},
+        "observed_contact_samples": 0,
+        "update_sample_count": 1,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.2",
+      "action": "Slow press",
+      "force_rmse_N": 0.0067936811288369665,
+      "contact_force_rmse_N": 0.007868013768624553,
+      "marker_rmse_m": 1.156767147126105e-06,
+      "inference_seconds": 0.7125033750016883,
+      "forecast_seconds": 0.6245018479967257,
+      "state_sha256": "0fe21f0c43c8ff65f4bb6c60641c96e099f86bdc415200abd0b7eb4b435a56dd",
+      "physics": {
+        "max_body_balance_N": 7.247417457834082e-09,
+        "max_tool_balance_N": 7.247416843308291e-09,
+        "max_penetration_m": 4.0046130341653665e-06,
+        "max_strain": 0.04359276508882882,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 7,
+        "optimizer_nfev": 1,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.38553276310923007,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "motion_sample_count": 21,
+        "phase_seconds": {
+          "wait": 0.20000000000000018
+        },
+        "observed_contact_samples": 0,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.2",
+      "action": "Fast press",
+      "force_rmse_N": 0.007398107195967986,
+      "contact_force_rmse_N": 0.007716218142577938,
+      "marker_rmse_m": 6.888982027556182e-07,
+      "inference_seconds": 0.7125033750016883,
+      "forecast_seconds": 0.6785012990003452,
+      "state_sha256": "0fe21f0c43c8ff65f4bb6c60641c96e099f86bdc415200abd0b7eb4b435a56dd",
+      "physics": {
+        "max_body_balance_N": 5.536526792582208e-11,
+        "max_tool_balance_N": 5.5362540940517846e-11,
+        "max_penetration_m": 4.356337242039914e-06,
+        "max_strain": 0.04386666777279695,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 7,
+        "optimizer_nfev": 1,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.38553276310923007,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "motion_sample_count": 21,
+        "phase_seconds": {
+          "wait": 0.20000000000000018
+        },
+        "observed_contact_samples": 0,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.2",
+      "action": "Slow press",
+      "force_rmse_N": 0.0008138179978832666,
+      "contact_force_rmse_N": 0.0009066756744701431,
+      "marker_rmse_m": 2.6996396941485976e-07,
+      "inference_seconds": 3.088948108998011,
+      "forecast_seconds": 0.5778788019997592,
+      "state_sha256": "a2d0e73e099b237bdc941c47041ce057f8baf4c7272b2b10e4a73917c0b47536",
+      "physics": {
+        "max_body_balance_N": 7.290296869660873e-09,
+        "max_tool_balance_N": 7.290296315416722e-09,
+        "max_penetration_m": 3.851840736970359e-06,
+        "max_strain": 0.043629465850644054,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06252103524659183,
+          0.10941908528878423,
+          0.18448747355689643,
+          0.056515361053271866,
+          0.11195863461131617,
+          0.19790529320889247
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_nfev": 5,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.6499372680730915,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "motion_sample_count": 21,
+        "phase_seconds": {
+          "wait": 0.20000000000000018
+        },
+        "observed_contact_samples": 0,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.2",
+      "action": "Fast press",
+      "force_rmse_N": 0.0005205521004496537,
+      "contact_force_rmse_N": 0.0005484085208010738,
+      "marker_rmse_m": 1.8497637836989693e-07,
+      "inference_seconds": 3.088948108998011,
+      "forecast_seconds": 0.5694443979991775,
+      "state_sha256": "a2d0e73e099b237bdc941c47041ce057f8baf4c7272b2b10e4a73917c0b47536",
+      "physics": {
+        "max_body_balance_N": 5.995903773481359e-11,
+        "max_tool_balance_N": 5.995703499656058e-11,
+        "max_penetration_m": 4.196425523345928e-06,
+        "max_strain": 0.043901360901947524,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.06252103524659183,
+          0.10941908528878423,
+          0.18448747355689643,
+          0.056515361053271866,
+          0.11195863461131617,
+          0.19790529320889247
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 35,
+        "optimizer_nfev": 5,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.6499372680730915,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          1.2000000000000008,
+          1.400000000000001
+        ],
+        "motion_sample_count": 21,
+        "phase_seconds": {
+          "wait": 0.20000000000000018
+        },
+        "observed_contact_samples": 0,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.0
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.8",
+      "action": "Slow press",
+      "force_rmse_N": 0.00026169850785015206,
+      "contact_force_rmse_N": 0.00030460375319817513,
+      "marker_rmse_m": 6.07393582258452e-08,
+      "inference_seconds": 19.054696037001122,
+      "forecast_seconds": 0.5869111909996718,
+      "state_sha256": "ca4a255cd19b48ff9f5f431eadba8dac8a8db23ee885ab7eebe65670aca972f8",
+      "physics": {
+        "max_body_balance_N": 7.42446860328011e-09,
+        "max_tool_balance_N": 7.42446831878546e-09,
+        "max_penetration_m": 3.933929913467536e-06,
+        "max_strain": 0.04371099761513028,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.8,
+        "basis_coefficients": [
+          0.3528775569163947,
+          0.3054273398615622,
+          0.28589131466352335,
+          0.4657685378929773,
+          0.056724896982794544,
+          0.07073375619922198
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 37,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.34712144498709924,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "motion_sample_count": 81,
+        "phase_seconds": {
+          "hold": 0.2400000000000002,
+          "release": 0.26000000000000023,
+          "wait": 0.30000000000000027
+        },
+        "observed_contact_samples": 32,
+        "update_sample_count": 81,
+        "observed_contact_seconds": 0.3100000000000003
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_0.8",
+      "action": "Fast press",
+      "force_rmse_N": 0.00021396606597987782,
+      "contact_force_rmse_N": 0.0002254160796667434,
+      "marker_rmse_m": 6.474268140519982e-08,
+      "inference_seconds": 19.054696037001122,
+      "forecast_seconds": 0.5368327140022302,
+      "state_sha256": "ca4a255cd19b48ff9f5f431eadba8dac8a8db23ee885ab7eebe65670aca972f8",
+      "physics": {
+        "max_body_balance_N": 5.029748839646686e-11,
+        "max_tool_balance_N": 5.0295097947516965e-11,
+        "max_penetration_m": 4.297538495993134e-06,
+        "max_strain": 0.04396697075932585,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.8,
+        "basis_coefficients": [
+          0.3528775569163947,
+          0.3054273398615622,
+          0.28589131466352335,
+          0.4657685378929773,
+          0.056724896982794544,
+          0.07073375619922198
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 37,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.34712144498709924,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "motion_sample_count": 81,
+        "phase_seconds": {
+          "hold": 0.2400000000000002,
+          "release": 0.26000000000000023,
+          "wait": 0.30000000000000027
+        },
+        "observed_contact_samples": 32,
+        "update_sample_count": 81,
+        "observed_contact_seconds": 0.3100000000000003
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.8",
+      "action": "Slow press",
+      "force_rmse_N": 9.883235379095881e-05,
+      "contact_force_rmse_N": 0.00011728948190527031,
+      "marker_rmse_m": 1.8157052374315167e-08,
+      "inference_seconds": 25.444769501002156,
+      "forecast_seconds": 0.5658054890009225,
+      "state_sha256": "d886aa4651b8504dfe149975e2990cc08ab268d649ff58ce388cac2acf4cffd4",
+      "physics": {
+        "max_body_balance_N": 7.3918453788457406e-09,
+        "max_tool_balance_N": 7.391844822433186e-09,
+        "max_penetration_m": 3.878977135108469e-06,
+        "max_strain": 0.0437093936971451,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.8,
+        "basis_coefficients": [
+          1.5578852939165766,
+          0.4249733118277807,
+          7.81965735800222e-05,
+          0.1674518098471709,
+          0.25030435952434194,
+          0.010214488504809702
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.6073580670070536,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "motion_sample_count": 81,
+        "phase_seconds": {
+          "hold": 0.2400000000000002,
+          "release": 0.26000000000000023,
+          "wait": 0.30000000000000027
+        },
+        "observed_contact_samples": 32,
+        "update_sample_count": 81,
+        "observed_contact_seconds": 0.3100000000000003
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_0.8",
+      "action": "Fast press",
+      "force_rmse_N": 0.00010755070715528527,
+      "contact_force_rmse_N": 0.0001133060920726109,
+      "marker_rmse_m": 1.2077418388789083e-08,
+      "inference_seconds": 25.444769501002156,
+      "forecast_seconds": 0.585691535998194,
+      "state_sha256": "d886aa4651b8504dfe149975e2990cc08ab268d649ff58ce388cac2acf4cffd4",
+      "physics": {
+        "max_body_balance_N": 4.97900054519107e-11,
+        "max_tool_balance_N": 4.978684218365226e-11,
+        "max_penetration_m": 4.2176055121391715e-06,
+        "max_strain": 0.04405231174171169,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.8,
+        "basis_coefficients": [
+          1.5578852939165766,
+          0.4249733118277807,
+          7.81965735800222e-05,
+          0.1674518098471709,
+          0.25030435952434194,
+          0.010214488504809702
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.6073580670070536,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "propagation_interval_s": [
+          1.400000000000001,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.6000000000000003,
+          1.400000000000001
+        ],
+        "motion_sample_count": 81,
+        "phase_seconds": {
+          "hold": 0.2400000000000002,
+          "release": 0.26000000000000023,
+          "wait": 0.30000000000000027
+        },
+        "observed_contact_samples": 32,
+        "update_sample_count": 81,
+        "observed_contact_seconds": 0.3100000000000003
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_contact",
+      "action": "Slow press",
+      "force_rmse_N": 9.130376753948228e-05,
+      "contact_force_rmse_N": 0.00010801411151128508,
+      "marker_rmse_m": 9.734226943621148e-08,
+      "inference_seconds": 11.010133234998648,
+      "forecast_seconds": 0.6017160960000183,
+      "state_sha256": "abf5ccb77402e8ac0ca0063f5941479b6a704b9ab6e46e802d38bc51f831cc38",
+      "physics": {
+        "max_body_balance_N": 7.389009103360433e-09,
+        "max_tool_balance_N": 7.389008346153636e-09,
+        "max_penetration_m": 3.858971031660979e-06,
+        "max_strain": 0.04369258453806762,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.9566696985008614,
+          0.5497777419221528,
+          0.04244255564493654,
+          0.20519245451425722,
+          0.1739737696041757,
+          0.09109951569259697
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2656845164599488,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          0.7100000000000004,
+          0.9100000000000006
+        ],
+        "propagation_interval_s": [
+          0.9100000000000006,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.7100000000000004,
+          1.400000000000001
+        ],
+        "motion_sample_count": 70,
+        "phase_seconds": {
+          "hold": 0.13000000000000012,
+          "release": 0.07000000000000006
+        },
+        "observed_contact_samples": 21,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.20000000000000018,
+        "contact_selection": {
+          "channel": "observed force",
+          "threshold_N": 0.0045,
+          "scanned_interval_s": [
+            0.0,
+            1.400000000000001
+          ],
+          "rule": "last continuous segment above threshold; no simulator contact labels"
+        }
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "basic_contact",
+      "action": "Fast press",
+      "force_rmse_N": 0.00010786474635438518,
+      "contact_force_rmse_N": 0.00011363693652123221,
+      "marker_rmse_m": 7.73365966411981e-08,
+      "inference_seconds": 11.010133234998648,
+      "forecast_seconds": 0.5703842039984011,
+      "state_sha256": "abf5ccb77402e8ac0ca0063f5941479b6a704b9ab6e46e802d38bc51f831cc38",
+      "physics": {
+        "max_body_balance_N": 5.243977474478356e-11,
+        "max_tool_balance_N": 5.243794721360162e-11,
+        "max_penetration_m": 4.18537805968233e-06,
+        "max_strain": 0.043952526625968026,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          0.9566696985008614,
+          0.5497777419221528,
+          0.04244255564493654,
+          0.20519245451425722,
+          0.1739737696041757,
+          0.09109951569259697
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 1,
+        "optimizer_success": true,
+        "weighted_residual": 0.2656845164599488,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": false
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2
+        ],
+        "update_interval_s": [
+          0.7100000000000004,
+          0.9100000000000006
+        ],
+        "propagation_interval_s": [
+          0.9100000000000006,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.7100000000000004,
+          1.400000000000001
+        ],
+        "motion_sample_count": 70,
+        "phase_seconds": {
+          "hold": 0.13000000000000012,
+          "release": 0.07000000000000006
+        },
+        "observed_contact_samples": 21,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.20000000000000018,
+        "contact_selection": {
+          "channel": "observed force",
+          "threshold_N": 0.0045,
+          "scanned_interval_s": [
+            0.0,
+            1.400000000000001
+          ],
+          "rule": "last continuous segment above threshold; no simulator contact labels"
+        }
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_contact",
+      "action": "Slow press",
+      "force_rmse_N": 0.00010139064263551443,
+      "contact_force_rmse_N": 0.00011219435165138396,
+      "marker_rmse_m": 1.7878083873892987e-08,
+      "inference_seconds": 11.237739651998709,
+      "forecast_seconds": 0.5646200160008448,
+      "state_sha256": "5d833b09ac4fa009f6863012f9f52c6295af6e88392779884c5c7cf8d5f2a5dd",
+      "physics": {
+        "max_body_balance_N": 7.365247391144525e-09,
+        "max_tool_balance_N": 7.365246756235733e-09,
+        "max_penetration_m": 3.833540781100037e-06,
+        "max_strain": 0.04369915357672609,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          1.286736897729097,
+          0.5213112304265409,
+          0.001048606747336977,
+          3.076908015703719e-05,
+          0.38071830866047135,
+          0.004806391250648829
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.4939940595883764,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          0.7100000000000004,
+          0.9100000000000006
+        ],
+        "propagation_interval_s": [
+          0.9100000000000006,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.7100000000000004,
+          1.400000000000001
+        ],
+        "motion_sample_count": 70,
+        "phase_seconds": {
+          "hold": 0.13000000000000012,
+          "release": 0.07000000000000006
+        },
+        "observed_contact_samples": 21,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.20000000000000018,
+        "contact_selection": {
+          "channel": "observed force",
+          "threshold_N": 0.0045,
+          "scanned_interval_s": [
+            0.0,
+            1.400000000000001
+          ],
+          "rule": "last continuous segment above threshold; no simulator contact labels"
+        }
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "lateral_contact",
+      "action": "Fast press",
+      "force_rmse_N": 5.505645794530903e-05,
+      "contact_force_rmse_N": 5.8002706426988424e-05,
+      "marker_rmse_m": 8.730458152805526e-09,
+      "inference_seconds": 11.237739651998709,
+      "forecast_seconds": 0.5446979260013904,
+      "state_sha256": "5d833b09ac4fa009f6863012f9f52c6295af6e88392779884c5c7cf8d5f2a5dd",
+      "physics": {
+        "max_body_balance_N": 5.0721121747088205e-11,
+        "max_tool_balance_N": 5.0718931658699784e-11,
+        "max_penetration_m": 4.1519464641313875e-06,
+        "max_strain": 0.04410668051852942,
+        "passed": true
+      },
+      "inference": {
+        "window_seconds": 0.2,
+        "basis_coefficients": [
+          1.286736897729097,
+          0.5213112304265409,
+          0.001048606747336977,
+          3.076908015703719e-05,
+          0.38071830866047135,
+          0.004806391250648829
+        ],
+        "basis_size": 6,
+        "known_relaxed_start": false,
+        "internal_truth_used": false,
+        "solver_calls": 49,
+        "optimizer_nfev": 7,
+        "optimizer_status": 0,
+        "optimizer_success": false,
+        "weighted_residual": 0.4939940595883764,
+        "approximation": "Nonnegative initial-strain basis; complete spatial future model",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": true,
+        "fitted_channels": [
+          2,
+          3,
+          4
+        ],
+        "update_interval_s": [
+          0.7100000000000004,
+          0.9100000000000006
+        ],
+        "propagation_interval_s": [
+          0.9100000000000006,
+          1.400000000000001
+        ],
+        "motion_interval_s": [
+          0.7100000000000004,
+          1.400000000000001
+        ],
+        "motion_sample_count": 70,
+        "phase_seconds": {
+          "hold": 0.13000000000000012,
+          "release": 0.07000000000000006
+        },
+        "observed_contact_samples": 21,
+        "update_sample_count": 21,
+        "observed_contact_seconds": 0.20000000000000018,
+        "contact_selection": {
+          "channel": "observed force",
+          "threshold_N": 0.0045,
+          "scanned_interval_s": [
+            0.0,
+            1.400000000000001
+          ],
+          "rule": "last continuous segment above threshold; no simulator contact labels"
+        }
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "replay",
+      "action": "Slow press",
+      "force_rmse_N": 6.540350844689929e-07,
+      "contact_force_rmse_N": 7.504989349624308e-07,
+      "marker_rmse_m": 1.15970983875032e-10,
+      "inference_seconds": 0.9077300659992034,
+      "forecast_seconds": 0.5686865220013715,
+      "state_sha256": "86f834dfd81527cf326feda0b189e951cea141d84a86cf3a373fa11941ea52a6",
+      "physics": {
+        "max_body_balance_N": 7.3897373133874344e-09,
+        "max_tool_balance_N": 7.389736636411598e-09,
+        "max_penetration_m": 3.857976515592469e-06,
+        "max_strain": 0.043706809571248395,
+        "passed": true
+      },
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": false
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "replay",
+      "action": "Fast press",
+      "force_rmse_N": 5.82450800157147e-07,
+      "contact_force_rmse_N": 6.136196193957655e-07,
+      "marker_rmse_m": 5.4709893475802806e-11,
+      "inference_seconds": 0.9077300659992034,
+      "forecast_seconds": 0.5559773339991807,
+      "state_sha256": "86f834dfd81527cf326feda0b189e951cea141d84a86cf3a373fa11941ea52a6",
+      "physics": {
+        "max_body_balance_N": 4.975189704659044e-11,
+        "max_tool_balance_N": 4.9749662722753385e-11,
+        "max_penetration_m": 4.186058070419936e-06,
+        "max_strain": 0.044092908991458554,
+        "passed": true
+      },
+      "inference": {
+        "window": "full",
+        "known_relaxed_start": true,
+        "internal_truth_used": false,
+        "solver_steps": 140,
+        "observation_use": "actual tool position drives material replay",
+        "observer_config": {
+          "basis_depths_m": [
+            0.0001,
+            0.00028,
+            0.00045
+          ],
+          "force_residual_scale_N": 0.004,
+          "lateral_residual_scale_m": 3e-06,
+          "regularization_weight": 0.015,
+          "initial_coefficient": 0.12,
+          "coefficient_bounds": [
+            0.0,
+            2.5
+          ],
+          "max_nfev": 7,
+          "ftol": 1e-05,
+          "xtol": 1e-05,
+          "gtol": 1e-05,
+          "diff_step": 0.001,
+          "short_window_seconds": 0.2,
+          "sweep_windows_seconds": [
+            0.0,
+            0.04,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ],
+          "use_lateral": true
+        },
+        "optimization_used": false
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "truth",
+      "action": "Slow press",
+      "force_rmse_N": 0.0,
+      "contact_force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "forecast_seconds": 0.0,
+      "state_sha256": "8c9b16be536985f105e65661e55bc83ece398ed31bec099f2529fa1490ef7789",
+      "physics": {
+        "max_body_balance_N": 7.389481040953605e-09,
+        "max_tool_balance_N": 7.3894804828063265e-09,
+        "max_penetration_m": 3.857813322590985e-06,
+        "max_strain": 0.04370677275962136,
+        "passed": true
+      },
+      "inference": {
+        "privileged": true
+      }
+    },
+    {
+      "parent_id": "test_5010",
+      "repeat": 2,
+      "noise_seed": 2698538478,
+      "noise_multiplier": 1.0,
+      "method": "truth",
+      "action": "Fast press",
+      "force_rmse_N": 0.0,
+      "contact_force_rmse_N": 0.0,
+      "marker_rmse_m": 0.0,
+      "inference_seconds": 0.0,
+      "forecast_seconds": 0.0,
+      "state_sha256": "8c9b16be536985f105e65661e55bc83ece398ed31bec099f2529fa1490ef7789",
+      "physics": {
+        "max_body_balance_N": 4.981864920594603e-11,
+        "max_tool_balance_N": 4.981653110858186e-11,
+        "max_penetration_m": 4.1858270022097975e-06,
+        "max_strain": 0.044093068639226976,
+        "passed": true
+      },
+      "inference": {
+        "privileged": true
+      }
+    }
+  ],
+  "failures": [],
+  "wall_seconds": 82.64971755400256
+}

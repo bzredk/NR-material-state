@@ -1,0 +1,1813 @@
+{
+  "status": "exploratory completed batch",
+  "planned_histories": 24,
+  "completed_histories": 24,
+  "completed_jobs": 72,
+  "expected_jobs": 72,
+  "means": [
+    {
+      "action": "Slow press",
+      "method": "basic_0.0",
+      "observations": 72,
+      "mean_force_rmse_mN": 11.503532974363914,
+      "mean_marker_rmse_um": 2.079862853494035
+    },
+    {
+      "action": "Slow press",
+      "method": "lateral_0.0",
+      "observations": 72,
+      "mean_force_rmse_mN": 2.19817868398233,
+      "mean_marker_rmse_um": 0.5205148992916784
+    },
+    {
+      "action": "Slow press",
+      "method": "basic_0.2",
+      "observations": 72,
+      "mean_force_rmse_mN": 12.753013680683491,
+      "mean_marker_rmse_um": 2.425886294964725
+    },
+    {
+      "action": "Slow press",
+      "method": "lateral_0.2",
+      "observations": 72,
+      "mean_force_rmse_mN": 1.2863597324224647,
+      "mean_marker_rmse_um": 0.2808154172566477
+    },
+    {
+      "action": "Slow press",
+      "method": "basic_0.8",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.3138211018202669,
+      "mean_marker_rmse_um": 0.12998329083253113
+    },
+    {
+      "action": "Slow press",
+      "method": "lateral_0.8",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.23041406197661138,
+      "mean_marker_rmse_um": 0.05469957311716638
+    },
+    {
+      "action": "Slow press",
+      "method": "basic_contact",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.4756978632077727,
+      "mean_marker_rmse_um": 0.18957280072686858
+    },
+    {
+      "action": "Slow press",
+      "method": "lateral_contact",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.38892373388366486,
+      "mean_marker_rmse_um": 0.11289587498292025
+    },
+    {
+      "action": "Slow press",
+      "method": "replay",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.006520226723385268,
+      "mean_marker_rmse_um": 0.0014053501388977198
+    },
+    {
+      "action": "Slow press",
+      "method": "truth",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.0,
+      "mean_marker_rmse_um": 0.0
+    },
+    {
+      "action": "Fast press",
+      "method": "basic_0.0",
+      "observations": 72,
+      "mean_force_rmse_mN": 12.764476507512395,
+      "mean_marker_rmse_um": 1.2201109503072087
+    },
+    {
+      "action": "Fast press",
+      "method": "lateral_0.0",
+      "observations": 72,
+      "mean_force_rmse_mN": 2.5161559856435716,
+      "mean_marker_rmse_um": 0.3243575820596684
+    },
+    {
+      "action": "Fast press",
+      "method": "basic_0.2",
+      "observations": 72,
+      "mean_force_rmse_mN": 14.32280644543239,
+      "mean_marker_rmse_um": 1.4642046827282758
+    },
+    {
+      "action": "Fast press",
+      "method": "lateral_0.2",
+      "observations": 72,
+      "mean_force_rmse_mN": 1.2561651507771876,
+      "mean_marker_rmse_um": 0.19384092044154475
+    },
+    {
+      "action": "Fast press",
+      "method": "basic_0.8",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.31728874645452737,
+      "mean_marker_rmse_um": 0.09683573562731516
+    },
+    {
+      "action": "Fast press",
+      "method": "lateral_0.8",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.20655600144642383,
+      "mean_marker_rmse_um": 0.039176482443260024
+    },
+    {
+      "action": "Fast press",
+      "method": "basic_contact",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.5136516154292856,
+      "mean_marker_rmse_um": 0.141136039949684
+    },
+    {
+      "action": "Fast press",
+      "method": "lateral_contact",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.4152966904595691,
+      "mean_marker_rmse_um": 0.07788505438870572
+    },
+    {
+      "action": "Fast press",
+      "method": "replay",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.007458772666506442,
+      "mean_marker_rmse_um": 0.0008599601547657532
+    },
+    {
+      "action": "Fast press",
+      "method": "truth",
+      "observations": 72,
+      "mean_force_rmse_mN": 0.0,
+      "mean_marker_rmse_um": 0.0
+    }
+  ],
+  "contrasts": [
+    {
+      "action": "Slow press",
+      "contrast": "Lateral sensing at current time",
+      "before": "basic_0.0",
+      "after": "lateral_0.0",
+      "n_histories": 24,
+      "mean_improvement_mN": 9.305354290381581,
+      "ci95_mN": [
+        7.056532584222579,
+        11.574209842191076
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 8.833635477893633
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 17.29789262039239
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 13.433183974134442
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 4.467304097350931
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 12.423369118142865
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 9.572205450034131
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 9.869011386406177
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": -0.03885604388377973
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 0.808523063773112
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 13.7819412640573
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 3.5226379752343715
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 6.845352253681184
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 19.053938514018228
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 14.326622869137545
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 14.018746532142467
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": -0.16143371598797937
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 13.310013639119996
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 19.454443857693875
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 7.835315604807507
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 5.451654576270025
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 1.2490054671889148
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 11.672473399643655
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 8.811851511317547
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 7.4896700765894355
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Recent 0.2 s, no lateral sensing",
+      "before": "basic_0.0",
+      "after": "basic_0.2",
+      "n_histories": 24,
+      "mean_improvement_mN": -1.2494807063195799,
+      "ci95_mN": [
+        -1.256248013479802,
+        -1.2424598619894316
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": -1.253396075101788
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": -1.2250418817978705
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": -1.2361884523165878
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": -1.262373893700616
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": -1.23869535446788
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": -1.25076124813309
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": -1.250199586303638
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": -1.2760644372299097
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": -1.2722922338741782
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": -1.2343928042400678
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": -1.2694334061158001
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": -1.2528329658944188
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": -1.2228064916974015
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": -1.234765855445335
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": -1.2353190845659465
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": -1.277447311088027
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": -1.2324950259370617
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": -1.2201170235733514
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": -1.2520092994365815
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": -1.2648822673793523
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": -1.275245056962969
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": -1.2415067113356117
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": -1.2523269756111974
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": -1.2569435094612353
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Recent 0.2 s, with lateral sensing",
+      "before": "lateral_0.0",
+      "after": "lateral_0.2",
+      "n_histories": 24,
+      "mean_improvement_mN": 0.911818951559865,
+      "ci95_mN": [
+        0.5708732105656964,
+        1.268016945224175
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": -1.1581863771841923
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 0.8032376602400427
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 1.2763667768021238
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 2.199762973800392
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 1.027419347415281
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 0.44547809011520706
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": -0.43476293587423026
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 1.042891778413192
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 2.412762763548792
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 0.40790781902166706
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 0.928031423116793
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 2.1981742745725987
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 0.38665096146982425
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 0.8168658689715405
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 1.4746336902369939
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 0.4990886325228806
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 2.186016704758976
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 0.9434598149048341
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 1.5925043604201796
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 0.09942968679374378
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 1.4891374625631522
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 0.6091326011313064
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 0.7013753035810438
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": -0.06372384390537847
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Recent 0.8 s, no lateral sensing",
+      "before": "basic_0.0",
+      "after": "basic_0.8",
+      "n_histories": 24,
+      "mean_improvement_mN": 11.189711872543645,
+      "ci95_mN": [
+        9.076240557722006,
+        13.36131136059769
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 9.757295364689062
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 19.057251995582515
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 15.355031667941741
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 7.29918413211937
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 14.401538786049441
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 10.65436445382688
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 10.931702859888476
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 2.579535193495373
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 4.352975291682733
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 15.831771001785361
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 5.158719048601469
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 9.90292177052384
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 19.85447872976401
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 15.935599435221333
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 15.624156153735644
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 1.9985548967902775
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 16.424928526177656
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 20.844976724431493
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 10.283988655941586
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 6.442050773613618
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 3.404481439322428
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 13.57032208619216
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 10.17022430565973
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 8.717031648011288
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Recent 0.8 s, with lateral sensing",
+      "before": "lateral_0.0",
+      "after": "lateral_0.8",
+      "n_histories": 24,
+      "mean_improvement_mN": 1.9677646220057186,
+      "ci95_mN": [
+        1.6784016748426747,
+        2.2997945060029745
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 0.9858954223280504
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 1.918115494273497
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 2.0190219332179082
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 2.8875148594172324
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 2.229254372476613
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 1.1749816362236403
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 1.0537574719425622
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 2.5831833973682166
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 3.5612028004508627
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 2.0287315706675075
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 1.7989672218385409
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 3.316594498516394
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 0.7604661865150004
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 1.6504241079200894
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 1.5814082313799318
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 2.263769987056178
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 3.2673515478004096
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 1.4896181861824518
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 2.600601581250333
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 1.0948973841521363
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 2.2822190632063277
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 1.9413944988159366
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 1.3009085617145162
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 1.4360709134229088
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Contact vs wait update, no lateral sensing",
+      "before": "basic_0.2",
+      "after": "basic_contact",
+      "n_histories": 24,
+      "mean_improvement_mN": 12.277315817475719,
+      "ci95_mN": [
+        10.107040367241114,
+        14.392503114540366
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 11.05178457999493
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 20.21398043403006
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 16.47899745747865
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 8.475425603653807
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 15.580805776140108
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 11.834634875424957
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 11.902110245786682
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 3.7030500989839767
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 5.188204862852178
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 16.761385578087705
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 6.315563389384567
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 11.019999684828441
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 20.97399521068852
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 16.905542049009476
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 16.624601361999872
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 3.0493023553786363
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 17.4583634668523
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 21.9581259610992
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 11.456795557956168
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 7.583103597524342
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 4.440751209723992
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 14.721551997580843
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 11.098052904445002
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 9.859451360512859
+        }
+      ]
+    },
+    {
+      "action": "Slow press",
+      "contrast": "Contact vs wait update, with lateral sensing",
+      "before": "lateral_0.2",
+      "after": "lateral_contact",
+      "n_histories": 24,
+      "mean_improvement_mN": 0.8974359985387999,
+      "ci95_mN": [
+        0.721124850597574,
+        1.0836372294825098
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 1.948513330537317
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 1.0447813471524952
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 0.6150278251856346
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 0.5354350200186164
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 1.0504259207671671
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 0.6425274357533795
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 1.3842806403438046
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 1.4963941392796682
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 0.6262267794433419
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 1.3289272606214813
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 0.667472880387759
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 0.9391698474547604
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 0.26471790007345475
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 0.6915434195468287
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 0.08639043777775762
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 1.6913244180373443
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 0.7711821557970266
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 0.42768523651110246
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 0.9326945720711343
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 0.835014423609662
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 0.5096002845209904
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 1.2781890571890464
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 0.46591737941871647
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 1.3050222534327083
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Lateral sensing at current time",
+      "before": "basic_0.0",
+      "after": "lateral_0.0",
+      "n_histories": 24,
+      "mean_improvement_mN": 10.248320521868823,
+      "ci95_mN": [
+        7.780042184779162,
+        12.749760735913407
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 9.606400151855627
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 19.511136005063836
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 14.93836253741188
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 4.663545669310764
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 13.742041348896944
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 10.413322620981038
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 10.757651677766425
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": -0.268040546227079
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 0.6664465542760641
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 15.330380818765551
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 3.697004756919169
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 7.396894494283574
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 21.563699816689553
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 15.956977723979135
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 15.647073977988379
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": -0.7098106123438426
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 15.034568068617494
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 22.01566317805138
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 8.487889949882163
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 5.871870894578877
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 1.1488851920529295
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 12.838404260935215
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 9.547923700401286
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 8.101400284715412
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Recent 0.2 s, no lateral sensing",
+      "before": "basic_0.0",
+      "after": "basic_0.2",
+      "n_histories": 24,
+      "mean_improvement_mN": -1.5583299379199946,
+      "ci95_mN": [
+        -1.5641349179077395,
+        -1.5529444148627012
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": -1.5596424700172733
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": -1.5396816834722684
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": -1.5473723996786566
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": -1.5662799914807803
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": -1.5494592519371315
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": -1.5582282534920155
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": -1.558010561475329
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": -1.5840325573725516
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": -1.5780787269895873
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": -1.5464216059004703
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": -1.573344441279831
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": -1.559610442894037
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": -1.5378629209808412
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": -1.5463917333043697
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": -1.5467471821955712
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": -1.5841660559410233
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": -1.5444763360916287
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": -1.5363270853204931
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": -1.558746417834457
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": -1.5691506854456991
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": -1.5822113772717197
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": -1.5517719741020841
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": -1.5593194360683176
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": -1.562584919533731
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Recent 0.2 s, with lateral sensing",
+      "before": "lateral_0.0",
+      "after": "lateral_0.2",
+      "n_histories": 24,
+      "mean_improvement_mN": 1.2599908348663837,
+      "ci95_mN": [
+        0.8706584062107402,
+        1.6296012207621375
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": -1.1871768709385793
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 1.1681297694400614
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 1.6652231312768802
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 2.710035720159958
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 1.3314629293870959
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 0.8748927955549908
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": -0.0839107078764299
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 1.4143875283334764
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 3.0440279703360607
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 0.8930193538298857
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 1.119393265255103
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 2.8333162203814006
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 0.5736416937932208
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 1.1907839831842617
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 1.6737579543816046
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 0.8260942615146613
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 2.4663402149032674
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 1.273312522392452
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 2.1091817991421387
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 0.27209218139033403
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 1.8602232327946622
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 0.8608242279602288
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 1.185712744306512
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 0.16501411588996373
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Recent 0.8 s, no lateral sensing",
+      "before": "basic_0.0",
+      "after": "basic_0.8",
+      "n_histories": 24,
+      "mean_improvement_mN": 12.447187761057867,
+      "ci95_mN": [
+        9.8835561286839,
+        14.89300875486309
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 10.773752196203793
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 21.48982147017899
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 17.288208472297317
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 7.923438478774088
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 16.130975193239877
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 11.74325847882866
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 12.070627061634102
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 2.516198293569431
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 4.68082037452405
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 17.904190453252646
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 5.479332337114613
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 10.840937621132344
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 22.634658596098948
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 17.87875241040697
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 17.547131140155287
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 1.8677923299248462
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 18.62164701352298
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 23.70969064652334
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 11.30902640223378
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 6.8762891390425285
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 3.443962371743941
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 15.22119775777903
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 11.299994180480008
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 9.480803846727252
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Recent 0.8 s, with lateral sensing",
+      "before": "lateral_0.0",
+      "after": "lateral_0.8",
+      "n_histories": 24,
+      "mean_improvement_mN": 2.3095999841971477,
+      "ci95_mN": [
+        2.0049584456419502,
+        2.639502381034595
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 1.2719974440571762
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 2.238789941166432
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 2.4286374518816825
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 3.3084914764105133
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 2.651831549140947
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 1.4626174334555755
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 1.3239192406186895
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 2.7495754551468723
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 4.036634556616897
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 2.535769184445121
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 1.9578394355240558
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 3.8277423531505748
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 1.0546106494094074
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 1.986791572286449
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 1.89114102998792
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 2.730047396417195
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 3.7512780899578084
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 1.8278500532869084
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 3.017097526552994
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 1.1644285732248467
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 2.476033574526967
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 2.384198528689015
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 1.6855894839691183
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 1.6674876208083742
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Contact vs wait update, no lateral sensing",
+      "before": "basic_0.2",
+      "after": "basic_contact",
+      "n_histories": 24,
+      "mean_improvement_mN": 13.809154830003104,
+      "ci95_mN": [
+        11.38017409933846,
+        16.326940373697898
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 12.411879670003914
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 22.985556594144178
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 18.632864321262392
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 9.47856278814604
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 17.52208792383683
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 13.316801684614195
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 13.304078681302503
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 3.9640223624952857
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 5.623482110193808
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 19.126126730018026
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 6.9011408691851726
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 12.202966272365035
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 24.01024736854697
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 19.060351471706802
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 18.807582119160102
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 3.185211208950448
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 19.853376928036013
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 25.19911887540671
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 12.708087312974554
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 8.292160469837867
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 4.734442556763922
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 16.66080733545546
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 12.50904068071533
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 10.929719584952933
+        }
+      ]
+    },
+    {
+      "action": "Fast press",
+      "contrast": "Contact vs wait update, with lateral sensing",
+      "before": "lateral_0.2",
+      "after": "lateral_contact",
+      "n_histories": 24,
+      "mean_improvement_mN": 0.8408684603176185,
+      "ci95_mN": [
+        0.6376938749011986,
+        1.066173788567276
+      ],
+      "parent_values": [
+        {
+          "parent_id": "test_5000",
+          "improvement_mN": 2.2306530612522373
+        },
+        {
+          "parent_id": "test_5001",
+          "improvement_mN": 0.972336910224162
+        },
+        {
+          "parent_id": "test_5002",
+          "improvement_mN": 0.6334159271486937
+        },
+        {
+          "parent_id": "test_5003",
+          "improvement_mN": 0.4323722654660247
+        },
+        {
+          "parent_id": "test_5004",
+          "improvement_mN": 1.0728764845118273
+        },
+        {
+          "parent_id": "test_5005",
+          "improvement_mN": 0.5166506418023492
+        },
+        {
+          "parent_id": "test_5006",
+          "improvement_mN": 1.2570581765476438
+        },
+        {
+          "parent_id": "test_5007",
+          "improvement_mN": 1.2769519951349886
+        },
+        {
+          "parent_id": "test_5008",
+          "improvement_mN": 0.3184010431944001
+        },
+        {
+          "parent_id": "test_5009",
+          "improvement_mN": 1.2699262471171653
+        },
+        {
+          "parent_id": "test_5010",
+          "improvement_mN": 0.5966549681809763
+        },
+        {
+          "parent_id": "test_5011",
+          "improvement_mN": 0.6963054419549423
+        },
+        {
+          "parent_id": "test_5012",
+          "improvement_mN": 0.2618282979283376
+        },
+        {
+          "parent_id": "test_5013",
+          "improvement_mN": 0.6015107872636248
+        },
+        {
+          "parent_id": "test_5014",
+          "improvement_mN": 0.15216890307706563
+        },
+        {
+          "parent_id": "test_5015",
+          "improvement_mN": 1.8362057329834633
+        },
+        {
+          "parent_id": "test_5016",
+          "improvement_mN": 0.8384923822549761
+        },
+        {
+          "parent_id": "test_5017",
+          "improvement_mN": 0.4224057008834932
+        },
+        {
+          "parent_id": "test_5018",
+          "improvement_mN": 0.777310786473862
+        },
+        {
+          "parent_id": "test_5019",
+          "improvement_mN": 0.7365138222892278
+        },
+        {
+          "parent_id": "test_5020",
+          "improvement_mN": 0.27217834857267004
+        },
+        {
+          "parent_id": "test_5021",
+          "improvement_mN": 1.4477551252817642
+        },
+        {
+          "parent_id": "test_5022",
+          "improvement_mN": 0.31044791105896374
+        },
+        {
+          "parent_id": "test_5023",
+          "improvement_mN": 1.2504220870199843
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "optimizer_by_method": [
+    {
+      "method": "basic_0.0",
+      "fits": 72,
+      "nonconverged": 0,
+      "unchanged_initial_coefficients": 72,
+      "median_residual_calls": 7.0,
+      "contact_seconds_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "lateral_0.0",
+      "fits": 72,
+      "nonconverged": 0,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 35.0,
+      "contact_seconds_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "basic_0.2",
+      "fits": 72,
+      "nonconverged": 0,
+      "unchanged_initial_coefficients": 72,
+      "median_residual_calls": 7.0,
+      "contact_seconds_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "lateral_0.2",
+      "fits": 72,
+      "nonconverged": 0,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 35.0,
+      "contact_seconds_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "basic_0.8",
+      "fits": 72,
+      "nonconverged": 33,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 43.0,
+      "contact_seconds_range": [
+        0.3100000000000003,
+        0.3400000000000003
+      ]
+    },
+    {
+      "method": "lateral_0.8",
+      "fits": 72,
+      "nonconverged": 53,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 49.0,
+      "contact_seconds_range": [
+        0.3100000000000003,
+        0.3400000000000003
+      ]
+    },
+    {
+      "method": "basic_contact",
+      "fits": 72,
+      "nonconverged": 45,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 49.0,
+      "contact_seconds_range": [
+        0.20000000000000018,
+        0.20000000000000018
+      ]
+    },
+    {
+      "method": "lateral_contact",
+      "fits": 72,
+      "nonconverged": 70,
+      "unchanged_initial_coefficients": 0,
+      "median_residual_calls": 49.0,
+      "contact_seconds_range": [
+        0.20000000000000018,
+        0.20000000000000018
+      ]
+    }
+  ],
+  "calibration_physical_failures": [
+    {
+      "id": "calibration_4002",
+      "seed": 4002,
+      "split": "calibration",
+      "physics": {
+        "max_body_balance_N": 3.5173322761317127e-09,
+        "max_tool_balance_N": 3.5173309525377006e-09,
+        "max_penetration_m": 5.014680694848648e-06,
+        "max_strain": 0.04501980298555025,
+        "passed": false
+      },
+      "status": "completed",
+      "wall_seconds": 0.03745270199942752
+    }
+  ],
+  "generation_failures": [],
+  "physical_failures": [
+    {
+      "parent_id": "test_5017",
+      "stage": "physical history",
+      "max_body_balance_N": 6.32463629558766e-09,
+      "max_tool_balance_N": 6.3246346423961874e-09,
+      "max_penetration_m": 5.02985491998689e-06,
+      "max_strain": 0.04374283587334222,
+      "passed": false
+    }
+  ],
+  "optimizer_nonconvergence": 201,
+  "analysis": "Average the three noise repeats within each complete test history. Bootstrap complete histories for paired mean differences. Intervals are exploratory, pointwise 95% intervals, conditional on this material and history distribution.",
+  "scope": "Fixed synthetic material, geometry and forward model. No controller comparison, parameter mismatch or neural training. All physical and optimization failures are retained. No selection by future effects."
+}

@@ -2,7 +2,12 @@
 
 ## Scientific evidence
 
-The representative experiment is [pilot_c9dd23016896](2d_contact/pilot_c9dd23016896/RESULTS.md). Read its result report before the individual files.
+The latest comparison is [sensor channels and contact history](information/channels_contact_20261026/RESULTS.md):
+24 new loading histories, three independent noise draws each, and the same estimated state used for two future commands.
+Its `summary.json`, `metrics.csv`, `calibration.json` and `failures.json` accompany the three figures.
+`histories/` stores physical episodes; `test/<history>/repeat_<n>/` stores observations, estimated states and predictions.
+
+The original spatial experiment is [pilot_c9dd23016896](2d_contact/pilot_c9dd23016896/RESULTS.md). Its eight histories and negative noise result are retained.
 
 | Record | Use |
 | --- | --- |

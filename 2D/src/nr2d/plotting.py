@@ -245,8 +245,10 @@ def export_figure(fig, stem, run, sources):
     stem.parent.mkdir(parents=True, exist_ok=True)
     for ext in ("png", "svg", "pdf"):
         fig.savefig(stem.with_suffix("."+ext), bbox_inches="tight", dpi=300)
-    write_json(stem.with_suffix(".json"), {"run": str(Path(run).resolve()), "sources": sources,
-               "config": str(Path(run)/"config.json"), "manifest": str(Path(run)/"manifest.json"),
+    run = Path(run)
+    write_json(stem.with_suffix(".json"), {"run": str(run.resolve()), "sources": sources,
+               "config": str(run/("config.json" if (run/"config.json").exists() else "study.json")),
+               "manifest": str(run/("manifest.json" if (run/"manifest.json").exists() else "environment.json")),
                "source_sha256": source_hashes(), "deformation_scale": 1})
 
 
@@ -291,3 +293,166 @@ def export_all(run, animation=True):
         write_json(out/"export_timing_history.json", history+[previous])
     write_json(out/"export_timing.json", timing)
     return timing
+
+
+SENSOR_COLORS = {False: '#B45F35', True: '#2878B5'}
+
+
+def information_forecast_figure(run, parent='test_5000', repeat=0, window=.8,
+                                action='Slow press', channels='Both', folder=None, fig=None):
+    """Four information conditions on a preselected history and noise draw."""
+    from .information import method_key
+    style()
+    run = Path(run)
+    folder = Path(folder) if folder is not None else run/'test'/parent/f'repeat_{repeat}'
+    result = read_json(folder/'result.json')
+    action_index = result['actions'].index(action)
+    with np.load(folder/'curves.npz') as data:
+        curves = dict(data)
+    if fig is None:
+        fig = plt.figure(figsize=(14, 5.3), layout='constrained')
+    else:
+        fig.clear()
+    axes = fig.subplots(1, 3)
+    suffix = f'_{action_index}_'
+    t = curves['truth'+suffix+'time']
+    x = t-t[0]
+    truth = curves['truth'+suffix+'force']
+    for side in (False, True):
+        if channels == 'Without lateral' and side or channels == 'With lateral' and not side:
+            continue
+        for duration in dict.fromkeys([0., window]):
+            key = method_key(side, duration)
+            title = 'Snapshot' if duration == 0. else ('Contact update + propagation' if duration == 'contact' else f'{duration:g} s history')
+            label = title + (' + lateral' if side else '; no lateral')
+            kw = dict(color=SENSOR_COLORS[side], ls='--' if duration == 0. else '-', lw=2., label=label)
+            force = curves[key+suffix+'force']
+            axes[0].plot(x, force, **kw)
+            axes[1].plot(x, (force-truth)*1e3, **kw)
+            axes[2].plot(x, curves[key+suffix+'markers'].mean(axis=1)*1e6, **kw)
+    for key, color, ls, label in [('replay', '#21836D', '-.', 'Motion replay; known relaxed start'),
+                                 ('truth', '#202C3B', ':', 'True internal state (reference)')]:
+        kw = dict(color=color, ls=ls, lw=1.8, label=label)
+        force = curves[key+suffix+'force']
+        axes[0].plot(x, force, **kw)
+        axes[1].plot(x, (force-truth)*1e3, **kw)
+        axes[2].plot(x, curves[key+suffix+'markers'].mean(axis=1)*1e6, **kw)
+    for ax in axes:
+        ax.axvline(0, color='#8B939C', ls=':', lw=1)
+        ax.set_xlabel('Time after prediction cut (s)')
+    axes[0].set(ylabel='Contact force (N)', title='Future response', ylim=(0, None))
+    axes[1].set(ylabel='Predicted minus true force (mN)', title='Prediction difference')
+    axes[2].set(ylabel='Mean outward motion (um)', title='Lateral deformation')
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='outside lower center', ncol=2, fontsize=10, frameon=False)
+    fig.suptitle(f'{parent} | noise repeat {repeat} | {action} | cut at {t[0]:.2f} s', fontsize=14)
+    return fig
+
+
+def information_window_figure(run, action='Slow press'):
+    """Aggregate errors plus explicitly separated phase/contact/update intervals."""
+    from .information import method_key
+    style()
+    run = Path(run)
+    spec = read_json(run/'study.json')
+    jobs = [read_json(p) for p in sorted((run/'test').glob('*/repeat_*/result.json'))]
+    parent = f"test_{spec['test_seeds'][0]}"
+    first = next(j for j in jobs if j['parent_id']==parent and j['repeat']==0)
+    trace = Trace.load(run/'histories'/f'{parent}.npz')
+    with np.load(run/'test'/parent/'repeat_0/curves.npz') as data:
+        observed = data['observed']
+    fig = plt.figure(figsize=(13, 9.2), layout='constrained')
+    grid = fig.add_gridspec(2, 2, height_ratios=(1, 1.1))
+    axes = [fig.add_subplot(grid[0, i]) for i in range(2)]
+    timeline = fig.add_subplot(grid[1, :])
+    rng = np.random.default_rng(spec['noise_root_seed'])
+
+    def parent_values(method):
+        return np.array([np.mean([r['force_rmse_N']*1e3 for j in jobs if j['parent_id']==f'test_{seed}'
+                                 for r in j['rows'] if r['method']==method and r['action']==action])
+                         for seed in spec['test_seeds']])
+
+    for side in (False, True):
+        color = SENSOR_COLORS[side]
+        label = 'With lateral' if side else 'Without lateral'
+        for ax, keys, x in [(axes[0], [method_key(side,w) for w in spec['windows_seconds']], spec['windows_seconds']),
+                           (axes[1], [method_key(side,.2),method_key(side,'contact')], [0,1])]:
+            values = np.array([parent_values(key) for key in keys])
+            means = values.mean(axis=1)
+            intervals = np.array([np.quantile(rng.choice(v,(2000,len(v))).mean(axis=1), [.025,.975]) for v in values])
+            ax.errorbar(x, means, yerr=np.maximum(0,np.array([means-intervals[:,0],intervals[:,1]-means])),
+                        color=color, marker='o', lw=2, capsize=4, label=label)
+            ax.set(ylabel='Force RMSE (mN)', ylim=(0,None))
+            ax.legend(frameon=False)
+    axes[0].set(xticks=spec['windows_seconds'], xlabel='Recent window (s); 0 = snapshot', title='Duration changes the available data')
+    axes[1].set(xticks=[0,1], xticklabels=['Recent wait\n0.2 s update','Earlier contact\n0.2 s update + propagation'],
+                title='Same update duration, different data')
+    # Command phases are distinct from contact detected in the noisy force.
+    phase_bands(timeline, trace, labels=True)
+    detected = observed[:,2] > spec['contact_threshold_N']
+    dt = trace.config['dt']
+    timeline.broken_barh([(trace.time[i-1],dt) for i in range(1,len(detected)) if detected[i]],
+                         (4.65,.35), facecolors='#26344A')
+    timeline.text(trace.time[0]+.01, 5.1, f'Contact: measured force > {spec["contact_threshold_N"]*1e3:g} mN', fontsize=10)
+    for y, duration in enumerate([.8,.2,0.,'contact']):
+        row = next(r for r in first['rows'] if r['method']==method_key(False,duration) and r['action']==action)
+        info = row['inference']
+        begin,end = info['update_interval_s']
+        stop = info['propagation_interval_s'][1]
+        if end>begin:
+            timeline.plot([begin,end],[y,y],color='#2878B5',lw=9,solid_capstyle='butt')
+        else:
+            timeline.scatter([end],[y],color='#2878B5',s=55,zorder=5)
+        if stop>end:
+            timeline.plot([end,stop],[y,y],color='#9CA3AA',ls='--',lw=3)
+            timeline.text((end+stop)/2,y+.15,f'Motion only: {stop-end:.2f} s',ha='center',fontsize=10)
+        if duration != 0.:
+            timeline.text(begin-.02,y,f'{info["observed_contact_seconds"]:.2f} s contact',ha='right',va='center',fontsize=10)
+    timeline.axvline(trace.time[-1],c='#A94A4A',ls=':',lw=1.5)
+    timeline.plot([],[],lw=8,color='#2878B5',label='Force / shape update')
+    timeline.plot([],[],ls='--',lw=3,color='#9CA3AA',label='Measured-position propagation')
+    timeline.set(xlim=(trace.time[0],trace.time[-1]+.04),ylim=(-.5,5.45),
+                 yticks=[0,1,2,3],yticklabels=['Recent 0.8 s','Recent 0.2 s','Snapshot','Earlier contact'],
+                 xlabel=f'Time (s) | first prespecified history: {parent}, repeat 0')
+    timeline.legend(loc='upper left',bbox_to_anchor=(0,-.18),ncol=2,frameon=False)
+    fig.suptitle(f'{action} | {len(spec["test_seeds"])} histories; three noise repeats averaged within each\n'
+                 'Bars: pointwise 95% bootstrap intervals over histories', fontsize=14)
+    fig.supxlabel('Contact selection scans all prior force; motion is used from update start to prediction cut.',fontsize=10)
+    return fig
+
+
+def information_gain_figure(run):
+    style()
+    import textwrap
+    from .information import CONTRASTS
+    summary = read_json(Path(run)/'summary.json')
+    fig, ax = plt.subplots(figsize=(13,8.3), layout='constrained')
+    labels = list(CONTRASTS)
+    for offset,action,color in [(-.15,'Slow press','#2878B5'),(.15,'Fast press','#7C4C9B')]:
+        for i,label in enumerate(labels):
+            row = next(r for r in summary['contrasts'] if r['contrast']==label and r['action']==action)
+            vals = np.array([r['improvement_mN'] for r in row['parent_values']])
+            y = i+offset
+            ax.scatter(vals, y+np.linspace(-.06,.06,len(vals)),s=18,color=color,alpha=.25,zorder=2)
+            mean,ci = row['mean_improvement_mN'],row['ci95_mN']
+            ax.errorbar(mean,y,xerr=[[max(0,mean-ci[0])],[max(0,ci[1]-mean)]],
+                        color=color,marker='o',ms=7,lw=2,capsize=4,zorder=3,
+                        label=action if i==0 else None)
+    ax.axvline(0,color='#555E68',lw=1,ls='--')
+    ax.set(yticks=range(len(labels)),yticklabels=['\n'.join(textwrap.wrap(s,36)) for s in labels],
+           xlabel='Paired force-error reduction (mN) | positive = improvement')
+    ax.invert_yaxis()
+    ax.legend(frameon=False,loc='lower right')
+    fig.suptitle('What changes prediction?\nEach faint point is one history, averaged over three noise repeats',fontsize=15)
+    fig.supxlabel('Solid points and bars: mean and pointwise 95% bootstrap interval. Fast press reuses the same estimated state.',fontsize=10)
+    return fig
+
+
+def export_information(run):
+    run = Path(run)
+    sources = ['study.json','physics.json','calibration.json','summary.json','metrics.csv','histories/','test/']
+    for name, figure in [('01_information_curves',information_forecast_figure(run)),
+                         ('02_window_and_contact',information_window_figure(run)),
+                         ('03_paired_improvements',information_gain_figure(run))]:
+        export_figure(figure,run/'figures'/name,run,sources)
+        plt.close(figure)

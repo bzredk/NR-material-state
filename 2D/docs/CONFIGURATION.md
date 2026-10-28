@@ -8,6 +8,7 @@ Physical parameters and observer settings are separate. The Notebook and CLI use
 | --- | --- |
 | [`configs/spatial_contact.json`](../configs/spatial_contact.json) | Physical parameters read by both the notebook and `demo` / `checks` CLI commands |
 | [`configs/observer.json`](../configs/observer.json) | Residual scales, regularization, basis, optimization budget and history windows |
+| [`configs/information_study.json`](../configs/information_study.json) | New sensor ablations, windows, calibration/test seeds and noise repeats |
 | [`protocols.py`](../src/nr2d/protocols.py) | Loading phases and future action commands |
 | [`estimators.py`](../src/nr2d/estimators.py) | `ObserverConfig`, sensor resolution, noise and inference |
 | [`experiments.py`](../src/nr2d/experiments.py) | History seeds, splits, matching and result caches |
@@ -55,6 +56,7 @@ The checked-in preset matches the published implementation. It changes how param
 | `diff_step` | 1e-3 | Relative finite-difference step |
 | `short_window_seconds` | 0.2 | Short-observer comparison window |
 | `sweep_windows_seconds` | 0, 0.04, 0.1, 0.2, 0.4, 0.8 | Finite windows; full replay is appended |
+| `use_lateral` | `true` | Include both lateral markers in the fit; `false` excludes them from all inference steps |
 
 Data residuals are divided by the square root of the number of samples before appending the coefficient penalty. This normalization is unchanged. Full replay does not use the optimizer; it starts from a known relaxed state. Inference records include the requested settings, actual rounded window length, optimizer status, `optimizer_nfev`, residual-call count and elapsed time.
 
@@ -83,6 +85,32 @@ The widget noise selector multiplies those standard deviations. Matching uses al
 Snapshot and short-window fits share a six-coefficient strain basis and optimizer limits. Full replay additionally knows the relaxed initial state. True-state prediction receives the internal fields. Every method receives the same future command and uses the same solver.
 
 ## Storage
+
+The sensor/contact study uses a separate run under `runs/information/`. Its `study.json` freezes the design;
+`calibration.json` freezes the shared observer preset selected using three calibration histories.
+The old eight test histories are not reused as new samples. The new seeds are 5000-5023, with three
+independent nominal-noise draws per history. Position, velocity, force and both markers are generated once
+per draw, then masked for each method.
+
+Recent windows are 0, 0.2 and 0.8 s. The contact comparison fits the last continuous 0.2 s interval above
+4.5 mN measured force, then propagates using measured position to the same prediction time. Selection
+reads all prior force; the record separates selection, update and propagation inputs.
+Every estimate is reused for Slow press and Fast press. Full replay additionally knows the relaxed start;
+true-state prediction receives the complete internal fields. Predictions use commands, not future measurements.
+
+To repeat the study from `2D/`:
+
+```sh
+python -m nr2d.information prepare
+python -m nr2d.information timing
+python -m nr2d.information calibrate --workers 4
+python -m nr2d.information evaluate --workers 8
+python -m nr2d.information figures
+```
+
+Completed jobs replay their cache. For an independent rerun, copy `information_study.json`, change its
+`run` directory, and pass `--config` to each command. Test outcomes never select observer settings.
+Raw histories, observations, checkpoints, per-draw metrics, timings and failures remain in that run.
 
 `2D/runs/` is on the host bind mount. Each pilot stores its physical configuration, histories and source versions. New observer comparisons go to `comparisons/observer_<key>/` inside that run. The key includes settings and numerical code hashes; each forecast also saves those settings in its trace metadata, inference diagnostics and provenance. Recompute retains earlier versions in that comparison folder and leaves the original published cache intact.
 

@@ -12,10 +12,10 @@ M(r"""# Spatial 2D object hidden state
 Explore how loading history changes internal state and the response to a later action.
 
 Open the project with **Dev Containers: Reopen in Container**, select the container's **Python 3.11.9**, and **Run All**.
-The default computes a fresh main trajectory and replays saved checks, forecasts and history sweeps.
+The default computes a fresh main trajectory and replays saved checks and predictions.
 Use **Recompute** for a new calculation; the timeline replays the trajectory.
 
-[Docker setup](../docs/CONTAINER.md) | [Pilot results](../runs/2d_contact/pilot_c9dd23016896/RESULTS.md) | [Model](../docs/README.md)
+[Latest comparison: sensors and contact](#5.-Sensor-channels-and-contact-history) | [Docker setup](../docs/CONTAINER.md) | [Pilot results](../runs/2d_contact/pilot_c9dd23016896/RESULTS.md)
 """),
 C("""from pathlib import Path
 import os
@@ -36,7 +36,7 @@ from nr2d.estimators import ObserverConfig
 from nr2d.protocols import protocol
 from nr2d.experiments import run_pilot, read_json, write_json, forecasts_for, sweep_for
 from nr2d.plotting import archived_history_figure, paired_figure, export_figure
-from nr2d.widgets import ReplayDashboard, ForecastDashboard, SweepDashboard, checks_table, matching_table, table
+from nr2d.widgets import ReplayDashboard, ForecastDashboard, SweepDashboard, InformationDashboard, checks_table, matching_table, table
 import ipywidgets as widgets
 
 NOTEBOOK_START = time.perf_counter()
@@ -119,6 +119,8 @@ The check table covers relaxation/recovery references, an elastic control, force
 """),
 M(r"""## 2. Why the current observation may be insufficient
 
+Sections 2-4 retain the original eight-history pilot. Section 5 uses new histories and independent noise repeats.
+
 Each history starts relaxed and follows a feasible command sequence. Pair selection uses current tool position, velocity,
 force and both lateral markers, taking the first accepted pair in fixed ID order. Future response is excluded from selection.
 Material, geometry, tool, current command and elapsed time are shared.
@@ -187,18 +189,67 @@ if audit_path.exists():
             print('Diagnostic doubled penalty: %.4f um; original is preserved, diagnostic excluded from tests.' %
                   item['diagnostic']['max_penetration_um'])
 """),
+M(r"""## 5. Sensor channels and contact history
+
+This comparison fixes the material, mesh, contact solver, prediction time and future commands.
+Three calibration histories select one shared observer setting before the 24 test histories are evaluated.
+Each test history has three independent nominal-noise draws; methods share each draw.
+
+| Available information | Current time | Recent history |
+|---|---|---|
+| Position, velocity and total force | Snapshot without lateral | 0.2 or 0.8 s without lateral |
+| The same channels plus two lateral markers | Snapshot with lateral | 0.2 or 0.8 s with lateral |
+
+Position drives the material replay; force and enabled lateral channels enter the residual.
+Measured velocity initializes the prediction. Disabled lateral values are excluded from every estimate.
+All finite-window fits use the same six-coefficient basis and optimizer budget. Longer windows cost more solver time.
+
+**Earlier contact** selects the last continuous 0.2 s interval with measured force above 4.5 mN.
+After that update, measured position propagates the estimate to the common prediction time.
+The selector reads the full prior force trace; this is a longer information span than a recent 0.2 s window.
+The interval table below records exactly what was used.
+
+Dropdowns prepare a selection. **Run selection** loads cached predictions; checking **Recompute** repeats inference
+and both future rollouts from the saved physical history. Switching actions reuses the same inferred state.
+"""),
+C("""INFORMATION_RUN = ROOT / 'runs/information/channels_contact_20261026'
+information_summary = read_json(INFORMATION_RUN / 'summary.json')
+calibration = read_json(INFORMATION_RUN / 'calibration.json')
+print('Test histories:', information_summary['completed_histories'])
+print('Noise jobs:', information_summary['completed_jobs'], '/', information_summary['expected_jobs'])
+print('Shared preset:', calibration['selected'], '| selected on three calibration histories')
+print('Optimization nonconvergence:', information_summary['optimizer_nonconvergence'])
+print('Physical-limit records:', len(information_summary['physical_failures']))
+information = InformationDashboard(INFORMATION_RUN)
+display(information.widget)
+"""),
+M(r"""**Duration and contact content.** The 0.2 s recent window lies in the detached wait.
+The timeline separates command phases, force-detected contact, observation updates and propagation.
+The lower timeline is the first prespecified test history; error bars summarize all 24 histories.
+"""),
+C("""display(Image(filename=str(INFORMATION_RUN / 'figures/02_window_and_contact.png')))
+display(Image(filename=str(INFORMATION_RUN / 'figures/03_paired_improvements.png')))
+display(Markdown('Three noise repeats are averaged within each history. Intervals resample complete histories; '
+                 'they are exploratory pointwise 95% intervals. Fast press uses the same estimate as Slow press.'))
+"""),
 M(r"""## Findings and next experiment
 
-- Fast/slow internal fields persist after release and affect later contact in this synthetic spatial model.
-- Lateral observations constrain those fields. Endpoint residuals matter when comparing history with snapshot.
-- The 0.2 s observer improves mean prediction without noise but loses to snapshot under nominal noise across eight test histories.
-- Full replay is nearly exact with a known relaxed start and correct model. The results support classical baselines and a measured choice of history length; a learned model needs an additional demonstrated gap.
+- Current lateral shape reduces mean Slow-press force RMSE from 11.50 to 2.20 mN. It provides substantial information, but history still improves prediction.
+- Recent 0.2 s lateral history reduces error to 1.29 mN even though this interval contains no contact. Recovery measurements retain useful information.
+- Without lateral sensing, the recent wait provides no contact signal and the coefficients remain at initialization. Earlier 0.2 s contact plus motion propagation gives 0.48 mN; the recent 0.8 s window gives 0.31 mN.
+- Using both channels over 0.8 s gives 0.23 mN. The same estimates also improve Fast-press prediction, without another fit.
 
-These are small-strain, same-material prediction experiments with one noise realization per condition. Decision benefit and transfer
-remain to be tested. Next, tune noise weighting on calibration histories, then evaluate new histories with independent noise,
-varied waits and parameter mismatch. Follow with common-feedback control and full 3D robot simulation before hardware operation.
+The earlier eight-history pilot's negative noisy-short-window result is retained; it does not generalize to this independent
+24-history, three-noise-draw batch. The new [results](../runs/information/channels_contact_20261026/RESULTS.md) report all paired intervals.
+There were 201 optimizer-budget stops among 576 finite-window fits and one retained physical-history tolerance overrun.
+The next useful comparison is a warm-started recursive classical observer that carries the contact estimate through the wait,
+with uncertainty-aware updates. Establish its state and timing benefit before introducing a learned representation.
 
-**Three-minute presentation:** physical recovery -> matched endpoints -> future-action curves -> history length and noise.
+These remain small-strain, same-material prediction experiments. Reusing a state across two commanded futures does not establish
+a control benefit or a universally sufficient state. Common-feedback action tests follow after checking that true-state access can
+improve the selected task.
+
+**Three-minute presentation:** physical recovery -> channel-ablation curves -> window/contact timeline -> paired gains and remaining estimator limits.
 """),
 C("""metrics = forecasts_for(run, observer_config=comparison_config)[1]
 display(widgets.HTML(table(['Default selected test parent', 'Force RMSE (mN)', 'Lateral RMSE (um)'],
@@ -207,6 +258,7 @@ display(widgets.HTML(table(['Default selected test parent', 'Force RMSE (mN)', '
 print('Notebook body elapsed: %.2f s (cached pilot and widgets included)' % (time.perf_counter()-NOTEBOOK_START))
 print('Figures / GIF:', run / 'figures')
 print('Full batch: python -m nr2d.cli batch')
+print('New information batch: python -m nr2d.information evaluate --workers 8')
 print('Fresh pilot: python -m nr2d.cli demo --recompute')
 print('Vector/raster/GIF export: python -m nr2d.cli export')
 print('Configuration, raw traces, matching, inference logs and source hashes are stored in the run folder.')

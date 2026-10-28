@@ -1,0 +1,8 @@
+{
+  "measured_job_seconds": 59.98728918100096,
+  "planned_test_jobs": 72,
+  "estimated_serial_seconds": 4319.084821032069,
+  "workers": 4,
+  "actual_test_history_count": 24,
+  "decision": "Retain the planned 24 histories; parallelize independent jobs on CPU."
+}
