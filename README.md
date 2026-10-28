@@ -1,22 +1,23 @@
 # NR material state
 
-Experiments on object state estimation from contact history. The current 2D model has fast and slow internal relaxation. We compare estimates based on current measurements, short observation windows and full loading histories.
+Experiments on estimating hidden object state from contact history: what current measurements reveal, what history adds, and whether the estimate helps a robot act.
 
-[2D notebook](2D/notebooks/spatial_2d_hidden_state.ipynb) · [Docker setup](2D/docs/CONTAINER.md) · [Parameters](2D/docs/CONFIGURATION.md) · [Experiment design](2D/docs/DESIGN.md)
+## Repository
 
-Open the repository in VS Code, choose **Dev Containers: Reopen in Container**, then open the notebook. Select the container's **Python 3.11.9** and **Run All**.
-
-![2D experiment: loading histories, state estimation and future response](2D/docs/figures/experiment_flow.svg)
+| Directory | Contents |
+| --- | --- |
+| [2D/](2D/README.md) | Current spatial experiments: Notebook, setup, results, design and related papers |
+| [1D/](1D/README.md) | Earlier contact experiments, figures and reproduction |
+| [research/](research/README.md) | State formulation, detailed literature audits and future protocols |
+| [research/presentations/](research/presentations/README.md) | Research reports, PDFs and speaking notes |
 
 ## Results so far
 
 ### Spatial 2D
 
-The new sensor/contact comparison uses 24 histories with three independent noise draws each. Current lateral shape reduces Slow-press force error from 11.50 to 2.20 mN; recent lateral history reduces it to 1.29 mN over 0.2 s and 0.23 mN over 0.8 s. The same estimated states also predict Fast press. [Results, curves and paired intervals](2D/runs/information/channels_contact_20261026/RESULTS.md).
+The 24-history comparison finds that current lateral shape improves prediction, and recovery/contact history adds further information. The same estimates are reused for Slow press and Fast press. [Results and figures](2D/README.md#results).
 
-The original eight-history pilot found that nominal noise reversed the short-window gain. That result is retained, but does not generalize to the new independent batch. [Earlier results and paired histories](2D/README.md#pilot-results).
-
-[Report 10.2](research/presentations/10.2/README.md) covers the comparison, limitations and discussion questions.
+[Run the experiment](2D/README.md#run) · [Related papers](2D/README.md#related-reading) · [Report 10.2](research/presentations/10.2/README.md)
 
 ### Earlier 1D
 
@@ -29,25 +30,3 @@ The original eight-history pilot found that nominal noise reversed the short-win
 [1D measurements and conditions](1D/RESULTS.md) · [Code and reproduction](1D/README.md)
 
 These are synthetic-material simulations. The 2D common-feedback control comparison and 3D robot manipulation remain planned.
-
-## Related reading
-
-[RoboPack](https://www.roboticsproceedings.org/rss20/p130.html) and [HIRE](https://arxiv.org/abs/2609.30828v1) study robot interaction history; [predictive state representations](https://proceedings.neurips.cc/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf) provide a state-representation foundation; [RME](https://proceedings.mlr.press/v305/jaszczuk25a.html) connects probabilistic estimation to robot control.
-
-The [six-paper reading guide](research/presentations/10.2/README.md#related-reading) also covers material-property adaptation and viscoelastic internal variables, explaining how each work relates to this experiment.
-
-## Repository
-
-```text
-1D/                 Earlier experiments and their evidence
-2D/
-  notebooks/        Interactive demonstration
-  configs/          Physical and observer settings
-  environment/      Docker image and pinned dependencies
-  src/              Solver, estimators and plotting
-  tests/            Physical and information checks
-  tools/            Execution and validation
-  docs/             Setup, design and configuration
-  runs/             Raw data, figures and run records
-research/           Research notes and future protocols
-```

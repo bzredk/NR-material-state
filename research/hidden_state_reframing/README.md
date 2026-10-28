@@ -32,8 +32,8 @@ Generic history encoding, belief update, internal variables and recurrence are p
 From the repository root:
 
 ```powershell
-python plans/hidden_state_reframing/tools/build_nadia_figures.py
-python plans/hidden_state_reframing/tools/validate_package.py
+python research/hidden_state_reframing/tools/build_nadia_figures.py
+python research/hidden_state_reframing/tools/validate_package.py
 ```
 
 The figure script reads archived arrays and saved summaries only. It fixes illustrative pair index 0 before inspecting the response magnitude. [figure_data.json](figure_data.json) and [figure provenance](figures/provenance.json) record inputs and hashes. The validation script checks sources, links, IDs, JSON structure and the absence of accidental non-English technical prose; these checks do not certify scientific hypotheses or a working simulator.

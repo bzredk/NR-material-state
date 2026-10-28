@@ -1,6 +1,6 @@
-# 2D contact experiment
+# Original 2D contact protocol
 
-Proposed October 23, 2026. **Update, October 26:** the initial spatial solver, classical estimators, physical checks and VS Code interactive pilot are implemented and executed. See the [implementation and evidence guide](../../2D/docs/README.md) and [notebook](../../2D/notebooks/spatial_2d_hidden_state.ipynb). The larger sample counts, learned models, decision experiment and real calibration below remain proposals; the small pilot is not their completion. The 1D experiments remain in [early experiment](../../1D/README.md).
+Proposed October 23, 2026. This page retains the original plan. The spatial solver, classical estimators, interactive pilot and subsequent 24-history sensor/contact study have now been run; their actual scope and results are in the [2D overview](../../2D/README.md). The larger sample counts, learned models, decision experiment and real calibration below remain proposals. Earlier experiments are in [1D/](../../1D/README.md).
 
 The next study uses a single indenter and a deformable body in a plane. It should show how previous loading changes force and sideways deformation during the next contact, then test whether that information affects a decision under shared feedback.
 
