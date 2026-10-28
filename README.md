@@ -30,6 +30,12 @@ The original eight-history pilot found that nominal noise reversed the short-win
 
 These are synthetic-material simulations. The 2D common-feedback control comparison and 3D robot manipulation remain planned.
 
+## Related reading
+
+[RoboPack](https://www.roboticsproceedings.org/rss20/p130.html) and [HIRE](https://arxiv.org/abs/2609.30828v1) study robot interaction history; [predictive state representations](https://proceedings.neurips.cc/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf) provide a state-representation foundation; [RME](https://proceedings.mlr.press/v305/jaszczuk25a.html) connects probabilistic estimation to robot control.
+
+The [six-paper reading guide](research/presentations/10.2/README.md#related-reading) also covers material-property adaptation and viscoelastic internal variables, explaining how each work relates to this experiment.
+
 ## Repository
 
 ```text
