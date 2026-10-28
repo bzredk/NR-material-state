@@ -25,7 +25,7 @@ import time
 ROOT = next((p for base in [Path.cwd(), *Path.cwd().parents]
              for p in (base, base / '2D') if (p / 'src/nr2d/physics.py').exists()), None)
 if ROOT is None:
-    raise RuntimeError('Open the NR-material-state folder in VS Code and run from this project.')
+    raise RuntimeError('Open the repository root in VS Code and run from this project.')
 sys.path.insert(0, str(ROOT / 'src'))
 get_ipython().run_line_magic('matplotlib', 'widget')
 

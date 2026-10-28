@@ -4,8 +4,8 @@ $experimentRoot = Split-Path -Parent $PSScriptRoot
 $projectRoot = Split-Path -Parent $experimentRoot
 if ($RunName -notmatch '^[A-Za-z0-9_-]+$') { throw 'RunName must be a directory name, not a path.' }
 $resultDir = Join-Path $experimentRoot "runs\container_validation\$RunName"
-$linuxRun = "/workspaces/NR-material-state/2D/runs/container_validation/$RunName"
-$mount = "type=bind,source=$projectRoot,target=/workspaces/NR-material-state"
+$linuxRun = "/workspaces/NR-object-state/2D/runs/container_validation/$RunName"
+$mount = "type=bind,source=$projectRoot,target=/workspaces/NR-object-state"
 $containerName = 'nr-persistence-' + [guid]::NewGuid().ToString('N').Substring(0,12)
 docker run --rm --name $containerName --mount $mount nr-spatial-2d:py311 python tools/container_persistence.py write $linuxRun
 if ($LASTEXITCODE -ne 0) { throw 'First persistence container failed.' }

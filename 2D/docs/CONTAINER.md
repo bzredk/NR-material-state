@@ -21,7 +21,7 @@ From the repository root:
 ```powershell
 docker build --progress=plain -t nr-spatial-2d:py311 2D/environment
 docker run --rm `
-  --mount "type=bind,source=$($PWD.Path),target=/workspaces/NR-material-state" `
+  --mount "type=bind,source=$($PWD.Path),target=/workspaces/NR-object-state" `
   nr-spatial-2d:py311 python tools/validate_container.py
 ```
 

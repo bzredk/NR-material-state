@@ -19,7 +19,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd --gid 1000 vscode \
     && useradd --uid 1000 --gid 1000 --create-home --shell /bin/bash vscode \
-    && git config --system --add safe.directory /workspaces/NR-material-state
+    && git config --system --add safe.directory /workspaces/NR-object-state
 
 COPY requirements-container.txt /usr/local/share/nr2d/requirements-container.txt
 RUN python -m pip install --no-cache-dir --require-hashes \
@@ -27,8 +27,8 @@ RUN python -m pip install --no-cache-dir --require-hashes \
     && python -m pip check \
     && python -m ipykernel install --sys-prefix --name nr-spatial-state \
         --display-name "NR 2D (Docker)" \
-    && python -c "from pathlib import Path; import sysconfig; Path(sysconfig.get_paths()['purelib'], 'nr2d-source.pth').write_text('/workspaces/NR-material-state/2D/src\n')"
+    && python -c "from pathlib import Path; import sysconfig; Path(sysconfig.get_paths()['purelib'], 'nr2d-source.pth').write_text('/workspaces/NR-object-state/2D/src\n')"
 
 USER vscode
-WORKDIR /workspaces/NR-material-state/2D
+WORKDIR /workspaces/NR-object-state/2D
 CMD ["sleep", "infinity"]

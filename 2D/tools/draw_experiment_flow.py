@@ -104,7 +104,7 @@ text(42, 574, f"Synthetic material: relaxation times {config['tau_fast']:.2f} s 
      "Eight test histories.", 11, MUTED)
 
 for suffix in ("svg", "png", "pdf"):
-    metadata = {"Creator": "NR material state"}
+    metadata = {"Creator": "Object State Inference"}
     if suffix == "svg":
         metadata["Date"] = None
     fig.savefig(OUT / f"experiment_flow.{suffix}", dpi=220,

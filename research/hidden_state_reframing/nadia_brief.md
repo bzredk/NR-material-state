@@ -12,7 +12,7 @@ Do not choose a network first. Retain the classical solution if it already captu
 
 ## Figure 1 — A present observation can hide different internal composition
 
-![Archived synthetic example of hidden-state aliasing](D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/01_state_aliasing.png)
+![Archived synthetic example of hidden-state aliasing](figures/01_state_aliasing.png)
 
 **Caption.** Archived SRC-history dependence, prespecified `test_wait` pair index 0; no selection for unusually large future response. Physically replayed command histories reach matched current position, velocity, total force and command, while the two internal dashpot states differ. The same subsequent command produces different force response. True internal states and their decomposition are simulator-only evaluation information. Any accompanying mechanical diagram is an explanatory schematic of the implemented model, not a photograph or independently identified material law.
 
@@ -26,7 +26,7 @@ Source: [figure_data.json](figure_data.json), [existing_evidence.md](existing_ev
 
 ## Figure 2 — Prediction improvement does not yet establish method or action necessity
 
-![Archived prediction, observer and action evidence](D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/02_existing_evidence.png)
+![Archived prediction, observer and action evidence](figures/02_existing_evidence.png)
 
 **Caption.** Empirical archived synthetic evidence. history dependence force errors use the stored test-wait summaries, with complete history pairs as the sampling units. shared feedback state-error points show seed 11 before and after the common 0.3 s release; they are not an across-seed confidence interval. Task-window and prefix-inclusive outcomes have different accounting scopes and must be shown separately. Any confidence intervals reproduced from the archive retain their original assumptions; a degenerate binary bootstrap interval is not a proof of population equivalence.
 
@@ -45,7 +45,7 @@ The archived shared feedback action batch contains no true-state controller refe
 
 ## Figure 3 — Decide which bottleneck exists before expanding the method
 
-![Proposed diagnostic decision framework](D:/capp/NR/NR-material-state/plans/hidden_state_reframing/figures/03_decision_gate.png)
+![Proposed diagnostic decision framework](figures/03_decision_gate.png)
 
 **Caption.** Proposed schematic, not measured data. The map distinguishes response relevance, recoverability, recursive/predictive adequacy, feedback timing, and task utility. No region prevalence, threshold, or effect size has been measured by drawing this figure. “True-state reference” always means the same tested predictor/controller/action library and horizon; it is not an absolute optimal-control upper bound.
 

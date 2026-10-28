@@ -46,8 +46,8 @@
 ```powershell
 git --version
 py -3.11 --version
-git clone https://github.com/bzredk/NR-material-state.git
-Set-Location NR-material-state
+git clone https://github.com/bzredk/NR-object-state.git
+Set-Location NR-object-state
 py -3.11 -m venv .venv
 $env:Path = (Join-Path (Get-Location) '.venv\Scripts') + ';' + $env:Path
 python -c "import sys; print(sys.executable); print(sys.version)"
@@ -55,7 +55,7 @@ python -m pip install --upgrade pip
 python -m pip install -r '1D/requirements.txt'
 ```
 
-打印出的 Python 路径应以 `NR-material-state\.venv\Scripts\python.exe` 结尾。如果机器没有 `py` 命令，但 `python --version` 显示 3.11，可以用 `python -m venv .venv` 创建环境。
+打印出的 Python 路径应以 `NR-object-state\.venv\Scripts\python.exe` 结尾。如果机器没有 `py` 命令，但 `python --version` 显示 3.11，可以用 `python -m venv .venv` 创建环境。
 
 这里把环境路径加入当前终端的 PATH，后续进入实验目录仍能使用同一个 `python`。这个修改只影响当前终端，不需要改变全局 PATH 或 PowerShell 执行策略。[Python 文档](https://docs.python.org/3.11/library/venv.html)也说明了直接使用虚拟环境解释器的方式。
 
@@ -116,8 +116,8 @@ python -c "import sys; print(sys.executable)"
 在 Bash 中执行：
 
 ```bash
-git clone https://github.com/bzredk/NR-material-state.git
-cd NR-material-state
+git clone https://github.com/bzredk/NR-object-state.git
+cd NR-object-state
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip

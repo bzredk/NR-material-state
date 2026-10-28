@@ -38,8 +38,8 @@ Install [Git for Windows](https://git-scm.com/downloads/win) and a 64-bit [Pytho
 ```powershell
 git --version
 py -3.11 --version
-git clone https://github.com/bzredk/NR-material-state.git
-Set-Location NR-material-state
+git clone https://github.com/bzredk/NR-object-state.git
+Set-Location NR-object-state
 py -3.11 -m venv .venv
 $env:Path = (Join-Path (Get-Location) '.venv\Scripts') + ';' + $env:Path
 python -c "import sys; print(sys.executable); print(sys.version)"
@@ -47,7 +47,7 @@ python -m pip install --upgrade pip
 python -m pip install -r '1D/requirements.txt'
 ```
 
-The printed executable should end in `NR-material-state\.venv\Scripts\python.exe`. If you already cloned the project, enter that folder and start at the environment step. If `py` is unavailable but `python --version` reports 3.11, use `python -m venv .venv` instead.
+The printed executable should end in `NR-object-state\.venv\Scripts\python.exe`. If you already cloned the project, enter that folder and start at the environment step. If `py` is unavailable but `python --version` reports 3.11, use `python -m venv .venv` instead.
 
 Adding `.venv\Scripts` to this terminal's PATH lets the remaining commands use `python` from any experiment folder. It does not change the system PATH or PowerShell's execution policy. [Python's venv documentation](https://docs.python.org/3.11/library/venv.html) also supports using the environment's executable directly without activation.
 
@@ -108,8 +108,8 @@ Start with Git, a 64-bit `python3.11`, and its `venv` support installed on the h
 Run in Bash:
 
 ```bash
-git clone https://github.com/bzredk/NR-material-state.git
-cd NR-material-state
+git clone https://github.com/bzredk/NR-object-state.git
+cd NR-object-state
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -c "import sys; print(sys.executable); print(sys.version)"

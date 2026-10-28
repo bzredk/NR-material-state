@@ -130,9 +130,9 @@ lateral_ax.set_ylabel('Mean lateral displacement (µm)')
 title(force_ax, 'd', 'Response to the same command')
 title(lateral_ax, 'e', 'Lateral response')
 
-fig.savefig(OUT / 'hidden_state_pair.svg', facecolor='white', metadata={'Creator': 'NR material state'})
-fig.savefig(OUT / 'hidden_state_pair.pdf', facecolor='white', metadata={'Creator': 'NR material state'})
-fig.savefig(OUT / 'hidden_state_pair.png', dpi=300, facecolor='white', metadata={'Creator': 'NR material state'})
+fig.savefig(OUT / 'hidden_state_pair.svg', facecolor='white', metadata={'Creator': 'Object State Inference'})
+fig.savefig(OUT / 'hidden_state_pair.pdf', facecolor='white', metadata={'Creator': 'Object State Inference'})
+fig.savefig(OUT / 'hidden_state_pair.png', dpi=300, facecolor='white', metadata={'Creator': 'Object State Inference'})
 plt.close(fig)
 
 with (OUT / 'hidden_state_pair.csv').open('w', newline='', encoding='utf-8') as stream:

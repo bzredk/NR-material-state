@@ -12,7 +12,7 @@ parser.add_argument("run", type=Path)
 args = parser.parse_args()
 assert sys.platform == "linux"
 run = args.run.resolve()
-assert run.is_relative_to(Path("/workspaces/NR-material-state/2D/runs/container_validation"))
+assert run.is_relative_to(Path("/workspaces/NR-object-state/2D/runs/container_validation"))
 assert json.loads((run / "validation.json").read_text())["status"] == "passed"
 marker = run / "persistence_marker.json"
 if args.phase == "write":

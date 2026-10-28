@@ -4,12 +4,12 @@
     "dockerfile": "../2D/environment/Dockerfile",
     "context": "../2D/environment"
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/NR-material-state,type=bind",
-  "workspaceFolder": "/workspaces/NR-material-state",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/NR-object-state,type=bind",
+  "workspaceFolder": "/workspaces/NR-object-state",
   "remoteUser": "vscode",
   "updateRemoteUserUID": false,
   "shutdownAction": "none",
-  "postCreateCommand": "python /workspaces/NR-material-state/2D/tools/setup_container.py",
+  "postCreateCommand": "python /workspaces/NR-object-state/2D/tools/setup_container.py",
   "waitFor": "postCreateCommand",
   "customizations": {
     "vscode": {

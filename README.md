@@ -1,6 +1,8 @@
-# NR material state
+# Object State Inference
 
-Experiments on estimating hidden object state from contact history: what current measurements reveal, what history adds, and whether the estimate helps a robot act.
+Estimating hidden object states from interaction history.
+
+We study what current measurements reveal, what history adds, and whether the estimate helps a robot act.
 
 ## Repository
 
