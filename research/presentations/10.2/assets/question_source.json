@@ -1,0 +1,33 @@
+{
+  "file": "Penn Engineering.m4a",
+  "sha256": "1765863ec71a1cfc53de1baac9c148af6846bed89e2c40844854d0ef5988aa96",
+  "duration_seconds": 78.396,
+  "source_type": "User-provided voice memo",
+  "slide": 16,
+  "interpretation": "Three lightly edited discussion questions. Preserve the concern about drifting toward soft robotics, the practical question of experiments on a real robot, and the return from a concrete mechanism to the broader research idea. No speaker identity or adviser attribution inferred.",
+  "user_correction": "The user confirmed the final spoken word as shenghua (conceptual development), rather than the uncertain automatic transcription. Do not replace this conceptual question with a requirement for transfer evidence.",
+  "transcription": "Local faster-whisper large-v3, checked with large-v3-turbo. Raw automatic transcripts retained in .build.",
+  "segments": [
+    {
+      "seconds": [
+        0,
+        30
+      ],
+      "topic": "Could too much focus on elasticity shift a hidden-state project toward soft robotics?"
+    },
+    {
+      "seconds": [
+        31,
+        46
+      ],
+      "topic": "The model can be built, but how should these experiments be carried out on a real robot?"
+    },
+    {
+      "seconds": [
+        54,
+        76
+      ],
+      "topic": "After making hidden state concrete through fast and slow forces, how should the specific case inform the broader research idea?"
+    }
+  ]
+}

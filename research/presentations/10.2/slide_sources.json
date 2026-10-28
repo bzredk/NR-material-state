@@ -1,0 +1,166 @@
+[
+  {
+    "number": 1,
+    "title": "Object state between contacts",
+    "speaking_notes_zh": "这周我把上次的一维接触扩展成了真正的空间二维模型。研究主题仍然是物体隐藏状态，而不是材料本构本身。本轮集中回答两个问题：当前侧向形变已经告诉了我们多少信息，以及历史的价值来自多长时间，还是来自其中的接触与恢复过程。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/RESULTS.md",
+      "Reference design: 10_1.pdf, 12 pages, Arial, 1600 x 900 px equivalent. Source PDF is retained unchanged."
+    ]
+  },
+  {
+    "number": 2,
+    "title": "What changed since the first report",
+    "speaking_notes_zh": "上周的三个判断保留：历史能帮助预测，状态可以用于不同未来控制，但共同反馈下的动作收益很小。经典估计器也已经很强。这周没有假设长历史或者神经网络必须获胜，而是把空间形变和传感信息加进去。关于老师反馈，2D到3D和侧向变化来自会后中文录音复述，现场英文片段只支持回到网格图和单指例子，不能说老师指定了某个算法。",
+    "sources": [
+      "1D/RESULTS.md",
+      "1D/PRESENTATION_MAP.md",
+      "2D/runs/information/channels_contact_20261026/RESULTS.md",
+      "Meeting source: D:/capp/NR/Documents/Codex/2026-10-23-project-feedback/项目反馈总结与转录.md (A 00:00.5-00:06; C 00:08-00:15.8)."
+    ]
+  },
+  {
+    "number": 3,
+    "title": "A spatial body produces the force and lateral response",
+    "speaking_notes_zh": "先看物理过程。底边固定，侧边自由，压头加载、保持、释放、等待，再接触。右侧分别记录实际接触力、命令与实际运动、两侧标记点。脱离接触后力回到零，但侧向形变仍在恢复。这里沿用已经验证过的空间2D演示图，后面统计来自新的24条历史。材料参数是合成参数，物体采用准静态平衡，压头保留动力学，尚未做真实材料标定。",
+    "sources": [
+      "2D/runs/2d_contact/pilot_c9dd23016896/figures/01_spatial_process.json",
+      "2D/runs/information/channels_contact_20261026/physics.json",
+      "2D/src/nr2d/physics.py"
+    ]
+  },
+  {
+    "number": 4,
+    "title": "The physical state contains more than the current measurement",
+    "speaking_notes_zh": "完整状态包括快慢内部应变场和压头位置速度。在已知参数的模型中，这些状态足以向前推进。机器人获得的瞬时测量只是位置、速度、总力和可选的两侧位移。我们用同一个经典观察器，在三个弹性基底上拟合快慢两个场，共六个非负系数。它是完整内部场的近似。当前形变很有信息，但还不能直接把它等同于对未来充分的状态。",
+    "sources": [
+      "2D/src/nr2d/estimators.py",
+      "2D/runs/information/channels_contact_20261026/physics.json",
+      "2D/runs/information/channels_contact_20261026/test/test_5000/repeat_0/result.json"
+    ]
+  },
+  {
+    "number": 5,
+    "title": "The comparison changes only the available information",
+    "speaking_notes_zh": "所有方法使用相同的物理历史和同一份噪声观测，只屏蔽通道，关闭侧向后它不能继续用于初始化或拟合。三条校准历史选超参数，24条新测试历史各有三次独立噪声。统计单位是完整历史，不能把72次噪声重复当72个独立物体。同一状态估计直接用于慢压和快压，快压不参与调参。真实内部场和已知松弛初态的完整重放只作为特权参考。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/study.json",
+      "2D/runs/information/channels_contact_20261026/calibration.json",
+      "2D/runs/information/channels_contact_20261026/verification/data_contract.json",
+      "2D/tests/test_observer_config.py"
+    ]
+  },
+  {
+    "number": 6,
+    "title": "The same future command exposes different prediction errors",
+    "speaking_notes_zh": "左图是同一慢压命令下的力曲线，右图把预测减去真实响应。当前运动和总力最容易失去恢复信息，加上侧向形变后已经明显改善。0.8秒历史进一步靠近真实曲线。这个例子固定取测试编号5000的第一次噪声，不按未来误差挑选。总体结论要看后面的24条完整历史。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/test/test_5000/repeat_0/curves.npz",
+      "2D/runs/information/channels_contact_20261026/figures/01_information_curves.json"
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Current lateral shape carries substantial predictive information",
+    "speaking_notes_zh": "24条历史上，只有当前运动和力的误差是11.50毫牛，加上当前侧向形变后降到2.20毫牛。配对改善9.31毫牛，按完整历史bootstrap的95%区间是7.06到11.57。它说明当前侧向信息不能忽略。不过对称模型的左右标记实际上反映同一个形变模式，不能把两个标记当成两个独立物理自由度。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/metrics.csv",
+      "Intervals: 2,000 whole-history bootstrap resamples, pointwise exploratory 95% intervals."
+    ]
+  },
+  {
+    "number": 8,
+    "title": "The recent 0.2 s contains waiting, while earlier data contain contact",
+    "speaking_notes_zh": "这是本轮最重要的设计修正。最后0.2秒全是脱离接触后的等待，不能和一维里的接触窗口直接作同条件解释。我们另外找更早的连续0.2秒接触片段，仅由观测力超过4.5毫牛识别，拟合后用实际运动记录传播到当前。以这条历史为例，0.72到0.92秒更新，再传播0.48秒，总运动跨度0.68秒。选择片段还扫描了之前的力，因此不能叫只使用0.2秒历史。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/coverage.json",
+      "2D/runs/information/channels_contact_20261026/histories/test_5000.npz",
+      "2D/runs/information/channels_contact_20261026/test/test_5000/repeat_0/curves.npz"
+    ]
+  },
+  {
+    "number": 9,
+    "title": "History helps when it includes informative observations",
+    "speaking_notes_zh": "只看力的等待窗口没有有效更新，误差仍然很大。加入侧向后，0.2秒等待也有增益，说明恢复过程有信息，同时重复测量降噪也可能贡献。0.8秒包含接触，误差降到0.23毫牛。更早的接触片段再传播，也明显优于近期等待。我们还不能把全部改善都归因于接触，因为它使用了更长运动跨度。新批次里带侧向短历史的改善，也限制了旧8条测试中“噪声使短窗变差”的适用范围。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/RESULTS.md",
+      "2D/runs/information/channels_contact_20261026/coverage.json",
+      "2D/runs/2d_contact/pilot_c9dd23016896/RESULTS.md"
+    ]
+  },
+  {
+    "number": 10,
+    "title": "The same estimate also predicts a faster press",
+    "speaking_notes_zh": "每次历史估计只做一次，慢压和快压使用完全相同的估计状态，运行记录用哈希核对过。快压没有参与校准。两种动作下的排序接近，0.8秒侧向历史的误差分别约0.23和0.21毫牛。这支持在这两种命令之间复用估计，但不能把它解释成跨任务普遍充分，也不能解释成闭环动作收益。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/verification/data_contract.json",
+      "Estimated-state hashes are identical across the two future branches."
+    ]
+  },
+  {
+    "number": 11,
+    "title": "The classical observer is accurate, but repeated fitting is costly",
+    "speaking_notes_zh": "经典方法在接触数据足够时已经很准，所以这轮不能自然推出必须上RNN或JEPA。真正显露的问题是每次从头拟合很慢，0.8秒带侧向窗口在八进程批量下中位耗时27.24秒，而且没有不确定性。201次有限窗拟合触及七次函数评估上限。没有侧向的等待拟合全部停在初值附近，因此当前和短窗的误差差异还混合了先验放在哪个时刻、如何传播的影响，不能说历史本身有害。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/failures.json",
+      "2D/runs/information/channels_contact_20261026/RESULTS.md",
+      "2D/src/nr2d/estimators.py"
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Next: retain the contact estimate through release and recovery",
+    "speaking_notes_zh": "下一步先不换网络。用经典递推观察器把接触时估计到的状态带过释放与等待，在多个预测时刻比较误差、更新时间和不确定性。补一个静态重复测量对照，区分恢复动力学和降噪。之后做共同反馈动作实验，先确认真实状态参考在给定任务和动作条件下有潜在收益。如果连这个参考都没有收益，应改任务而不是继续改编码器。完整3D机械臂闭环仿真在实机之前。希望讨论的是：哪个操作确实需要反馈尚未来得及补齐的信息，以及应该用什么任务结果判定它有用。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/RESULTS.md#next-experiment",
+      "research/robot_manipulation/",
+      "Planned only: recursive observer, uncertainty calibration, shared-feedback 2D actions, complete 3D robot simulation, hardware."
+    ]
+  },
+  {
+    "number": 13,
+    "title": "All recorded prediction errors",
+    "speaking_notes_zh": "这一页保留所有方法的完整均值，避免只展示有效的条件。已知松弛初态的完整重放和真实内部场使用额外信息。真实内部场误差为零来自使用同一个状态和同一个前向求解器，不代表现实物理误差为零，也不是所有控制策略的最优上界。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/metrics.csv"
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Paired gains across complete loading histories",
+    "speaking_notes_zh": "每个点是一个完整历史的配对改善，先平均它的三次噪声重复，再在24条历史上bootstrap。横轴第一行和后面三行范围不同。区间是探索性的逐项95%区间，不做普遍保证。接触对照除了接触内容，也使用了更长运动跨度，这一点不能隐藏。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/summary.json",
+      "2D/runs/information/channels_contact_20261026/metrics.csv",
+      "Plot uses stored per-history paired values and stored confidence limits without recomputing selection."
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Physical checks and reproducibility",
+    "speaking_notes_zh": "数值检查不能只报通过。一条测试历史和一条校准历史的惩罚接触穿透略微超过5微米，已经保留并记录。没有计算异常，通道屏蔽、数据一致性和动作间状态复用检查通过。Notebook在干净Docker内核Run All实测7.61秒，这主要是缓存结果回放，不是重新运行整批实验。主批量生成和评估约16.1分钟。更低的估计误差是同一个模型内部的证据，不代表真实材料已达到亚毫牛精度。",
+    "sources": [
+      "2D/runs/information/channels_contact_20261026/physics.json",
+      "2D/runs/information/channels_contact_20261026/failures.json",
+      "2D/runs/information/channels_contact_20261026/verification/notebook.json",
+      "2D/runs/information/channels_contact_20261026/verification/data_contract.json",
+      "2D/runs/information/channels_contact_20261026/RESULTS.md",
+      "2D/notebooks/spatial_2d_hidden_state.ipynb"
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Questions for discussion",
+    "speaking_notes_zh": "我想讨论三个问题。第一，我们研究的是当前观测之外的隐藏状态。如果太关注弹性，会不会让研究方向偏向软体机器人？第二，模型可以建立，但真正上实机时，这个实验应该怎么做？第三，我们已经把 hidden state 具体化到快慢力这个点，接下来如何再升华回来，回到更一般的隐藏状态研究问题？",
+    "sources": [
+      "User-provided voice memo: Penn Engineering.m4a (78.396 s). Research focus: 00:00-00:30; real-robot experiments: 00:31-00:46; broader research question: 00:54-01:16. The user confirmed the final word as shenghua (conceptual development).",
+      "research/presentations/10.2/assets/question_source.json",
+      "These are discussion questions paraphrased from the user-provided memo, not additional experimental findings or attributed adviser instructions."
+    ]
+  }
+]

@@ -12,7 +12,11 @@ Open the repository in VS Code, choose **Dev Containers: Reopen in Container**, 
 
 ### Spatial 2D
 
-In the eight-history 2D pilot, a 0.2 s observer reduced force-prediction error for slow and fast presses without noise. Under the nominal noise setting, the instantaneous fit was better. Full replay was accurate with the correct model and a known relaxed start. [Results and paired histories](2D/README.md#pilot-results).
+The new sensor/contact comparison uses 24 histories with three independent noise draws each. Current lateral shape reduces Slow-press force error from 11.50 to 2.20 mN; recent lateral history reduces it to 1.29 mN over 0.2 s and 0.23 mN over 0.8 s. The same estimated states also predict Fast press. [Results, curves and paired intervals](2D/runs/information/channels_contact_20261026/RESULTS.md).
+
+The original eight-history pilot found that nominal noise reversed the short-window gain. That result is retained, but does not generalize to the new independent batch. [Earlier results and paired histories](2D/README.md#pilot-results).
+
+[Report 10.2](research/presentations/10.2/README.md) covers the comparison, limitations and discussion questions.
 
 ### Earlier 1D
 
@@ -24,7 +28,7 @@ In the eight-history 2D pilot, a 0.2 s observer reduced force-prediction error f
 
 [1D measurements and conditions](1D/RESULTS.md) · [Code and reproduction](1D/README.md)
 
-These are synthetic-material simulations. The 2D action comparison and 3D robot manipulation remain planned.
+These are synthetic-material simulations. The 2D common-feedback control comparison and 3D robot manipulation remain planned.
 
 ## Repository
 
